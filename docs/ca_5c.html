@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 5c Notificació a les autoritats competents </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_05.html"> 
+                    RA5
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA5c
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#1e6f6f, #0e6767);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 5c Notificació a les autoritats competents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    📢
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs quan un incident de
+ciberseguretat ha de comunicar-se a una autoritat competent i quines
+organitzacions intervenen en aquest procés. Coneixeràs qui és el
+responsable de decidir la notificació, quina informació s'ha de
+transmetre i per què és important complir els procediments i els
+terminis establits.
+</p>
+
+<p>
+També comprendràs la diferència entre una notificació interna i una
+notificació externa, així com la importància de preservar la
+confidencialitat de la informació durant tot el procés.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és una notificació oficial.</li>
+
+<li>Identificar quan és necessària.</li>
+
+<li>Conèixer qui decideix la notificació.</li>
+
+<li>Identificar les principals autoritats competents.</li>
+
+<li>Comprendre la importància dels terminis.</li>
+
+<li>Valorar la necessitat de documentar totes les comunicacions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Alguns incidents de ciberseguretat no afecten únicament
+l'organització, sinó que també poden tindre conseqüències per a
+clients, ciutadans, altres empreses o serveis essencials. En aquestes
+situacions, pot ser necessari comunicar l'incident a organismes
+externs competents.
+</p>
+
+<p>
+La notificació a les autoritats permet coordinar la resposta davant
+incidents d'especial rellevància, compartir informació sobre noves
+amenaces i facilitar la protecció d'altres organitzacions que podrien
+veure's afectades.
+</p>
+
+<p>
+Aquestes comunicacions han de seguir els procediments establits,
+realitzar-se pels responsables autoritzats i incloure únicament la
+informació necessària per facilitar la gestió de l'incident.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+No tots els incidents s'han de comunicar a organismes externs. La
+decisió dependrà de la seua gravetat, del tipus d'organització, de
+l'impacte produït i dels requisits establits pels procediments i la
+normativa aplicable.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     NOTIFICACIÓ A LES AUTORITATS COMPETENTS
+========================================================== -->
+
+<section>
+
+<h2>Notificació a les autoritats competents</h2>
+
+<p>
+La notificació a les autoritats competents consisteix a comunicar un
+incident de ciberseguretat a organismes oficials que tenen funcions de
+coordinació, suport, supervisió o resposta davant aquest tipus de
+situacions.
+</p>
+
+<p>
+Aquestes notificacions permeten compartir informació rellevant sobre
+amenaces, coordinar actuacions entre diferents organitzacions i
+contribuir a millorar la protecció del conjunt dels serveis digitals.
+</p>
+
+<p>
+En moltes organitzacions aquest procediment forma part del pla de
+resposta davant incidents i només pot ser autoritzat pels responsables
+designats.
+</p>
+
+<h3>Objectius de la notificació oficial</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Informar</td>
+
+<td>Comunicar l'existència de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinar</td>
+
+<td>Facilitar una resposta conjunta.</td>
+
+</tr>
+
+<tr>
+
+<td>Compartir informació</td>
+
+<td>Alertar altres organitzacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Complir obligacions</td>
+
+<td>Respectar els procediments establits.</td>
+
+</tr>
+
+<tr>
+
+<td>Obtenir suport</td>
+
+<td>Rebre assistència especialitzada.</td>
+
+</tr>
+
+<tr>
+
+<td>Millorar la seguretat</td>
+
+<td>Contribuir a la prevenció d'incidents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa que gestiona un servei essencial detecta un atac que ha
+interromput el funcionament de diversos sistemes crítics. Després de
+confirmar l'incident, el responsable de seguretat inicia el
+procediment de notificació a l'autoritat competent segons el protocol
+intern.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUAN ÉS OBLIGATÒRIA
+========================================================== -->
+
+<section>
+
+<h2>Quan és necessària la notificació?</h2>
+
+<p>
+No tots els incidents requereixen una notificació externa. Aquesta
+decisió depén de factors com la gravetat, l'impacte sobre els serveis,
+l'afectació a dades personals o les obligacions que tinguen les
+organitzacions segons la normativa que els siga aplicable.
+</p>
+
+<p>
+Abans de realitzar qualsevol comunicació externa, és necessari
+analitzar l'incident, valorar-ne les conseqüències i seguir el
+procediment establit per l'organització.
+</p>
+
+<h3>Situacions habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Possibilitat de notificació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Interrupció d'un servei essencial</td>
+
+<td>Pot ser necessària.</td>
+
+</tr>
+
+<tr>
+
+<td>Filtració de dades personals</td>
+
+<td>Pot ser necessària.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident sense impacte extern</td>
+
+<td>Habitualment no.</td>
+
+</tr>
+
+<tr>
+
+<td>Atac amb afectació generalitzada</td>
+
+<td>Normalment sí.</td>
+
+</tr>
+
+<tr>
+
+<td>Compromís d'infraestructures crítiques</td>
+
+<td>Habitualment sí.</td>
+
+</tr>
+
+<tr>
+
+<td>Incidència menor resolta internament</td>
+
+<td>Normalment no.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     QUI DECIDEIX LA NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Qui decideix la notificació?</h2>
+
+<p>
+La decisió de comunicar un incident a una autoritat competent no
+correspon normalment a qualsevol empleat. Aquesta responsabilitat
+recau en els responsables designats per l'organització, que valoren la
+gravetat de l'incident i determinen si és necessari iniciar el
+procediment oficial de notificació.
+</p>
+
+<p>
+Els equips tècnics aporten la informació necessària perquè els
+responsables puguen prendre una decisió fonamentada i coherent amb els
+procediments interns.
+</p>
+
+<h3>Responsables habituals</h3>
+
+<ul>
+
+<li>Responsable de Seguretat de la Informació.</li>
+
+<li>CISO o responsable de ciberseguretat.</li>
+
+<li>Direcció TIC.</li>
+
+<li>Direcció de l'organització.</li>
+
+<li>Comitè de crisi, si està activat.</li>
+
+<li>Responsables jurídics, quan siga necessari.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Procés de notificació externa</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident crític]
+--> B[Responsable de Seguretat]
+--> C{Cal notificació externa?}
+
+C -->|Sí| D[Autoritat competent]
+
+C -->|No| E[Gestió interna]
+
+</div>
+
+<p>
+Aquest diagrama mostra el procés general de decisió abans de realitzar
+una notificació oficial. Després d'avaluar l'incident, els
+responsables determinen si és necessari comunicar-lo a una autoritat
+competent o continuar únicament amb la gestió interna.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     AUTORITATS COMPETENTS
+========================================================== -->
+
+<section>
+
+<h2>Autoritats competents</h2>
+
+<p>
+Segons el tipus d'incident, el sector d'activitat i la normativa
+aplicable, la notificació pot dirigir-se a diferents organismes
+especialitzats. Aquests organismes coordinen la resposta davant
+incidents, proporcionen assistència tècnica o supervisen el compliment
+de determinades obligacions.
+</p>
+
+<p>
+L'organització ha de conèixer quina és l'autoritat de referència en el
+seu àmbit i disposar dels procediments necessaris per realitzar la
+comunicació quan siga necessari.
+</p>
+
+<h3>Organismes habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Organisme</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>INCIBE-CERT</td>
+
+<td>Resposta a incidents del sector privat i ciutadania.</td>
+
+</tr>
+
+<tr>
+
+<td>CCN-CERT</td>
+
+<td>Resposta a incidents del sector públic.</td>
+
+</tr>
+
+<tr>
+
+<td>CSIRT de referència</td>
+
+<td>Coordinació i assistència tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Agència Espanyola de Protecció de Dades</td>
+
+<td>Incidents relacionats amb dades personals.</td>
+
+</tr>
+
+<tr>
+
+<td>Forces i Cossos de Seguretat</td>
+
+<td>Investigació de possibles delictes.</td>
+
+</tr>
+
+<tr>
+
+<td>Organisme regulador</td>
+
+<td>Supervisió del sector corresponent.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta una filtració de dades personals de clients. A més
+de gestionar l'incident internament, els responsables valoren si és
+necessari comunicar-lo a l'autoritat competent en matèria de
+protecció de dades, d'acord amb la normativa aplicable.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ QUE S'HA DE COMUNICAR
+========================================================== -->
+
+<section>
+
+<h2>Informació que s'ha de comunicar</h2>
+
+<p>
+La notificació oficial ha de proporcionar informació suficient perquè
+l'autoritat competent puga comprendre la naturalesa de l'incident,
+valorar-ne l'impacte i coordinar les actuacions que considere
+necessàries.
+</p>
+
+<p>
+La informació ha de ser clara, objectiva i basada en dades
+confirmades. Si durant la investigació apareixen noves evidències, la
+notificació inicial pot ampliar-se mitjançant comunicacions
+successives.
+</p>
+
+<h3>Informació mínima recomanada</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Data i hora</td>
+
+<td>Situar l'incident en el temps.</td>
+
+</tr>
+
+<tr>
+
+<td>Descripció</td>
+
+<td>Explicar què ha ocorregut.</td>
+
+</tr>
+
+<tr>
+
+<td>Sistemes afectats</td>
+
+<td>Identificar els actius compromesos.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Valorar les conseqüències.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures adoptades</td>
+
+<td>Informar de les actuacions realitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Persona de contacte</td>
+
+<td>Facilitar la coordinació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les notificacions oficials han d'estar basades en fets verificats.
+Quan alguna informació encara no estiga confirmada, és preferible
+indicar-ho expressament abans que formular hipòtesis.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     TERMINIS DE NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Terminis de notificació</h2>
+
+<p>
+Determinades normatives estableixen terminis per comunicar alguns
+incidents a les autoritats competents. Per aquest motiu és important
+que l'organització dispose d'un procediment que permeta actuar amb
+rapidesa una vegada confirmada la necessitat de realitzar la
+notificació.
+</p>
+
+<p>
+Independentment dels terminis concrets que siguen aplicables en cada
+cas, la notificació ha de preparar-se sense demores injustificades i
+actualitzar-se quan aparega informació rellevant.
+</p>
+
+<h3>Bones pràctiques relacionades amb els terminis</h3>
+
+<ul>
+
+<li>Detectar l'incident al més prompte possible.</li>
+
+<li>Informar immediatament els responsables interns.</li>
+
+<li>Analitzar ràpidament la necessitat de notificació externa.</li>
+
+<li>Preparar la documentació requerida.</li>
+
+<li>Registrar la data i l'hora de totes les comunicacions.</li>
+
+<li>Realitzar actualitzacions quan siga necessari.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els terminis poden variar segons el tipus d'organització, la normativa
+aplicable i la naturalesa de l'incident. Per això sempre s'han de
+seguir els procediments establits per l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONSERVACIÓ DE LA DOCUMENTACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Conservació de la documentació</h2>
+
+<p>
+Tota la documentació relacionada amb la notificació ha de conservar-se
+adequadament per garantir la traçabilitat del procés, facilitar les
+auditories i donar suport a possibles investigacions posteriors.
+</p>
+
+<p>
+Els registres han d'incloure tant la notificació inicial com les
+actualitzacions, les respostes rebudes i qualsevol altra comunicació
+relacionada amb l'incident.
+</p>
+
+<h3>Documentació habitual</h3>
+
+<ul>
+
+<li>Notificació inicial.</li>
+
+<li>Informes tècnics.</li>
+
+<li>Registres del sistema.</li>
+
+<li>Comunicacions amb les autoritats.</li>
+
+<li>Actualitzacions de l'incident.</li>
+
+<li>Informe final de tancament.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Organismes que poden rebre notificacions</h2>
+
+<div class="mermaid">
+flowchart TD
+
+A[Organització]
+
+A --> B[INCIBE-CERT]
+
+A --> C[CCN-CERT]
+
+A --> D[Agència de Protecció de Dades]
+
+A --> E[CSIRT de referència]
+
+</div>
+
+<p>
+Aquest esquema mostra alguns dels organismes als quals una
+organització pot dirigir una notificació oficial, segons el tipus
+d'incident i el seu àmbit d'actuació.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la notificació a les autoritats</h2>
+
+<p>
+Una notificació oficial ha de ser precisa, objectiva i realitzar-se
+seguint els procediments establits. La qualitat de la informació
+facilita el treball dels organismes competents i contribueix a una
+millor coordinació davant dels incidents de ciberseguretat.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Seguir sempre el procediment intern abans de comunicar l'incident.</li>
+
+<li>Verificar la informació abans d'enviar-la.</li>
+
+<li>Utilitzar únicament els canals oficials.</li>
+
+<li>Documentar totes les comunicacions realitzades.</li>
+
+<li>Respectar els terminis establits.</li>
+
+<li>Actualitzar la informació quan apareguen noves dades.</li>
+
+<li>Mantindre la confidencialitat de la informació sensible.</li>
+
+<li>Conservar tots els registres de la notificació.</li>
+
+<li>Coordinar les comunicacions amb els responsables interns.</li>
+
+<li>Designar una única persona de contacte amb l'autoritat.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una notificació clara, estructurada i basada en dades confirmades
+facilita la resposta dels organismes competents i evita consultes
+addicionals innecessàries.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals</h2>
+
+<p>
+Determinats errors poden dificultar la gestió de l'incident o provocar
+incompliments dels procediments establits. Conèixer-los ajuda a
+millorar la qualitat de les notificacions oficials.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Retardar la notificació sense justificació.</li>
+
+<li>Comunicar informació no confirmada com si fora definitiva.</li>
+
+<li>Ometre dades rellevants.</li>
+
+<li>Enviar la notificació a un organisme incorrecte.</li>
+
+<li>No conservar els justificants de la comunicació.</li>
+
+<li>Utilitzar canals no autoritzats.</li>
+
+<li>No informar els responsables interns abans de la notificació.</li>
+
+<li>No actualitzar la informació quan canvia la situació.</li>
+
+<li>Compartir dades confidencials innecessàries.</li>
+
+<li>No registrar les actuacions realitzades.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Esperar a disposar de tota la informació abans d'iniciar la
+notificació pot retardar la coordinació amb les autoritats
+competents. En molts casos és preferible enviar una notificació
+inicial i completar-la posteriorment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONFIDENCIALITAT
+========================================================== -->
+
+<section>
+
+<h2>Confidencialitat de les comunicacions</h2>
+
+<p>
+Les notificacions oficials poden incloure informació sensible sobre
+els sistemes afectats, vulnerabilitats, evidències digitals o dades de
+persones afectades. Per aquest motiu és imprescindible protegir la
+confidencialitat durant tot el procés de comunicació.
+</p>
+
+<p>
+Només s'ha de transmetre la informació estrictament necessària per
+permetre que l'autoritat competent desenvolupe les seues funcions, tot
+respectant els procediments interns i la normativa aplicable.
+</p>
+
+<h3>Mesures recomanades</h3>
+
+<ul>
+
+<li>Utilitzar canals segurs.</li>
+
+<li>Verificar la identitat del destinatari.</li>
+
+<li>Limitar l'accés a la documentació.</li>
+
+<li>Protegir els fitxers amb mesures de seguretat adequades.</li>
+
+<li>Registrar totes les comunicacions.</li>
+
+<li>Custodiar la documentació durant el temps establit.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La notificació a una autoritat competent no implica fer pública la
+informació de l'incident. La comunicació oficial continua estant
+subjecta a mesures de confidencialitat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Els exemples següents mostren diferents situacions en què una
+organització pot valorar la necessitat de comunicar un incident a una
+autoritat competent.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Possible actuació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Filtració de dades personals</td>
+
+<td>Valorar la notificació a l'autoritat competent en protecció de dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Atac a un servei essencial</td>
+
+<td>Comunicar al CSIRT o organisme de referència.</td>
+
+</tr>
+
+<tr>
+
+<td>Ciberdelicte</td>
+
+<td>Contactar amb les Forces i Cossos de Seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident al sector públic</td>
+
+<td>Coordinar amb el CCN-CERT.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident en una empresa privada</td>
+
+<td>Coordinar amb INCIBE-CERT quan corresponga.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Una empresa detecta un atac de ransomware que afecta diversos
+servidors crítics i interromp temporalment la prestació dels seus
+serveis. El responsable de seguretat informa la direcció, inicia el
+procediment intern i, després d'analitzar l'impacte, tramita la
+notificació oficial a l'organisme competent utilitzant els canals
+establits. Paral·lelament es manté actualitzada la informació conforme
+avança la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+La notificació a les autoritats competents és una actuació formal que
+ha de preparar-se amb rigor. Una comunicació clara, ordenada i basada
+en informació verificada facilita la coordinació amb els organismes
+externs i contribueix a una gestió més eficaç de l'incident.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Actua sempre d'acord amb el procediment intern.</li>
+
+<li>Confirma la informació abans de comunicar-la.</li>
+
+<li>Utilitza exclusivament els canals oficials.</li>
+
+<li>Designa una persona responsable de la comunicació.</li>
+
+<li>Registra totes les notificacions efectuades.</li>
+
+<li>Conserva la documentació associada.</li>
+
+<li>Actualitza la informació quan hi haja novetats.</li>
+
+<li>Respecta la confidencialitat de les dades.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Les notificacions oficials formen part del procés de resposta davant
+incidents i han de realitzar-se únicament quan corresponga, seguint
+els criteris establits per l'organització i la normativa aplicable.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>No tots els incidents requereixen notificació externa.</li>
+
+<li>La decisió correspon als responsables autoritzats.</li>
+
+<li>La informació ha de ser objectiva i verificable.</li>
+
+<li>Els terminis poden ser determinants.</li>
+
+<li>La notificació ha de quedar documentada.</li>
+
+<li>Les evidències digitals s'han de preservar.</li>
+
+<li>La confidencialitat continua sent obligatòria.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu principal de la notificació és facilitar la coordinació amb
+els organismes competents i contribuir a una resposta més ràpida i
+eficaç davant dels incidents de ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els CSIRT comparteixen informació sobre amenaces</strong>
+
+<p>
+
+Els equips de resposta davant incidents intercanvien informació
+tècnica sobre vulnerabilitats, indicadors de compromís i noves
+campanyes d'atac per ajudar altres organitzacions a protegir-se.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La notificació facilita la resposta coordinada</strong>
+
+<p>
+
+Quan diferents organitzacions comuniquen incidents similars, els
+organismes competents poden detectar campanyes d'atac més àmplies i
+coordinar mesures de protecció conjuntes.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La primera notificació pot ser provisional</strong>
+
+<p>
+
+En molts casos és suficient enviar una notificació inicial amb la
+informació disponible i completar-la posteriorment quan avance la
+investigació de l'incident.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació és essencial</strong>
+
+<p>
+
+Conservar totes les comunicacions i els informes facilita les
+auditories, les investigacions posteriors i l'aprenentatge derivat de
+l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa que presta serveis digitals detecta un atac que provoca la
+interrupció temporal de diversos serveis i afecta un nombre important
+d'usuaris. El responsable de seguretat analitza la situació i valora
+la necessitat d'informar l'autoritat competent.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Origen</td>
+
+<td>Atac de ransomware.</td>
+
+</tr>
+
+<tr>
+
+<td>Sistemes afectats</td>
+
+<td>Servidors de producció.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Interrupció parcial del servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable</td>
+
+<td>CISO.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat</td>
+
+<td>Notificació en preparació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Determina si l'incident podria requerir una notificació externa.</li>
+
+<li>Identifica els responsables que han de prendre la decisió.</li>
+
+<li>Indica quina informació hauria d'incloure la notificació inicial.</li>
+
+<li>Explica quina documentació s'hauria de conservar.</li>
+
+<li>Descriu com actualitzaries la notificació si aparegueren noves evidències.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica simularàs la preparació d'una notificació oficial
+després d'un incident de ciberseguretat. Analitzaràs la situació,
+determinaràs si és necessari comunicar-la a una autoritat competent i
+elaboraràs la documentació corresponent seguint un procediment formal.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una organització detecta un atac de ransomware que interromp diversos
+serveis crítics durant diverses hores. La investigació confirma que
+alguns sistemes han estat compromesos i que l'incident podria tindre
+repercussions externes. El responsable de seguretat inicia l'avaluació
+per decidir si és necessària una notificació oficial.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Procediment de notificació externa.</li>
+
+<li>Informe tècnic preliminar.</li>
+
+<li>Registres del SIEM i de l'EDR.</li>
+
+<li>Inventari dels actius afectats.</li>
+
+<li>Plantilla oficial de notificació.</li>
+
+<li>Guia interna de classificació d'incidents.</li>
+
+<li>Checklist de documentació.</li>
+
+<li>Directori d'organismes competents.</li>
+
+<li>Informe d'impacte inicial.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar la gravetat de l'incident.</li>
+
+<li>Determinar si cal una notificació externa.</li>
+
+<li>Identificar l'autoritat competent.</li>
+
+<li>Preparar la notificació inicial.</li>
+
+<li>Seleccionar la informació que s'ha de comunicar.</li>
+
+<li>Registrar totes les actuacions realitzades.</li>
+
+<li>Preparar una actualització de la notificació.</li>
+
+<li>Organitzar la documentació associada.</li>
+
+<li>Presentar un informe resum del procés seguit.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu no és només complir un procediment administratiu, sinó
+facilitar la coordinació amb els organismes competents perquè la
+resposta davant l'incident siga més eficaç.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és una notificació a una autoritat competent.</li>
+
+<li>Explica la diferència entre notificació interna i externa.</li>
+
+<li>Identifica els principals organismes que poden rebre notificacions.</li>
+
+<li>Descriu qui autoritza una notificació oficial.</li>
+
+<li>Relaciona cada organisme amb la seua funció.</li>
+
+<li>Enumera la informació mínima d'una notificació.</li>
+
+<li>Explica per què és important respectar els terminis.</li>
+
+<li>Descriu les mesures de confidencialitat que s'han d'aplicar.</li>
+
+<li>Analitza un cas pràctic i decideix si requereix notificació externa.</li>
+
+<li>Justifica la importància de conservar tota la documentació.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La notificació a les autoritats competents és una actuació formal que
+pot resultar necessària quan un incident de ciberseguretat té un
+impacte rellevant o està subjecte a obligacions específiques. Aquest
+procés ha de seguir els procediments definits per l'organització i
+realitzar-se únicament pels responsables autoritzats.
+
+</p>
+
+<p>
+
+La qualitat de la informació comunicada, el respecte dels terminis, la
+protecció de la confidencialitat i la conservació de tota la
+documentació contribueixen a una millor coordinació amb els organismes
+competents i a una gestió més eficaç dels incidents.
+
+</p>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>No tots els incidents requereixen notificació externa.</li>
+
+<li>La decisió correspon als responsables designats.</li>
+
+<li>La informació ha de ser objectiva i verificable.</li>
+
+<li>Els canals oficials garanteixen una comunicació adequada.</li>
+
+<li>La documentació ha de conservar-se íntegrament.</li>
+
+<li>Les notificacions poden actualitzar-se durant la investigació.</li>
+
+<li>La confidencialitat continua sent essencial.</li>
+
+<li>La coordinació amb les autoritats millora la resposta global.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir la notificació a les autoritats competents.</li>
+
+<li>Explicar quan pot ser necessària.</li>
+
+<li>Identificar els principals organismes implicats.</li>
+
+<li>Descriure qui autoritza la notificació.</li>
+
+<li>Reconèixer la informació que ha d'incloure.</li>
+
+<li>Explicar la importància dels terminis.</li>
+
+<li>Descriure les mesures de confidencialitat.</li>
+
+<li>Identificar bones pràctiques de documentació.</li>
+
+<li>Aplicar el procediment a un cas pràctic.</li>
+
+<li>Justificar la importància de la coordinació amb els organismes externs.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos recursos
+orientats a la preparació de notificacions oficials i a la gestió de
+les comunicacions amb organismes externs.
+
+</p>
+
+<ul>
+
+<li>📄 Procediment de notificació externa.</li>
+
+<li>📄 Plantilla de notificació oficial.</li>
+
+<li>📄 Guia d'identificació d'autoritats competents.</li>
+
+<li>📄 Checklist de verificació abans de la notificació.</li>
+
+<li>📄 Model de registre de comunicacions oficials.</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Exercicis sobre classificació d'incidents.</li>
+
+<li>📄 Plantilla d'informe d'impacte.</li>
+
+<li>📄 Guia de conservació de la documentació.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Una notificació oficial ben preparada no només contribueix al
+compliment dels procediments establits, sinó que també facilita la
+coordinació entre organitzacions, millora la resposta davant els
+incidents i ajuda a protegir altres sistemes davant amenaces
+similars.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+   <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

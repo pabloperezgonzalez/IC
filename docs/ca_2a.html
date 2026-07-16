@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 2a - Taxonomia dels incidents de ciberseguretat</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_02.html"> 
+                    RA2
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA2a
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#0ca982, #268968);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 2a - Taxonomia dels incidents de ciberseguretat
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🚨
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+
+<nav data-ca-navigation></nav>
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a identificar què és un
+incident de ciberseguretat, quina és la diferència entre un
+incident i altres conceptes relacionats, i per què és necessari
+classificar-los mitjançant una taxonomia comuna. També coneixeràs
+els principals tipus d'incidents que poden afectar una
+organització i els criteris utilitzats pels equips especialitzats
+per categoritzar-los.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el concepte d'incident de ciberseguretat.</li>
+
+<li>Diferenciar incident, esdeveniment, amenaça, vulnerabilitat i risc.</li>
+
+<li>Entendre què és una taxonomia i per què és necessària.</li>
+
+<li>Conèixer els principals criteris de classificació.</li>
+
+<li>Interpretar correctament una classificació d'incidents.</li>
+
+<li>Preparar-se per a les fases posteriors de detecció i resposta davant incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+En qualsevol organització es produeixen diàriament centenars o
+milers d'esdeveniments relacionats amb la seguretat: intents
+d'accés, errors de configuració, connexions de xarxa,
+actualitzacions, alertes de l'antivirus, etc. No obstant això,
+només una petita part d'aquests esdeveniments arriben a convertir-se
+en incidents de ciberseguretat.
+</p>
+
+<p>
+Per poder actuar de forma ràpida i eficient és imprescindible
+utilitzar una classificació comuna que permeta descriure cada
+incident amb un llenguatge estandarditzat. Aquesta classificació,
+anomenada <strong>taxonomia dels incidents</strong>, facilita la
+coordinació entre administradors, equips SOC, CSIRT, organismes
+oficials i empreses.
+</p>
+
+<p>
+Sense una taxonomia comuna seria molt difícil compartir
+informació, establir prioritats, generar estadístiques o
+automatitzar processos de resposta davant incidents.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+No tots els esdeveniments són incidents. La primera tasca d'un
+analista consisteix precisament a determinar si una alerta
+representa un incident real o simplement una activitat normal del
+sistema.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS UN INCIDENT
+========================================================== -->
+
+<section>
+
+<h3Què és un incident de ciberseguretat?</h3>
+
+<p>
+Un <strong>incident de ciberseguretat</strong> és qualsevol succés
+que compromet o pot comprometre la confidencialitat, la integritat
+o la disponibilitat dels sistemes d'informació d'una organització.
+Els incidents poden afectar equips, xarxes, aplicacions, dades o
+serveis, i poden tenir conseqüències econòmiques, operatives,
+legals o reputacionals.
+</p>
+
+<p>
+La majoria dels organismes internacionals, com ara el
+<strong>NIST</strong> o <strong>ENISA</strong>, defineixen un
+incident com qualsevol esdeveniment que viola o posa en risc les
+polítiques de seguretat establertes.
+</p>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+Un empleat introdueix les seues credencials en una pàgina web
+fraudulenta després de rebre un correu de phishing. Aquest fet
+constitueix un incident perquè compromet la seguretat del compte
+corporatiu.
+</p>
+
+</div>
+
+<h3>Esdeveniment o incident?</h3>
+
+<p>
+És habitual confondre aquests dos conceptes. Un sistema pot
+registrar milers d'esdeveniments cada hora, però només alguns
+requereixen una actuació immediata.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Esdeveniment</th>
+
+<th>Incident</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Connexió d'un usuari.</td>
+
+<td>Connexió utilitzant credencials robades.</td>
+
+</tr>
+
+<tr>
+
+<td>Actualització del sistema.</td>
+
+<td>Instal·lació de programari maliciós.</td>
+
+</tr>
+
+<tr>
+
+<td>Error d'inici de sessió.</td>
+
+<td>Intent massiu de força bruta.</td>
+
+</tr>
+
+<tr>
+
+<td>Còpia d'un fitxer.</td>
+
+<td>Robatori d'informació confidencial.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Esdeveniment] --> B{És una amenaça?}
+
+B -- No --> C[Registrar]
+
+B -- Sí --> D[Analitzar]
+
+D --> E{Compromet la seguretat?}
+
+E -- No --> C
+
+E -- Sí --> F[Incident de ciberseguretat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONCEPTES RELACIONATS
+========================================================== -->
+
+<section>
+
+<h3>Conceptes relacionats amb els incidents</h3>
+
+<p>
+Abans de classificar un incident és necessari comprendre diversos
+conceptes que formen part de qualsevol anàlisi de riscos. Aquests
+termes apareixen de forma habitual en normes internacionals com
+ISO/IEC 27001 o en les guies del NIST.
+</p>
+
+<p>
+Encara que sovint s'utilitzen com si foren sinònims, cadascun
+descriu una realitat diferent dins del procés de seguretat.
+Conèixer aquestes diferències permet interpretar correctament els
+incidents i aplicar les mesures més adequades.
+</p>
+
+<h3>Actiu</h3>
+
+<p>
+Qualsevol recurs que té valor per a l'organització i que cal
+protegir. Pot tractar-se d'informació, equips, persones,
+aplicacions, serveis o infraestructures.
+</p>
+
+<h3>Amenaça</h3>
+
+<p>
+Circumstància o actor capaç d'aprofitar una vulnerabilitat i
+provocar un perjudici. Les amenaces poden ser naturals, accidentals
+o provocades intencionadament.
+</p>
+
+<h3>Vulnerabilitat</h3>
+
+<p>
+Debilitat present en un sistema, procés o configuració que pot ser
+aprofitada per una amenaça per comprometre la seguretat.
+</p>
+
+<h3>Risc</h3>
+
+<p>
+Probabilitat que una amenaça aprofite una vulnerabilitat i genere
+un impacte negatiu sobre un actiu.
+</p>
+
+<h3>Incident</h3>
+
+<p>
+Materialització d'un risc que afecta o pot afectar els actius de
+l'organització.
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Actiu]
+
+--> B[Vulnerabilitat]
+
+--> C[Amenaça]
+
+--> D[Risc]
+
+--> E[Incident]
+
+</div>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+Un incident no apareix de manera espontània. Normalment és el
+resultat de la combinació d'un actiu vulnerable, una amenaça
+existent i unes mesures de protecció insuficients.
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     TAXONOMIA DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Què és una taxonomia dels incidents de ciberseguretat?</h2>
+
+<p>
+Una <strong>taxonomia</strong> és un sistema de classificació que
+permet organitzar elements segons unes característiques comunes.
+En l'àmbit de la ciberseguretat, una taxonomia serveix per
+identificar, descriure i categoritzar els incidents de manera
+uniforme, facilitant la comunicació entre les diferents persones i
+equips implicats en la seua gestió.
+</p>
+
+<p>
+Disposar d'una taxonomia comuna evita interpretacions diferents
+sobre un mateix incident i permet comparar dades entre
+organitzacions, elaborar estadístiques, definir prioritats i
+automatitzar processos de resposta.
+</p>
+
+<p>
+Els equips SOC (Security Operations Center), els CSIRT (Computer
+Security Incident Response Team) i organismes com ENISA o el NIST
+utilitzen sistemes de classificació semblants per compartir
+informació sobre incidents de forma eficient.
+</p>
+
+<div class="info">
+
+<strong>Per què és important una taxonomia?</strong>
+
+<ul>
+
+<li>Facilita la comunicació entre equips tècnics.</li>
+
+<li>Permet prioritzar els incidents.</li>
+
+<li>Ajuda a generar informes i estadístiques.</li>
+
+<li>Millora la presa de decisions.</li>
+
+<li>Afavoreix l'automatització dels processos de resposta.</li>
+
+<li>Facilita la cooperació entre organitzacions.</li>
+
+</ul>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident detectat]
+
+--> B[Classificació]
+
+--> C[Assignació de prioritat]
+
+--> D[Resposta]
+
+--> E[Documentació]
+
+--> F[Estadístiques]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CLASSIFICACIÓ SEGONS L'ORIGEN
+========================================================== -->
+
+<section>
+
+<h3>Classificació segons l'origen</h3>
+
+<p>
+Una de les primeres característiques que s'analitza és l'origen de
+l'incident. Saber d'on prové ajuda a determinar les mesures de
+protecció més adequades i a orientar la investigació.
+</p>
+
+<p>
+Els incidents poden tindre un origen intern o extern, però també
+es poden classificar segons si han estat provocats de forma
+accidental o intencionada.
+</p>
+
+<h3>Incidents interns</h3>
+
+<p>
+Són aquells que tenen el seu origen dins de la pròpia
+organització. Poden ser conseqüència d'errors humans,
+configuracions incorrectes, negligències o actuacions
+malintencionades d'empleats.
+</p>
+
+<div class="example">
+
+<strong>Exemples d'incidents interns</strong>
+
+<ul>
+
+<li>Esborrar accidentalment una base de dades.</li>
+
+<li>Compartir una contrasenya corporativa.</li>
+
+<li>Connectar un dispositiu USB infectat.</li>
+
+<li>Modificar incorrectament la configuració d'un servidor.</li>
+
+</ul>
+
+</div>
+
+<h3>Incidents externs</h3>
+
+<p>
+Procedeixen d'actors aliens a l'organització. Habitualment són
+atacs dirigits per ciberdelinqüents, grups organitzats o actors
+estatals, encara que també poden ser conseqüència de desastres
+naturals o fallades dels proveïdors.
+</p>
+
+<div class="example">
+
+<strong>Exemples d'incidents externs</strong>
+
+<ul>
+
+<li>Campanyes de phishing.</li>
+
+<li>Atacs de ransomware.</li>
+
+<li>Atacs DDoS.</li>
+
+<li>Explotació d'una vulnerabilitat pública.</li>
+
+</ul>
+
+</div>
+
+<h3>Accidentals o intencionats</h3>
+
+<p>
+Una altra forma habitual de classificació consisteix a distingir
+si l'incident ha estat provocat sense intenció o si existeix una
+voluntat deliberada de causar un perjudici.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Origen</th>
+
+<th>Característiques</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Intern</td>
+
+<td>Prové de personal o recursos propis.</td>
+
+<td>Error de configuració.</td>
+
+</tr>
+
+<tr>
+
+<td>Extern</td>
+
+<td>Prové de tercers.</td>
+
+<td>Atac de ransomware.</td>
+
+</tr>
+
+<tr>
+
+<td>Accidental</td>
+
+<td>Sense intencionalitat.</td>
+
+<td>Esborrat accidental d'arxius.</td>
+
+</tr>
+
+<tr>
+
+<td>Intencionat</td>
+
+<td>Amb voluntat de causar un perjudici.</td>
+
+<td>Robatori d'informació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+Quan es registra un incident és recomanable indicar sempre tant
+l'origen com la possible causa. Aquesta informació facilitarà les
+investigacions posteriors i ajudarà a detectar patrons repetitius.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CLASSIFICACIÓ SEGONS EL TIPUS
+========================================================== -->
+
+<section>
+
+<h3>Classificació segons el tipus d'incident</h3>
+
+<p>
+La classificació segons el tipus és probablement la més utilitzada
+en els centres d'operacions de seguretat. Permet agrupar els
+incidents segons la tècnica utilitzada, el seu objectiu o la forma
+en què comprometen els sistemes d'informació.
+</p>
+
+<p>
+Cada categoria requereix procediments de resposta diferents, per
+la qual cosa identificar correctament el tipus d'incident és un
+pas fonamental dins del procés de gestió.
+</p>
+
+<h3>Principals categories</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Malware</td>
+
+<td>Programari maliciós que compromet equips o dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Xifra la informació i exigeix un rescat.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Suplantació d'identitat per obtenir credencials.</td>
+
+</tr>
+
+<tr>
+
+<td>DDoS</td>
+
+<td>Saturació d'un servei mitjançant múltiples connexions.</td>
+
+</tr>
+
+<tr>
+
+<td>Accés no autoritzat</td>
+
+<td>Entrada il·legítima als sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuita d'informació</td>
+
+<td>Exposició de dades sensibles.</td>
+
+</tr>
+
+<tr>
+
+<td>Error humà</td>
+
+<td>Accions involuntàries que comprometen la seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Configuració incorrecta</td>
+
+<td>Errors en la configuració dels sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Insider Threat</td>
+
+<td>Amenaces provocades per personal intern.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+mindmap
+
+root((Incidents))
+
+    Malware
+
+    Phishing
+
+    Ransomware
+
+    DDoS
+
+    "Accés no autoritzat"
+
+    "Fuita de dades"
+
+    "Error humà"
+
+    "Configuració incorrecta"
+
+    "Amenaces internes"
+
+</div>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+Un mateix incident pot pertànyer simultàniament a diverses
+categories. Per exemple, un atac de phishing pot provocar un accés
+no autoritzat que finalment desemboque en una fuita d'informació o
+en la instal·lació de ransomware.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     CLASSIFICACIÓ SEGONS LA GRAVETAT
+========================================================== -->
+
+<section>
+
+<h3>Classificació segons la gravetat</h3>
+
+<p>
+No tots els incidents tenen la mateixa importància ni requereixen
+la mateixa rapidesa de resposta. Per aquest motiu, una de les
+primeres tasques de l'equip responsable consisteix a determinar la
+<strong>gravetat</strong> de l'incident. Aquesta classificació
+permet prioritzar els recursos disponibles i actuar primer sobre
+els incidents que poden causar majors perjudicis.
+</p>
+
+<p>
+La gravetat es determina analitzant diferents factors, com ara el
+nombre de sistemes afectats, el tipus d'informació compromesa,
+l'impacte sobre el negoci, el temps necessari per recuperar els
+serveis o les possibles conseqüències legals.
+</p>
+
+<h3>Nivells de gravetat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nivell</th>
+
+<th>Característiques</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Baixa</td>
+
+<td>Impacte mínim sobre els serveis.</td>
+
+<td>Error puntual d'un usuari.</td>
+
+</tr>
+
+<tr>
+
+<td>Mitjana</td>
+
+<td>Afecta diversos usuaris o un servei no crític.</td>
+
+<td>Equip infectat amb malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Alta</td>
+
+<td>Compromet serveis importants.</td>
+
+<td>Accés il·lícit a un servidor.</td>
+
+</tr>
+
+<tr>
+
+<td>Crítica</td>
+
+<td>Compromet la continuïtat del negoci.</td>
+
+<td>Ransomware generalitzat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B{Gravetat}
+
+B --> C[Baixa]
+
+B --> D[Mitjana]
+
+B --> E[Alta]
+
+B --> F[Crítica]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+La gravetat d'un incident pot canviar durant la investigació.
+Inicialment pot considerar-se moderat i, després de descobrir nous
+equips compromesos, passar a ser crític.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CLASSIFICACIÓ SEGONS L'IMPACTE
+========================================================== -->
+
+<section>
+
+<h3>Classificació segons l'impacte</h3>
+
+<p>
+A més de la gravetat, també és important determinar quin és
+l'impacte real que l'incident ha provocat sobre els actius de
+l'organització. Aquesta classificació permet conèixer quines
+propietats de la informació s'han vist compromeses.
+</p>
+
+<p>
+La majoria de metodologies utilitzen la coneguda
+<strong>tríada CIA</strong> (Confidencialitat, Integritat i
+Disponibilitat) com a base per analitzar les conseqüències dels
+incidents.
+</p>
+
+<h3>Confidencialitat</h3>
+
+<p>
+Es veu afectada quan persones no autoritzades accedeixen a dades
+que haurien de romandre protegides.
+</p>
+
+<h3>Integritat</h3>
+
+<p>
+Es compromet quan les dades són modificades, destruïdes o
+alterades sense autorització.
+</p>
+
+<h3>Disponibilitat</h3>
+
+<p>
+Resulta afectada quan els serveis o la informació deixen
+d'estar accessibles per als usuaris autoritzats.
+</p>
+
+<div class="mermaid">
+
+graph LR
+
+A[Incident]
+
+--> B[Confidencialitat]
+
+A --> C[Integritat]
+
+A --> D[Disponibilitat]
+
+</div>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un atac de ransomware afecta simultàniament la disponibilitat
+(encripta els fitxers) i la integritat (modifica les dades).
+Si, a més, els atacants roben informació abans del xifrat,
+també es compromet la confidencialitat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CICLE DE VIDA D'UN INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Cicle de vida d'un incident</h2>
+
+<p>
+Els incidents evolucionen al llarg del temps. Des del moment en
+què són detectats fins que es tanquen definitivament, passen per
+diverses fases que permeten gestionar-los de forma estructurada i
+documentada.
+</p>
+
+<p>
+Conèixer aquest cicle és fonamental perquè els equips de resposta
+puguen coordinar les seues actuacions i garantir que no queda cap
+tasca pendent.
+</p>
+
+<h3>Fases principals</h3>
+
+<ol>
+
+<li>Detecció.</li>
+
+<li>Classificació.</li>
+
+<li>Anàlisi.</li>
+
+<li>Contenció.</li>
+
+<li>Eradicació.</li>
+
+<li>Recuperació.</li>
+
+<li>Tancament i documentació.</li>
+
+</ol>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Classificació]
+
+--> C[Anàlisi]
+
+--> D[Contenció]
+
+--> E[Eradicació]
+
+--> F[Recuperació]
+
+--> G[Tancament]
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+La classificació és una de les primeres activitats després de la
+detecció. Una classificació incorrecta pot retardar la resposta i
+augmentar considerablement l'impacte de l'incident.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESTÀNDARDS INTERNACIONALS
+========================================================== -->
+
+<section>
+
+<h2>Taxonomies i estàndards internacionals</h2>
+
+<p>
+Diverses organitzacions internacionals han desenvolupat models i
+guies per facilitar una classificació homogènia dels incidents de
+ciberseguretat. Encara que cadascun té els seus objectius, tots
+persegueixen un llenguatge comú que facilite la cooperació entre
+organitzacions.
+</p>
+
+<h3>NIST</h3>
+
+<p>
+Publica guies de referència sobre gestió d'incidents i
+ciberseguretat, àmpliament utilitzades en administracions
+públiques i empreses.
+</p>
+
+<h3>ENISA</h3>
+
+<p>
+L'Agència de la Unió Europea per a la Ciberseguretat elabora
+recomanacions, bones pràctiques i informes sobre incidents que
+serveixen de referència als països membres.
+</p>
+
+<h3>FIRST</h3>
+
+<p>
+Associació internacional que agrupa equips de resposta davant
+incidents (CSIRT) i fomenta l'intercanvi segur d'informació entre
+organitzacions.
+</p>
+
+<h3>MITRE ATT&amp;CK</h3>
+
+<p>
+Base de coneixement que descriu les tècniques i tàctiques
+utilitzades pels atacants. És molt útil per relacionar incidents
+amb els mètodes emprats pels ciberdelinqüents.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Organisme</th>
+
+<th>Àmbit principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>NIST</td>
+
+<td>Guies i bones pràctiques.</td>
+
+</tr>
+
+<tr>
+
+<td>ENISA</td>
+
+<td>Ciberseguretat a la Unió Europea.</td>
+
+</tr>
+
+<tr>
+
+<td>FIRST</td>
+
+<td>Coordinació entre equips CSIRT.</td>
+
+</tr>
+
+<tr>
+
+<td>MITRE ATT&amp;CK</td>
+
+<td>Tècniques i tàctiques dels atacants.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+En els pròxims criteris d'avaluació estudiarem com aquests models
+s'utilitzen durant la detecció, investigació i resposta davant
+incidents de ciberseguretat.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples d'incidents classificats</h2>
+
+<p>
+La millor manera d'aprendre una taxonomia és aplicar-la sobre
+situacions reals. En aquesta secció es mostren alguns exemples
+habituals que poden produir-se en qualsevol organització.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Tipus</th>
+
+<th>Origen</th>
+
+<th>Gravetat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Recepció d'un correu fraudulent.</td>
+
+<td>Phishing</td>
+
+<td>Extern</td>
+
+<td>Mitjana</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor xifrat per ransomware.</td>
+
+<td>Ransomware</td>
+
+<td>Extern</td>
+
+<td>Crítica</td>
+
+</tr>
+
+<tr>
+
+<td>Esborrat accidental d'una carpeta compartida.</td>
+
+<td>Error humà</td>
+
+<td>Intern</td>
+
+<td>Mitjana</td>
+
+</tr>
+
+<tr>
+
+<td>Escaneig massiu de ports.</td>
+
+<td>Reconeixement</td>
+
+<td>Extern</td>
+
+<td>Baixa</td>
+
+</tr>
+
+<tr>
+
+<td>Robatori de credencials d'un empleat.</td>
+
+<td>Accés no autoritzat</td>
+
+<td>Extern</td>
+
+<td>Alta</td>
+
+</tr>
+
+<tr>
+
+<td>Base de dades exposada a Internet.</td>
+
+<td>Error de configuració</td>
+
+<td>Intern</td>
+
+<td>Alta</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta que diversos treballadors han rebut un correu
+electrònic aparentment enviat pel departament de Recursos Humans.
+Quan alguns empleats introdueixen les seues credencials en la
+pàgina fraudulenta, els atacants accedeixen al correu corporatiu.
+
+</p>
+
+<ul>
+
+<li><strong>Origen:</strong> extern.</li>
+
+<li><strong>Tipus:</strong> phishing.</li>
+
+<li><strong>Impacte:</strong> confidencialitat.</li>
+
+<li><strong>Gravetat:</strong> alta.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h3>💡 Bones pràctiques en la classificació d'incidents</h3>
+
+<p>
+Una classificació correcta és el primer pas per gestionar
+adequadament qualsevol incident. Les següents recomanacions
+ajuden a evitar errors durant aquest procés.
+</p>
+
+<div class="tip">
+
+<strong>Consells</strong>
+
+<ul>
+
+<li>Utilitza sempre la mateixa taxonomia dins de tota l'organització.</li>
+
+<li>Documenta els incidents tan prompte com siguen detectats.</li>
+
+<li>No pressuposes mai l'origen sense evidències.</li>
+
+<li>Actualitza la classificació si apareix informació nova.</li>
+
+<li>Registra totes les actuacions realitzades.</li>
+
+<li>Conserva les evidències abans d'iniciar qualsevol acció correctiva.</li>
+
+<li>Assigna una prioritat coherent amb la gravetat de l'incident.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h3>⚠️ Errors habituals durant la classificació</h3>
+
+<p>
+Una classificació incorrecta pot retardar la resposta davant un
+incident i provocar conseqüències molt més greus que el propi
+atac inicial.
+</p>
+
+<div class="important">
+
+<strong>Aspectes que cal evitar</strong>
+
+<ul>
+
+<li>Confondre una alerta amb un incident confirmat.</li>
+
+<li>No registrar adequadament la informació disponible.</li>
+
+<li>Classificar un incident sense verificar les evidències.</li>
+
+<li>Infravalorar incidents aparentment poc importants.</li>
+
+<li>No revisar la classificació durant la investigació.</li>
+
+<li>Eliminar evidències abans d'haver-les analitzat.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La classificació inicial és provisional. Conforme avança la
+investigació és habitual que canvien el tipus, la gravetat o
+l'impacte assignats inicialment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h3>📦 Sabies que...?</h3>
+
+<div class="didyouknow">
+
+<strong>WannaCry (2017)</strong>
+
+<p>
+
+L'atac de ransomware WannaCry va afectar més de 200.000 equips en
+més de 150 països en menys de 48 hores. Una classificació ràpida
+de l'incident va permetre identificar que tots els equips
+compartien la mateixa vulnerabilitat del protocol SMB.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Colonial Pipeline (2021)</strong>
+
+<p>
+
+L'empresa nord-americana va interrompre el subministrament de
+combustible després d'un atac de ransomware. La correcta
+classificació de l'incident va permetre activar els plans de
+continuïtat del negoci i coordinar la resposta amb les autoritats.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Molts incidents no són atacs</strong>
+
+<p>
+
+Segons diversos informes d'ENISA, una part important dels
+incidents notificats tenen el seu origen en errors humans,
+configuracions incorrectes o fallades dels sistemes, i no en
+ciberatacs deliberats.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+L'empresa <strong>SecureTech S.L.</strong> ha detectat diverses
+situacions al llarg d'una mateixa setmana. El responsable de
+seguretat necessita classificar-les abans de decidir quines
+actuacions cal dur a terme.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Classifica-la</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Un usuari rep un correu fraudulent.</td>
+
+<td>.......................</td>
+
+</tr>
+
+<tr>
+
+<td>Un servidor deixa de respondre després d'un atac.</td>
+
+<td>.......................</td>
+
+</tr>
+
+<tr>
+
+<td>Es detecta una base de dades exposada a Internet.</td>
+
+<td>.......................</td>
+
+</tr>
+
+<tr>
+
+<td>Un empleat elimina accidentalment fitxers crítics.</td>
+
+<td>.......................</td>
+
+</tr>
+
+<tr>
+
+<td>Es detecta un accés amb credencials robades.</td>
+
+<td>.......................</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Objectiu</strong>
+
+<p>
+
+Per a cada situació identifica:
+
+</p>
+
+<ul>
+
+<li>Origen.</li>
+
+<li>Tipus d'incident.</li>
+
+<li>Gravetat.</li>
+
+<li>Impacte sobre la tríada CIA.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista de
+ciberseguretat responsable de classificar els incidents detectats
+en una empresa. A partir de diferents evidències hauràs
+d'identificar el tipus d'incident, el seu origen, la gravetat i
+l'impacte sobre els actius afectats.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+L'empresa ha rebut durant les últimes hores diversos avisos del
+SIEM, del servidor de correu i dels usuaris. Encara no es coneix
+si tots els esdeveniments estan relacionats entre si.
+
+</p>
+
+</div>
+
+<h3>Material proporcionat</h3>
+
+<ul>
+
+<li>Registres (logs) del servidor.</li>
+
+<li>Alertes del SIEM.</li>
+
+<li>Captura del trànsit de xarxa.</li>
+
+<li>Correus electrònics sospitosos.</li>
+
+<li>Informe preliminar dels administradors.</li>
+
+<li>Plantilla de classificació d'incidents.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar totes les evidències disponibles.</li>
+
+<li>Determinar si es tracta d'esdeveniments o incidents.</li>
+
+<li>Classificar cada incident segons la taxonomia estudiada.</li>
+
+<li>Assignar una gravetat inicial.</li>
+
+<li>Indicar l'impacte sobre la confidencialitat, la integritat i la disponibilitat.</li>
+
+<li>Justificar cadascuna de les decisions adoptades.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+No tots els esdeveniments detectats requeriran una actuació.
+L'objectiu del laboratori és aprendre a distingir els incidents
+reals de les alertes que no representen cap amenaça.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>
+Defineix amb les teues paraules què és un incident de
+ciberseguretat.
+</li>
+
+<li>
+Explica la diferència entre un esdeveniment i un incident.
+</li>
+
+<li>
+Elabora una taula amb cinc exemples d'incidents interns i cinc
+d'externs.
+</li>
+
+<li>
+Classifica els següents incidents segons el seu tipus,
+gravetat i impacte.
+</li>
+
+<li>
+Investiga un incident real publicat per ENISA o INCIBE i
+descriu com el classificaries.
+</li>
+
+<li>
+Construeix un mapa conceptual amb els conceptes:
+actiu, amenaça, vulnerabilitat, risc i incident.
+</li>
+
+<li>
+Explica per què és important utilitzar una taxonomia comuna
+dins d'una organització.
+</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+La taxonomia dels incidents de ciberseguretat proporciona un
+llenguatge comú que facilita la detecció, la classificació,
+l'anàlisi i la resposta davant qualsevol incident. Classificar
+correctament un incident permet prioritzar recursos, coordinar els
+equips implicats i aplicar els procediments més adequats en cada
+situació.
+</p>
+
+<div class="mermaid">
+
+mindmap
+
+root((Taxonomia))
+
+    Incident
+
+        Esdeveniment
+
+        Classificació
+
+            Origen
+
+            Tipus
+
+            Gravetat
+
+            Impacte
+
+        CIA
+
+            Confidencialitat
+
+            Integritat
+
+            Disponibilitat
+
+        Gestió
+
+            Detecció
+
+            Anàlisi
+
+            Resposta
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>Un esdeveniment no sempre és un incident.</li>
+
+<li>Els incidents poden classificar-se segons diversos criteris.</li>
+
+<li>La gravetat determina la prioritat de resposta.</li>
+
+<li>La tríada CIA permet valorar l'impacte.</li>
+
+<li>Una taxonomia comuna facilita la coordinació entre equips.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Conceptes que has de dominar</strong>
+
+<ul>
+
+<li>Definició d'incident de ciberseguretat.</li>
+
+<li>Diferència entre esdeveniment i incident.</li>
+
+<li>Concepte de taxonomia.</li>
+
+<li>Classificació segons l'origen.</li>
+
+<li>Classificació segons el tipus.</li>
+
+<li>Classificació segons la gravetat.</li>
+
+<li>Classificació segons l'impacte.</li>
+
+<li>Tríada CIA.</li>
+
+<li>Cicle de vida d'un incident.</li>
+
+<li>Principals organismes de referència (NIST, ENISA, FIRST i MITRE ATT&amp;CK).</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+Per reforçar els continguts d'aquest criteri d'avaluació es
+proporcionen els següents recursos complementaris.
+</p>
+
+<ul>
+
+<li>📄 Plantilla de classificació d'incidents.</li>
+
+<li>📄 Fitxa d'anàlisi preliminar.</li>
+
+<li>📄 Taula resum de taxonomies.</li>
+
+<li>📄 Exercicis resolts.</li>
+
+<li>📄 Casos pràctics addicionals.</li>
+
+<li>📄 Glossari de terminologia.</li>
+
+<li>📄 Infografia sobre la classificació d'incidents.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Plantilla de laboratori.</li>
+
+<li>📄 Full d'autoavaluació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Conserva aquestes plantilles, ja que les reutilitzarem en els
+criteris d'avaluació següents dedicats a la detecció,
+investigació, resposta i notificació d'incidents.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+<!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

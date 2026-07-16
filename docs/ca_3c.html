@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 3c - Investigació de l'incident </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_03.html"> 
+                    RA3
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA3c
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6b501a, #4a3809);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 3c - Investigació de l'incident
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🔎
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a
+<strong>investigar un incident de ciberseguretat</strong> utilitzant
+les evidències recopilades i analitzades en les fases anteriors.
+L'objectiu és reconstruir els fets, identificar l'origen de
+l'incident, determinar el seu impacte i elaborar conclusions
+tècniques fonamentades.
+</p>
+
+<p>
+També coneixeràs la metodologia seguida pels equips de resposta
+davant incidents (CSIRT i SOC), aprendràs a establir hipòtesis,
+validar-les mitjançant les evidències disponibles i elaborar un
+informe tècnic que permeta prendre decisions adequades.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre en què consisteix una investigació d'incidents.</li>
+
+<li>Conèixer les fases principals d'una investigació.</li>
+
+<li>Reconstruir cronològicament els fets.</li>
+
+<li>Identificar el vector d'entrada de l'atac.</li>
+
+<li>Determinar l'abast i l'impacte de l'incident.</li>
+
+<li>Elaborar conclusions objectives basades en evidències.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Després de recopilar les evidències (CA3a) i analitzar-les (CA3b),
+arriba el moment d'investigar què ha passat realment. Aquesta fase
+consisteix a unir totes les peces del trencaclosques per comprendre
+l'incident en la seua totalitat.
+</p>
+
+<p>
+La investigació d'un incident no es limita a identificar un fitxer
+maliciós o una connexió sospitosa. Cal determinar com s'ha iniciat
+l'atac, quins sistemes han estat compromesos, quines tècniques ha
+utilitzat l'atacant i quines conseqüències ha tingut sobre
+l'organització.
+</p>
+
+<p>
+Les conclusions obtingudes durant aquesta fase serviran de base per
+a la resposta a l'incident, la recuperació dels sistemes i la
+implantació de mesures que eviten que una situació semblant torne a
+produir-se.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una investigació només és vàlida si totes les conclusions poden
+justificar-se mitjançant evidències verificables. Les hipòtesis
+sense proves no constitueixen conclusions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA INVESTIGACIÓ D'UN INCIDENT?
+========================================================== -->
+
+<section>
+
+<h2>Què és la investigació d'un incident?</h2>
+
+<p>
+La <strong>investigació d'un incident de ciberseguretat</strong> és el
+procés d'analitzar tota la informació disponible amb la finalitat de
+reconstruir els fets, identificar les causes de l'incident,
+determinar les tècniques utilitzades pels atacants i establir les
+conseqüències sobre l'organització.
+</p>
+
+<p>
+Durant aquesta fase s'integren les evidències obtingudes dels
+dispositius, dels registres del sistema, de les captures de xarxa,
+de la memòria RAM i de qualsevol altra font d'informació rellevant.
+L'objectiu és construir una explicació coherent dels fets basada
+exclusivament en proves.
+</p>
+
+<p>
+Aquest procés és fonamental tant per recuperar els serveis afectats
+com per evitar incidents futurs, ja que permet identificar les
+vulnerabilitats explotades i aplicar mesures correctores.
+</p>
+
+<h3>Característiques d'una investigació efectiva</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectiva</td>
+
+<td>Es basa exclusivament en les evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Metòdica</td>
+
+<td>Segueix un procediment estructurat.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentada</td>
+
+<td>Totes les actuacions queden registrades.</td>
+
+</tr>
+
+<tr>
+
+<td>Reproduïble</td>
+
+<td>Altres analistes poden obtenir els mateixos resultats.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificable</td>
+
+<td>Les conclusions poden demostrar-se.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'anàlisi detecta que un usuari va obrir un correu de phishing.
+Mitjançant la investigació es comprova que aquest correu va
+descarregar un malware, que posteriorment va robar credencials,
+va accedir al servidor de fitxers i va iniciar l'exfiltració de
+documents confidencials.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidències]
+
+--> B[Anàlisi]
+
+--> C[Investigació]
+
+--> D[Reconstrucció]
+
+--> E[Conclusions]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE LA INVESTIGACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Objectius de la investigació</h2>
+
+<p>
+La finalitat principal d'una investigació és comprendre completament
+l'incident per poder prendre decisions adequades. Les conclusions
+obtingudes permetran millorar la seguretat de l'organització,
+recuperar els serveis afectats i, si és necessari, aportar proves en
+un procediment disciplinari o judicial.
+</p>
+
+<p>
+Per aconseguir-ho és necessari respondre una sèrie de preguntes
+fonamentals que orienten tota la investigació.
+</p>
+
+<h3>Preguntes que ha de respondre una investigació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Pregunta</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Què ha passat?</td>
+
+<td>Identificar el tipus d'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Quan?</td>
+
+<td>Determinar el moment dels fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Com?</td>
+
+<td>Conèixer les tècniques utilitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Per on?</td>
+
+<td>Identificar el vector d'entrada.</td>
+
+</tr>
+
+<tr>
+
+<td>Quins sistemes?</td>
+
+<td>Determinar l'abast de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Quin impacte?</td>
+
+<td>Avaluar els danys ocasionats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'objectiu d'una investigació no és trobar un culpable, sinó
+esclarir els fets i proporcionar informació fiable perquè
+l'organització puga actuar adequadament.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FASES D'UNA INVESTIGACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Fases d'una investigació d'incidents</h2>
+
+<p>
+Encara que cada incident presenta característiques diferents, totes
+les investigacions segueixen una metodologia semblant que permet
+garantir la qualitat dels resultats i facilitar el treball dels
+analistes.
+</p>
+
+<p>
+Cada fase utilitza la informació obtinguda en l'anterior fins
+arribar a una reconstrucció completa dels fets.
+</p>
+
+<h3>Fases principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Recopilació</td>
+
+<td>Obtindre les evidències digitals.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi</td>
+
+<td>Examinar les evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Investigació</td>
+
+<td>Relacionar tota la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Reconstrucció</td>
+
+<td>Ordenar cronològicament els fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Determinar les causes i conseqüències.</td>
+
+</tr>
+
+<tr>
+
+<td>Informe</td>
+
+<td>Documentar la investigació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Recopilació]
+
+--> B[Anàlisi]
+
+--> C[Investigació]
+
+--> D[Reconstrucció]
+
+--> E[Conclusions]
+
+--> F[Informe]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+No és convenient començar a elaborar conclusions massa prompte.
+Primer cal reunir totes les evidències disponibles, verificar-les i
+correlacionar-les abans d'emetre qualsevol valoració tècnica.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RECONSTRUCCIÓ DELS FETS
+========================================================== -->
+
+<section>
+
+<h2>Reconstrucció dels fets</h2>
+
+<p>
+Una vegada analitzades totes les evidències, el següent pas consisteix
+a <strong>reconstruir cronològicament l'incident</strong>. Aquesta fase
+permet comprendre què ha passat exactament, en quin ordre s'han
+produït els esdeveniments i com ha evolucionat l'atac des del primer
+accés fins a la seua detecció.
+</p>
+
+<p>
+La reconstrucció dels fets facilita la identificació dels punts
+febles de l'organització i ajuda a determinar quines mesures de
+seguretat han fallat durant l'incident.
+</p>
+
+<h3>Informació necessària</h3>
+
+<ul>
+
+<li>Data i hora dels esdeveniments.</li>
+
+<li>Usuaris implicats.</li>
+
+<li>Equips afectats.</li>
+
+<li>Adreces IP internes i externes.</li>
+
+<li>Fitxers modificats o eliminats.</li>
+
+<li>Connexions de xarxa.</li>
+
+<li>Alertes generades pels sistemes de seguretat.</li>
+
+</ul>
+
+<div class="mermaid">
+
+timeline
+    title Reconstrucció d'un incident
+
+    section Desenvolupament
+        08-12 : Recepció del correu de phishing
+        08-15 : Obertura de l'arxiu adjunt
+        08-17 : Instal·lació del malware
+        08-24 : Robatori de credencials
+        08-31 : Accés al servidor
+        08-42 : Exfiltració de dades
+        08-50 : Detecció per l'EDR
+
+</div>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'anàlisi dels registres permet descobrir que l'atac va començar amb
+un correu electrònic. Minuts després es va executar un malware que va
+obtenir les credencials de l'usuari i va accedir al servidor de
+fitxers de l'empresa.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     IDENTIFICACIÓ DEL VECTOR D'ENTRADA
+========================================================== -->
+
+<section>
+
+<h2>Identificació del vector d'entrada</h2>
+
+<p>
+El <strong>vector d'entrada</strong> és el mecanisme utilitzat per
+l'atacant per accedir inicialment al sistema. Conèixer aquest punt
+és essencial per corregir la vulnerabilitat i evitar que
+l'incident es repetisca.
+</p>
+
+<p>
+En molts casos no existeix un únic vector d'entrada, sinó una cadena
+d'accions que aprofiten diferents vulnerabilitats fins aconseguir
+l'accés als sistemes interns.
+</p>
+
+<h3>Vectors d'entrada més habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Vector</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Correu amb un fitxer maliciós.</td>
+
+</tr>
+
+<tr>
+
+<td>Contrasenya feble</td>
+
+<td>Accés mitjançant força bruta.</td>
+
+</tr>
+
+<tr>
+
+<td>Vulnerabilitat</td>
+
+<td>Explotació d'un servidor sense actualitzar.</td>
+
+</tr>
+
+<tr>
+
+<td>USB infectat</td>
+
+<td>Introducció de malware.</td>
+
+</tr>
+
+<tr>
+
+<td>RDP exposat</td>
+
+<td>Accés remot no protegit.</td>
+
+</tr>
+
+<tr>
+
+<td>Aplicació web</td>
+
+<td>Explotació d'una injecció SQL.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Vector d'entrada]
+
+--> B[Accés inicial]
+
+--> C[Execució]
+
+--> D[Persistència]
+
+--> E[Moviment lateral]
+
+--> F[Objectiu final]
+
+</div>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Identificar el vector d'entrada és imprescindible per eliminar la
+causa de l'incident. Si només s'elimina el malware però no es corregeix
+la vulnerabilitat, l'atac podria repetir-se.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     DETERMINACIÓ DE L'ABAST DE L'INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Determinació de l'abast de l'incident</h2>
+
+<p>
+Una vegada identificat el punt d'entrada, cal determinar
+<strong>l'abast real de l'incident</strong>. Aquesta fase consisteix
+a identificar quins sistemes, serveis, comptes d'usuari i dades han
+estat afectats.
+</p>
+
+<p>
+Conèixer l'abast és fonamental per planificar la recuperació dels
+serveis, informar correctament la direcció i valorar les possibles
+conseqüències legals o econòmiques.
+</p>
+
+<h3>Aspectes que cal analitzar</h3>
+
+<ul>
+
+<li>Nombre d'equips compromesos.</li>
+
+<li>Usuaris afectats.</li>
+
+<li>Serveis interromputs.</li>
+
+<li>Dades robades o modificades.</li>
+
+<li>Temps de permanència de l'atacant.</li>
+
+<li>Sistemes crítics compromesos.</li>
+
+<li>Possibles moviments laterals.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Pregunta</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Equips</td>
+
+<td>Quants dispositius han estat compromesos?</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris</td>
+
+<td>Quins comptes han estat utilitzats?</td>
+
+</tr>
+
+<tr>
+
+<td>Dades</td>
+
+<td>S'han robat o modificat fitxers?</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis</td>
+
+<td>Quins serveis han deixat de funcionar?</td>
+
+</tr>
+
+<tr>
+
+<td>Xarxa</td>
+
+<td>L'atac s'ha propagat?</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+mindmap
+Abast
+  Equips
+  Usuaris
+  Serveis
+  Dades
+  Xarxa
+  Impacte
+</div>
+
+</section>
+
+<!-- ==========================================================
+     IDENTIFICACIÓ DE L'ATACANT (ATRIBUCIÓ)
+========================================================== -->
+
+<section>
+
+<h2>Identificació de l'atacant (atribució)</h2>
+
+<p>
+L'<strong>atribució</strong> consisteix a intentar determinar qui
+pot estar darrere de l'incident o, almenys, obtenir informació sobre
+el grup, la infraestructura o les tècniques utilitzades.
+</p>
+
+<p>
+En la majoria dels casos no és possible identificar amb total
+certesa una persona concreta. Els atacants utilitzen servidors
+intermediaris, VPN, xarxes d'anonimat i equips compromesos per
+ocultar la seua identitat.
+</p>
+
+<h3>Indicadors útils</h3>
+
+<ul>
+
+<li>Adreces IP.</li>
+
+<li>Dominis utilitzats.</li>
+
+<li>Hash del malware.</li>
+
+<li>Indicadors de compromís (IoC).</li>
+
+<li>Tècniques MITRE ATT&amp;CK.</li>
+
+<li>Informació procedent d'OSINT.</li>
+
+<li>Intel·ligència sobre amenaces (Threat Intelligence).</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+L'atribució ha de basar-se en indicadors objectius. Compartir
+infraestructures o utilitzar el mateix malware no significa
+necessàriament que darrere hi haja el mateix grup d'atacants.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Indicadors]
+
+--> B[OSINT]
+
+--> C[Threat Intelligence]
+
+--> D[MITRE ATT&CK]
+
+--> E[Hipòtesis]
+
+--> F[Atribució]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     ELABORACIÓ DE CONCLUSIONS
+========================================================== -->
+
+<section>
+
+<h2>Elaboració de conclusions</h2>
+
+<p>
+Una vegada reconstruïts els fets i analitzades totes les evidències,
+arriba el moment d'elaborar les conclusions de la investigació.
+Aquestes han de respondre de forma clara i objectiva a les preguntes
+plantejades a l'inici de l'anàlisi i servir de base per a la presa de
+decisions.
+</p>
+
+<p>
+Les conclusions han d'estar sustentades exclusivament en les proves
+obtingudes. Quan alguna afirmació no puga demostrar-se completament,
+ha de presentar-se com una hipòtesi i indicar el nivell de confiança
+associat.
+</p>
+
+<h3>Què han d'incloure les conclusions?</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecte</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Origen</td>
+
+<td>Com va començar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Vector d'entrada</td>
+
+<td>Vulnerabilitat o mecanisme utilitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>Cronologia</td>
+
+<td>Seqüència dels esdeveniments.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Sistemes i dades afectades.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsables</td>
+
+<td>Si és possible determinar-los.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures</td>
+
+<td>Accions recomanades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Les evidències indiquen que l'incident es va iniciar mitjançant un
+correu de phishing. L'usuari va executar un fitxer maliciós que va
+instal·lar un troià, el qual va permetre el robatori de credencials i
+l'accés posterior al servidor de fitxers.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidències]
+
+--> B[Anàlisi]
+
+--> C[Conclusions]
+
+--> D[Recomanacions]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORME D'INVESTIGACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Informe d'investigació</h2>
+
+<p>
+L'informe és el document que recull tot el treball realitzat durant
+la investigació. Ha de permetre que qualsevol persona puga entendre
+què ha ocorregut, quines proves s'han analitzat i quines conclusions
+s'han obtingut.
+</p>
+
+<p>
+Aquest document pot utilitzar-se tant per a la direcció de
+l'organització com en procediments disciplinaris o judicials, per la
+qual cosa ha de ser clar, objectiu i perfectament documentat.
+</p>
+
+<h3>Estructura habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Secció</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Resum executiu</td>
+
+<td>Descripció breu de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Antecedents</td>
+
+<td>Context de la investigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències</td>
+
+<td>Relació de proves analitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Metodologia</td>
+
+<td>Procediment utilitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>Resultats</td>
+
+<td>Troballes principals.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Explicació dels fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Recomanacions</td>
+
+<td>Mesures de millora.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'informe ha de diferenciar clarament els fets demostrats, les
+hipòtesis i les recomanacions. Barrejar-los pot provocar
+interpretacions incorrectes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS DURANT LA INVESTIGACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals durant la investigació</h2>
+
+<p>
+Moltes investigacions fracassen perquè es cometen errors
+metodològics que afecten la qualitat de les conclusions. Conèixer
+aquests errors ajuda a evitar-los i millora la fiabilitat de
+l'anàlisi.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Treure conclusions sense proves suficients.</li>
+
+<li>Ignorar evidències que contradiuen la hipòtesi inicial.</li>
+
+<li>No documentar totes les actuacions.</li>
+
+<li>No verificar els resultats amb diferents fonts.</li>
+
+<li>Perdre la cadena de custòdia.</li>
+
+<li>No sincronitzar correctament les hores dels sistemes.</li>
+
+<li>Analitzar únicament una part de les evidències.</li>
+
+<li>Confondre correlació amb causalitat.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Que dues accions ocórreguen de forma consecutiva no significa que una
+haja provocat l'altra. Cal demostrar sempre la relació mitjançant
+evidències.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+
+    Hipòtesis
+
+    Evidències incompletes
+
+    Mala documentació
+
+    Cadena de custòdia
+
+    Conclusions precipitades
+
+    Falta de verificació
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques durant una investigació</h2>
+
+<p>
+Seguir bones pràctiques facilita el treball dels investigadors,
+augmenta la qualitat dels resultats i garanteix que la investigació
+puga repetir-se en qualsevol moment.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Treballar sempre sobre còpies forenses.</li>
+
+<li>Registrar totes les actuacions realitzades.</li>
+
+<li>Utilitzar eines contrastades.</li>
+
+<li>Correlacionar informació de diverses fonts.</li>
+
+<li>Validar totes les hipòtesis.</li>
+
+<li>Conservar totes les evidències.</li>
+
+<li>Mantindre una cronologia actualitzada.</li>
+
+<li>Redactar un informe clar i objectiu.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una bona investigació no és la que troba més evidències, sinó la que
+és capaç d'explicar els fets de forma coherent, objectiva i
+demostrable.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Recopilar]
+
+--> B[Analitzar]
+
+--> C[Relacionar]
+
+--> D[Verificar]
+
+--> E[Conclusions]
+
+--> F[Informe]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Cada incident de ciberseguretat presenta característiques diferents,
+però la metodologia d'investigació és sempre semblant. Els exemples
+següents mostren com les evidències permeten reconstruir els fets i
+arribar a conclusions objectives.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Evidències</th>
+
+<th>Conclusió</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Correu, logs i navegador.</td>
+
+<td>L'usuari va executar un fitxer maliciós.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>RAM, processos i registres.</td>
+
+<td>El malware va xifrar els fitxers del servidor.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió web</td>
+
+<td>Logs Apache i Firewall.</td>
+
+<td>Explotació d'una vulnerabilitat SQL Injection.</td>
+
+</tr>
+
+<tr>
+
+<td>Robatori d'informació</td>
+
+<td>Captura de xarxa.</td>
+
+<td>Exfiltració de dades cap a un servidor extern.</td>
+
+</tr>
+
+<tr>
+
+<td>Compte compromés</td>
+
+<td>Active Directory.</td>
+
+<td>Accés utilitzant credencials robades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'investigador observa una connexió RDP durant la matinada. Els logs
+mostren que es va iniciar sessió amb un compte administrador, mentre
+que l'anàlisi de la memòria RAM revela l'execució d'un malware de
+control remot. La correlació de totes les evidències confirma que
+l'atacant va obtenir accés utilitzant credencials robades.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una investigació eficaç requereix ordre, paciència i una actitud
+crítica. Les hipòtesis inicials poden canviar a mesura que apareixen
+noves evidències.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Analitza totes les evidències disponibles.</li>
+
+<li>Construeix sempre una línia temporal.</li>
+
+<li>Relaciona la informació de diverses fonts.</li>
+
+<li>Contrasta totes les conclusions.</li>
+
+<li>Documenta qualsevol decisió presa.</li>
+
+<li>Diferencia fets demostrats i hipòtesis.</li>
+
+<li>Conserva totes les proves originals.</li>
+
+<li>Redacta conclusions objectives.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Durant una investigació és fàcil deixar-se influir per les primeres
+hipòtesis. No obstant això, qualsevol conclusió ha d'estar
+fonamentada en evidències objectives i verificables.
+</p>
+
+<div class="important">
+
+<strong>Aspectes que no has d'oblidar</strong>
+
+<ul>
+
+<li>Les evidències poden ser incompletes.</li>
+
+<li>Els atacants intenten ocultar el seu rastre.</li>
+
+<li>Els horaris dels sistemes poden no coincidir.</li>
+
+<li>Una mateixa evidència pot tenir diverses interpretacions.</li>
+
+<li>Cal verificar qualsevol conclusió abans de documentar-la.</li>
+
+<li>La correlació és més fiable que una única prova.</li>
+
+<li>L'informe ha de ser comprensible per a tercers.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Investigar no significa buscar proves que confirmen una teoria,
+sinó descobrir què ha ocorregut realment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Una investigació pot durar setmanes</strong>
+
+<p>
+
+Els incidents complexos poden afectar centenars d'equips i generar
+milions de registres, fet que obliga a utilitzar eines automàtiques
+de correlació i anàlisi.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els atacants també investiguen</strong>
+
+<p>
+
+Abans d'iniciar molts atacs, els ciberdelinqüents recopilen
+informació pública sobre l'organització mitjançant tècniques
+d'OSINT.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les conclusions poden canviar</strong>
+
+<p>
+
+És habitual que apareguen noves evidències durant la investigació,
+la qual cosa obliga a revisar les hipòtesis inicials i actualitzar
+les conclusions.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació és tan important com l'anàlisi</strong>
+
+<p>
+
+Una investigació excel·lent perd gran part del seu valor si no queda
+correctament documentada i justificada.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta una activitat anòmala en el servidor de bases de
+dades. Després de recopilar i analitzar les evidències, es disposa de
+la informació següent.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Hora</th>
+
+<th>Esdeveniment</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>09:12</td>
+
+<td>Recepció d'un correu sospitós.</td>
+
+</tr>
+
+<tr>
+
+<td>09:18</td>
+
+<td>Execució d'un fitxer descarregat.</td>
+
+</tr>
+
+<tr>
+
+<td>09:24</td>
+
+<td>Robatori de credencials.</td>
+
+</tr>
+
+<tr>
+
+<td>09:31</td>
+
+<td>Accés al servidor SQL.</td>
+
+</tr>
+
+<tr>
+
+<td>09:40</td>
+
+<td>Descàrrega massiva de dades.</td>
+
+</tr>
+
+<tr>
+
+<td>09:45</td>
+
+<td>Connexió amb una IP estrangera.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Construeix la cronologia completa de l'incident.</li>
+
+<li>Identifica el vector d'entrada.</li>
+
+<li>Determina quins sistemes han estat afectats.</li>
+
+<li>Explica quin ha sigut l'objectiu probable de l'atac.</li>
+
+<li>Proposa tres mesures per evitar que torne a produir-se.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista d'un equip
+<strong>CSIRT</strong>. A partir d'un conjunt d'evidències ja
+recopilades i analitzades, hauràs d'investigar completament
+l'incident, reconstruir la seqüència dels fets i elaborar un informe
+amb les conclusions.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa ha detectat una activitat sospitosa en diversos servidors.
+Disposeu dels logs del SIEM, captures de xarxa, una imatge forense del
+disc i una captura de memòria RAM. La direcció necessita conèixer què
+ha ocorregut i quin impacte ha tingut l'incident.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Imatge forense del disc.</li>
+
+<li>Captura de memòria RAM.</li>
+
+<li>Logs del SIEM.</li>
+
+<li>Registres del Firewall.</li>
+
+<li>Logs de Windows i Linux.</li>
+
+<li>Captura de trànsit amb Wireshark.</li>
+
+<li>Autopsy.</li>
+
+<li>Volatility 3.</li>
+
+<li>MITRE ATT&amp;CK Navigator.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Reconstruir la cronologia completa de l'incident.</li>
+
+<li>Identificar el vector d'entrada.</li>
+
+<li>Determinar els sistemes compromesos.</li>
+
+<li>Detectar moviments laterals.</li>
+
+<li>Identificar els indicadors de compromís (IoC).</li>
+
+<li>Relacionar totes les evidències.</li>
+
+<li>Elaborar les conclusions de la investigació.</li>
+
+<li>Redactar un informe tècnic final.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una investigació és correcta quan qualsevol altre analista pot
+arribar a les mateixes conclusions utilitzant les mateixes
+evidències.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és una investigació d'incidents de ciberseguretat.</li>
+
+<li>Explica les fases principals d'una investigació.</li>
+
+<li>Descriu què és un vector d'entrada.</li>
+
+<li>Indica com es determina l'abast d'un incident.</li>
+
+<li>Explica què significa atribuir un atac.</li>
+
+<li>Construeix una cronologia a partir d'un conjunt de logs.</li>
+
+<li>Relaciona diferents evidències per obtenir una conclusió.</li>
+
+<li>Descriu l'estructura d'un informe d'investigació.</li>
+
+<li>Identifica els errors més freqüents durant una investigació.</li>
+
+<li>Analitza un cas real publicat per un CSIRT i resumeix-ne les conclusions.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La investigació d'un incident és el procés que permet transformar les
+evidències recopilades i analitzades en una explicació coherent del
+que ha ocorregut. Mitjançant la reconstrucció dels fets, la
+identificació del vector d'entrada, l'anàlisi de l'abast i
+l'elaboració de conclusions, els analistes poden comprendre
+completament l'incident i proposar les mesures necessàries per evitar
+que torne a produir-se.
+
+</p>
+
+<p>
+
+Les conclusions obtingudes constitueixen la base de la fase següent,
+dedicada a l'intercanvi d'informació amb altres organismes i a la
+resposta davant l'incident.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidències]
+
+--> B[Investigació]
+
+--> C[Reconstrucció]
+
+--> D[Conclusions]
+
+--> E[Informe]
+
+--> F[Resposta a l'incident]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La investigació integra totes les evidències disponibles.</li>
+
+<li>La cronologia permet reconstruir els fets.</li>
+
+<li>Cal identificar el vector d'entrada.</li>
+
+<li>L'abast determina els sistemes i dades afectades.</li>
+
+<li>Les conclusions han d'estar basades en proves.</li>
+
+<li>Les hipòtesis han de diferenciar-se dels fets demostrats.</li>
+
+<li>L'informe documenta tota la investigació.</li>
+
+<li>Les conclusions serviran per millorar la seguretat de l'organització.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és una investigació d'incidents.</li>
+
+<li>Explicar les fases d'una investigació.</li>
+
+<li>Descriure el procés de reconstrucció dels fets.</li>
+
+<li>Identificar el vector d'entrada.</li>
+
+<li>Determinar l'abast d'un incident.</li>
+
+<li>Explicar el concepte d'atribució.</li>
+
+<li>Descriure el contingut d'un informe d'investigació.</li>
+
+<li>Identificar els errors més habituals.</li>
+
+<li>Relacionar evidències amb conclusions.</li>
+
+<li>Resoldre un cas pràctic senzill d'investigació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per ampliar els coneixements sobre la investigació d'incidents es
+proporcionen els següents materials de suport.
+
+</p>
+
+<ul>
+
+<li>📄 Guia d'investigació d'incidents de ciberseguretat.</li>
+
+<li>📄 Plantilla d'informe d'investigació.</li>
+
+<li>📄 Exercicis de reconstrucció de cronologies.</li>
+
+<li>📄 Cas pràctic complet resolt.</li>
+
+<li>📄 Guia ràpida de MITRE ATT&amp;CK.</li>
+
+<li>📄 Col·lecció d'indicadors de compromís (IoC).</li>
+
+<li>📄 Fitxers de logs per practicar.</li>
+
+<li>📄 Glossari de terminologia DFIR.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Resum visual del procés complet d'investigació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri representa el punt culminant del procés d'investigació.
+En el següent criteri (<strong>CA3d - Intercanvi d'informació sobre
+incidents</strong>) aprendràs a compartir de forma segura les dades
+obtingudes amb altres equips, proveïdors i organismes competents, una
+pràctica essencial per millorar la resposta coordinada davant les
+amenaces de ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

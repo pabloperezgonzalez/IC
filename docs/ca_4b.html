@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4b Estratègies de ciberresiliència </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4b
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4b Estratègies de ciberresiliència
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs què és la
+<strong>ciberresiliència</strong> i per què s'ha convertit en un dels
+pilars fonamentals de la ciberseguretat moderna. Descobriràs com les
+organitzacions preparen els seus sistemes perquè puguen continuar
+funcionant fins i tot quan pateixen un ciberatac, una fallada greu o
+un desastre.
+</p>
+
+<p>
+També coneixeràs les principals estratègies de continuïtat del negoci,
+els plans de recuperació davant desastres, la importància de les
+còpies de seguretat, la redundància dels sistemes i els simulacres que
+permeten comprovar l'eficàcia dels procediments abans que es produïsca
+un incident real.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el concepte de ciberresiliència.</li>
+
+<li>Diferenciar la ciberseguretat de la ciberresiliència.</li>
+
+<li>Conèixer els objectius d'una estratègia resilient.</li>
+
+<li>Identificar les principals mesures de continuïtat del negoci.</li>
+
+<li>Comprendre la importància dels plans de recuperació.</li>
+
+<li>Aplicar bones pràctiques per millorar la resiliència d'una organització.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Durant molts anys les organitzacions van centrar els seus esforços en
+evitar qualsevol atac informàtic. No obstant això, l'augment dels
+ciberatacs ha demostrat que cap sistema és completament segur.
+</p>
+
+<p>
+Per aquest motiu ha sorgit el concepte de
+<strong>ciberresiliència</strong>, que consisteix no sols a protegir
+els sistemes, sinó també a garantir que l'organització puga continuar
+funcionant, recuperar-se ràpidament i aprendre de cada incident.
+</p>
+
+<p>
+Una empresa resilient és capaç de resistir un atac, limitar-ne
+l'impacte, restaurar els serveis essencials en el menor temps possible
+i incorporar millores perquè la mateixa situació no torne a repetir-se.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La pregunta ja no és si una organització patirà un incident, sinó
+quan es produirà i com estarà preparada per recuperar-se.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA CIBERRESILIÈNCIA?
+========================================================== -->
+
+<section>
+
+<h2>Què és la ciberresiliència?</h2>
+
+<p>
+La <strong>ciberresiliència</strong> és la capacitat d'una
+organització per preparar-se, resistir, respondre i recuperar-se
+davant incidents de ciberseguretat mantenint els serveis essencials i
+reduint al màxim l'impacte sobre el negoci.
+</p>
+
+<p>
+Aquest concepte combina mesures preventives, mecanismes de detecció,
+procediments de resposta, plans de recuperació i estratègies de
+millora contínua. No es tracta únicament d'evitar els atacs, sinó de
+garantir que l'organització continue funcionant encara que aquests es
+produïsquen.
+</p>
+
+<p>
+La ciberresiliència integra aspectes tècnics, organitzatius i humans,
+incloent-hi la formació del personal, la gestió dels riscos, les
+còpies de seguretat, la redundància dels sistemes i els plans de
+continuïtat del negoci.
+</p>
+
+<h3>Característiques principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Preparació</td>
+
+<td>Disposar de plans i recursos abans de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Resistència</td>
+
+<td>Continuar funcionant durant l'atac.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Actuar de forma ràpida i coordinada.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Restablir els serveis en el menor temps possible.</td>
+
+</tr>
+
+<tr>
+
+<td>Millora contínua</td>
+
+<td>Aprendre dels incidents per reforçar la seguretat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa pateix un atac de ransomware. Gràcies a les còpies de
+seguretat immutables, als servidors redundants i al seu Pla de
+Continuïtat del Negoci, aconsegueix reprendre l'activitat en poques
+hores sense perdre informació crítica.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Preparació]
+
+--> B[Resistència]
+
+--> C[Resposta]
+
+--> D[Recuperació]
+
+--> E[Millora contínua]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     DIFERÈNCIA ENTRE CIBERSEGURETAT I CIBERRESILIÈNCIA
+========================================================== -->
+
+<section>
+
+<h2>Diferència entre ciberseguretat i ciberresiliència</h2>
+
+<p>
+Encara que els dos conceptes estan estretament relacionats, no són
+sinònims. La <strong>ciberseguretat</strong> té com a objectiu
+protegir els sistemes davant les amenaces, mentre que la
+<strong>ciberresiliència</strong> se centra en garantir que
+l'organització puga continuar funcionant fins i tot quan aquestes
+mesures de protecció no han estat suficients.
+</p>
+
+<p>
+En altres paraules, la ciberseguretat intenta evitar els incidents,
+mentre que la ciberresiliència prepara l'organització per gestionar-los
+amb el menor impacte possible.
+</p>
+
+<h3>Comparació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Ciberseguretat</th>
+
+<th>Ciberresiliència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Prevenir atacs.</td>
+
+<td>Resistir i recuperar-se.</td>
+
+</tr>
+
+<tr>
+
+<td>Protegir els sistemes.</td>
+
+<td>Mantenir els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Reduir vulnerabilitats.</td>
+
+<td>Garantir la continuïtat.</td>
+
+</tr>
+
+<tr>
+
+<td>Evitar incidents.</td>
+
+<td>Minimitzar-ne l'impacte.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures preventives.</td>
+
+<td>Prevenció, resposta i recuperació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una organització pot tindre una bona ciberseguretat i, tanmateix, no
+ser resilient si no és capaç de recuperar els seus serveis després
+d'un atac.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE LA CIBERRESILIÈNCIA
+========================================================== -->
+
+<section>
+
+<h2>Objectius de la ciberresiliència</h2>
+
+<p>
+Les estratègies de ciberresiliència tenen com a objectiu garantir que
+els processos crítics continuen funcionant durant un incident i que la
+recuperació siga ràpida, segura i amb la mínima pèrdua d'informació.
+</p>
+
+<p>
+Per aconseguir-ho és necessari combinar mesures tècniques,
+organitzatives i de planificació que reduïsquen el risc i preparen
+l'organització davant qualsevol eventualitat.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Garantir la disponibilitat</td>
+
+<td>Mantindre els serveis essencials.</td>
+
+</tr>
+
+<tr>
+
+<td>Reduir l'impacte</td>
+
+<td>Minimitzar les conseqüències de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Accelerar la recuperació</td>
+
+<td>Reduir el temps d'interrupció.</td>
+
+</tr>
+
+<tr>
+
+<td>Protegir les dades</td>
+
+<td>Evitar la pèrdua d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Millorar contínuament</td>
+
+<td>Aprendre de cada incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Garantir la confiança</td>
+
+<td>Mantindre la reputació de l'organització.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+mindmap
+Ciberresiliència
+
+    Preparació
+
+    Prevenció
+
+    Resposta
+
+    Recuperació
+
+    Continuïtat
+
+    Millora contínua
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+La millor estratègia de ciberresiliència és aquella que combina una
+bona protecció preventiva amb una excel·lent capacitat de resposta i
+recuperació davant qualsevol incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESTRATÈGIES DE CIBERRESILIÈNCIA
+========================================================== -->
+
+<section>
+
+<h2>Estratègies de ciberresiliència</h2>
+
+<p>
+La ciberresiliència s'aconsegueix combinant diferents estratègies que
+permeten prevenir incidents, limitar-ne les conseqüències i recuperar
+els serveis amb rapidesa. Aquestes estratègies afecten tant la
+infraestructura tecnològica com l'organització i les persones.
+</p>
+
+<p>
+No existeix una única mesura capaç de garantir la resiliència. És
+necessari aplicar un conjunt de controls complementaris que
+incrementen la capacitat de l'organització per resistir qualsevol
+tipus d'incident.
+</p>
+
+<h3>Principals estratègies</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estratègia</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Còpies de seguretat</td>
+
+<td>Recuperar la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Redundància</td>
+
+<td>Mantindre els serveis disponibles.</td>
+
+</tr>
+
+<tr>
+
+<td>Segmentació de xarxes</td>
+
+<td>Evitar la propagació dels atacs.</td>
+
+</tr>
+
+<tr>
+
+<td>Plans de continuïtat</td>
+
+<td>Garantir el funcionament del negoci.</td>
+
+</tr>
+
+<tr>
+
+<td>Plans de recuperació</td>
+
+<td>Restablir els sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Simulacres</td>
+
+<td>Entrenar els equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Monitorització</td>
+
+<td>Detectar incidents ràpidament.</td>
+
+</tr>
+
+<tr>
+
+<td>Millora contínua</td>
+
+<td>Corregir les deficiències detectades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa disposa de dos centres de dades redundants. Si un queda
+inoperatiu per un atac, el segon assumeix automàticament el servei,
+reduint el temps d'interrupció.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Estratègies]
+
+--> B[Prevenció]
+
+--> C[Detecció]
+
+--> D[Resposta]
+
+--> E[Recuperació]
+
+--> F[Millora contínua]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONTINUÏTAT DEL NEGOCI (BCP)
+========================================================== -->
+
+<section>
+
+<h2>Continuïtat del negoci (BCP)</h2>
+
+<p>
+El <strong>Business Continuity Plan (BCP)</strong> o
+<strong>Pla de Continuïtat del Negoci</strong> defineix les mesures
+necessàries perquè una organització puga continuar desenvolupant les
+seues activitats essencials durant i després d'un incident greu.
+</p>
+
+<p>
+Aquest pla identifica els processos crítics, els recursos necessaris,
+els responsables de cada actuació i els procediments que permeten
+mantindre el servei encara que part de la infraestructura estiga
+afectada.
+</p>
+
+<p>
+L'objectiu principal del BCP és reduir al màxim les interrupcions del
+negoci i garantir que les funcions més importants continuen operatives.
+</p>
+
+<h3>Elements habituals d'un BCP</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Processos crítics</td>
+
+<td>Identificar les activitats essencials.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsables</td>
+
+<td>Assignar funcions.</td>
+
+</tr>
+
+<tr>
+
+<td>Procediments</td>
+
+<td>Descriure les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Coordinar els equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Infraestructura alternativa</td>
+
+<td>Mantindre els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Revisió periòdica</td>
+
+<td>Actualitzar el pla.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+El BCP no només contempla incidents informàtics. També inclou
+desastres naturals, fallades elèctriques, incendis o qualsevol altra
+situació que puga interrompre l'activitat de l'organització.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[BCP]
+
+--> C[Serveis essencials]
+
+--> D[Continuïtat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RECUPERACIÓ DAVANT DESASTRES (DRP)
+========================================================== -->
+
+<section>
+
+<h2>Recuperació davant desastres (DRP)</h2>
+
+<p>
+El <strong>Disaster Recovery Plan (DRP)</strong> o
+<strong>Pla de Recuperació davant Desastres</strong> descriu els
+procediments tècnics necessaris per restaurar els sistemes
+informàtics després d'un incident greu.
+</p>
+
+<p>
+Aquest pla especifica com recuperar servidors, xarxes, bases de dades,
+còpies de seguretat i aplicacions perquè els serveis tornen a estar
+operatius en el menor temps possible.
+</p>
+
+<p>
+El DRP treballa conjuntament amb el BCP: mentre aquest assegura la
+continuïtat del negoci, el DRP se centra en la recuperació de la
+infraestructura tecnològica.
+</p>
+
+<h3>Conceptes clau</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Concepte</th>
+
+<th>Significat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>RTO</td>
+
+<td>Temps màxim acceptable de recuperació.</td>
+
+</tr>
+
+<tr>
+
+<td>RPO</td>
+
+<td>Pèrdua màxima acceptable de dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Failover</td>
+
+<td>Canvi automàtic a un sistema alternatiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Restauració</td>
+
+<td>Recuperació dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificació</td>
+
+<td>Comprovació del correcte funcionament.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa defineix un RTO de 2 hores per al servidor ERP i un RPO de
+15 minuts gràcies a la replicació contínua de les dades.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Desastre]
+
+--> B[Activar DRP]
+
+--> C[Restaurar serveis]
+
+--> D[Verificar]
+
+--> E[Tornar a producció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CÒPIES DE SEGURETAT RESILIENTS
+========================================================== -->
+
+<section>
+
+<h2>Còpies de seguretat resilients</h2>
+
+<p>
+Les còpies de seguretat constitueixen un dels elements més importants
+de qualsevol estratègia de ciberresiliència. Permeten recuperar la
+informació després d'un atac, una fallada tècnica o un error humà.
+</p>
+
+<p>
+Actualment no és suficient disposar de còpies de seguretat; aquestes
+han de ser resilients davant els ciberatacs. Per aquest motiu moltes
+organitzacions utilitzen còpies immutables, desconnectades de la
+xarxa o emmagatzemades en ubicacions diferents.
+</p>
+
+<h3>Bones pràctiques</h3>
+
+<ul>
+
+<li>Aplicar la regla 3-2-1.</li>
+
+<li>Disposar de còpies offline.</li>
+
+<li>Utilitzar backups immutables.</li>
+
+<li>Xifrar les còpies de seguretat.</li>
+
+<li>Comprovar periòdicament la restauració.</li>
+
+<li>Automatitzar les còpies sempre que siga possible.</li>
+
+<li>Protegir també les còpies al núvol.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Regla 3-2-1</strong>
+
+<p>
+
+Conservar almenys <strong>3 còpies</strong> de la informació,
+emmagatzemades en <strong>2 suports diferents</strong>, mantenint
+<strong>1 còpia fora de la ubicació principal</strong> o completament
+desconnectada de la xarxa.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Dades]
+
+--> B[Còpia principal]
+
+--> C[Còpia secundària]
+
+--> D[Còpia externa]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     REDUNDÀNCIA I ALTA DISPONIBILITAT
+========================================================== -->
+
+<section>
+
+<h2>Redundància i alta disponibilitat</h2>
+
+<p>
+La <strong>redundància</strong> consisteix a disposar de components
+duplicats o alternatius que permeten continuar oferint un servei quan
+es produeix una fallada en la infraestructura principal.
+</p>
+
+<p>
+L'<strong>alta disponibilitat (High Availability o HA)</strong> és
+l'objectiu d'aconseguir que els serveis estiguen disponibles el màxim
+temps possible, minimitzant les interrupcions provocades per errors,
+avaries o ciberatacs.
+</p>
+
+<p>
+Aquestes estratègies són especialment importants en serveis crítics
+com ara hospitals, entitats financeres, administracions públiques o
+plataformes de comerç electrònic, on qualsevol interrupció pot tenir
+un impacte econòmic o social molt elevat.
+</p>
+
+<h3>Mecanismes habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Mecanisme</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Servidors redundants</td>
+
+<td>Substituir automàticament un servidor avariat.</td>
+
+</tr>
+
+<tr>
+
+<td>Clústers</td>
+
+<td>Distribuir la càrrega entre diversos equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Balancejadors de càrrega</td>
+
+<td>Repartir les connexions entre diversos servidors.</td>
+
+</tr>
+
+<tr>
+
+<td>Fonts d'alimentació duplicades</td>
+
+<td>Evitar interrupcions per fallades elèctriques.</td>
+
+</tr>
+
+<tr>
+
+<td>Replicació de dades</td>
+
+<td>Mantenir còpies sincronitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Failover automàtic</td>
+
+<td>Activar un sistema alternatiu sense intervenció humana.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa disposa de dos servidors web configurats en alta
+disponibilitat. Si un deixa de respondre, el balancejador de càrrega
+redirigeix automàticament totes les peticions al servidor secundari.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Servidor principal]
+
+--> B{Disponible?}
+
+B -->|Sí| C[Servei operatiu]
+
+B -->|No| D[Failover]
+
+D --> E[Servidor redundant]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     EXERCICIS I SIMULACRES
+========================================================== -->
+
+<section>
+
+<h2>Exercicis i simulacres</h2>
+
+<p>
+Una estratègia de ciberresiliència només és efectiva si es comprova
+periòdicament mitjançant exercicis i simulacres. Aquestes activitats
+permeten verificar que els plans de resposta, continuïtat i
+recuperació funcionen correctament i que tots els participants
+coneixen les seues responsabilitats.
+</p>
+
+<p>
+Els simulacres també ajuden a detectar errors en els procediments,
+millorar la coordinació entre equips i reduir els temps de resposta
+quan es produïsca un incident real.
+</p>
+
+<h3>Tipus d'exercicis</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Característiques</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tabletop</td>
+
+<td>Anàlisi teòrica d'un escenari.</td>
+
+</tr>
+
+<tr>
+
+<td>Simulació parcial</td>
+
+<td>Només intervenen alguns equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Simulació completa</td>
+
+<td>Participa tota l'organització.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació de backups</td>
+
+<td>Comprovació de les còpies.</td>
+
+</tr>
+
+<tr>
+
+<td>Canvi a infraestructura redundant</td>
+
+<td>Verificació del failover.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Els simulacres han d'incloure situacions realistes i finalitzar amb
+una reunió de revisió per identificar oportunitats de millora.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Simulacre]
+
+--> B[Execució]
+
+--> C[Avaluació]
+
+--> D[Lliçons apreses]
+
+--> E[Actualització dels plans]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals en la ciberresiliència</h2>
+
+<p>
+Moltes organitzacions disposen de plans de continuïtat o de còpies de
+seguretat, però no els revisen ni els proven regularment. Això fa que,
+quan es produeix un incident real, els procediments no siguen
+efectius.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>No provar mai la restauració de les còpies de seguretat.</li>
+
+<li>Guardar totes les còpies en la mateixa ubicació.</li>
+
+<li>No disposar d'un BCP o d'un DRP actualitzats.</li>
+
+<li>No definir els valors d'RTO i RPO.</li>
+
+<li>No realitzar simulacres periòdics.</li>
+
+<li>No documentar les lliçons apreses.</li>
+
+<li>Dependre d'un únic servidor o proveïdor.</li>
+
+<li>Considerar la ciberresiliència només com un problema tècnic.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Pensar que disposar de còpies de seguretat és suficient. Si aquestes
+no poden restaurar-se ràpidament o també han estat compromeses,
+l'organització continuarà sense poder recuperar els seus serveis.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+
+    Backups no provats
+
+    Sense DRP
+
+    Sense BCP
+
+    Sense simulacres
+
+    Sense redundància
+
+    Plans desactualitzats
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques</h2>
+
+<p>
+La ciberresiliència és un procés de millora contínua. Les
+organitzacions més preparades revisen periòdicament els seus plans,
+actualitzen les mesures de protecció i entrenen els seus equips per
+respondre davant nous tipus d'amenaces.
+</p>
+
+<p>
+Les bones pràctiques no només redueixen l'impacte dels incidents, sinó
+que també augmenten la confiança dels clients, dels proveïdors i dels
+organismes reguladors.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Revisar anualment el BCP i el DRP.</li>
+
+<li>Aplicar la regla 3-2-1 en les còpies de seguretat.</li>
+
+<li>Disposar d'infraestructura redundant.</li>
+
+<li>Automatitzar els processos de recuperació quan siga possible.</li>
+
+<li>Mesurar periòdicament els valors d'RTO i RPO.</li>
+
+<li>Realitzar simulacres de forma periòdica.</li>
+
+<li>Analitzar les lliçons apreses després de cada incident.</li>
+
+<li>Fomentar una cultura de ciberresiliència en tota l'organització.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La ciberresiliència no és un projecte puntual, sinó un procés continu
+que ha d'evolucionar al mateix ritme que les amenaces i la tecnologia.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Les estratègies de ciberresiliència poden aplicar-se en qualsevol
+tipus d'organització. Els exemples següents mostren com diferents
+mesures contribueixen a reduir l'impacte d'un incident i a recuperar
+els serveis amb rapidesa.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Estratègia aplicada</th>
+
+<th>Resultat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Backups immutables.</td>
+
+<td>Recuperació sense pagar el rescat.</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda d'un servidor</td>
+
+<td>Failover automàtic.</td>
+
+<td>Servei disponible.</td>
+
+</tr>
+
+<tr>
+
+<td>Tall elèctric</td>
+
+<td>SAI i generador.</td>
+
+<td>Continuïtat dels sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Incendi al CPD</td>
+
+<td>Centre de dades alternatiu.</td>
+
+<td>Recuperació dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Error humà</td>
+
+<td>Restauració de backups.</td>
+
+<td>Recuperació de la informació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa pateix un atac de ransomware que xifra diversos servidors.
+Com que disposa de còpies de seguretat immutables i d'un Pla de
+Recuperació davant Desastres, pot restaurar els serveis en menys de
+dues hores sense perdre informació crítica.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+La ciberresiliència depén tant de la tecnologia com de la preparació
+de les persones. Els procediments han de revisar-se periòdicament i
+tots els equips han de conèixer les seues responsabilitats.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Revisa anualment els plans de continuïtat i recuperació.</li>
+
+<li>Prova periòdicament les còpies de seguretat.</li>
+
+<li>Mesura els temps reals de recuperació.</li>
+
+<li>Mantén actualitzats els inventaris dels actius.</li>
+
+<li>Documenta totes les incidències importants.</li>
+
+<li>Forma periòdicament els treballadors.</li>
+
+<li>Realitza simulacres de manera regular.</li>
+
+<li>Analitza les lliçons apreses després de cada incident.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Una organització resilient no és aquella que mai pateix incidents,
+sinó aquella que és capaç de continuar funcionant, recuperar-se
+ràpidament i reduir al màxim les conseqüències del problema.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La ciberresiliència complementa la ciberseguretat.</li>
+
+<li>Els backups només són útils si es poden restaurar.</li>
+
+<li>Els plans han d'estar actualitzats.</li>
+
+<li>La redundància disminueix el temps d'interrupció.</li>
+
+<li>Els simulacres permeten detectar errors abans dels incidents reals.</li>
+
+<li>Els valors d'RTO i RPO han d'estar definits.</li>
+
+<li>Les lliçons apreses permeten millorar contínuament.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Preparar-se per a la recuperació és tan important com protegir-se
+davant els atacs.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>La regla 3-2-1 continua sent una referència mundial</strong>
+
+<p>
+
+La majoria de les organitzacions utilitzen aquesta estratègia per
+reduir el risc de perdre definitivament la informació després d'un
+incident greu.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Molts atacs de ransomware també intenten destruir els backups</strong>
+
+<p>
+
+Per aquest motiu cada vegada és més habitual utilitzar còpies
+immutables o completament desconnectades de la xarxa.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les proves de restauració són obligatòries en moltes organitzacions</strong>
+
+<p>
+
+Disposar de còpies de seguretat no garanteix que aquestes funcionen.
+Cal comprovar periòdicament que poden restaurar-se correctament.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La ciberresiliència és un requisit creixent</strong>
+
+<p>
+
+Cada vegada més normatives i estàndards exigeixen disposar de plans de
+continuïtat, recuperació i resposta davant incidents per garantir la
+disponibilitat dels serveis essencials.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa de comerç electrònic pateix una fallada greu en el seu
+centre de dades principal després d'un atac informàtic. La direcció
+necessita recuperar el servei al més prompte possible sense perdre les
+comandes dels clients.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Serveis afectats</td>
+
+<td>Botiga en línia i base de dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Temps màxim admissible</td>
+
+<td>2 hores.</td>
+
+</tr>
+
+<tr>
+
+<td>Pèrdua màxima de dades</td>
+
+<td>15 minuts.</td>
+
+</tr>
+
+<tr>
+
+<td>Infraestructura redundant</td>
+
+<td>Disponible.</td>
+
+</tr>
+
+<tr>
+
+<td>Backups</td>
+
+<td>Immutables i externs.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Identifica les mesures de ciberresiliència disponibles.</li>
+
+<li>Indica quin pla s'ha d'activar (BCP o DRP).</li>
+
+<li>Explica el significat dels valors d'RTO i RPO.</li>
+
+<li>Ordena cronològicament les actuacions de recuperació.</li>
+
+<li>Proposa dues millores per augmentar la resiliència de l'empresa.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica actuaràs com a responsable de continuïtat del
+negoci d'una empresa que ha patit un incident greu de
+ciberseguretat. Hauràs d'analitzar els recursos disponibles i aplicar
+les estratègies de ciberresiliència adequades per recuperar els
+serveis amb el menor impacte possible.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa de serveis ha detectat un atac de ransomware que ha deixat
+inoperatius diversos servidors. L'organització disposa de còpies de
+seguretat immutables, un centre de dades secundari i un Pla de
+Recuperació davant Desastres (DRP).
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Pla de Continuïtat del Negoci (BCP).</li>
+
+<li>Pla de Recuperació davant Desastres (DRP).</li>
+
+<li>Inventari dels actius crítics.</li>
+
+<li>Documentació dels valors d'RTO i RPO.</li>
+
+<li>Infraestructura redundant.</li>
+
+<li>Còpies de seguretat immutables.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Plantilla de seguiment de la recuperació.</li>
+
+<li>Informe de l'incident.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Identificar els serveis crítics afectats.</li>
+
+<li>Seleccionar les estratègies de ciberresiliència més adequades.</li>
+
+<li>Determinar si cal activar el BCP, el DRP o tots dos.</li>
+
+<li>Planificar la restauració dels serveis.</li>
+
+<li>Comprovar el compliment dels valors d'RTO i RPO.</li>
+
+<li>Valorar el funcionament de la infraestructura redundant.</li>
+
+<li>Documentar totes les actuacions realitzades.</li>
+
+<li>Proposar millores per augmentar la resiliència de l'organització.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu de la ciberresiliència no és evitar tots els incidents,
+sinó garantir que l'organització puga continuar funcionant i recuperar
+els seus serveis en el menor temps possible.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix el concepte de ciberresiliència.</li>
+
+<li>Diferencia entre ciberseguretat i ciberresiliència.</li>
+
+<li>Explica els objectius principals d'una estratègia resilient.</li>
+
+<li>Descriu les diferències entre un BCP i un DRP.</li>
+
+<li>Explica el significat dels valors d'RTO i RPO.</li>
+
+<li>Descriu la regla 3-2-1 de les còpies de seguretat.</li>
+
+<li>Explica què és el failover i per a què serveix.</li>
+
+<li>Analitza un cas pràctic proposant mesures de recuperació.</li>
+
+<li>Indica els errors més habituals en la planificació de la recuperació.</li>
+
+<li>Elabora un esquema amb les principals estratègies de ciberresiliència.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La ciberresiliència permet que una organització continue oferint els
+seus serveis essencials encara que patisca un incident greu de
+ciberseguretat. Per aconseguir-ho combina mesures preventives,
+procediments de resposta, plans de recuperació, infraestructura
+redundant i processos de millora contínua.
+
+</p>
+
+<p>
+
+Els plans de continuïtat del negoci (BCP), els plans de recuperació
+davant desastres (DRP), les còpies de seguretat resilients i els
+simulacres constitueixen els principals mecanismes per garantir la
+continuïtat dels serveis.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Preparació]
+
+--> B[Prevenció]
+
+--> C[Resposta]
+
+--> D[Recuperació]
+
+--> E[Continuïtat]
+
+--> F[Millora contínua]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La ciberresiliència va més enllà de la prevenció.</li>
+
+<li>BCP i DRP són plans complementaris.</li>
+
+<li>Les còpies de seguretat han de provar-se periòdicament.</li>
+
+<li>La redundància augmenta la disponibilitat dels serveis.</li>
+
+<li>Els valors d'RTO i RPO defineixen els objectius de recuperació.</li>
+
+<li>Els simulacres permeten validar els procediments.</li>
+
+<li>La millora contínua és imprescindible.</li>
+
+<li>La preparació redueix l'impacte dels incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és la ciberresiliència.</li>
+
+<li>Diferenciar-la de la ciberseguretat.</li>
+
+<li>Explicar els objectius d'una estratègia resilient.</li>
+
+<li>Descriure les funcions del BCP i del DRP.</li>
+
+<li>Interpretar els conceptes d'RTO i RPO.</li>
+
+<li>Explicar la regla 3-2-1 de les còpies de seguretat.</li>
+
+<li>Descriure el funcionament del failover.</li>
+
+<li>Identificar les principals estratègies de recuperació.</li>
+
+<li>Reconèixer errors habituals en la planificació.</li>
+
+<li>Analitzar casos pràctics proposant mesures de ciberresiliència.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos recursos
+que permeten practicar la planificació de la continuïtat del negoci i
+la recuperació davant incidents greus.
+
+</p>
+
+<ul>
+
+<li>📄 Model de Pla de Continuïtat del Negoci (BCP).</li>
+
+<li>📄 Model de Pla de Recuperació davant Desastres (DRP).</li>
+
+<li>📄 Plantilla per definir RTO i RPO.</li>
+
+<li>📄 Checklist de verificació de backups.</li>
+
+<li>📄 Guia de la regla 3-2-1.</li>
+
+<li>📄 Exemple de procediment de failover.</li>
+
+<li>📄 Exercicis resolts de ciberresiliència.</li>
+
+<li>📄 Esquema resum de les estratègies resilients.</li>
+
+<li>📄 Plantilla per documentar simulacres.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri d'avaluació proporciona la base per comprendre com les
+organitzacions poden garantir la continuïtat dels seus serveis després
+d'un incident. Els següents criteris del RA4 aprofundiran en les
+accions de recuperació, restauració dels sistemes i anàlisi de les
+lliçons apreses per millorar la preparació davant futurs incidents.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+    <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

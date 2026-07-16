@@ -1,0 +1,1684 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 5d Comunicació a les persones afectades </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_05.html"> 
+                    RA5
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA5d
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#1e6f6f, #0e6767);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 5d Comunicació a les persones afectades
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    📢
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com comunicar un incident de
+ciberseguretat a les persones afectades de manera clara, responsable i
+coordinada. Coneixeràs quan és necessari informar els afectats, qui ha
+d'autoritzar aquesta comunicació i quina informació ha d'incloure el
+missatge.
+</p>
+
+<p>
+També comprendràs la importància de la transparència, de la protecció
+de la informació sensible i de mantenir la confiança dels usuaris,
+clients o empleats durant la gestió d'un incident.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la finalitat de la comunicació als afectats.</li>
+
+<li>Identificar quan és necessari informar-los.</li>
+
+<li>Conèixer qui autoritza la comunicació.</li>
+
+<li>Aprendre quina informació ha d'incloure un comunicat.</li>
+
+<li>Seleccionar els canals de comunicació més adequats.</li>
+
+<li>Valorar la importància de la transparència i la confiança.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan un incident de ciberseguretat afecta persones, aquestes poden
+necessitar informació per comprendre què ha ocorregut, quines
+conseqüències pot tindre l'incident i quines mesures han d'adoptar per
+protegir-se.
+</p>
+
+<p>
+Una comunicació adequada contribueix a reduir la incertesa, evita la
+difusió de rumors i reforça la confiança en l'organització. Al mateix
+temps, ha de realitzar-se de forma responsable, evitant divulgar
+informació innecessària que puga comprometre la investigació o la
+seguretat dels sistemes.
+</p>
+
+<p>
+Per aquest motiu, la comunicació als afectats forma part dels plans de
+resposta davant incidents i ha d'estar coordinada amb la resta
+d'actuacions tècniques i organitzatives.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Informar les persones afectades no significa explicar tots els detalls
+tècnics de l'incident. La informació ha de ser útil, comprensible,
+veraç i adequada al destinatari.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     COMUNICACIÓ A LES PERSONES AFECTADES
+========================================================== -->
+
+<section>
+
+<h2>Comunicació a les persones afectades</h2>
+
+<p>
+La comunicació a les persones afectades consisteix a informar els
+usuaris, clients, empleats o altres col·lectius que poden haver patit
+les conseqüències d'un incident de ciberseguretat.
+</p>
+
+<p>
+Aquesta comunicació té com a finalitat explicar la situació, indicar
+les mesures adoptades per l'organització i proporcionar recomanacions
+que ajuden els afectats a reduir els possibles riscos derivats de
+l'incident.
+</p>
+
+<p>
+Perquè siga efectiva, ha de ser clara, coherent, oportuna i adaptada
+al perfil dels destinataris.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Informar</td>
+
+<td>Comunicar l'existència de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Protegir</td>
+
+<td>Reduir els riscos per als afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Orientar</td>
+
+<td>Indicar les accions recomanades.</td>
+
+</tr>
+
+<tr>
+
+<td>Generar confiança</td>
+
+<td>Transmetre transparència.</td>
+
+</tr>
+
+<tr>
+
+<td>Evitar rumors</td>
+
+<td>Proporcionar informació oficial.</td>
+
+</tr>
+
+<tr>
+
+<td>Facilitar suport</td>
+
+<td>Oferir canals de contacte.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després de detectar un accés no autoritzat a una base de dades de
+clients, l'organització envia un comunicat explicant què ha ocorregut,
+quines dades podrien estar afectades i recomana canviar les
+contrasenyes dels comptes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUAN S'HA DE COMUNICAR
+========================================================== -->
+
+<section>
+
+<h2>Quan s'ha de comunicar?</h2>
+
+<p>
+La decisió de comunicar un incident a les persones afectades depén de
+l'impacte que aquest pot tindre sobre elles. Quan existeix un risc
+rellevant per als usuaris o és necessari que adopten mesures de
+protecció, l'organització ha de valorar la conveniència o
+l'obligatorietat d'informar-los.
+</p>
+
+<p>
+La comunicació ha de realitzar-se quan la informació disponible siga
+suficient per explicar la situació amb claredat i evitar generar
+confusió.
+</p>
+
+<h3>Situacions habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Comunicació als afectats</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Filtració de dades personals</td>
+
+<td>Habitualment necessària.</td>
+
+</tr>
+
+<tr>
+
+<td>Canvi obligatori de contrasenya</td>
+
+<td>Necessària.</td>
+
+</tr>
+
+<tr>
+
+<td>Interrupció prolongada del servei</td>
+
+<td>Recomanable.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident sense afectació als usuaris</td>
+
+<td>Generalment no.</td>
+
+</tr>
+
+<tr>
+
+<td>Possible ús fraudulent de comptes</td>
+
+<td>Necessària.</td>
+
+</tr>
+
+<tr>
+
+<td>Manteniment preventiu</td>
+
+<td>No és una comunicació d'incident.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Procés de comunicació als afectats</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident confirmat]
+--> B[Valoració]
+
+B --> C{Hi ha persones afectades?}
+
+C -->|Sí| D[Preparar comunicació]
+
+D --> E[Enviar comunicat]
+
+C -->|No| F[Continuar gestió]
+
+</div>
+
+<p>
+Abans d'informar les persones afectades és necessari analitzar
+l'incident, confirmar-ne l'abast i preparar un comunicat adaptat a la
+situació. Si no existeix afectació directa, la gestió pot continuar
+sense necessitat d'una comunicació específica als usuaris.
+</p>
+
+</section>
+
+
+<!-- ==========================================================
+     QUI AUTORITZA LA COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Qui autoritza la comunicació?</h2>
+
+<p>
+La comunicació a les persones afectades ha de ser autoritzada pels
+responsables designats per l'organització. Aquesta decisió s'adopta
+després d'analitzar l'impacte de l'incident, valorar els riscos i
+coordinar-se amb els equips tècnics, jurídics i de comunicació.
+</p>
+
+<p>
+L'objectiu és garantir que el missatge siga coherent, correcte i
+alineat amb els procediments interns, evitant contradiccions o
+informacions incompletes.
+</p>
+
+<h3>Responsables habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Responsable</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Responsable de Seguretat</td>
+
+<td>Coordinar la gestió de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>CISO</td>
+
+<td>Autoritzar la comunicació tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Aprovar les comunicacions estratègiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Departament Jurídic</td>
+
+<td>Revisar els aspectes legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Departament de Comunicació</td>
+
+<td>Preparar el missatge oficial.</td>
+
+</tr>
+
+<tr>
+
+<td>Delegat de Protecció de Dades</td>
+
+<td>Assessorar quan hi haja dades personals afectades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els empleats no han de difondre informació sobre un incident sense
+autorització. Totes les comunicacions externes han de seguir el
+procediment establit per l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     DESTINATARIS
+========================================================== -->
+
+<section>
+
+<h2>Persones destinatàries de la comunicació</h2>
+
+<p>
+Els destinataris del comunicat dependran del tipus d'incident i de les
+persones que puguen veure's afectades. En alguns casos la comunicació
+es dirigeix únicament als clients afectats, mentre que en altres pot
+incloure empleats, proveïdors o altres col·laboradors.
+</p>
+
+<p>
+És important identificar correctament els destinataris per evitar
+enviar informació innecessària a persones no afectades.
+</p>
+
+<h3>Destinataris habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Destinatari</th>
+
+<th>Motiu de la comunicació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Clients</td>
+
+<td>Informar sobre possibles riscos.</td>
+
+</tr>
+
+<tr>
+
+<td>Empleats</td>
+
+<td>Aplicar mesures internes.</td>
+
+</tr>
+
+<tr>
+
+<td>Proveïdors</td>
+
+<td>Coordinar actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Col·laboradors</td>
+
+<td>Evitar afectacions addicionals.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris dels serveis</td>
+
+<td>Comunicar interrupcions o recomanacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Altres persones afectades</td>
+
+<td>Informar segons el cas.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ DEL COMUNICAT
+========================================================== -->
+
+<section>
+
+<h2>Informació que ha d'incloure el comunicat</h2>
+
+<p>
+El comunicat ha de proporcionar la informació necessària perquè les
+persones afectades entenguen la situació i puguen adoptar les mesures
+recomanades. Ha de redactar-se amb un llenguatge senzill, evitant
+tecnicismes innecessaris.
+</p>
+
+<p>
+La informació ha de ser veraç, coherent i actualitzada, indicant
+clarament què es coneix, quines actuacions s'han realitzat i quins
+passos s'esperen a continuació.
+</p>
+
+<h3>Contingut habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Descripció de l'incident</td>
+
+<td>Explicar què ha passat.</td>
+
+</tr>
+
+<tr>
+
+<td>Data aproximada</td>
+
+<td>Situar els fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Persones afectades</td>
+
+<td>Indicar a qui afecta.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures adoptades</td>
+
+<td>Informar de les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Recomanacions</td>
+
+<td>Explicar què han de fer els afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Canals de contacte</td>
+
+<td>Facilitar suport i consultes.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Explica sempre les recomanacions de manera concreta. Per exemple,
+indica si és necessari canviar la contrasenya, activar
+l'autenticació multifactor o contactar amb el servei d'assistència.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CANALS DE COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Canals de comunicació</h2>
+
+<p>
+L'organització ha d'utilitzar canals oficials que garantisquen que la
+informació arriba als destinataris de manera segura i fiable. El canal
+escollit dependrà del nombre d'afectats, de la urgència i del tipus
+d'informació que s'haja de comunicar.
+</p>
+
+<h3>Canals habituals</h3>
+
+<ul>
+
+<li>Correu electrònic corporatiu.</li>
+
+<li>Portal de clients.</li>
+
+<li>Intranet.</li>
+
+<li>Aplicació mòbil oficial.</li>
+
+<li>SMS o notificacions push.</li>
+
+<li>Comunicats al lloc web corporatiu.</li>
+
+<li>Servei d'atenció telefònica.</li>
+
+<li>Xarxes socials oficials, quan siga procedent.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Destinataris de la comunicació</h2>
+
+<div class="mermaid">
+flowchart TD
+
+A[Comunicació]
+
+A --> B[Clients]
+
+A --> C[Empleats]
+
+A --> D[Proveïdors]
+
+A --> E[Altres afectats]
+
+</div>
+
+<p>
+Els destinataris del comunicat poden variar segons la naturalesa de
+l'incident. L'organització ha d'identificar quins col·lectius estan
+realment afectats abans d'enviar qualsevol informació.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la comunicació als afectats</h2>
+
+<p>
+Una comunicació ben planificada ajuda a reduir la incertesa, reforça la
+confiança en l'organització i facilita que les persones afectades
+adopten les mesures de protecció adequades. Per aconseguir-ho, el
+missatge ha de ser clar, coherent i fàcil d'entendre.
+</p>
+
+<p>
+També és important que totes les comunicacions siguen coherents entre
+els diferents canals utilitzats i que qualsevol actualització siga
+transmesa amb rapidesa.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Comunicar únicament informació confirmada.</li>
+
+<li>Utilitzar un llenguatge senzill i comprensible.</li>
+
+<li>Explicar les mesures adoptades per l'organització.</li>
+
+<li>Indicar clarament què han de fer les persones afectades.</li>
+
+<li>Facilitar canals de contacte per resoldre dubtes.</li>
+
+<li>Actualitzar la informació quan hi haja novetats.</li>
+
+<li>Coordinar el missatge amb tots els departaments implicats.</li>
+
+<li>Mantindre la transparència sense comprometre la investigació.</li>
+
+<li>Respectar la confidencialitat de les dades.</li>
+
+<li>Conservar un registre de totes les comunicacions.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Abans d'enviar un comunicat, comprova que qualsevol persona sense
+coneixements tècnics puga entendre fàcilment el seu contingut.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals</h2>
+
+<p>
+Una comunicació inadequada pot augmentar la preocupació dels afectats,
+generar rumors o perjudicar la imatge de l'organització. Per això és
+important evitar alguns errors freqüents.
+</p>
+
+<h3>Errors més comuns</h3>
+
+<ul>
+
+<li>Retardar excessivament la comunicació.</li>
+
+<li>Utilitzar un llenguatge massa tècnic.</li>
+
+<li>Enviar informació contradictòria.</li>
+
+<li>Ocultar informació rellevant.</li>
+
+<li>Fer promeses que no poden complir-se.</li>
+
+<li>No indicar recomanacions als afectats.</li>
+
+<li>No oferir canals de contacte.</li>
+
+<li>Difondre informació sense verificar.</li>
+
+<li>Comunicar a persones que no estan afectades.</li>
+
+<li>No actualitzar el comunicat quan canvia la situació.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Esperar massa temps per informar les persones afectades pot provocar
+que aquestes coneguen l'incident per fonts no oficials, generant
+confusió i desconfiança.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RECOMANACIONS PER ALS AFECTATS
+========================================================== -->
+
+<section>
+
+<h2>Recomanacions per a les persones afectades</h2>
+
+<p>
+A més d'informar sobre l'incident, el comunicat ha d'incloure
+recomanacions pràctiques perquè les persones afectades puguen reduir
+els riscos derivats de la situació.
+</p>
+
+<p>
+Aquestes recomanacions dependran del tipus d'incident, però han de ser
+concretes, fàcils d'aplicar i adaptades al perfil dels destinataris.
+</p>
+
+<h3>Mesures habituals</h3>
+
+<ul>
+
+<li>Canviar les contrasenyes dels comptes.</li>
+
+<li>Activar l'autenticació multifactor.</li>
+
+<li>Revisar els moviments dels comptes.</li>
+
+<li>Desconfiar de correus sospitosos.</li>
+
+<li>No reutilitzar contrasenyes antigues.</li>
+
+<li>Actualitzar els dispositius.</li>
+
+<li>Contactar amb el servei d'assistència si detecten anomalies.</li>
+
+<li>Conservar les comunicacions rebudes.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Les recomanacions han de ser clares i accionables. Els afectats han de
+saber exactament què han de fer després de llegir el comunicat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Cada incident requereix una comunicació adaptada a la situació. Els
+següents exemples mostren diferents casos habituals.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Comunicació recomanada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Filtració de dades</td>
+
+<td>Informar dels riscos i recomanar el canvi de contrasenya.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Comunicar la interrupció temporal dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Accés indegut a comptes</td>
+
+<td>Sol·licitar la revisió de l'activitat dels usuaris.</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda del portal web</td>
+
+<td>Informar de la incidència i del temps estimat de recuperació.</td>
+
+</tr>
+
+<tr>
+
+<td>Campanya de phishing</td>
+
+<td>Advertir els usuaris perquè no responguen als missatges fraudulents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Una empresa detecta que diversos comptes d'usuaris han pogut quedar
+compromesos després d'un atac de phishing. L'organització envia un
+correu electrònic explicant la situació, recomana canviar
+immediatament les contrasenyes, activar l'autenticació multifactor i
+contactar amb el servei d'assistència davant qualsevol activitat
+sospitosa.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una bona comunicació pot reduir l'impacte d'un incident tant com una
+bona resposta tècnica. Les persones afectades valoren especialment la
+claredat, la rapidesa i la sinceritat amb què una organització explica
+la situació.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Comunica només informació confirmada.</li>
+
+<li>Utilitza un llenguatge senzill i directe.</li>
+
+<li>Explica què ha passat sense crear alarma innecessària.</li>
+
+<li>Indica clarament què ha de fer cada persona afectada.</li>
+
+<li>Facilita canals de contacte per resoldre dubtes.</li>
+
+<li>Actualitza els comunicats quan hi haja noves dades.</li>
+
+<li>Mantín la coherència entre tots els canals oficials.</li>
+
+<li>Mostra transparència sense comprometre la investigació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La comunicació als afectats forma part de la gestió integral dels
+incidents de ciberseguretat. Ha d'estar coordinada amb la resposta
+tècnica, la notificació als responsables interns i, si és necessari,
+amb les comunicacions a les autoritats competents.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La informació ha de ser veraç i verificable.</li>
+
+<li>Cal protegir la confidencialitat de les dades.</li>
+
+<li>No s'han de difondre detalls tècnics innecessaris.</li>
+
+<li>Els comunicats han de ser coherents en tots els canals.</li>
+
+<li>Les recomanacions han de ser fàcils d'aplicar.</li>
+
+<li>Totes les comunicacions han de quedar documentades.</li>
+
+<li>La confiança dels usuaris depén també d'una bona comunicació.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu principal és ajudar les persones afectades a comprendre la
+situació i a protegir-se davant les possibles conseqüències de
+l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>La primera impressió és decisiva</strong>
+
+<p>
+
+Els primers comunicats solen marcar la percepció que els afectats
+tenen de la gestió de l'incident. Una resposta ràpida i transparent
+contribueix a generar confiança.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els rumors es propaguen molt ràpidament</strong>
+
+<p>
+
+Quan una organització no proporciona informació oficial, és habitual
+que apareguen especulacions o informacions incorrectes que dificulten
+la gestió de la situació.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La comunicació també és una mesura de protecció</strong>
+
+<p>
+
+Un simple avís recomanant canviar les contrasenyes o activar
+l'autenticació multifactor pot evitar nous accessos no autoritzats i
+reduir l'impacte de l'incident.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació és imprescindible</strong>
+
+<p>
+
+Conservar còpies de tots els comunicats enviats facilita les
+auditories, les revisions internes i l'anàlisi posterior de la gestió
+de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa de comerç electrònic detecta que un atac ha compromés una
+base de dades que conté informació dels comptes d'alguns clients.
+Després d'analitzar l'incident, decideix informar les persones
+afectades i proporcionar-los recomanacions de seguretat.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Origen</td>
+
+<td>Accés no autoritzat.</td>
+
+</tr>
+
+<tr>
+
+<td>Afectats</td>
+
+<td>Clients registrats.</td>
+
+</tr>
+
+<tr>
+
+<td>Informació compromesa</td>
+
+<td>Dades del compte.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable del comunicat</td>
+
+<td>Departament de Comunicació.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat</td>
+
+<td>Comunicació en preparació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Decideix quina informació ha d'incloure el comunicat.</li>
+
+<li>Explica quines recomanacions rebran els clients.</li>
+
+<li>Selecciona el canal de comunicació més adequat.</li>
+
+<li>Indica qui hauria d'autoritzar el comunicat.</li>
+
+<li>Justifica per què és important informar ràpidament els afectats.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica simularàs la preparació d'un comunicat dirigit a
+les persones afectades per un incident de ciberseguretat. Analitzaràs
+la informació disponible, seleccionaràs els destinataris adequats i
+redactaràs un missatge clar, responsable i fàcil d'entendre.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa detecta una filtració de dades que podria afectar una part
+dels seus clients. La investigació confirma que alguns comptes han
+estat compromesos i la direcció decideix informar les persones
+afectades perquè adopten mesures de protecció immediates.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Informe tècnic preliminar.</li>
+
+<li>Plantilla de comunicació als afectats.</li>
+
+<li>Protocol intern de resposta davant incidents.</li>
+
+<li>Inventari dels usuaris afectats.</li>
+
+<li>Guia de comunicació corporativa.</li>
+
+<li>Model de preguntes freqüents (FAQ).</li>
+
+<li>Checklist de revisió del comunicat.</li>
+
+<li>Canals oficials de comunicació.</li>
+
+<li>Informe d'impacte de l'incident.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar la informació disponible sobre l'incident.</li>
+
+<li>Identificar les persones afectades.</li>
+
+<li>Seleccionar el canal de comunicació més adequat.</li>
+
+<li>Redactar el comunicat oficial.</li>
+
+<li>Incloure recomanacions de seguretat per als afectats.</li>
+
+<li>Preparar una llista de preguntes freqüents.</li>
+
+<li>Revisar el comunicat abans del seu enviament.</li>
+
+<li>Registrar la comunicació realitzada.</li>
+
+<li>Presentar el procediment complet seguit.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu del comunicat és informar, tranquil·litzar i ajudar les
+persones afectades a protegir-se. Un bon missatge és clar, coherent,
+comprensible i ofereix instruccions concretes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és la comunicació a les persones afectades.</li>
+
+<li>Explica quan és necessari enviar un comunicat.</li>
+
+<li>Identifica els principals destinataris.</li>
+
+<li>Descriu la informació que ha d'incloure un comunicat.</li>
+
+<li>Relaciona diferents incidents amb el canal de comunicació més adequat.</li>
+
+<li>Explica la importància de la transparència.</li>
+
+<li>Analitza els errors més habituals en aquest tipus de comunicacions.</li>
+
+<li>Redacta un comunicat per a un cas pràctic de filtració de dades.</li>
+
+<li>Proposa recomanacions de seguretat per als usuaris afectats.</li>
+
+<li>Justifica la necessitat de conservar totes les comunicacions realitzades.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La comunicació a les persones afectades és una part fonamental de la
+gestió dels incidents de ciberseguretat. Permet informar de manera
+responsable, reduir la incertesa, facilitar mesures de protecció i
+mantindre la confiança dels usuaris en l'organització.
+
+</p>
+
+<p>
+
+Els comunicats han de ser autoritzats pels responsables corresponents,
+utilitzar canals oficials, incloure informació clara i comprensible i
+adaptar-se a les necessitats dels destinataris. Una comunicació eficaç
+complementa les actuacions tècniques i contribueix a minimitzar
+l'impacte de l'incident.
+
+</p>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La comunicació ha de ser clara i transparent.</li>
+
+<li>Només s'ha d'enviar informació confirmada.</li>
+
+<li>Els afectats han de rebre recomanacions útils.</li>
+
+<li>Cal utilitzar canals oficials.</li>
+
+<li>La informació s'ha d'adaptar als destinataris.</li>
+
+<li>La confidencialitat continua sent imprescindible.</li>
+
+<li>Les comunicacions han de quedar documentades.</li>
+
+<li>Una bona comunicació reforça la confiança en l'organització.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir la comunicació a les persones afectades.</li>
+
+<li>Explicar quan és necessària.</li>
+
+<li>Identificar qui autoritza el comunicat.</li>
+
+<li>Descriure els principals destinataris.</li>
+
+<li>Explicar quina informació ha d'incloure.</li>
+
+<li>Seleccionar els canals de comunicació adequats.</li>
+
+<li>Reconèixer bones pràctiques i errors habituals.</li>
+
+<li>Proposar recomanacions per als afectats.</li>
+
+<li>Aplicar el procediment a un cas pràctic.</li>
+
+<li>Justificar la importància de la transparència i la confiança.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos materials
+orientats a la preparació de comunicats i a la gestió de la
+comunicació amb les persones afectades per un incident de
+ciberseguretat.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla de comunicat als afectats.</li>
+
+<li>📄 Protocol intern de comunicació.</li>
+
+<li>📄 Checklist de revisió abans de l'enviament.</li>
+
+<li>📄 Model de preguntes freqüents (FAQ).</li>
+
+<li>📄 Guia de bones pràctiques de comunicació.</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Exercicis de redacció de comunicats.</li>
+
+<li>📄 Plantilla de registre de comunicacions.</li>
+
+<li>📄 Guia de recomanacions de seguretat per als usuaris.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Una comunicació eficaç no consisteix únicament a informar que hi ha
+hagut un incident. També ha d'ajudar les persones afectades a entendre
+la situació, saber què poden fer per protegir-se i mantindre la
+confiança en la gestió realitzada per l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+   <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

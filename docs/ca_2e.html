@@ -1,0 +1,2088 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 2e - Classificació i seguiment dels incidents </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_02.html"> 
+                    RA2
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA2e
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#0ca982, #268968);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 2e - Classificació i seguiment dels incidents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🚨
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a <strong>classificar,
+valorar, documentar i fer el seguiment dels incidents de
+ciberseguretat</strong> detectats dins d'una organització.
+Aquestes activitats permeten establir la prioritat de resposta,
+coordinar els equips implicats i conservar un registre complet de
+tot el cicle de vida de l'incident.
+</p>
+
+<p>
+També coneixeràs els diferents criteris utilitzats per determinar
+la gravetat d'un incident, les dades que han de registrar-se i les
+bones pràctiques per garantir la traçabilitat de totes les
+actuacions realitzades.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la importància de classificar correctament els incidents.</li>
+
+<li>Aprendre a valorar el risc i la criticitat d'un incident.</li>
+
+<li>Conèixer els criteris de priorització.</li>
+
+<li>Documentar correctament els incidents detectats.</li>
+
+<li>Realitzar el seguiment de totes les actuacions.</li>
+
+<li>Comprendre el cicle de vida complet d'un incident.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan una organització detecta un incident de ciberseguretat, no és
+suficient amb identificar-lo. També és necessari determinar la
+seua gravetat, registrar tota la informació disponible,
+assignar-ne una prioritat i controlar-ne l'evolució fins a la seua
+resolució definitiva.
+</p>
+
+<p>
+Una bona classificació permet destinar els recursos adequats als
+incidents més crítics i reduir el temps de resposta. Al mateix
+temps, la documentació i el seguiment faciliten les investigacions
+posteriors, les auditories i l'obtenció de lliçons apreses que
+ajudaran a millorar la seguretat de l'organització.
+</p>
+
+<p>
+Aquest procés forma part de qualsevol sistema de gestió
+d'incidents i és una de les funcions principals dels Centres
+d'Operacions de Seguretat (SOC) i dels equips de resposta davant
+incidents (CSIRT).
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Un incident que no queda registrat ni documentat és un incident
+del qual l'organització difícilment podrà aprendre.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CLASSIFICACIÓ DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Classificació dels incidents</h2>
+
+<p>
+La classificació consisteix a agrupar els incidents segons les
+seues característiques. Aquesta informació facilita l'assignació
+de recursos, la priorització de la resposta i l'elaboració
+d'estadístiques que permeten identificar tendències i amenaces
+recurrents.
+</p>
+
+<p>
+Cada organització pot definir la seua pròpia classificació, però
+habitualment es tenen en compte l'origen de l'incident, els actius
+afectats, el tipus d'atac i els objectius compromesos.
+</p>
+
+<h3>Criteris de classificació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Criteri</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Origen</td>
+
+<td>Intern o extern.</td>
+
+</tr>
+
+<tr>
+
+<td>Tipus d'incident</td>
+
+<td>Malware, phishing, DDoS, fuga d'informació...</td>
+
+</tr>
+
+<tr>
+
+<td>Actiu afectat</td>
+
+<td>Servidor, xarxa, aplicació o usuari.</td>
+
+</tr>
+
+<tr>
+
+<td>Objectiu compromès</td>
+
+<td>Confidencialitat, integritat o disponibilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Àrea afectada</td>
+
+<td>Finances, RRHH, producció...</td>
+
+</tr>
+
+<tr>
+
+<td>Origen tècnic</td>
+
+<td>Error humà, fallada de maquinari o atac.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un correu electrònic fraudulent que intenta robar credencials es
+classificaria com un incident de <strong>phishing</strong>, amb
+origen extern, afectació als usuaris i compromís potencial de la
+confidencialitat.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[Classificació]
+
+--> C[Tipus]
+
+--> D[Origen]
+
+--> E[Actius afectats]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     VALORACIÓ DE L'INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Valoració de l'incident</h2>
+
+<p>
+Una vegada classificat l'incident, és necessari valorar-ne la
+gravetat. Aquesta valoració determina l'ordre en què serà atés i
+els recursos que caldrà dedicar-hi.
+</p>
+
+<p>
+La criticitat d'un incident depén tant de la probabilitat que
+provoque danys com de l'impacte que pot tenir sobre els serveis de
+l'organització.
+</p>
+
+<h3>Factors de valoració</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Factor</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Conseqüències sobre l'organització.</td>
+
+</tr>
+
+<tr>
+
+<td>Probabilitat</td>
+
+<td>Possibilitat que l'incident es materialitze.</td>
+
+</tr>
+
+<tr>
+
+<td>Urgència</td>
+
+<td>Temps disponible per actuar.</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis afectats</td>
+
+<td>Nombre i importància dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris afectats</td>
+
+<td>Persones o departaments implicats.</td>
+
+</tr>
+
+<tr>
+
+<td>Compliment legal</td>
+
+<td>Possibles obligacions normatives.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Dos incidents del mateix tipus poden tenir prioritats molt
+diferents segons els sistemes afectats. Un ransomware en un equip
+d'oficina no té el mateix impacte que en un servidor de producció.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B[Classificació]
+
+--> C[Valoració]
+
+--> D[Priorització]
+
+--> E[Resposta]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     REGISTRE DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Registre dels incidents</h2>
+
+<p>
+Després de classificar i valorar un incident és imprescindible
+registrar tota la informació disponible. Aquest registre permet
+documentar què ha ocorregut, conservar les evidències i facilitar
+el treball dels equips encarregats de la investigació i la
+resposta.
+</p>
+
+<p>
+Un registre complet garanteix la traçabilitat de totes les
+actuacions realitzades i permet consultar l'historial de
+l'incident en qualsevol moment. També és una eina fonamental
+durant les auditories i les anàlisis de lliçons apreses.
+</p>
+
+<h3>Informació que ha de registrar-se</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Camp</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Identificador</td>
+
+<td>Codi únic de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Data i hora</td>
+
+<td>Moment en què es detecta.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable</td>
+
+<td>Persona o equip assignat.</td>
+
+</tr>
+
+<tr>
+
+<td>Origen</td>
+
+<td>Intern o extern.</td>
+
+</tr>
+
+<tr>
+
+<td>Descripció</td>
+
+<td>Resum de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Actius afectats</td>
+
+<td>Equips, serveis o dades compromeses.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Conseqüències observades.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències</td>
+
+<td>Logs, captures o fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat</td>
+
+<td>Fase en què es troba.</td>
+
+</tr>
+
+<tr>
+
+<td>Resolució</td>
+
+<td>Mesures adoptades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+En detectar un intent de phishing es crea el registre
+<strong>INC-2026-0048</strong>, indicant la data, el departament
+afectat, el correu fraudulent, les evidències disponibles i el
+responsable assignat a la investigació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Crear registre]
+
+--> C[Assignar responsable]
+
+--> D[Afegir evidències]
+
+--> E[Seguiment]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SEGUIMENT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Seguiment dels incidents</h2>
+
+<p>
+Una vegada registrat, l'incident ha de ser supervisat fins al seu
+tancament. El seguiment permet controlar l'evolució de les
+actuacions, verificar que les mesures adoptades són efectives i
+garantir que cap tasca queda pendent.
+</p>
+
+<p>
+Cada modificació de l'estat de l'incident ha de quedar registrada,
+indicant la data, la persona responsable i les actuacions
+realitzades.
+</p>
+
+<h3>Estats habituals d'un incident</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estat</th>
+
+<th>Significat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Nou</td>
+
+<td>S'acaba de detectar.</td>
+
+</tr>
+
+<tr>
+
+<td>En investigació</td>
+
+<td>S'estan analitzant les causes.</td>
+
+</tr>
+
+<tr>
+
+<td>Contingut</td>
+
+<td>S'ha limitat l'impacte.</td>
+
+</tr>
+
+<tr>
+
+<td>En recuperació</td>
+
+<td>S'estan restaurant els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Resolt</td>
+
+<td>L'incident està solucionat.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancat</td>
+
+<td>Finalitza el seguiment.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+No s'ha de considerar un incident tancat fins que s'haja comprovat
+que els serveis funcionen amb normalitat i que no existeixen nous
+indicadors de compromís.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Nou]
+
+--> B[Investigació]
+
+--> C[Contenció]
+
+--> D[Recuperació]
+
+--> E[Resolt]
+
+--> F[Tancat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PLATAFORMES DE GESTIÓ D'INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Plataformes de gestió d'incidents</h2>
+
+<p>
+Les organitzacions utilitzen eines específiques per registrar,
+coordinar i supervisar els incidents de ciberseguretat. Aquestes
+plataformes permeten centralitzar tota la informació, automatitzar
+tasques repetitives i facilitar la col·laboració entre els
+diferents equips.
+</p>
+
+<p>
+Segons les necessitats de cada organització poden utilitzar-se
+sistemes de ticketing, plataformes ITSM o eines avançades
+integrades amb els sistemes de monitorització.
+</p>
+
+<h3>Principals plataformes</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Plataforma</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ticketing</td>
+
+<td>Registrar i assignar incidències.</td>
+
+</tr>
+
+<tr>
+
+<td>ITSM</td>
+
+<td>Gestió integral dels serveis TIC.</td>
+
+</tr>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>Centralitzar esdeveniments i alertes.</td>
+
+</tr>
+
+<tr>
+
+<td>SOAR</td>
+
+<td>Automatitzar la resposta davant incidents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Comparativa</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Registre</th>
+
+<th>Monitorització</th>
+
+<th>Automatització</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ticketing</td>
+
+<td>✔</td>
+
+<td>—</td>
+
+<td>—</td>
+
+</tr>
+
+<tr>
+
+<td>ITSM</td>
+
+<td>✔</td>
+
+<td>Limitada</td>
+
+<td>Parcial</td>
+
+</tr>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>Limitada</td>
+
+</tr>
+
+<tr>
+
+<td>SOAR</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+
+En moltes organitzacions modernes, un SIEM detecta l'incident,
+crea automàticament un tiquet a la plataforma ITSM i un sistema
+SOAR executa les primeres accions de resposta de manera
+automàtica, reduint considerablement el temps de reacció.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[SIEM]
+
+--> B[Ticket]
+
+--> C[Analista]
+
+--> D[SOAR]
+
+--> E[Resposta]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PRIORITZACIÓ DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Priorització dels incidents</h2>
+
+<p>
+Una vegada classificat i valorat un incident, cal determinar
+l'ordre en què serà tractat. No tots els incidents requereixen una
+resposta immediata; alguns poden esperar, mentre que altres poden
+comprometre greument la continuïtat del negoci i han de ser
+atenguts de manera urgent.
+</p>
+
+<p>
+La priorització permet optimitzar els recursos disponibles i
+garantir que els equips de resposta dediquen els seus esforços als
+incidents amb major impacte per a l'organització.
+</p>
+
+<h3>Factors que determinen la prioritat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Factor</th>
+
+<th>Influència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Dany potencial sobre l'organització.</td>
+
+</tr>
+
+<tr>
+
+<td>Urgència</td>
+
+<td>Temps disponible abans que augmente el risc.</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis afectats</td>
+
+<td>Importància dels serveis compromesos.</td>
+
+</tr>
+
+<tr>
+
+<td>Nombre d'usuaris afectats</td>
+
+<td>Abast de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Compliment normatiu</td>
+
+<td>Possibles obligacions legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Disponibilitat de recursos</td>
+
+<td>Capacitat de resposta de l'organització.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Nivells de prioritat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Prioritat</th>
+
+<th>Exemple</th>
+
+<th>Temps de resposta orientatiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Crítica</td>
+
+<td>Ransomware en servidors de producció.</td>
+
+<td>Immediat.</td>
+
+</tr>
+
+<tr>
+
+<td>Alta</td>
+
+<td>Fuga de dades personals.</td>
+
+<td>Menys d'1 hora.</td>
+
+</tr>
+
+<tr>
+
+<td>Mitjana</td>
+
+<td>Intent de phishing detectat.</td>
+
+<td>Mateix dia.</td>
+
+</tr>
+
+<tr>
+
+<td>Baixa</td>
+
+<td>Error menor de configuració.</td>
+
+<td>Segons planificació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+La prioritat no depén únicament del tipus d'incident. Un atac de
+phishing dirigit al director financer pot ser molt més crític que
+altres incidents aparentment més greus.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B[Valoració]
+
+B --> C{Impacte}
+
+C --> D[Alt]
+
+C --> E[Mitjà]
+
+C --> F[Baix]
+
+D --> G[Prioritat crítica]
+
+E --> H[Prioritat mitjana]
+
+F --> I[Prioritat baixa]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     DOCUMENTACIÓ DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Documentació dels incidents</h2>
+
+<p>
+La documentació consisteix a registrar totes les actuacions
+realitzades durant el cicle de vida de l'incident. Aquesta
+informació és imprescindible per facilitar les investigacions,
+justificar les decisions adoptades i elaborar informes tècnics o
+legals.
+</p>
+
+<p>
+Una documentació clara i completa permet que qualsevol membre de
+l'equip puga comprendre ràpidament què ha ocorregut i quines
+mesures s'han aplicat fins al moment.
+</p>
+
+<h3>Informació que ha d'incloure l'informe</h3>
+
+<ul>
+
+<li>Identificador de l'incident.</li>
+
+<li>Data i hora de detecció.</li>
+
+<li>Descripció dels fets.</li>
+
+<li>Actius afectats.</li>
+
+<li>Evidències recopilades.</li>
+
+<li>Accions realitzades.</li>
+
+<li>Responsables de cada actuació.</li>
+
+<li>Estat actual.</li>
+
+<li>Conclusió i mesures adoptades.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+En finalitzar la investigació d'un incident de malware, l'equip
+redacta un informe que inclou la cronologia dels fets, els equips
+afectats, les evidències recollides, les accions de contenció i
+les recomanacions per evitar incidents similars.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     TRAÇABILITAT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Traçabilitat dels incidents</h2>
+
+<p>
+La traçabilitat garanteix que totes les actuacions realitzades
+durant la gestió de l'incident queden registrades de manera
+cronològica. Això permet reconstruir els fets, identificar qui ha
+intervingut en cada moment i demostrar que s'han seguit els
+procediments establerts.
+</p>
+
+<p>
+Disposar d'una traçabilitat completa és especialment important en
+auditories, investigacions forenses o procediments judicials, on
+pot ser necessari demostrar la cadena d'actuacions realitzades.
+</p>
+
+<h3>Elements de la traçabilitat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Data i hora</td>
+
+<td>Ordenar cronològicament els fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuari responsable</td>
+
+<td>Identificar qui realitza cada acció.</td>
+
+</tr>
+
+<tr>
+
+<td>Acció executada</td>
+
+<td>Descriure la intervenció.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències associades</td>
+
+<td>Relacionar proves amb les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Canvi d'estat</td>
+
+<td>Registrar l'evolució de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Comentaris</td>
+
+<td>Afegir observacions tècniques.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els registres no s'han de modificar ni eliminar una vegada creats.
+Si és necessari corregir una dada, s'ha de registrar una nova
+entrada mantenint l'historial complet de l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Classificació]
+
+--> C[Valoració]
+
+--> D[Registre]
+
+--> E[Seguiment]
+
+--> F[Resolució]
+
+--> G[Lliçons apreses]
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Classificar, valorar, documentar i fer el seguiment dels incidents
+no només facilita la resposta immediata, sinó que també permet
+millorar contínuament la seguretat de l'organització a partir de
+l'experiència adquirida.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples de classificació i seguiment d'incidents</h2>
+
+<p>
+La classificació i el seguiment permeten gestionar els incidents
+de manera ordenada, assignant-los la prioritat adequada i
+garantint que totes les actuacions queden documentades fins al seu
+tancament.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Classificació</th>
+
+<th>Prioritat</th>
+
+<th>Estat inicial</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Correu de phishing.</td>
+
+<td>Enginyeria social.</td>
+
+<td>Mitjana.</td>
+
+<td>Nou.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware en un servidor.</td>
+
+<td>Malware.</td>
+
+<td>Crítica.</td>
+
+<td>En investigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Intent d'accés no autoritzat.</td>
+
+<td>Intrusió.</td>
+
+<td>Alta.</td>
+
+<td>Contingut.</td>
+
+</tr>
+
+<tr>
+
+<td>Pèrdua d'un ordinador portàtil.</td>
+
+<td>Seguretat física.</td>
+
+<td>Alta.</td>
+
+<td>En investigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Error de configuració del tallafoc.</td>
+
+<td>Configuració.</td>
+
+<td>Baixa.</td>
+
+<td>Nou.</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda del servidor web.</td>
+
+<td>Disponibilitat.</td>
+
+<td>Alta.</td>
+
+<td>En recuperació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+El SOC detecta un atac de ransomware sobre el servidor de fitxers.
+L'incident es classifica com a <strong>Malware</strong>, amb
+criticitat <strong>Crítica</strong>, s'assigna immediatament a
+l'equip de resposta i s'actualitza el seu estat cada vegada que es
+realitza una nova actuació fins al seu tancament.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Bones pràctiques</h2>
+
+<p>
+Una bona gestió dels incidents depén tant de la rapidesa en la
+resposta com de la qualitat del registre i de la documentació
+realitzada durant tot el procés.
+</p>
+
+<div class="tip">
+
+<strong>Recomanacions</strong>
+
+<ul>
+
+<li>Assigna un identificador únic a cada incident.</li>
+
+<li>Documenta totes les actuacions realitzades.</li>
+
+<li>Actualitza l'estat sempre que hi haja novetats.</li>
+
+<li>Revisa periòdicament els incidents oberts.</li>
+
+<li>Prioritza segons l'impacte sobre el negoci.</li>
+
+<li>Conserva totes les evidències recopilades.</li>
+
+<li>Utilitza una nomenclatura coherent.</li>
+
+<li>Elabora informes de tancament amb les lliçons apreses.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Una classificació incorrecta pot retardar la resposta davant un
+incident greu o provocar que es destinen recursos excessius a
+incidents de poca importància.
+</p>
+
+<div class="important">
+
+<strong>Errors habituals</strong>
+
+<ul>
+
+<li>No registrar tots els incidents.</li>
+
+<li>Assignar una prioritat inadequada.</li>
+
+<li>No conservar les evidències.</li>
+
+<li>Tancar un incident sense verificar la recuperació.</li>
+
+<li>No documentar les actuacions realitzades.</li>
+
+<li>No revisar els incidents recurrents.</li>
+
+<li>No identificar correctament els actius afectats.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Un incident no finalitza quan desapareix el problema tècnic. Només
+pot considerar-se tancat quan s'han completat la investigació, la
+documentació i la revisió final.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els SOC gestionen milers d'incidents cada dia</strong>
+
+<p>
+
+Els grans Centres d'Operacions de Seguretat poden rebre desenes de
+milers d'alertes diàries. Sense una correcta classificació i
+priorització seria impossible identificar els incidents realment
+crítics.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Molts incidents es reobrin després del seu tancament</strong>
+
+<p>
+
+Si apareixen noves evidències o es detecten noves afectacions,
+l'incident pot tornar a obrir-se per continuar la investigació i
+actualitzar la documentació.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les lliçons apreses milloren la seguretat</strong>
+
+<p>
+
+L'anàlisi dels incidents resolts permet identificar patrons,
+millorar els procediments i reduir el temps de resposta davant
+futurs incidents similars.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> detecta diversos
+incidents durant una mateixa setmana. L'equip de seguretat ha de
+classificar-los, establir-ne la prioritat i iniciar-ne el
+seguiment.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Classificació</th>
+
+<th>Prioritat</th>
+
+<th>Estat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Phishing a Recursos Humans.</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware al servidor ERP.</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda del servidor web.</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+</tr>
+
+<tr>
+
+<td>Intent d'accés al CPD.</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+</tr>
+
+<tr>
+
+<td>Error de configuració VPN.</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+<td>................................</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<p>
+
+Per a cada incident indica:
+
+</p>
+
+<ul>
+
+<li>La classificació més adequada.</li>
+
+<li>El nivell de prioritat.</li>
+
+<li>Quin responsable l'hauria de gestionar.</li>
+
+<li>Quines dades registraríes en la fitxa de seguiment.</li>
+
+<li>Quan consideraries que pot donar-se per tancat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h3>💻 Laboratori</h3>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista d'un
+<strong>Centre d'Operacions de Seguretat (SOC)</strong>. El teu
+objectiu serà gestionar un conjunt d'incidents detectats durant
+una jornada laboral, classificar-los, assignar-los una prioritat,
+documentar totes les actuacions i realitzar-ne el seguiment fins
+al seu tancament.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> ha registrat diversos
+incidents en les últimes hores. El responsable del SOC t'ha
+assignat la tasca de gestionar-los utilitzant el procediment
+intern de resposta davant incidents.
+
+</p>
+
+</div>
+
+<h3>Material proporcionat</h3>
+
+<ul>
+
+<li>Fitxes dels incidents detectats.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Logs del tallafoc.</li>
+
+<li>Informe dels sistemes EDR.</li>
+
+<li>Plantilla de registre d'incidents.</li>
+
+<li>Procediment de classificació i priorització.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Classificar cada incident segons la taxonomia establida.</li>
+
+<li>Determinar el nivell de criticitat.</li>
+
+<li>Assignar la prioritat de resposta.</li>
+
+<li>Crear el registre inicial de cada incident.</li>
+
+<li>Documentar totes les actuacions realitzades.</li>
+
+<li>Actualitzar l'estat de cada incidència.</li>
+
+<li>Registrar les evidències associades.</li>
+
+<li>Redactar l'informe final de tancament.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Cada modificació realitzada durant la gestió d'un incident ha de
+quedar registrada. Una bona traçabilitat és essencial durant les
+auditories i les investigacions forenses.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>Explica la diferència entre classificar i prioritzar un incident.</li>
+
+<li>Descriu el cicle de vida complet d'un incident de ciberseguretat.</li>
+
+<li>Indica quines dades mínimes ha de contenir un registre d'incident.</li>
+
+<li>Elabora una plantilla per documentar incidents dins d'una organització.</li>
+
+<li>Classifica cinc incidents diferents segons la seua gravetat.</li>
+
+<li>Construeix una matriu Impacte × Probabilitat i utilitza-la per determinar la prioritat de diversos incidents.</li>
+
+<li>Investiga quines plataformes ITSM s'utilitzen habitualment en empreses.</li>
+
+<li>Compara les funcions d'un SIEM i d'un SOAR durant la gestió dels incidents.</li>
+
+<li>Explica per què és important conservar totes les evidències encara que l'incident semble resolt.</li>
+
+<li>Debateix quines conseqüències podria tenir una classificació incorrecta d'un incident crític.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La classificació, la valoració i el seguiment constitueixen les
+últimes fases del procés de detecció d'incidents. Aquestes
+activitats permeten establir la prioritat de resposta, coordinar
+els equips implicats, documentar totes les actuacions i obtenir
+informació valuosa per millorar la seguretat de l'organització en
+el futur.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident detectat]
+
+--> B[Classificació]
+
+--> C[Valoració]
+
+--> D[Priorització]
+
+--> E[Registre]
+
+--> F[Seguiment]
+
+--> G[Tancament]
+
+--> H[Lliçons apreses]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>Cal classificar tots els incidents detectats.</li>
+
+<li>La prioritat depén del risc i de l'impacte sobre el negoci.</li>
+
+<li>Tot incident ha de disposar d'un registre únic.</li>
+
+<li>Les actuacions han de quedar perfectament documentades.</li>
+
+<li>El seguiment garanteix que no queden tasques pendents.</li>
+
+<li>La traçabilitat facilita les investigacions i les auditories.</li>
+
+<li>Les lliçons apreses permeten millorar els procediments de seguretat.</li>
+
+<li>Els SIEM, SOAR i ITSM faciliten la gestió integral dels incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Conceptes que has de dominar</strong>
+
+<ul>
+
+<li>Classificació dels incidents.</li>
+
+<li>Criteris de valoració.</li>
+
+<li>Impacte, probabilitat i criticitat.</li>
+
+<li>Priorització dels incidents.</li>
+
+<li>Registre d'incidents.</li>
+
+<li>Seguiment i canvi d'estats.</li>
+
+<li>Traçabilitat.</li>
+
+<li>Documentació i informes.</li>
+
+<li>Diferències entre SIEM, SOAR, ITSM i sistemes de ticketing.</li>
+
+<li>Lliçons apreses (<em>Lessons Learned</em>).</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar els continguts d'aquest criteri d'avaluació es
+proporcionen els següents recursos.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla de registre d'incidents.</li>
+
+<li>📄 Fitxa de classificació i priorització.</li>
+
+<li>📄 Matriu Impacte × Probabilitat.</li>
+
+<li>📄 Model d'informe d'incident.</li>
+
+<li>📄 Checklist de seguiment d'incidents.</li>
+
+<li>📄 Infografia del cicle de vida d'un incident.</li>
+
+<li>📄 Cas pràctic resolt.</li>
+
+<li>📄 Glossari de terminologia.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Full d'autoavaluació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Conserva aquestes plantilles perquè es reutilitzaran en el
+<strong>RA3</strong>, dedicat a la recopilació d'evidències,
+l'anàlisi forense i la investigació d'incidents de
+ciberseguretat. Un bon registre dels incidents facilitarà enormement
+les fases posteriors de l'anàlisi i la resposta.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+   
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4a Procediments de resposta davant incidents </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4a
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4a Procediments de resposta davant incidents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a aplicar els
+<strong>procediments de resposta davant incidents de
+ciberseguretat</strong>. Una vegada detectat, investigat i contingut
+l'incident, és necessari seguir una metodologia estructurada que
+permeta coordinar els equips implicats, reduir l'impacte sobre
+l'organització i recuperar els serveis de manera segura.
+</p>
+
+<p>
+També coneixeràs els plans de resposta davant incidents (IRP), els
+rols dels diferents equips, els mecanismes d'escalat i la importància
+de seguir procediments normalitzats per garantir una resposta ràpida,
+eficaç i documentada.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és un procediment de resposta davant incidents.</li>
+
+<li>Conèixer les fases generals de la resposta.</li>
+
+<li>Entendre la funció dels plans de resposta (IRP).</li>
+
+<li>Identificar els diferents rols implicats.</li>
+
+<li>Aplicar procediments segons el tipus d'incident.</li>
+
+<li>Coordinar correctament els equips tècnics i organitzatius.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan una organització confirma que està patint un incident de
+ciberseguretat, no és suficient actuar de forma improvisada. Les
+accions han de seguir un procediment preestablert que permeta prendre
+decisions ràpides, coordinar els equips implicats i minimitzar
+l'impacte sobre els sistemes i el negoci.
+</p>
+
+<p>
+Els procediments de resposta estableixen qui ha d'actuar, quan s'ha
+d'actuar, quines mesures s'han d'aplicar i com s'ha de documentar tot
+el procés. D'aquesta manera es garanteix que totes les actuacions
+siguen coherents, repetibles i eficaces.
+</p>
+
+<p>
+En les organitzacions modernes, aquests procediments formen part del
+<strong>Pla de Resposta davant Incidents (Incident Response Plan o
+IRP)</strong>, document que defineix totes les actuacions necessàries
+des de la detecció fins a la recuperació completa dels serveis.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Els millors equips de resposta no són els que improvisen millor,
+sinó els que disposen de procediments ben definits i entrenats
+prèviament.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA RESPOSTA DAVANT INCIDENTS?
+========================================================== -->
+
+<section>
+
+<h2>Què és la resposta davant incidents?</h2>
+
+<p>
+La <strong>resposta davant incidents</strong> és el conjunt
+d'actuacions tècniques, organitzatives i de comunicació que es duen a
+terme després de detectar un incident amb l'objectiu de controlar la
+situació, reduir els danys, recuperar els serveis afectats i evitar
+que el problema torne a produir-se.
+</p>
+
+<p>
+Aquest procés implica la participació de diferents equips, com ara el
+SOC, el CSIRT, els administradors de sistemes, els responsables de
+seguretat i, en alguns casos, la direcció de l'organització.
+</p>
+
+<p>
+La resposta davant incidents no consisteix únicament a eliminar un
+malware o restaurar una còpia de seguretat; també inclou la presa de
+decisions, la coordinació dels equips, la comunicació amb els
+responsables i la documentació de totes les actuacions.
+</p>
+
+<h3>Característiques principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Organitzada</td>
+
+<td>Segueix procediments definits.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinada</td>
+
+<td>Participen diferents equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentada</td>
+
+<td>Totes les actuacions queden registrades.</td>
+
+</tr>
+
+<tr>
+
+<td>Escalable</td>
+
+<td>S'adapta a la gravetat de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Orientada a la recuperació</td>
+
+<td>Busca restablir els serveis amb seguretat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Quan un servidor web és compromés, el procediment de resposta indica
+qui ha d'aïllar el servidor, qui analitza les evidències, qui informa
+la direcció i qui coordina la recuperació del servei.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Investigació]
+
+--> C[Contenció]
+
+--> D[Resposta]
+
+--> E[Recuperació]
+
+--> F[Lliçons apreses]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DELS PROCEDIMENTS DE RESPOSTA
+========================================================== -->
+
+<section>
+
+<h2>Objectius dels procediments de resposta</h2>
+
+<p>
+Els procediments de resposta tenen com a finalitat garantir que totes
+les actuacions es realitzen de manera coordinada, reduint el temps de
+resposta i minimitzant els efectes de l'incident sobre
+l'organització.
+</p>
+
+<p>
+Disposar d'un procediment ben definit permet actuar amb rapidesa,
+evitar errors derivats de la improvisació i facilitar la coordinació
+entre els diferents equips implicats.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Protegir els actius</td>
+
+<td>Reduir els danys produïts per l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinar equips</td>
+
+<td>Assignar funcions i responsabilitats.</td>
+
+</tr>
+
+<tr>
+
+<td>Reduir el temps de resposta</td>
+
+<td>Actuar amb rapidesa.</td>
+
+</tr>
+
+<tr>
+
+<td>Garantir la continuïtat</td>
+
+<td>Mantenir els serveis essencials.</td>
+
+</tr>
+
+<tr>
+
+<td>Facilitar la recuperació</td>
+
+<td>Preparar el retorn a la normalitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentar l'incident</td>
+
+<td>Registrar totes les actuacions.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Un procediment ben documentat redueix considerablement els temps de
+resposta (MTTR) i disminueix el risc d'errors durant la gestió de
+l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FASES GENERALS DE LA RESPOSTA
+========================================================== -->
+
+<section>
+
+<h2>Fases generals de la resposta davant incidents</h2>
+
+<p>
+Encara que cada organització adapta els seus procediments, la majoria
+dels plans de resposta segueixen una seqüència comuna de fases que
+permet gestionar qualsevol incident de manera ordenada.
+</p>
+
+<p>
+Aquestes fases faciliten la coordinació entre els equips tècnics i
+garanteixen que no s'oblide cap actuació important durant la gestió
+de l'incident.
+</p>
+
+<h3>Fases habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Preparació</td>
+
+<td>Disposar de plans, eines i equips preparats.</td>
+
+</tr>
+
+<tr>
+
+<td>Detecció</td>
+
+<td>Identificar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi</td>
+
+<td>Determinar l'abast i la gravetat.</td>
+
+</tr>
+
+<tr>
+
+<td>Contenció</td>
+
+<td>Limitar els danys.</td>
+
+</tr>
+
+<tr>
+
+<td>Erradicació</td>
+
+<td>Eliminar la causa de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Restablir els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Lliçons apreses</td>
+
+<td>Millorar els procediments futurs.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Preparació]
+
+--> B[Detecció]
+
+--> C[Anàlisi]
+
+--> D[Contenció]
+
+--> E[Erradicació]
+
+--> F[Recuperació]
+
+--> G[Lliçons apreses]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les organitzacions més madures realitzen simulacres periòdics dels
+procediments de resposta perquè els equips coneguen perfectament les
+seues funcions abans que es produïsca un incident real.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     PLA DE RESPOSTA DAVANT INCIDENTS (IRP)
+========================================================== -->
+
+<section>
+
+<h2>Pla de resposta davant incidents (IRP)</h2>
+
+<p>
+El <strong>Pla de Resposta davant Incidents</strong> (Incident Response
+Plan o <strong>IRP</strong>) és el document que descriu els procediments
+que ha de seguir una organització quan es produeix un incident de
+ciberseguretat.
+</p>
+
+<p>
+Aquest document defineix les responsabilitats dels diferents equips,
+els canals de comunicació, els procediments tècnics, els criteris
+d'escalat i les actuacions que s'han de realitzar en cada fase de la
+resposta.
+</p>
+
+<p>
+L'IRP ha d'estar actualitzat, ser conegut pels equips implicats i
+provar-se periòdicament mitjançant simulacres per garantir que és
+eficaç quan es produïsca un incident real.
+</p>
+
+<h3>Contingut habitual d'un IRP</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Apartat</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectius</td>
+
+<td>Finalitat del procediment.</td>
+
+</tr>
+
+<tr>
+
+<td>Rols</td>
+
+<td>Responsables de cada actuació.</td>
+
+</tr>
+
+<tr>
+
+<td>Procediments</td>
+
+<td>Accions que cal executar.</td>
+
+</tr>
+
+<tr>
+
+<td>Escalat</td>
+
+<td>Quan informar altres responsables.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Canals interns i externs.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentació</td>
+
+<td>Registre de totes les actuacions.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa disposa d'un IRP que estableix que qualsevol incident
+classificat com a crític ha de ser comunicat immediatament al
+responsable de seguretat, al CSIRT i a la direcció.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B[Activar IRP]
+
+--> C[Assignar responsables]
+
+--> D[Executar procediments]
+
+--> E[Documentar]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ROLS I RESPONSABILITATS
+========================================================== -->
+
+<section>
+
+<h2>Rols i responsabilitats</h2>
+
+<p>
+Una resposta eficaç depén de la coordinació entre els diferents equips
+de l'organització. Cada participant ha de conèixer exactament quines
+funcions li corresponen i quines decisions pot prendre.
+</p>
+
+<p>
+Definir clarament les responsabilitats evita duplicitats, redueix els
+temps de resposta i facilita la coordinació durant situacions de gran
+pressió.
+</p>
+
+<h3>Rols principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Rol</th>
+
+<th>Responsabilitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Detectar i monitoritzar incidents.</td>
+
+</tr>
+
+<tr>
+
+<td>CSIRT</td>
+
+<td>Coordinar la resposta tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Administrador</td>
+
+<td>Aplicar les mesures tècniques.</td>
+
+</tr>
+
+<tr>
+
+<td>CISO</td>
+
+<td>Coordinar la seguretat de l'organització.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Prendre decisions estratègiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Gestionar la informació externa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[SOC]
+
+--> B[CSIRT]
+
+--> C[CISO]
+
+--> D[Direcció]
+
+A --> E[Administradors]
+
+C --> F[Comunicació]
+
+</div>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Cada actuació ha de tindre un responsable assignat. Quan les
+responsabilitats no estan definides és habitual que algunes tasques
+queden sense realitzar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ACTIVACIÓ DEL PROCEDIMENT
+========================================================== -->
+
+<section>
+
+<h2>Activació del procediment</h2>
+
+<p>
+No tots els incidents requereixen activar el mateix nivell de resposta.
+Per aquest motiu, els plans de resposta estableixen criteris que
+determinen quan s'ha d'iniciar el procediment i quin nivell
+d'intervenció és necessari.
+</p>
+
+<p>
+L'activació pot ser automàtica, a partir d'una alerta crítica
+generada per les eines de monitorització, o manual, després de la
+valoració realitzada pels analistes del SOC o del CSIRT.
+</p>
+
+<h3>Criteris habituals</h3>
+
+<ul>
+
+<li>Impacte sobre els serveis.</li>
+
+<li>Nombre d'equips afectats.</li>
+
+<li>Tipus d'amenaça detectada.</li>
+
+<li>Existència de dades compromeses.</li>
+
+<li>Risc de propagació.</li>
+
+<li>Requisits legals.</li>
+
+<li>Valor dels actius afectats.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És preferible activar el procediment davant un dubte raonable que
+retardar la resposta mentre l'incident continua evolucionant.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Alerta]
+
+--> B{Incident?}
+
+B -->|No| C[Tancar]
+
+B -->|Sí| D[Activar IRP]
+
+D --> E[Assignar equip]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESCALAT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Escalat dels incidents</h2>
+
+<p>
+L'escalat consisteix a traslladar la gestió d'un incident a un nivell
+superior quan la situació supera les competències o els recursos de
+l'equip que l'està gestionant.
+</p>
+
+<p>
+Un bon procediment defineix quan cal escalar un incident, a qui s'ha
+de comunicar i quina informació s'ha de facilitar perquè la resposta
+continue sense interrupcions.
+</p>
+
+<h3>Tipus d'escalat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Funcional</td>
+
+<td>Intervenció d'especialistes.</td>
+
+</tr>
+
+<tr>
+
+<td>Jeràrquic</td>
+
+<td>Informar nivells directius.</td>
+
+</tr>
+
+<tr>
+
+<td>Extern</td>
+
+<td>Contactar amb proveïdors o CSIRT.</td>
+
+</tr>
+
+<tr>
+
+<td>Legal</td>
+
+<td>Notificar a les autoritats competents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si una empresa detecta una fuga massiva de dades personals, l'incident
+pot escalar-se simultàniament al CISO, a la direcció, al delegat de
+protecció de dades i al CSIRT de referència.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Analista SOC]
+
+--> B[CSIRT]
+
+--> C[CISO]
+
+--> D[Direcció]
+
+--> E[Autoritats]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     PROCEDIMENTS SEGONS EL TIPUS D'INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Procediments segons el tipus d'incident</h2>
+
+<p>
+No tots els incidents requereixen la mateixa resposta. Un atac de
+ransomware, una intrusió en un servidor, una fuga d'informació o un
+atac de denegació de servei (DoS) presenten característiques diferents
+i, per tant, exigeixen procediments específics.
+</p>
+
+<p>
+Per facilitar una actuació ràpida i homogènia, moltes organitzacions
+disposen de <strong>playbooks</strong> o <strong>runbooks</strong>,
+documents que descriuen pas a pas les actuacions que s'han de seguir
+davant cada tipus d'incident.
+</p>
+
+<h3>Procediments habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Resposta principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Aïllar els equips i preservar les evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Bloquejar dominis, eliminar correus i informar els usuaris.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió</td>
+
+<td>Identificar l'accés i limitar els moviments laterals.</td>
+
+</tr>
+
+<tr>
+
+<td>DoS / DDoS</td>
+
+<td>Filtrar el trànsit i activar mesures de mitigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga d'informació</td>
+
+<td>Contindre la filtració i iniciar la notificació.</td>
+
+</tr>
+
+<tr>
+
+<td>Compromís de comptes</td>
+
+<td>Desactivar credencials i forçar el canvi de contrasenyes.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Davant una campanya de phishing, el playbook estableix eliminar els
+correus de totes les bústies, bloquejar el domini fraudulent,
+analitzar els equips afectats i informar immediatament els usuaris.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Tipus d'incident]
+
+--> B{Seleccionar Playbook}
+
+B --> C[Ransomware]
+
+B --> D[Phishing]
+
+B --> E[Intrusió]
+
+B --> F[DoS]
+
+C --> G[Resposta específica]
+
+D --> G
+
+E --> G
+
+F --> G
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     COMUNICACIÓ DURANT LA RESPOSTA
+========================================================== -->
+
+<section>
+
+<h2>Comunicació durant la resposta</h2>
+
+<p>
+Una resposta tècnica eficaç necessita una comunicació clara entre tots
+els participants. La informació ha d'arribar en el moment adequat als
+responsables tècnics, a la direcció i, quan siga necessari, als
+organismes externs.
+</p>
+
+<p>
+Una comunicació deficient pot provocar retards, actuacions
+contradictòries o decisions inadequades. Per aquest motiu, els plans
+de resposta estableixen canals i responsables de comunicació.
+</p>
+
+<h3>Comunicacions habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Destinatari</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Equip tècnic</td>
+
+<td>Estat de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Impacte i decisions estratègiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris</td>
+
+<td>Instruccions i recomanacions.</td>
+
+</tr>
+
+<tr>
+
+<td>CSIRT extern</td>
+
+<td>Coordinació tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Autoritats</td>
+
+<td>Notificacions legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Proveïdors</td>
+
+<td>Suport especialitzat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Durant un incident és preferible disposar d'un únic portaveu oficial
+que centralitze totes les comunicacions externes.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[CSIRT]
+
+--> B[Direcció]
+
+A --> C[Administradors]
+
+A --> D[Usuaris]
+
+A --> E[Proveïdors]
+
+A --> F[Autoritats]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS DURANT LA RESPOSTA
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals durant la resposta</h2>
+
+<p>
+Els errors comesos durant la resposta poden incrementar l'impacte de
+l'incident i dificultar la recuperació. Molts d'aquests problemes són
+conseqüència de la manca de preparació o de no seguir els
+procediments establerts.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Improvisar sense consultar el pla de resposta.</li>
+
+<li>No informar els responsables adequats.</li>
+
+<li>No registrar les actuacions realitzades.</li>
+
+<li>Duplicar tasques entre diferents equips.</li>
+
+<li>Aplicar canvis sense autorització.</li>
+
+<li>Comunicar informació no verificada.</li>
+
+<li>Retardar l'escalat de l'incident.</li>
+
+<li>No revisar l'efectivitat de les mesures adoptades.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Intentar resoldre un incident crític de manera individual sense
+coordinar-se amb la resta de l'equip acostuma a provocar errors i
+retards en la recuperació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+
+    Improvisació
+
+    Sense documentació
+
+    Mala comunicació
+
+    Sense coordinació
+
+    Escalat tardà
+
+    Procediments ignorats
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la resposta davant incidents</h2>
+
+<p>
+Les organitzacions amb una major maduresa en ciberseguretat segueixen
+un conjunt de bones pràctiques que permeten respondre de manera més
+ràpida, coordinada i eficient davant qualsevol incident.
+</p>
+
+<p>
+Aquestes pràctiques redueixen el temps de recuperació, milloren la
+coordinació dels equips i faciliten l'aprenentatge després de cada
+incident.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Disposar d'un IRP actualitzat.</li>
+
+<li>Utilitzar playbooks per als incidents habituals.</li>
+
+<li>Realitzar simulacres periòdics.</li>
+
+<li>Definir clarament els responsables.</li>
+
+<li>Documentar totes les actuacions.</li>
+
+<li>Mantindre una comunicació constant.</li>
+
+<li>Mesurar els temps de resposta (MTTD i MTTR).</li>
+
+<li>Revisar els procediments després de cada incident.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els procediments només són útils si es practiquen regularment.
+L'entrenament dels equips és una part essencial de la preparació
+davant incidents.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Els procediments de resposta varien segons el tipus d'incident, però
+tots comparteixen un mateix objectiu: reduir l'impacte, recuperar els
+serveis i evitar que la situació empitjore.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Resposta inicial</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Aïllar els equips afectats.</td>
+
+<td>Evitar la propagació.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Eliminar els correus i bloquejar el domini.</td>
+
+<td>Evitar noves víctimes.</td>
+
+</tr>
+
+<tr>
+
+<td>Compte compromés</td>
+
+<td>Desactivar el compte i canviar la contrasenya.</td>
+
+<td>Impedir nous accessos.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió en servidor</td>
+
+<td>Aïllar el servidor i iniciar l'anàlisi forense.</td>
+
+<td>Conservar evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>DDoS</td>
+
+<td>Activar la mitigació del trànsit.</td>
+
+<td>Mantenir el servei disponible.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta una intrusió en el servidor web. El procediment de
+resposta estableix aïllar el servidor, redirigir el trànsit cap al
+servidor de reserva, preservar les evidències i informar
+immediatament el responsable de seguretat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una resposta eficaç no depén únicament dels coneixements tècnics.
+També és fonamental seguir els procediments establerts i coordinar
+correctament tots els participants.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Segueix sempre el Pla de Resposta davant Incidents.</li>
+
+<li>Assigna un coordinador de l'incident.</li>
+
+<li>Comunica únicament informació verificada.</li>
+
+<li>Documenta totes les actuacions realitzades.</li>
+
+<li>Respecta els nivells d'escalat definits.</li>
+
+<li>Utilitza els playbooks disponibles.</li>
+
+<li>Avalua contínuament l'efectivitat de la resposta.</li>
+
+<li>Realitza una reunió de revisió en finalitzar l'incident.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La resposta davant incidents implica tant aspectes tècnics com
+organitzatius. Una actuació correcta pot reduir considerablement els
+temps de recuperació i les pèrdues econòmiques.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La resposta ha de seguir un procediment documentat.</li>
+
+<li>Totes les actuacions han de quedar registrades.</li>
+
+<li>Els responsables han d'estar clarament definits.</li>
+
+<li>Cal preservar les evidències durant tot el procés.</li>
+
+<li>La comunicació és tan important com les actuacions tècniques.</li>
+
+<li>Els procediments s'han d'actualitzar periòdicament.</li>
+
+<li>Els simulacres milloren la capacitat de resposta.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una resposta improvisada acostuma a incrementar els danys provocats
+per un incident. Els procediments existeixen precisament per evitar
+aquesta situació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Molts SOC utilitzen playbooks automàtics</strong>
+
+<p>
+
+Les plataformes SOAR permeten executar automàticament nombroses
+accions de resposta, com ara bloquejar adreces IP, aïllar equips o
+crear incidències sense intervenció humana.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els simulacres són obligatoris en moltes organitzacions</strong>
+
+<p>
+
+Els equips de resposta realitzen exercicis periòdics per comprovar que
+els procediments continuen sent eficaços i que tots els participants
+coneixen les seues responsabilitats.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació facilita les auditories</strong>
+
+<p>
+
+Registrar totes les actuacions permet reconstruir cronològicament
+l'incident, identificar punts de millora i demostrar el compliment de
+les polítiques de seguretat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La preparació redueix el temps de recuperació</strong>
+
+<p>
+
+Les organitzacions que disposen d'un IRP actualitzat solen recuperar
+els serveis molt més ràpidament que aquelles que improvisen la seua
+resposta.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta un accés no autoritzat al servidor de correu
+electrònic. Diversos usuaris indiquen que s'han enviat missatges des
+dels seus comptes sense el seu coneixement.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Observació</th>
+
+<th>Situació detectada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sistema afectat</td>
+
+<td>Servidor de correu.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris compromesos</td>
+
+<td>12 comptes.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Enviament massiu de correus fraudulents.</td>
+
+</tr>
+
+<tr>
+
+<td>Risc</td>
+
+<td>Compromís de credencials.</td>
+
+</tr>
+
+<tr>
+
+<td>Prioritat</td>
+
+<td>Alta.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Decideix si cal activar el Pla de Resposta davant Incidents.</li>
+
+<li>Identifica els responsables que han d'intervindre.</li>
+
+<li>Ordena cronològicament les actuacions que aplicaries.</li>
+
+<li>Indica quins canals de comunicació utilitzaries.</li>
+
+<li>Explica com documentaries totes les actuacions realitzades.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica assumiràs el paper del responsable de resposta
+davant incidents d'una empresa. A partir d'un incident simulat,
+hauràs d'aplicar el Pla de Resposta davant Incidents (IRP),
+coordinar els diferents equips implicats i documentar totes les
+actuacions realitzades.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+El SOC detecta un increment anòmal de connexions des d'un servidor
+intern cap a diverses adreces IP desconegudes. Poc després apareixen
+alertes de l'EDR indicant l'execució d'un procés sospitós i diversos
+usuaris informen de problemes d'accés als recursos compartits.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Pla de Resposta davant Incidents (IRP).</li>
+
+<li>Playbooks de ransomware i intrusions.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Alertes de l'EDR.</li>
+
+<li>Inventari dels actius.</li>
+
+<li>Mapa de la xarxa.</li>
+
+<li>Consola del Firewall.</li>
+
+<li>Plantilla de registre d'incidents.</li>
+
+<li>Pla de Continuïtat del Negoci.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Classificar l'incident segons la seua gravetat.</li>
+
+<li>Activar el procediment de resposta corresponent.</li>
+
+<li>Assignar els responsables de cada actuació.</li>
+
+<li>Aplicar les primeres mesures de resposta.</li>
+
+<li>Coordinar la comunicació entre els equips implicats.</li>
+
+<li>Documentar totes les decisions adoptades.</li>
+
+<li>Valorar si és necessari escalar l'incident.</li>
+
+<li>Preparar la fase de recuperació dels serveis.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La resposta davant incidents no consisteix únicament en aplicar
+mesures tècniques. També implica coordinar persones, gestionar la
+informació i garantir que totes les actuacions siguen coherents amb
+els procediments establerts.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és un procediment de resposta davant incidents.</li>
+
+<li>Explica les diferents fases d'un procés de resposta.</li>
+
+<li>Descriu el contingut habitual d'un Pla de Resposta davant Incidents (IRP).</li>
+
+<li>Diferencia entre un playbook i un runbook.</li>
+
+<li>Identifica els principals rols implicats en la resposta.</li>
+
+<li>Explica quan és necessari escalar un incident.</li>
+
+<li>Analitza un cas pràctic i selecciona el procediment més adequat.</li>
+
+<li>Descriu els errors més freqüents durant la resposta.</li>
+
+<li>Proposa millores per a un procediment de resposta existent.</li>
+
+<li>Elabora un diagrama del flux complet de resposta davant un incident.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La resposta davant incidents és una fase essencial de la gestió de la
+ciberseguretat. Mitjançant procediments ben definits, l'organització
+pot coordinar les actuacions dels diferents equips, reduir l'impacte
+de l'incident i recuperar els serveis amb rapidesa i seguretat.
+
+</p>
+
+<p>
+
+Els plans de resposta, els playbooks i els mecanismes d'escalat
+permeten actuar de manera homogènia davant situacions molt diverses,
+evitant improvisacions i facilitant la presa de decisions.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident detectat]
+
+--> B[Activació IRP]
+
+--> C[Resposta]
+
+--> D[Coordinació]
+
+--> E[Recuperació]
+
+--> F[Lliçons apreses]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La resposta segueix procediments normalitzats.</li>
+
+<li>L'IRP defineix les actuacions i els responsables.</li>
+
+<li>Els playbooks adapten la resposta a cada tipus d'incident.</li>
+
+<li>Els rols han d'estar clarament definits.</li>
+
+<li>L'escalat garanteix la participació dels responsables adequats.</li>
+
+<li>La comunicació és essencial durant tot el procés.</li>
+
+<li>Totes les actuacions han de quedar documentades.</li>
+
+<li>Els simulacres permeten millorar la preparació dels equips.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és un procediment de resposta davant incidents.</li>
+
+<li>Explicar les fases generals del procés de resposta.</li>
+
+<li>Descriure el contingut d'un IRP.</li>
+
+<li>Diferenciar entre playbook i runbook.</li>
+
+<li>Identificar els rols principals durant la resposta.</li>
+
+<li>Explicar els criteris d'activació i escalat.</li>
+
+<li>Relacionar cada tipus d'incident amb el procediment adequat.</li>
+
+<li>Identificar errors habituals durant la resposta.</li>
+
+<li>Justificar la importància de documentar totes les actuacions.</li>
+
+<li>Analitzar un cas pràctic proposant una resposta estructurada.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per ampliar els continguts d'aquest criteri d'avaluació es posen a
+disposició diferents recursos pràctics orientats a la preparació,
+execució i millora dels procediments de resposta davant incidents.
+
+</p>
+
+<ul>
+
+<li>📄 Model de Pla de Resposta davant Incidents (IRP).</li>
+
+<li>📄 Exemple de playbook per a ransomware.</li>
+
+<li>📄 Exemple de playbook per a phishing.</li>
+
+<li>📄 Plantilla de registre d'incidents.</li>
+
+<li>📄 Checklist d'activació del procediment.</li>
+
+<li>📄 Guia de rols i responsabilitats.</li>
+
+<li>📄 Plantilla de comunicació durant incidents.</li>
+
+<li>📄 Exercicis resolts de resposta davant incidents.</li>
+
+<li>📄 Esquema resum del procés complet de resposta.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri d'avaluació constitueix la base del <strong>RA4</strong>.
+Els següents criteris aprofundiran en aspectes concrets de la resposta,
+com ara la recuperació dels sistemes, la restauració dels serveis, la
+gestió de la continuïtat del negoci i les lliçons apreses després de
+cada incident.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

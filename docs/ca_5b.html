@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 5b Notificació als responsables interns </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_05.html"> 
+                    RA5
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA5b
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#1e6f6f, #0e6767);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 5b Notificació als responsables interns
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    📢
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com es realitza la notificació
+d'un incident als diferents responsables interns de l'organització.
+Coneixeràs els rols implicats, les seues responsabilitats i la manera
+en què la informació circula entre els diferents nivells durant la
+gestió d'un incident de ciberseguretat.
+</p>
+
+<p>
+També comprendràs la importància d'una comunicació clara, ordenada i
+confidencial per facilitar la coordinació entre els equips tècnics,
+els responsables de seguretat i la direcció.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Identificar els responsables interns implicats.</li>
+
+<li>Conèixer les funcions de cada rol.</li>
+
+<li>Comprendre el flux de notificació interna.</li>
+
+<li>Aprendre quan s'ha d'escalar un incident.</li>
+
+<li>Valorar la importància de la confidencialitat.</li>
+
+<li>Garantir la traçabilitat de les comunicacions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan es detecta un incident de ciberseguretat no és suficient amb
+registrar-lo. També és imprescindible comunicar-lo a les persones
+responsables perquè puguen prendre decisions, coordinar les actuacions
+i mobilitzar els recursos necessaris.
+</p>
+
+<p>
+Cada organització defineix els seus propis circuits de comunicació,
+però en tots els casos és fonamental que la informació arribe al
+destinatari correcte en el menor temps possible i mitjançant els
+canals establits.
+</p>
+
+<p>
+Una notificació interna eficaç facilita la coordinació dels equips,
+redueix el temps de resposta i evita que diferents persones actuen de
+manera descoordinada davant del mateix incident.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+No tots els incidents han d'arribar directament a la direcció. La
+informació s'escala progressivament segons la gravetat, l'impacte i
+els procediments definits per l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     NOTIFICACIÓ ALS RESPONSABLES INTERNS
+========================================================== -->
+
+<section>
+
+<h2>Notificació als responsables interns</h2>
+
+<p>
+La notificació interna consisteix a comunicar un incident als
+professionals de l'organització que tenen responsabilitats en la seua
+gestió. Aquesta comunicació ha de seguir un procediment establit que
+garantisca rapidesa, coordinació i traçabilitat.
+</p>
+
+<p>
+Els responsables informats poden variar segons la gravetat de
+l'incident, els sistemes afectats i les polítiques internes de
+l'organització. En incidents menors, la notificació pot limitar-se als
+equips tècnics, mentre que en situacions crítiques pot arribar fins a
+la direcció.
+</p>
+
+<p>
+L'objectiu és assegurar que cada responsable disposa de la informació
+necessària per actuar dins de les seues competències.
+</p>
+
+<h3>Objectius de la notificació interna</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Informar</td>
+
+<td>Comunicar l'existència de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinar</td>
+
+<td>Organitzar els equips implicats.</td>
+
+</tr>
+
+<tr>
+
+<td>Escalar</td>
+
+<td>Informar nivells superiors quan siga necessari.</td>
+
+</tr>
+
+<tr>
+
+<td>Registrar</td>
+
+<td>Mantindre la traçabilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Prioritzar</td>
+
+<td>Assignar recursos segons la criticitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Supervisar</td>
+
+<td>Fer seguiment de l'evolució.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un analista del SOC detecta una connexió sospitosa cap a un servidor
+extern. Després de validar l'alerta, informa el responsable de
+seguretat, que decideix escalar l'incident al CSIRT intern i informar
+la direcció perquè es tracta d'un servei crític.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ROLS IMPLICATS
+========================================================== -->
+
+<section>
+
+<h2>Rols implicats en la notificació</h2>
+
+<p>
+Durant la gestió d'un incident intervenen diferents perfils
+professionals. Cada un assumeix unes responsabilitats concretes i
+necessita rebre un determinat nivell d'informació per desenvolupar les
+seues funcions.
+</p>
+
+<p>
+Conèixer aquests rols facilita la coordinació entre els equips i evita
+retards o duplicitats en la comunicació.
+</p>
+
+<h3>Rols habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Rol</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Usuari</td>
+
+<td>Comunicar anomalies.</td>
+
+</tr>
+
+<tr>
+
+<td>Servei d'Assistència</td>
+
+<td>Registrar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Analista SOC</td>
+
+<td>Analitzar i classificar.</td>
+
+</tr>
+
+<tr>
+
+<td>Administrador de sistemes</td>
+
+<td>Aplicar mesures tècniques.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable de seguretat</td>
+
+<td>Coordinar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Prendre decisions estratègiques.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     RESPONSABILITATS
+========================================================== -->
+
+<section>
+
+<h2>Responsabilitats dels diferents nivells</h2>
+
+<p>
+Cada responsable rep la informació necessària segons el seu nivell de
+responsabilitat. Els equips tècnics gestionen els aspectes operatius,
+mentre que la direcció necessita una visió global de l'impacte sobre
+l'organització per prendre decisions estratègiques.
+</p>
+
+<h3>Responsabilitats principals</h3>
+
+<ul>
+
+<li>Registrar correctament la notificació.</li>
+
+<li>Classificar l'incident.</li>
+
+<li>Validar la informació rebuda.</li>
+
+<li>Coordinar les actuacions tècniques.</li>
+
+<li>Escalar quan siga necessari.</li>
+
+<li>Comunicar l'evolució de l'incident.</li>
+
+<li>Mantindre la confidencialitat.</li>
+
+<li>Autoritzar les decisions importants.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Cada responsable ha de rebre la informació que necessita per actuar,
+evitant tant la falta d'informació com l'excés de dades que no siguen
+rellevants per a les seues funcions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Flux de notificació interna</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Usuari]
+--> B[Help Desk]
+--> C[SOC]
+--> D[Responsable de Seguretat]
+--> E[Direcció]
+
+</div>
+
+<p>
+Aquest flux representa un model habitual de notificació interna. La
+informació circula pels diferents nivells de responsabilitat fins que
+arriba als responsables encarregats de coordinar la resposta davant
+l'incident.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     FLUX INTERN DE COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Flux intern de comunicació</h2>
+
+<p>
+El flux intern de comunicació estableix el recorregut que segueix la
+informació des que es detecta un incident fins que arriba als
+responsables que han de coordinar la resposta. Un procés ben definit
+evita pèrdues d'informació, duplicitats i retards en la presa de
+decisions.
+</p>
+
+<p>
+Aquest flux ha d'estar documentat en els procediments interns perquè
+tots els membres de l'organització coneguen quin és el següent pas en
+cada moment i a qui han de comunicar qualsevol novetat relacionada amb
+l'incident.
+</p>
+
+<h3>Fases habituals del flux intern</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Acció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Detecció</td>
+
+<td>Identificar una anomalia.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació inicial</td>
+
+<td>Informar el Servei d'Assistència.</td>
+
+</tr>
+
+<tr>
+
+<td>Validació</td>
+
+<td>Confirmar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Classificació</td>
+
+<td>Determinar la criticitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Escalat</td>
+
+<td>Informar els responsables.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment</td>
+
+<td>Comunicar l'evolució.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un empleat comunica una alerta al Servei d'Assistència. Després de
+registrar-la, el SOC confirma que es tracta d'un atac de phishing i
+informa el responsable de seguretat, que decideix activar el CSIRT
+intern.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESCALAT INTERN
+========================================================== -->
+
+<section>
+
+<h2>Escalat intern dels incidents</h2>
+
+<p>
+L'escalat intern consisteix a comunicar un incident a responsables de
+nivell superior quan la seua gravetat, impacte o complexitat supera la
+capacitat de gestió del nivell anterior.
+</p>
+
+<p>
+No tots els incidents segueixen el mateix recorregut. Els incidents
+lleus poden gestionar-se dins del departament TIC, mentre que els més
+crítics poden requerir la intervenció de la direcció o del comitè de
+crisi.
+</p>
+
+<h3>Nivells habituals d'escalat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nivell</th>
+
+<th>Responsable</th>
+
+<th>Quan intervé</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Help Desk</td>
+
+<td>Incidències senzilles.</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>SOC</td>
+
+<td>Incidents confirmats.</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>Responsable de Seguretat</td>
+
+<td>Incidents importants.</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Direcció</td>
+
+<td>Impacte crític.</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Comitè de crisi</td>
+
+<td>Emergències majors.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'escalat ha d'estar basat en criteris objectius com la disponibilitat
+dels serveis, l'impacte econòmic, el nombre d'usuaris afectats o els
+requisits legals.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ SEGONS EL DESTINATARI
+========================================================== -->
+
+<section>
+
+<h2>Informació segons el destinatari</h2>
+
+<p>
+No tots els responsables necessiten el mateix nivell de detall. Els
+equips tècnics requereixen informació molt específica sobre els
+sistemes afectats, mentre que la direcció necessita dades resumides
+que faciliten la presa de decisions.
+</p>
+
+<p>
+Adaptar el contingut de la notificació al destinatari millora la
+comprensió, evita sobrecàrrega d'informació i accelera la resposta.
+</p>
+
+<h3>Informació habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Destinatari</th>
+
+<th>Informació principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Help Desk</td>
+
+<td>Descripció inicial.</td>
+
+</tr>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Detalls tècnics.</td>
+
+</tr>
+
+<tr>
+
+<td>Administradors</td>
+
+<td>Sistemes afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable de Seguretat</td>
+
+<td>Impacte i evolució.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Resum executiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Comitè de crisi</td>
+
+<td>Situació global.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Utilitza un llenguatge adaptat al destinatari. La informació tècnica
+pot ser imprescindible per als analistes, però excessiva per a la
+direcció.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONFIDENCIALITAT
+========================================================== -->
+
+<section>
+
+<h2>Confidencialitat de les comunicacions</h2>
+
+<p>
+Les notificacions internes poden contenir informació sensible sobre
+els sistemes, les vulnerabilitats o les dades afectades. Per aquest
+motiu, només han de ser accessibles per les persones autoritzades.
+</p>
+
+<p>
+La confidencialitat evita filtracions d'informació que podrien
+comprometre la investigació o facilitar noves accions als atacants.
+</p>
+
+<h3>Mesures de protecció</h3>
+
+<ul>
+
+<li>Utilitzar canals corporatius.</li>
+
+<li>Aplicar control d'accés.</li>
+
+<li>Evitar reenviaments innecessaris.</li>
+
+<li>Xifrar les comunicacions sensibles.</li>
+
+<li>Registrar tots els accessos.</li>
+
+<li>Compartir només la informació imprescindible.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Escalat segons la gravetat</h2>
+
+<div class="mermaid">
+flowchart TD
+
+A[Incident]
+
+A --> B{Gravetat}
+
+B -->|Baixa| C[Responsable TIC]
+
+B -->|Mitjana| D[SOC]
+
+B -->|Alta| E[Responsable de Seguretat]
+
+E --> F[Direcció]
+
+</div>
+
+<p>
+Aquest esquema mostra com el nivell de gravetat condiciona el procés
+d'escalat intern. Com més crític és l'incident, més nivells de
+responsabilitat intervenen en la presa de decisions.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     COORDINACIÓ ENTRE DEPARTAMENTS
+========================================================== -->
+
+<section>
+
+<h2>Coordinació entre departaments</h2>
+
+<p>
+La resposta a un incident de ciberseguretat no depén exclusivament del
+departament TIC. En funció del tipus d'incident poden intervenir
+altres àrees de l'organització, com ara Recursos Humans, l'assessoria
+jurídica, la comunicació corporativa o la direcció.
+</p>
+
+<p>
+La coordinació entre departaments garanteix que totes les decisions es
+prenen de manera coherent i que cada equip actua dins del seu àmbit de
+responsabilitat. Una comunicació fluida evita contradiccions,
+duplicitats i retards durant la gestió de l'incident.
+</p>
+
+<h3>Departaments implicats</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Departament</th>
+
+<th>Funció durant l'incident</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Servei d'Assistència</td>
+
+<td>Registrar i derivar incidències.</td>
+
+</tr>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Analitzar les alertes.</td>
+
+</tr>
+
+<tr>
+
+<td>Administració de sistemes</td>
+
+<td>Aplicar mesures tècniques.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguretat de la informació</td>
+
+<td>Coordinar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Assessoria jurídica</td>
+
+<td>Analitzar obligacions legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Recursos Humans</td>
+
+<td>Gestionar incidències internes.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Preparar comunicats oficials.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Prendre decisions estratègiques.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una filtració de dades personals obliga a coordinar el SOC, el
+responsable de seguretat, l'assessoria jurídica, el delegat de
+protecció de dades i el departament de comunicació abans d'informar
+els clients afectats.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la notificació interna</h2>
+
+<p>
+L'aplicació de bones pràctiques facilita la coordinació entre els
+equips, redueix els errors de comunicació i permet una resposta més
+ràpida i eficaç davant dels incidents.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Seguir sempre el procediment establit.</li>
+
+<li>Utilitzar únicament els canals oficials.</li>
+
+<li>Registrar totes les notificacions.</li>
+
+<li>Informar només els responsables necessaris.</li>
+
+<li>Mantindre la informació actualitzada.</li>
+
+<li>Confirmar la recepció dels avisos crítics.</li>
+
+<li>Preservar la confidencialitat de les dades.</li>
+
+<li>Documentar totes les decisions adoptades.</li>
+
+<li>Coordinar les actuacions entre departaments.</li>
+
+<li>Realitzar revisions periòdiques del procediment.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una notificació estructurada facilita que qualsevol responsable puga
+comprendre ràpidament la situació i prendre les decisions oportunes
+sense necessitat de buscar informació addicional.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals en la notificació interna</h2>
+
+<p>
+Una mala comunicació interna pot provocar retards, decisions
+incorrectes o una resposta descoordinada. Conèixer els errors més
+freqüents ajuda a evitar-los i a millorar els procediments de
+l'organització.
+</p>
+
+<h3>Errors més comuns</h3>
+
+<ul>
+
+<li>Comunicar l'incident massa tard.</li>
+
+<li>No seguir el circuit d'escalat.</li>
+
+<li>Utilitzar canals personals.</li>
+
+<li>Compartir informació sense autorització.</li>
+
+<li>No registrar les comunicacions.</li>
+
+<li>Enviar informació incompleta.</li>
+
+<li>Duplicar notificacions innecessàriament.</li>
+
+<li>No informar dels canvis en l'estat de l'incident.</li>
+
+<li>Ometre responsables rellevants.</li>
+
+<li>Difondre dades no verificades.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Enviar notificacions massives a tota l'organització quan només alguns
+responsables necessiten intervenir pot generar confusió i dificultar
+la gestió de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+La notificació interna varia segons el tipus d'incident i el nivell de
+criticitat. Els exemples següents mostren diferents situacions que es
+poden produir en una organització.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Primer responsable notificat</th>
+
+<th>Escalat posterior</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Malware en un equip</td>
+
+<td>Help Desk.</td>
+
+<td>SOC.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>SOC.</td>
+
+<td>Responsable de Seguretat i Direcció.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga de dades</td>
+
+<td>Responsable de Seguretat.</td>
+
+<td>Assessoria jurídica.</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda del servidor</td>
+
+<td>Administració de sistemes.</td>
+
+<td>Direcció TIC.</td>
+
+</tr>
+
+<tr>
+
+<td>Accés no autoritzat</td>
+
+<td>SOC.</td>
+
+<td>CSIRT intern.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Durant la monitorització diària, el SIEM detecta múltiples intents
+d'accés fallits contra un servidor crític. L'analista del SOC valida
+l'alerta, informa immediatament el responsable de seguretat i registra
+l'incident al sistema de ticketing. Després d'analitzar-ne l'impacte,
+es comunica la situació a la direcció TIC i s'activa el procediment
+d'escalat intern.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una notificació interna eficaç depén tant de la rapidesa com de la
+qualitat de la informació transmesa. Els responsables han de rebre les
+dades necessàries per actuar sense retard, però evitant informació
+innecessària o no verificada.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Segueix sempre el procediment intern de notificació.</li>
+
+<li>Comunica els incidents tan prompte com siguen detectats.</li>
+
+<li>Utilitza exclusivament els canals corporatius.</li>
+
+<li>Registra totes les notificacions realitzades.</li>
+
+<li>Adapta el nivell de detall al destinatari.</li>
+
+<li>Actualitza la informació quan hi haja novetats.</li>
+
+<li>Protegeix la confidencialitat de les dades.</li>
+
+<li>Confirma la recepció dels avisos més crítics.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La comunicació interna forma part del procediment oficial de resposta
+davant incidents. Qualsevol desviació respecte al procés establit pot
+retardar les actuacions i dificultar la coordinació entre els equips.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>Cada responsable té funcions diferents.</li>
+
+<li>No tota la informació s'ha de comunicar a totes les persones.</li>
+
+<li>Els incidents crítics requereixen un escalat immediat.</li>
+
+<li>Les notificacions han de quedar documentades.</li>
+
+<li>Cal respectar els nivells d'autorització.</li>
+
+<li>Les comunicacions sensibles han d'estar protegides.</li>
+
+<li>La direcció necessita informació executiva, no tècnica.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La finalitat de la notificació interna no és només informar, sinó
+coordinar totes les persones que participen en la resposta davant
+l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els SOC treballen amb protocols de comunicació molt estrictes</strong>
+
+<p>
+
+Els Centres d'Operacions de Seguretat defineixen procediments molt
+detallats sobre qui ha de ser informat, en quin moment i mitjançant
+quin canal, per reduir al mínim els temps de resposta.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Molts errors provenen de la manca de coordinació</strong>
+
+<p>
+
+Una notificació incompleta o enviada al destinatari incorrecte pot
+retardar la contenció d'un incident encara que la detecció haja estat
+molt ràpida.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La traçabilitat és imprescindible</strong>
+
+<p>
+
+Registrar totes les comunicacions permet reconstruir posteriorment el
+procés de presa de decisions i facilita les auditories internes.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els responsables reben informació diferent</strong>
+
+<p>
+
+Els analistes necessiten dades tècniques detallades, mentre que la
+direcció acostuma a rebre informes resumits centrats en l'impacte,
+els riscos i les decisions que cal adoptar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Durant la jornada laboral, el sistema SIEM detecta una activitat
+anòmala en diversos servidors corporatius. L'analista confirma que es
+tracta d'un possible atac coordinat i inicia el procediment de
+notificació interna segons el protocol de l'organització.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Origen de la detecció</td>
+
+<td>SIEM corporatiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Sistemes afectats</td>
+
+<td>Servidors de fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>Gravetat inicial</td>
+
+<td>Alta.</td>
+
+</tr>
+
+<tr>
+
+<td>Primer responsable informat</td>
+
+<td>Responsable del SOC.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat actual</td>
+
+<td>En fase d'escalat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Identifica els responsables que haurien de ser informats.</li>
+
+<li>Explica l'ordre correcte de la notificació interna.</li>
+
+<li>Indica quina informació necessita cadascun dels responsables.</li>
+
+<li>Justifica si cal informar immediatament la direcció.</li>
+
+<li>Descriu quines actuacions s'haurien de coordinar després de la notificació.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

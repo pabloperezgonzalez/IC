@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4e Documentació i lliçons apreses </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4e
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4e Documentació i lliçons apreses
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs la importància de documentar
+correctament tot el cicle de vida d'un incident de ciberseguretat i de
+transformar l'experiència obtinguda en coneixement útil per a
+l'organització. Coneixeràs quina informació ha de formar part de
+l'informe final, com s'elaboren les lliçons apreses i de quina manera
+aquestes contribueixen a millorar els procediments de resposta davant
+futurs incidents.
+</p>
+
+<p>
+També comprendràs que la gestió d'un incident no finalitza quan els
+serveis tornen a funcionar, sinó quan l'organització ha analitzat què
+ha passat, per què ha passat i quines mesures adoptarà perquè no es
+torne a repetir.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la importància de documentar totes les actuacions.</li>
+
+<li>Conèixer l'estructura d'un informe final d'incident.</li>
+
+<li>Aprendre a elaborar una cronologia dels fets.</li>
+
+<li>Identificar les lliçons apreses després d'un incident.</li>
+
+<li>Relacionar la documentació amb la millora contínua.</li>
+
+<li>Entendre el valor del coneixement compartit.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan un incident ha estat resolt i els serveis han sigut recuperats,
+encara queda una última fase fonamental: documentar tot el que ha
+ocorregut i analitzar l'experiència adquirida.
+</p>
+
+<p>
+La documentació permet reconstruir cronològicament els fets, justificar
+les decisions adoptades, conservar evidències i facilitar futures
+investigacions. Al mateix temps, l'anàlisi de les lliçons apreses ajuda
+a identificar punts febles dels procediments i oportunitats de millora.
+</p>
+
+<p>
+Les organitzacions amb una elevada maduresa en ciberseguretat
+consideren aquesta fase una part essencial de la gestió dels
+incidents, ja que cada atac es converteix en una oportunitat per
+augmentar la seua capacitat de resposta.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Un incident només es considera completament tancat quan tota la
+informació ha estat documentada, revisada i incorporada als processos
+de millora contínua.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     IMPORTÀNCIA DE LA DOCUMENTACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Importància de la documentació dels incidents</h2>
+
+<p>
+La documentació recull tota la informació generada durant la detecció,
+investigació, resposta i recuperació d'un incident. Aquesta informació
+constitueix una evidència del treball realitzat i facilita tant les
+auditories com les investigacions futures.
+</p>
+
+<p>
+Una documentació completa permet entendre com es va produir
+l'incident, quines decisions es van prendre, quines eines es van
+utilitzar i quins resultats es van obtenir en cada fase del procés.
+</p>
+
+<p>
+A més, la documentació serveix de base per actualitzar procediments,
+formar nous analistes i demostrar el compliment dels requisits legals
+o normatius.
+</p>
+
+<h3>Beneficis principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Benefici</th>
+
+<th>Utilitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Traçabilitat</td>
+
+<td>Reconstruir l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Auditories</td>
+
+<td>Demostrar les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Coneixement</td>
+
+<td>Facilitar la formació.</td>
+
+</tr>
+
+<tr>
+
+<td>Compliment</td>
+
+<td>Satisfer requisits normatius.</td>
+
+</tr>
+
+<tr>
+
+<td>Millora contínua</td>
+
+<td>Optimitzar procediments.</td>
+
+</tr>
+
+<tr>
+
+<td>Investigació</td>
+
+<td>Conservar evidències.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un atac de ransomware, tota la cronologia de l'incident,
+les evidències recopilades, les decisions adoptades i les actuacions
+realitzades s'incorporen a l'informe final perquè puguen ser
+consultades en futures investigacions.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Documentació]
+--> C[Informe final]
+--> D[Millora contínua]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ D'UN INFORME D'INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Informació que ha de contenir un informe d'incident</h2>
+
+<p>
+L'informe final és el document que resumeix tot el cicle de vida de
+l'incident. Ha de ser clar, objectiu i suficientment detallat perquè
+qualsevol professional puga comprendre què ha succeït sense haver
+participat directament en la resposta.
+</p>
+
+<p>
+No existeix un únic model d'informe, però la majoria de les
+organitzacions utilitzen una estructura molt semblant que facilita la
+consulta posterior i l'anàlisi comparativa entre incidents.
+</p>
+
+<h3>Contingut habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Secció</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Resum executiu</td>
+
+<td>Visió general de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Cronologia</td>
+
+<td>Seqüència temporal dels fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Sistemes i serveis afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències</td>
+
+<td>Fitxers, registres i captures.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Accions realitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Lliçons apreses i millores.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'informe ha de descriure únicament fets verificables i evitar
+suposicions que no puguen demostrar-se mitjançant evidències.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CICLE DE LES LLIÇONS APRESES
+========================================================== -->
+
+<section>
+
+<h2>Cicle de les lliçons apreses</h2>
+
+<p>
+Les lliçons apreses són les conclusions obtingudes després d'analitzar
+un incident. El seu objectiu és identificar què ha funcionat
+correctament, quins problemes han aparegut i quines accions poden
+millorar la resposta davant futurs incidents.
+</p>
+
+<p>
+Aquest procés implica la participació dels diferents equips que han
+intervingut en la gestió de l'incident, incloent-hi els analistes del
+SOC, el CSIRT, els administradors de sistemes i els responsables de
+negoci.
+</p>
+
+<p>
+Les conclusions obtingudes es transformen posteriorment en millores
+dels procediments, de les polítiques de seguretat i dels plans de
+resposta.
+</p>
+
+<h3>Fases del procés</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Recopilar informació</td>
+
+<td>Reunir totes les dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Analitzar</td>
+
+<td>Identificar causes i problemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Proposar millores</td>
+
+<td>Definir accions correctives.</td>
+
+</tr>
+
+<tr>
+
+<td>Aplicar canvis</td>
+
+<td>Actualitzar procediments.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificar</td>
+
+<td>Comprovar l'eficàcia.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Anàlisi]
+--> C[Lliçons apreses]
+--> D[Millores]
+--> E[Nous procediments]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les reunions de lliçons apreses han de centrar-se en millorar els
+processos i no en buscar responsables dels errors.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     ELABORACIÓ DE L'INFORME FINAL
+========================================================== -->
+
+<section>
+
+<h2>Elaboració de l'informe final</h2>
+
+<p>
+L'informe final és el document que recull de manera estructurada tota
+la informació relacionada amb l'incident. El seu objectiu és deixar
+constància del que ha ocorregut, facilitar futures consultes i servir
+de suport per a les auditories, les investigacions i els processos de
+millora contínua.
+</p>
+
+<p>
+Aquest document ha de redactar-se quan l'incident ja ha estat
+controlat i els serveis s'han recuperat, però mentre tota la
+informació encara està disponible i els participants recorden amb
+precisió les actuacions realitzades.
+</p>
+
+<p>
+L'informe ha de ser objectiu, cronològic, complet i basat únicament en
+fets verificats mitjançant evidències.
+</p>
+
+<h3>Estructura recomanada</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Secció</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Resum executiu</td>
+
+<td>Visió global de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Descripció</td>
+
+<td>Què ha succeït.</td>
+
+</tr>
+
+<tr>
+
+<td>Cronologia</td>
+
+<td>Línia temporal dels fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Sistemes i dades afectades.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Accions realitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Restabliment dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Lliçons apreses.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'informe d'un atac de phishing inclou la cronologia de l'incident,
+els correus electrònics utilitzats pels atacants, les evidències
+digitals recopilades, les mesures de contenció aplicades i les accions
+correctives adoptades posteriorment.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Recopilació d'informació]
+--> C[Informe final]
+--> D[Arxiu]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ANÀLISI POSTINCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Anàlisi postincident (Post Incident Review)</h2>
+
+<p>
+Una vegada finalitzada la resposta, és recomanable reunir totes les
+persones implicades per analitzar l'incident des d'una perspectiva
+global. Aquesta reunió rep habitualment el nom de <em>Post Incident
+Review</em> (PIR) o reunió de revisió postincident.
+</p>
+
+<p>
+L'objectiu és identificar què ha funcionat correctament, quines
+dificultats han aparegut i quines millores poden aplicar-se en futurs
+incidents. Aquest procés contribueix directament a augmentar la
+maduresa de l'organització.
+</p>
+
+<h3>Aspectes analitzats</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecte</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Detecció</td>
+
+<td>Rapidesa de descobriment.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Eficàcia de les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Coordinació dels equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Temps de restabliment.</td>
+
+</tr>
+
+<tr>
+
+<td>Procediments</td>
+
+<td>Adequació dels protocols.</td>
+
+</tr>
+
+<tr>
+
+<td>Formació</td>
+
+<td>Necessitats detectades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La reunió postincident ha de fomentar la col·laboració i la millora
+contínua. No ha de convertir-se en una recerca de culpables.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart TD
+
+A[Incident resolt]
+--> B[Reunió PIR]
+--> C[Anàlisi]
+--> D[Accions de millora]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INDICADORS I MÈTRIQUES
+========================================================== -->
+
+<section>
+
+<h2>Indicadors i mètriques</h2>
+
+<p>
+Per valorar l'eficàcia de la resposta davant incidents és necessari
+utilitzar indicadors objectius. Aquestes mètriques permeten comparar
+resultats al llarg del temps i identificar si els procediments estan
+millorant.
+</p>
+
+<p>
+Els indicadors també faciliten la presa de decisions per part de la
+direcció i ajuden a justificar inversions en ciberseguretat.
+</p>
+
+<h3>KPIs habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Indicador</th>
+
+<th>Significat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>MTTD</td>
+
+<td>Temps mitjà de detecció.</td>
+
+</tr>
+
+<tr>
+
+<td>MTTR</td>
+
+<td>Temps mitjà de recuperació.</td>
+
+</tr>
+
+<tr>
+
+<td>MTTC</td>
+
+<td>Temps mitjà de contenció.</td>
+
+</tr>
+
+<tr>
+
+<td>Incidents repetits</td>
+
+<td>Percentatge de recurrència.</td>
+
+</tr>
+
+<tr>
+
+<td>Disponibilitat</td>
+
+<td>Temps de servei operatiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Temps d'escalat</td>
+
+<td>Velocitat de notificació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les mètriques només són útils si es recopilen de manera homogènia i es
+comparen amb els objectius definits per l'organització.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incidents]
+--> B[KPIs]
+--> C[Anàlisi]
+--> D[Millora]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     MILLORA CONTÍNUA
+========================================================== -->
+
+<section>
+
+<h2>Millora contínua</h2>
+
+<p>
+Cada incident proporciona informació valuosa que pot utilitzar-se per
+augmentar el nivell de protecció de l'organització. La millora
+contínua consisteix a incorporar aquest coneixement als procediments,
+les eines i la formació dels equips.
+</p>
+
+<p>
+Aquest procés permet reduir el temps de resposta, evitar errors
+repetitius i augmentar la ciberresiliència davant futures amenaces.
+</p>
+
+<h3>Accions de millora</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Acció</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Actualitzar procediments</td>
+
+<td>Millorar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Revisar polítiques</td>
+
+<td>Augmentar la seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Millorar la formació</td>
+
+<td>Reduir errors humans.</td>
+
+</tr>
+
+<tr>
+
+<td>Actualitzar eines</td>
+
+<td>Millorar la detecció.</td>
+
+</tr>
+
+<tr>
+
+<td>Realitzar simulacres</td>
+
+<td>Validar els canvis.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesurar resultats</td>
+
+<td>Comprovar l'eficàcia.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Lliçons apreses]
+--> C[Millores]
+--> D[Nous procediments]
+--> E[Simulacres]
+--> F[Millora contínua]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ACTUALITZACIÓ DELS PROCEDIMENTS
+========================================================== -->
+
+<section>
+
+<h2>Actualització dels procediments</h2>
+
+<p>
+Les lliçons apreses només aporten valor si es transformen en millores
+reals dels procediments de l'organització. Després de cada incident és
+necessari revisar la documentació existent per adaptar-la als nous
+coneixements adquirits i corregir les deficiències detectades durant
+la resposta.
+</p>
+
+<p>
+L'actualització dels procediments permet que els futurs incidents es
+gestionen de manera més eficient, reduint el temps de resposta i
+evitant repetir els mateixos errors.
+</p>
+
+<p>
+Aquesta revisió pot afectar els plans de resposta davant incidents,
+els protocols de comunicació, els procediments tècnics, les polítiques
+de seguretat o els plans de recuperació.
+</p>
+
+<h3>Documents que solen actualitzar-se</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Document</th>
+
+<th>Motiu de l'actualització</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Pla de resposta</td>
+
+<td>Millorar les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Procediments tècnics</td>
+
+<td>Corregir errors detectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Polítiques de seguretat</td>
+
+<td>Reduir nous riscos.</td>
+
+</tr>
+
+<tr>
+
+<td>Plans de recuperació</td>
+
+<td>Optimitzar el restabliment.</td>
+
+</tr>
+
+<tr>
+
+<td>Inventari d'actius</td>
+
+<td>Actualitzar la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Guies operatives</td>
+
+<td>Incorporar bones pràctiques.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un incident provocat per una configuració incorrecta del
+firewall, l'organització modifica el procediment de revisió de
+configuracions i incorpora una validació addicional abans de posar
+nous serveis en producció.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Lliçons apreses]
+--> C[Actualització]
+--> D[Nous procediments]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     COMPARTICIÓ DEL CONEIXEMENT
+========================================================== -->
+
+<section>
+
+<h2>Compartició del coneixement</h2>
+
+<p>
+El coneixement generat durant la resolució d'un incident no ha de
+quedar limitat als analistes que hi han participat. Compartir aquesta
+informació permet que tota l'organització es beneficie de
+l'experiència adquirida.
+</p>
+
+<p>
+La transferència de coneixement facilita la formació de nous tècnics,
+augmenta la coordinació entre equips i contribueix a construir una
+base documental útil per afrontar incidents semblants en el futur.
+</p>
+
+<h3>Formes de compartir el coneixement</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Mecanisme</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sessions internes</td>
+
+<td>Explicar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentació tècnica</td>
+
+<td>Conservar el coneixement.</td>
+
+</tr>
+
+<tr>
+
+<td>Base de coneixement</td>
+
+<td>Consultar casos anteriors.</td>
+
+</tr>
+
+<tr>
+
+<td>Simulacres</td>
+
+<td>Practicar els procediments.</td>
+
+</tr>
+
+<tr>
+
+<td>Formació</td>
+
+<td>Millorar les competències.</td>
+
+</tr>
+
+<tr>
+
+<td>Reunions tècniques</td>
+
+<td>Compartir experiències.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Documentar un incident és important, però encara ho és més que aquesta
+informació siga fàcilment accessible per als equips que la necessiten.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart TD
+
+A[Incident]
+--> B[Informe]
+--> C[Base de coneixement]
+--> D[Formació]
+--> E[Millora de l'organització]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals en la documentació</h2>
+
+<p>
+Una documentació incompleta o incorrecta dificulta les investigacions,
+impedeix aprendre dels incidents i redueix l'eficàcia dels processos
+de millora contínua.
+</p>
+
+<p>
+Molts d'aquests errors poden evitar-se utilitzant plantilles
+estandarditzades i revisant els informes abans de donar-los per
+finalitzats.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>No registrar totes les actuacions realitzades.</li>
+
+<li>Ometre la cronologia dels fets.</li>
+
+<li>No conservar les evidències.</li>
+
+<li>Confondre fets amb opinions.</li>
+
+<li>No identificar les causes arrel.</li>
+
+<li>No documentar les decisions adoptades.</li>
+
+<li>No actualitzar els procediments.</li>
+
+<li>No compartir les lliçons apreses.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Esperar diversos dies abans de redactar l'informe final pot provocar
+la pèrdua d'informació important i dificultar la reconstrucció
+cronològica de l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart TD
+
+A[Documentació deficient]
+--> B[Informació incompleta]
+--> C[Errors repetits]
+--> D[Resposta menys eficient]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques</h2>
+
+<p>
+La documentació i les lliçons apreses aporten el màxim valor quan
+formen part d'un procés sistemàtic i repetible. Per aquest motiu és
+recomanable seguir unes bones pràctiques comunes després de qualsevol
+incident, independentment de la seua gravetat.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Documentar totes les actuacions en temps real.</li>
+
+<li>Utilitzar plantilles normalitzades.</li>
+
+<li>Basar l'informe en evidències verificables.</li>
+
+<li>Realitzar la reunió postincident al més prompte possible.</li>
+
+<li>Assignar responsables a cada acció de millora.</li>
+
+<li>Revisar periòdicament els procediments actualitzats.</li>
+
+<li>Compartir el coneixement amb tota l'organització.</li>
+
+<li>Mesurar l'eficàcia de les millores implantades.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una organització madura no considera els incidents com un fracàs,
+sinó com una oportunitat per aprendre, reforçar els seus processos i
+augmentar la seua ciberresiliència.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident]
+--> B[Documentació]
+--> C[Lliçons apreses]
+--> D[Millora]
+--> E[Major ciberresiliència]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+La documentació dels incidents pot adoptar diferents formats segons el
+tipus d'organització, però sempre ha d'incloure informació suficient
+per reconstruir els fets, justificar les decisions adoptades i
+identificar oportunitats de millora.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Documentació generada</th>
+
+<th>Lliçó apresa</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Informe tècnic i cronologia.</td>
+
+<td>Millorar la formació.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Informe complet d'incident.</td>
+
+<td>Verificar els backups.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga de dades</td>
+
+<td>Informe legal i tècnic.</td>
+
+<td>Reforçar els controls d'accés.</td>
+
+</tr>
+
+<tr>
+
+<td>DDoS</td>
+
+<td>Informe operatiu.</td>
+
+<td>Millorar la mitigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Error de configuració</td>
+
+<td>Registre de canvis.</td>
+
+<td>Afegir revisions prèvies.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un atac de phishing, l'equip de resposta documenta totes les
+actuacions realitzades, identifica que diversos usuaris desconeixien
+els indicadors del correu fraudulent i decideix incorporar una nova
+campanya de conscienciació dins del pla anual de formació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una bona documentació facilita el treball dels equips tècnics,
+simplifica les auditories i converteix cada incident en una font de
+coneixement per a tota l'organització.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Documenta totes les actuacions mentre es realitzen.</li>
+
+<li>Utilitza un llenguatge clar, objectiu i tècnic.</li>
+
+<li>Diferencia sempre els fets de les hipòtesis.</li>
+
+<li>Conserva totes les evidències associades.</li>
+
+<li>Inclou una cronologia detallada.</li>
+
+<li>Assigna responsables a les accions de millora.</li>
+
+<li>Actualitza els procediments afectats.</li>
+
+<li>Comparteix les lliçons apreses amb els equips implicats.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La qualitat de la documentació condiciona la capacitat de
+l'organització per aprendre dels incidents i respondre amb més
+eficiència davant situacions semblants en el futur.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>L'informe ha d'estar basat en evidències.</li>
+
+<li>La cronologia ha de ser completa.</li>
+
+<li>Totes les decisions importants s'han de justificar.</li>
+
+<li>Les lliçons apreses han de convertir-se en accions concretes.</li>
+
+<li>Els procediments han d'actualitzar-se quan siga necessari.</li>
+
+<li>La informació sensible ha de protegir-se adequadament.</li>
+
+<li>Els informes han de conservar-se segons la política de l'organització.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Documentar un incident no és una tasca administrativa, sinó una part
+essencial del procés de millora contínua de la ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Molts incidents es resolen gràcies a documentació anterior</strong>
+
+<p>
+
+Els equips de resposta consulten sovint informes d'incidents
+anteriors per identificar patrons semblants i aplicar solucions que
+ja han demostrat la seua eficàcia.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les normes internacionals recomanen analitzar tots els incidents</strong>
+
+<p>
+
+Estàndards com ISO/IEC 27035 promouen la documentació sistemàtica dels
+incidents i la realització de revisions posteriors per millorar la
+gestió de la seguretat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les lliçons apreses milloren la ciberresiliència</strong>
+
+<p>
+
+Cada acció correctiva implantada redueix la probabilitat que un
+incident similar torne a produir-se o, si ocorre, que tinga el mateix
+impacte.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació també és una evidència legal</strong>
+
+<p>
+
+En alguns incidents greus, els informes elaborats durant la resposta
+poden formar part de processos judicials, reclamacions o auditories
+externes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa ha finalitzat la recuperació després d'un atac de
+ransomware. Ara és necessari elaborar l'informe final, identificar les
+lliçons apreses i proposar millores perquè una situació semblant no
+torne a produir-se.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Informació disponible</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tipus d'incident</td>
+
+<td>Ransomware.</td>
+
+</tr>
+
+<tr>
+
+<td>Duració</td>
+
+<td>18 hores.</td>
+
+</tr>
+
+<tr>
+
+<td>Sistemes afectats</td>
+
+<td>Servidor de fitxers i 25 equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Mitjançant còpies de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Resultat</td>
+
+<td>Serveis restablits.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Elabora l'estructura de l'informe final.</li>
+
+<li>Construeix una cronologia dels fets.</li>
+
+<li>Identifica les causes principals de l'incident.</li>
+
+<li>Proposa cinc accions de millora.</li>
+
+<li>Indica quins procediments actualitzaries.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica elaboraràs la documentació completa d'un incident
+de ciberseguretat ja resolt. L'objectiu és reconstruir els fets,
+redactar l'informe final, identificar les lliçons apreses i proposar
+accions de millora que incrementen la ciberresiliència de
+l'organització.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa ha recuperat tots els seus serveis després d'un atac de
+phishing que va permetre el compromís d'un compte corporatiu. Durant
+la resposta s'han recopilat evidències, s'han registrat totes les
+actuacions i ara és necessari elaborar la documentació final.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Cronologia completa de l'incident.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Captures de pantalla i evidències digitals.</li>
+
+<li>Informe de recuperació dels serveis.</li>
+
+<li>Llista d'accions de contenció aplicades.</li>
+
+<li>Inventari dels sistemes afectats.</li>
+
+<li>Plantilla d'informe final.</li>
+
+<li>Procediments actuals de resposta davant incidents.</li>
+
+<li>Indicadors de rendiment (KPIs).</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Redactar el resum executiu de l'incident.</li>
+
+<li>Construir la cronologia completa dels fets.</li>
+
+<li>Descriure les actuacions realitzades.</li>
+
+<li>Identificar les causes de l'incident.</li>
+
+<li>Elaborar les lliçons apreses.</li>
+
+<li>Proposar accions correctives.</li>
+
+<li>Indicar quins procediments s'han d'actualitzar.</li>
+
+<li>Definir indicadors per mesurar les millores.</li>
+
+<li>Presentar l'informe final a la direcció.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una bona documentació ha de permetre que qualsevol analista puga
+entendre què va ocórrer, quines decisions es van prendre i com pot
+evitar-se que el mateix incident torne a produir-se.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Explica la importància de documentar un incident.</li>
+
+<li>Descriu les parts principals d'un informe final.</li>
+
+<li>Construeix una cronologia d'un incident real o simulat.</li>
+
+<li>Identifica les lliçons apreses d'un cas pràctic.</li>
+
+<li>Proposa accions correctives i preventives.</li>
+
+<li>Explica el procés de revisió postincident (PIR).</li>
+
+<li>Descriu diversos indicadors (KPIs) de resposta davant incidents.</li>
+
+<li>Analitza errors habituals en la documentació.</li>
+
+<li>Proposa millores dels procediments existents.</li>
+
+<li>Elabora un informe complet utilitzant una plantilla normalitzada.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La documentació constitueix l'última fase del procés de gestió
+d'incidents i garanteix que tot el coneixement adquirit durant la
+resposta quede disponible per a futures actuacions. L'informe final,
+les reunions de revisió postincident i les lliçons apreses permeten
+transformar cada incident en una oportunitat de millora.
+
+</p>
+
+<p>
+
+L'actualització dels procediments, la compartició del coneixement i la
+implantació d'accions correctives contribueixen a reduir el risc,
+millorar la resposta i augmentar la ciberresiliència de
+l'organització.
+
+</p>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident resolt]
+--> B[Informe final]
+--> C[Lliçons apreses]
+--> D[Millora dels procediments]
+--> E[Major ciberresiliència]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>Tots els incidents han de documentar-se.</li>
+
+<li>L'informe final ha d'estar basat en evidències.</li>
+
+<li>La cronologia facilita la reconstrucció dels fets.</li>
+
+<li>Les lliçons apreses han de generar accions concretes.</li>
+
+<li>Els procediments s'han d'actualitzar periòdicament.</li>
+
+<li>La compartició del coneixement millora tota l'organització.</li>
+
+<li>Els KPIs permeten mesurar l'eficàcia de la resposta.</li>
+
+<li>La millora contínua augmenta la ciberresiliència.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Explicar la finalitat de la documentació dels incidents.</li>
+
+<li>Descriure l'estructura d'un informe final.</li>
+
+<li>Construir una cronologia dels fets.</li>
+
+<li>Diferenciar fets, evidències i conclusions.</li>
+
+<li>Explicar el procés de lliçons apreses.</li>
+
+<li>Descriure una reunió Post Incident Review.</li>
+
+<li>Identificar indicadors com MTTD, MTTC i MTTR.</li>
+
+<li>Proposar accions correctives i preventives.</li>
+
+<li>Relacionar la documentació amb la millora contínua.</li>
+
+<li>Analitzar un cas pràctic complet.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per aprofundir en aquest criteri d'avaluació es proposen diversos
+materials orientats a la redacció d'informes, l'anàlisi postincident i
+la implantació de processos de millora contínua.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla d'informe final d'incident.</li>
+
+<li>📄 Model de cronologia d'un incident.</li>
+
+<li>📄 Plantilla de reunió Post Incident Review (PIR).</li>
+
+<li>📄 Full de lliçons apreses.</li>
+
+<li>📄 Checklist de tancament d'un incident.</li>
+
+<li>📄 Guia per documentar evidències i actuacions.</li>
+
+<li>📄 Plantilla de pla d'accions correctives.</li>
+
+<li>📄 Fitxa de seguiment d'indicadors (KPIs).</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Les organitzacions més madures no es limiten a resoldre incidents.
+Analitzen cada situació, documenten l'experiència, comparteixen el
+coneixement adquirit i actualitzen contínuament els seus procediments.
+Aquesta filosofia de millora contínua és un dels pilars fonamentals de
+la ciberresiliència.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+ 
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

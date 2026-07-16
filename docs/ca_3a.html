@@ -1,0 +1,2165 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 3a - Recopilació i preservació d'evidències </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_03.html"> 
+                    RA3
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA3a
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6b501a, #4a3809);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 3a - Recopilació i preservació d'evidències
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🔎
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a
+<strong>recopilar, preservar i documentar evidències digitals</strong>
+després de detectar un incident de ciberseguretat. Aquest és el
+primer pas de qualsevol investigació forense i resulta fonamental
+per garantir que les proves mantinguen la seua validesa durant tot
+el procés d'anàlisi.
+</p>
+
+<p>
+També coneixeràs els diferents tipus d'evidències digitals, la
+seua importància dins d'una investigació, les bones pràctiques de
+preservació i els conceptes bàsics de la cadena de custòdia.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és una evidència digital.</li>
+
+<li>Distingir entre evidències volàtils i no volàtils.</li>
+
+<li>Aprendre a recopilar evidències sense alterar-les.</li>
+
+<li>Conèixer la importància de la preservació de les proves.</li>
+
+<li>Comprendre el funcionament de la cadena de custòdia.</li>
+
+<li>Identificar les primeres actuacions d'una investigació forense.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Després de detectar un incident de ciberseguretat, la següent fase
+consisteix a investigar què ha ocorregut, com s'ha produït i quin
+ha estat el seu impacte sobre l'organització. Per aconseguir-ho és
+necessari recopilar totes les evidències digitals disponibles
+abans que puguen modificar-se o desaparèixer.
+</p>
+
+<p>
+Una evidència digital pot ser qualsevol dada emmagatzemada o
+transmesa mitjançant un sistema informàtic que ajude a reconstruir
+els fets. Aquestes evidències poden trobar-se en discs durs,
+memòries USB, registres del sistema, dispositius mòbils,
+servidors, captures de xarxa o fins i tot en la memòria RAM d'un
+equip.
+</p>
+
+<p>
+La manera com es recopilen aquestes proves és tan important com la
+informació que contenen. Una manipulació incorrecta pot alterar-ne
+el contingut, comprometre la investigació o impedir que siguen
+acceptades com a prova en un procediment judicial.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una evidència digital només és útil si es manté íntegra des del
+moment de la seua recopilació fins al final de la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS UNA EVIDÈNCIA DIGITAL?
+========================================================== -->
+
+<section>
+
+<h2>Què és una evidència digital?</h2>
+
+<p>
+Una <strong>evidència digital</strong> és qualsevol informació
+emmagatzemada o transmesa en format electrònic que pot utilitzar-se
+per demostrar un fet relacionat amb un incident de ciberseguretat.
+</p>
+
+<p>
+Aquestes evidències permeten reconstruir els esdeveniments,
+identificar els sistemes afectats, determinar l'origen de
+l'incident i conèixer les accions realitzades per l'atacant.
+Constitueixen la base de qualsevol investigació de
+<strong>informàtica forense</strong>.
+</p>
+
+<p>
+Perquè una evidència siga útil, ha de conservar la seua integritat
+i poder demostrar-se que no ha estat modificada des del moment de
+la seua obtenció.
+</p>
+
+<h3>Característiques d'una evidència digital</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectiva</td>
+
+<td>Es basa en dades verificables.</td>
+
+</tr>
+
+<tr>
+
+<td>Íntegra</td>
+
+<td>No ha estat alterada.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificable</td>
+
+<td>Es pot comprovar la seua autenticitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Reproduïble</td>
+
+<td>Pot analitzar-se diverses vegades obtenint els mateixos resultats.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentada</td>
+
+<td>Disposa d'un registre complet de totes les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Admissible</td>
+
+<td>Pot presentar-se com a prova si s'han seguit els procediments adequats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Exemples d'evidències digitals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Logs</td>
+
+<td>Registres del sistema operatiu o d'un servidor.</td>
+
+</tr>
+
+<tr>
+
+<td>Memòria RAM</td>
+
+<td>Processos en execució i connexions actives.</td>
+
+</tr>
+
+<tr>
+
+<td>Disc dur</td>
+
+<td>Fitxers, documents, bases de dades o malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Captura de xarxa</td>
+
+<td>Paquets capturats amb Wireshark.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu electrònic</td>
+
+<td>Missatges de phishing o notificacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Dispositius USB</td>
+
+<td>Documents, còpies de seguretat o programari maliciós.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un atac de ransomware, les evidències poden incloure els
+fitxers xifrats, els registres del servidor, els processos actius,
+les connexions de xarxa i els correus electrònics rebuts abans de
+l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[Recopilació d'evidències]
+
+--> C[Preservació]
+
+--> D[Anàlisi]
+
+--> E[Informe forense]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     TIPUS D'EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Tipus d'evidències digitals</h2>
+
+<p>
+No totes les evidències tenen el mateix comportament. Algunes
+desapareixen tan bon punt s'apaga l'equip, mentre que altres
+romanen emmagatzemades durant molt de temps. Per aquest motiu és
+important conèixer els diferents tipus d'evidències i establir un
+ordre correcte de recopilació.
+</p>
+
+<h3>Evidències volàtils</h3>
+
+<p>
+Les <strong>evidències volàtils</strong> són aquelles que es perden
+quan el sistema deixa de funcionar o es reinicia. Han de ser les
+primeres a recopilar-se perquè desapareixen fàcilment.
+</p>
+
+<ul>
+
+<li>Memòria RAM.</li>
+
+<li>Processos en execució.</li>
+
+<li>Connexions de xarxa actives.</li>
+
+<li>Sessions obertes.</li>
+
+<li>Taules ARP.</li>
+
+<li>Claus de xifrat carregades en memòria.</li>
+
+</ul>
+
+<h3>Evidències no volàtils</h3>
+
+<p>
+Les <strong>evidències no volàtils</strong> romanen emmagatzemades
+encara que l'equip s'apague. Tot i això, també poden alterar-se si
+no es manipulen correctament.
+</p>
+
+<ul>
+
+<li>Discs durs.</li>
+
+<li>Unitats SSD.</li>
+
+<li>Memòries USB.</li>
+
+<li>Fitxers de registre.</li>
+
+<li>Còpies de seguretat.</li>
+
+<li>Bases de dades.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Volàtils</th>
+
+<th>No volàtils</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Es perden en apagar l'equip.</td>
+
+<td>Romanen emmagatzemades.</td>
+
+</tr>
+
+<tr>
+
+<td>S'han de recopilar primer.</td>
+
+<td>Poden adquirir-se posteriorment.</td>
+
+</tr>
+
+<tr>
+
+<td>RAM, processos, connexions.</td>
+
+<td>Discs, USB, fitxers i backups.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+En una investigació forense, l'ordre de recopilació és fonamental.
+Si s'apaga un equip abans de capturar la memòria RAM, es poden
+perdre evidències que mai no podran recuperar-se.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Evidències digitals]
+
+--> B[Volàtils]
+
+A --> C[No volàtils]
+
+B --> D[RAM]
+
+B --> E[Connexions]
+
+B --> F[Processos]
+
+C --> G[Disc dur]
+
+C --> H[USB]
+
+C --> I[Logs]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PROCÉS DE RECOPILACIÓ D'EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Procés de recopilació d'evidències</h2>
+
+<p>
+La recopilació d'evidències és el conjunt d'actuacions destinades a
+obtenir totes les dades relacionades amb un incident sense alterar-ne
+el contingut. Aquest procés ha de seguir una metodologia estricta per
+garantir la integritat de la informació i assegurar que les proves
+puguen utilitzar-se posteriorment durant la investigació o en un
+procediment judicial.
+</p>
+
+<p>
+La rapidesa és important, però mai ha d'anar en detriment de la
+correcta preservació de les evidències. Una actuació precipitada pot
+modificar informació crítica o destruir proves irrecuperables.
+</p>
+
+<h3>Fases del procés de recopilació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Identificació</td>
+
+<td>Localitzar les possibles fonts d'evidència.</td>
+
+</tr>
+
+<tr>
+
+<td>Recopilació</td>
+
+<td>Obtenir les dades sense modificar-les.</td>
+
+</tr>
+
+<tr>
+
+<td>Etiquetatge</td>
+
+<td>Assignar un identificador únic a cada evidència.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentació</td>
+
+<td>Registrar totes les actuacions realitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Emmagatzematge</td>
+
+<td>Guardar les evidències de manera segura.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificació</td>
+
+<td>Comprovar que les dades no s'han alterat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Ordre recomanat de recopilació</h3>
+
+<p>
+En informàtica forense existeix un ordre de prioritat conegut com a
+<strong>volatilitat de les evidències</strong>. Les dades que poden
+desaparèixer més ràpidament s'han de recopilar abans que les que
+romanen emmagatzemades.
+</p>
+
+<ol>
+
+<li>Memòria RAM.</li>
+
+<li>Processos en execució.</li>
+
+<li>Connexions de xarxa.</li>
+
+<li>Informació del sistema.</li>
+
+<li>Fitxers temporals.</li>
+
+<li>Discs durs i SSD.</li>
+
+<li>Dispositius externs.</li>
+
+<li>Còpies de seguretat.</li>
+
+</ol>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Abans de tocar qualsevol equip és convenient documentar-ne
+l'estat inicial mitjançant fotografies, captures de pantalla o
+anotacions que descriguen la situació observada.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Identificar]
+
+--> B[Recopilar]
+
+--> C[Etiquetar]
+
+--> D[Documentar]
+
+--> E[Emmagatzemar]
+
+--> F[Verificar]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PRESERVACIÓ DE LES EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Preservació de les evidències</h2>
+
+<p>
+Preservar una evidència significa protegir-la perquè conserve el seu
+estat original des del moment de la recopilació fins a la finalització
+de la investigació. Qualsevol modificació, encara que siga
+accidental, pot invalidar-la com a prova.
+</p>
+
+<p>
+La preservació afecta tant el suport físic (disc dur, memòria USB,
+telèfon mòbil...) com la informació que conté. Per això és habitual
+treballar sempre sobre còpies forenses i conservar intacte el suport
+original.
+</p>
+
+<h3>Bones pràctiques de preservació</h3>
+
+<ul>
+
+<li>No treballar mai directament sobre el suport original.</li>
+
+<li>Crear una imatge forense abans d'iniciar l'anàlisi.</li>
+
+<li>Utilitzar bloquejadors d'escriptura (<em>Write Blockers</em>).</li>
+
+<li>Calcular el hash abans i després de la còpia.</li>
+
+<li>Guardar les evidències en llocs segurs.</li>
+
+<li>Controlar qui té accés a les proves.</li>
+
+<li>Registrar qualsevol moviment o manipulació.</li>
+
+</ul>
+
+<h3>Riscos que poden alterar una evidència</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Risc</th>
+
+<th>Conseqüència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Encendre l'equip</td>
+
+<td>Es modifiquen fitxers i registres.</td>
+
+</tr>
+
+<tr>
+
+<td>Copiar fitxers manualment</td>
+
+<td>Canvien les metadades.</td>
+
+</tr>
+
+<tr>
+
+<td>No utilitzar bloquejador d'escriptura</td>
+
+<td>El sistema pot escriure al disc.</td>
+
+</tr>
+
+<tr>
+
+<td>Treballar sobre l'original</td>
+
+<td>Es perden proves.</td>
+
+</tr>
+
+<tr>
+
+<td>Emmagatzematge inadequat</td>
+
+<td>Deteriorament físic del suport.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'objectiu no és només conservar la informació, sinó poder demostrar
+que aquesta no ha estat modificada des del moment de la seua
+recopilació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Evidència original]
+
+--> B[Imatge forense]
+
+--> C[Anàlisi]
+
+A --> D[Emmagatzematge segur]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CADENA DE CUSTÒDIA
+========================================================== -->
+
+<section>
+
+<h2>Cadena de custòdia</h2>
+
+<p>
+La <strong>cadena de custòdia</strong> és el conjunt de procediments
+que permeten demostrar qui ha tingut accés a una evidència, quan,
+on i amb quina finalitat. Gràcies a aquest registre és possible
+garantir que les proves no han estat manipulades durant la
+investigació.
+</p>
+
+<p>
+Cada canvi de responsable, cada trasllat o cada actuació sobre una
+evidència ha de quedar documentat de forma precisa.
+</p>
+
+<h3>Informació registrada</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Camp</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Identificador</td>
+
+<td>Codi únic de l'evidència.</td>
+
+</tr>
+
+<tr>
+
+<td>Data i hora</td>
+
+<td>Moment de la recopilació.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable</td>
+
+<td>Persona que la recull.</td>
+
+</tr>
+
+<tr>
+
+<td>Lloc</td>
+
+<td>Ubicació de la recopilació.</td>
+
+</tr>
+
+<tr>
+
+<td>Descripció</td>
+
+<td>Característiques de l'evidència.</td>
+
+</tr>
+
+<tr>
+
+<td>Moviments</td>
+
+<td>Canvis de custòdia.</td>
+
+</tr>
+
+<tr>
+
+<td>Observacions</td>
+
+<td>Incidències o comentaris.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una memòria USB confiscada durant una investigació rep el codi
+<strong>EV-0032</strong>. En el document de cadena de custòdia
+s'anoten la data de recollida, el tècnic responsable, el lloc on es
+va trobar i totes les persones que hi tindran accés fins a la
+finalització del cas.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Recollida]
+
+--> B[Etiquetatge]
+
+--> C[Cadena de custòdia]
+
+--> D[Anàlisi]
+
+--> E[Arxiu segur]
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     INTEGRITAT DE LES EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Integritat de les evidències</h2>
+
+<p>
+La <strong>integritat</strong> garanteix que una evidència digital
+no ha estat modificada des del moment de la seua recopilació.
+Durant una investigació és imprescindible poder demostrar que les
+dades analitzades són exactament les mateixes que es van obtenir
+després de l'incident.
+</p>
+
+<p>
+Per verificar aquesta integritat s'utilitzen funcions
+criptogràfiques de resum, conegudes com a
+<strong>hash</strong>. Aquestes generen una empremta digital única
+per a cada fitxer o dispositiu.
+</p>
+
+<p>
+Si una sola dada canvia, encara que siga un únic bit, el valor hash
+obtingut també serà completament diferent.
+</p>
+
+<h3>Propietats d'una funció hash</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Propietat</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Unívoca</td>
+
+<td>Cada fitxer genera un resum diferent.</td>
+
+</tr>
+
+<tr>
+
+<td>Determinista</td>
+
+<td>El mateix fitxer produeix sempre el mateix hash.</td>
+
+</tr>
+
+<tr>
+
+<td>Irreversible</td>
+
+<td>No és possible reconstruir el fitxer a partir del hash.</td>
+
+</tr>
+
+<tr>
+
+<td>Sensible als canvis</td>
+
+<td>Qualsevol modificació altera completament el resultat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Algorismes més utilitzats</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Algorisme</th>
+
+<th>Situació actual</th>
+
+<th>Ús habitual</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>MD5</td>
+
+<td>No recomanat per a seguretat.</td>
+
+<td>Compatibilitat amb eines antigues.</td>
+
+</tr>
+
+<tr>
+
+<td>SHA-1</td>
+
+<td>Obsolet.</td>
+
+<td>Sistemes heretats.</td>
+
+</tr>
+
+<tr>
+
+<td>SHA-256</td>
+
+<td>Recomanat.</td>
+
+<td>Informàtica forense i integritat.</td>
+
+</tr>
+
+<tr>
+
+<td>SHA-512</td>
+
+<td>Recomanat.</td>
+
+<td>Evidències d'alt valor.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Abans de començar l'anàlisi d'un disc dur es calcula el seu
+<strong>hash SHA-256</strong>. En finalitzar la investigació es torna
+a calcular. Si tots dos coincideixen, es demostra que la còpia
+forense no ha estat modificada.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidència]
+
+--> B[Calcular hash]
+
+--> C[Guardar hash]
+
+--> D[Anàlisi]
+
+--> E[Recalcular hash]
+
+--> F{Coincideix?}
+
+F -->|Sí| G[Integritat garantida]
+
+F -->|No| H[Evidència alterada]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     IMATGES FORENSES
+========================================================== -->
+
+<section>
+
+<h2>Imatges forenses</h2>
+
+<p>
+Una <strong>imatge forense</strong> és una còpia exacta, bit a bit,
+d'un dispositiu d'emmagatzematge. A diferència d'una còpia
+convencional, inclou tots els sectors del dispositiu, fins i tot
+aquells que aparentment estan buits o corresponen a fitxers
+eliminats.
+</p>
+
+<p>
+L'objectiu és preservar completament la informació original perquè
+l'anàlisi es realitze sobre la còpia i mai sobre el dispositiu
+original.
+</p>
+
+<h3>Còpia convencional vs imatge forense</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Còpia convencional</th>
+
+<th>Imatge forense</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Només copia fitxers visibles.</td>
+
+<td>Copia tots els sectors del dispositiu.</td>
+
+</tr>
+
+<tr>
+
+<td>No recupera fitxers eliminats.</td>
+
+<td>Permet recuperar informació esborrada.</td>
+
+</tr>
+
+<tr>
+
+<td>Pot modificar metadades.</td>
+
+<td>Manté íntegra tota la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Ús quotidià.</td>
+
+<td>Investigació forense.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Formats habituals</h3>
+
+<ul>
+
+<li>RAW (.dd)</li>
+
+<li>E01 (EnCase)</li>
+
+<li>AFF (Advanced Forensic Format)</li>
+
+<li>AFF4</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Mai s'ha d'analitzar directament el disc original. Sempre es treballa
+sobre una imatge forense verificada mitjançant el seu hash.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Disc original]
+
+--> B[Imatge forense]
+
+--> C[Verificació hash]
+
+--> D[Anàlisi]
+
+--> E[Informe]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PRINCIPALS EINES FORENSES
+========================================================== -->
+
+<section>
+
+<h2>Principals eines de recopilació i anàlisi</h2>
+
+<p>
+Existeixen nombroses eines especialitzades en informàtica forense
+que permeten adquirir evidències, generar imatges forenses,
+analitzar discos, recuperar fitxers eliminats i elaborar informes
+tècnics.
+</p>
+
+<p>
+L'elecció de l'eina dependrà del tipus de dispositiu, del sistema
+operatiu i dels objectius de la investigació.
+</p>
+
+<h3>Eines més utilitzades</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>FTK Imager</td>
+
+<td>Crear imatges forenses i visualitzar evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Autopsy</td>
+
+<td>Anàlisi forense de discos i fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>Guymager</td>
+
+<td>Adquisició ràpida de discos.</td>
+
+</tr>
+
+<tr>
+
+<td>Magnet AXIOM</td>
+
+<td>Investigació forense avançada.</td>
+
+</tr>
+
+<tr>
+
+<td>dd</td>
+
+<td>Còpies bit a bit en sistemes Unix/Linux.</td>
+
+</tr>
+
+<tr>
+
+<td>dc3dd</td>
+
+<td>Versió millorada de dd amb verificació.</td>
+
+</tr>
+
+<tr>
+
+<td>Volatility</td>
+
+<td>Anàlisi de memòria RAM.</td>
+
+</tr>
+
+<tr>
+
+<td>Wireshark</td>
+
+<td>Anàlisi del trànsit de xarxa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Flux habitual d'una investigació</h3>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Recopilar evidències]
+
+--> B[Crear imatge forense]
+
+--> C[Calcular hash]
+
+--> D[Anàlisi]
+
+--> E[Informe]
+
+</div>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+
+Moltes d'aquestes eines són compatibles entre si. Per exemple,
+és habitual crear la imatge forense amb <strong>FTK Imager</strong>,
+analitzar-la amb <strong>Autopsy</strong> i estudiar la memòria RAM
+amb <strong>Volatility</strong>, obtenint una visió molt més
+completa de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+La recopilació i preservació d'evidències és una tasca habitual en
+qualsevol investigació de ciberseguretat. A continuació es mostren
+alguns exemples d'incidents i les evidències que convé obtenir en
+cada cas.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Evidències principals</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Memòria RAM, disc dur, logs, processos i connexions.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Correu electrònic, capçaleres SMTP, fitxers adjunts i logs.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió remota</td>
+
+<td>Logs d'autenticació, captures de xarxa i registres VPN.</td>
+
+</tr>
+
+<tr>
+
+<td>Robatori d'informació</td>
+
+<td>Historial d'accessos, fitxers copiats i dispositius USB.</td>
+
+</tr>
+
+<tr>
+
+<td>Denegació de servei</td>
+
+<td>Captura de trànsit, logs del tallafoc i del servidor.</td>
+
+</tr>
+
+<tr>
+
+<td>Malware</td>
+
+<td>Executable sospitós, memòria RAM i fitxers modificats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un servidor comença a xifrar tots els fitxers de manera
+automàtica. Abans d'apagar-lo, l'analista captura la memòria RAM,
+exporta els processos en execució, guarda els registres del SIEM i
+crea una imatge forense del disc. D'aquesta manera es preserven les
+evidències necessàries per determinar l'origen del ransomware.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Durant una investigació forense és molt fàcil alterar una prova
+sense adonar-se'n. Seguir unes bones pràctiques ajuda a conservar
+la integritat de les evidències.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Documenta totes les actuacions des del primer moment.</li>
+
+<li>Treballa sempre sobre una còpia forense.</li>
+
+<li>Calcula el hash abans i després de qualsevol còpia.</li>
+
+<li>No manipules l'evidència original.</li>
+
+<li>Utilitza bloquejadors d'escriptura quan siga possible.</li>
+
+<li>Etiqueta correctament totes les evidències.</li>
+
+<li>Conserva la cadena de custòdia actualitzada.</li>
+
+<li>Emmagatzema les proves en un lloc segur.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La validesa d'una investigació depén tant de les proves
+recopilades com de la forma en què aquestes han estat
+gestionades. Una evidència alterada pot impedir conèixer l'origen
+real de l'incident.
+</p>
+
+<div class="important">
+
+<strong>Errors més habituals</strong>
+
+<ul>
+
+<li>Apagar un equip abans de capturar la memòria RAM.</li>
+
+<li>Treballar directament sobre el disc original.</li>
+
+<li>No calcular el hash de verificació.</li>
+
+<li>No documentar la cadena de custòdia.</li>
+
+<li>Modificar accidentalment els fitxers originals.</li>
+
+<li>Utilitzar eines inadequades.</li>
+
+<li>No registrar la data i l'hora de les actuacions.</li>
+
+<li>Guardar les evidències sense protecció.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una prova alterada pot perdre tot el seu valor tècnic i jurídic.
+La preservació de les evidències és tan important com la seua
+recopilació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>La memòria RAM desapareix en segons</strong>
+
+<p>
+
+Quan un ordinador s'apaga, tota la informació emmagatzemada a la
+memòria RAM es perd. Per això és una de les primeres evidències que
+es recopilen durant una investigació.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Una còpia normal no és una còpia forense</strong>
+
+<p>
+
+Copiar fitxers amb l'explorador del sistema només trasllada els
+documents visibles. Una imatge forense copia tots els sectors del
+disc, incloent-hi fitxers eliminats i espai no assignat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>El hash funciona com una empremta digital</strong>
+
+<p>
+
+Els investigadors calculen el hash d'una evidència abans i després
+de l'anàlisi. Si els valors coincideixen, poden demostrar que la
+prova no ha estat modificada.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Les investigacions judicials exigeixen cadena de custòdia</strong>
+
+<p>
+
+Sense una cadena de custòdia correctament documentada resulta molt
+difícil demostrar que una evidència digital no ha estat manipulada
+durant la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta que diversos servidors estan xifrant els seus
+fitxers de manera automàtica. Els tècnics sospiten que es tracta
+d'un atac de ransomware.
+
+</p>
+
+<p>
+
+Com a membre de l'equip de resposta davant incidents, has de decidir
+quines evidències recopilar i en quin ordre per preservar tota la
+informació possible.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Actuació</th>
+
+<th>Ordre</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Capturar la memòria RAM.</td>
+
+<td>..........</td>
+
+</tr>
+
+<tr>
+
+<td>Crear la imatge forense del disc.</td>
+
+<td>..........</td>
+
+</tr>
+
+<tr>
+
+<td>Calcular el hash.</td>
+
+<td>..........</td>
+
+</tr>
+
+<tr>
+
+<td>Recollir els logs del servidor.</td>
+
+<td>..........</td>
+
+</tr>
+
+<tr>
+
+<td>Documentar la cadena de custòdia.</td>
+
+<td>..........</td>
+
+</tr>
+
+<tr>
+
+<td>Emmagatzemar les evidències.</td>
+
+<td>..........</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<p>
+
+Justifica l'ordre de les actuacions, explica quines evidències són
+volàtils i descriu les conseqüències de treballar directament sobre
+el disc original.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica actuaràs com a tècnic d'un
+<strong>equip de resposta davant incidents (CSIRT/SOC)</strong>.
+El teu objectiu serà recopilar i preservar correctament les
+evidències digitals d'un ordinador sospitós d'haver estat
+compromés, aplicant les tècniques bàsiques de la informàtica
+forense.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Un treballador informa que el seu ordinador presenta un comportament
+estrany: lentitud, processos desconeguts i connexions a servidors
+externs. El responsable de seguretat sospita que el sistema ha estat
+infectat amb malware i ordena iniciar una investigació forense.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Un ordinador o màquina virtual de pràctiques.</li>
+
+<li>Una memòria USB amb eines forenses.</li>
+
+<li>FTK Imager o Guymager.</li>
+
+<li>Autopsy.</li>
+
+<li>Volatility (opcional).</li>
+
+<li>HashMyFiles o l'ordre <code>sha256sum</code>.</li>
+
+<li>Plantilla de cadena de custòdia.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Identificar les possibles fonts d'evidència.</li>
+
+<li>Determinar quines evidències són volàtils.</li>
+
+<li>Capturar la memòria RAM (si és possible).</li>
+
+<li>Crear una imatge forense del disc.</li>
+
+<li>Calcular el hash SHA-256 de la imatge.</li>
+
+<li>Documentar totes les actuacions realitzades.</li>
+
+<li>Emplenar la cadena de custòdia.</li>
+
+<li>Guardar les evidències de forma segura.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Durant tota la pràctica has de treballar sobre la còpia forense.
+L'original només s'utilitza per a la seua adquisició i mai no s'ha
+de modificar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és una evidència digital.</li>
+
+<li>Explica la diferència entre una evidència volàtil i una no volàtil.</li>
+
+<li>Per què la memòria RAM és una de les primeres evidències que s'han de recopilar?</li>
+
+<li>Descriu les fases del procés de recopilació d'evidències.</li>
+
+<li>Investiga què és una imatge forense i en què es diferencia d'una còpia convencional.</li>
+
+<li>Explica la funció dels algoritmes hash durant una investigació.</li>
+
+<li>Compara els algoritmes MD5 i SHA-256.</li>
+
+<li>Descriu el funcionament de la cadena de custòdia.</li>
+
+<li>Investiga les principals característiques d'Autopsy, FTK Imager i Volatility.</li>
+
+<li>Elabora una plantilla pròpia per documentar una evidència digital.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La recopilació i la preservació de les evidències constitueixen la
+base de qualsevol investigació de ciberseguretat. Una obtenció
+incorrecta de les proves pot impedir conèixer l'origen real de
+l'incident o invalidar tota la investigació.
+
+</p>
+
+<p>
+
+Les evidències digitals han de recopilar-se seguint un procediment
+estructurat, preservant-ne la integritat, documentant totes les
+actuacions i mantenint una cadena de custòdia completa durant tot el
+procés.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[Recopilació]
+
+--> C[Preservació]
+
+--> D[Hash]
+
+--> E[Cadena de custòdia]
+
+--> F[Anàlisi]
+
+--> G[Informe]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>Les evidències digitals són la base de qualsevol investigació.</li>
+
+<li>Les evidències volàtils s'han de recopilar primer.</li>
+
+<li>Mai no s'ha de treballar sobre el suport original.</li>
+
+<li>La imatge forense és una còpia exacta del dispositiu.</li>
+
+<li>El hash permet verificar la integritat de les proves.</li>
+
+<li>La cadena de custòdia garanteix la traçabilitat.</li>
+
+<li>Totes les actuacions han de quedar documentades.</li>
+
+<li>Les eines forenses faciliten l'adquisició i l'anàlisi de les evidències.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és una evidència digital.</li>
+
+<li>Distingir evidències volàtils i no volàtils.</li>
+
+<li>Explicar el procés de recopilació.</li>
+
+<li>Descriure les tècniques de preservació.</li>
+
+<li>Explicar què és una imatge forense.</li>
+
+<li>Justificar la utilització dels algoritmes hash.</li>
+
+<li>Descriure la cadena de custòdia.</li>
+
+<li>Identificar les principals eines de la informàtica forense.</li>
+
+<li>Conèixer l'ordre correcte de recopilació de les evidències.</li>
+
+<li>Reconèixer els errors més habituals durant una investigació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar els continguts d'aquest criteri d'avaluació es
+proporcionen els següents materials de suport.
+
+</p>
+
+<ul>
+
+<li>📄 Guia de recopilació d'evidències digitals.</li>
+
+<li>📄 Plantilla de cadena de custòdia.</li>
+
+<li>📄 Full de registre d'evidències.</li>
+
+<li>📄 Procediment de creació d'imatges forenses.</li>
+
+<li>📄 Guia d'ús de FTK Imager.</li>
+
+<li>📄 Guia bàsica d'Autopsy.</li>
+
+<li>📄 Resum dels algoritmes hash.</li>
+
+<li>📄 Cas pràctic complet resolt.</li>
+
+<li>📄 Glossari de terminologia forense.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Conserva aquestes plantilles i procediments. En els següents criteris
+d'avaluació (<strong>CA3b</strong> i <strong>CA3c</strong>) les
+evidències recopilades en aquest apartat seran analitzades per
+determinar l'origen de l'incident, reconstruir els fets i elaborar
+l'informe tècnic final de la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+   <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

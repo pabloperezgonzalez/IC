@@ -1,0 +1,15 @@
+
+amb:
+
+📑 Índex lateral que es genera automàticament a partir dels <h2> i <h3>.
+🌙 Mode clar/fosc.
+📊 Barra de progrés de lectura.
+📋 Botó Copiar en tots els blocs de codi.
+🔍 Cercador de contingut dins del RA.
+📝 Caixes de tipus Informació, Consell, Important, Exemple, Recorda.
+📖 Navegació Anterior / Següent RA al final de la pàgina.
+Diagrames Mermaid
+🧭 Índex flotant amb ressaltat de la secció actual.
+🖼️ Imatges ampliables fent clic.
+🎨 Icones SVG en lloc d'emojis, per donar-li un acabat molt més professional.
+

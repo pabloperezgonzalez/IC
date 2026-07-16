@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 5e Comunicació als mitjans de comunicació </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_05.html"> 
+                    RA5
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA5e
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#1e6f6f, #0e6767);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 5e Comunicació als mitjans de comunicació
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    📢
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com gestionar la comunicació
+amb els mitjans de comunicació durant un incident de ciberseguretat.
+Comprendràs quan és necessari emetre un comunicat públic, qui està
+autoritzat a parlar en nom de l'organització i quina informació s'ha
+de transmetre.
+</p>
+
+<p>
+També coneixeràs la importància de coordinar la comunicació pública
+amb la resposta tècnica a l'incident, protegint la reputació de
+l'organització i evitant la difusió d'informació incorrecta o
+confidencial.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la finalitat de la comunicació amb els mitjans.</li>
+
+<li>Identificar quan és necessari un comunicat públic.</li>
+
+<li>Conèixer qui actua com a portaveu.</li>
+
+<li>Aprendre a preparar un comunicat oficial.</li>
+
+<li>Seleccionar els canals de comunicació més adequats.</li>
+
+<li>Valorar la importància de protegir la reputació corporativa.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan un incident de ciberseguretat té una repercussió important, és
+possible que desperte l'interés dels mitjans de comunicació. En
+aquests casos, l'organització ha de disposar d'un procediment per
+informar de manera clara, coordinada i responsable, evitant rumors i
+especulacions.
+</p>
+
+<p>
+La comunicació pública forma part del pla de gestió d'incidents i ha
+d'estar alineada amb la resposta tècnica, la comunicació interna i,
+quan siga necessari, amb les notificacions a les autoritats
+competents.
+</p>
+
+<p>
+Una comunicació adequada contribueix a transmetre confiança, protegir
+la imatge de l'organització i demostrar transparència davant de la
+societat.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La comunicació amb els mitjans no consisteix a explicar tots els
+detalls tècnics de l'incident, sinó a oferir informació fiable,
+comprensible i coherent sense comprometre la investigació ni la
+seguretat dels sistemes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     COMUNICACIÓ ALS MITJANS
+========================================================== -->
+
+<section>
+
+<h2>Comunicació als mitjans de comunicació</h2>
+
+<p>
+La comunicació als mitjans consisteix a transmetre informació oficial
+sobre un incident de ciberseguretat a periodistes i altres canals
+informatius. Aquesta comunicació permet oferir una versió contrastada
+dels fets i reduir la difusió d'informacions incorrectes.
+</p>
+
+<p>
+Els comunicats públics han de ser elaborats amb cura, aprovats pels
+responsables corresponents i coordinats amb els equips tècnics,
+jurídics i de comunicació.
+</p>
+
+<p>
+L'objectiu és informar de manera responsable, protegint tant els
+interessos de l'organització com els de les persones afectades.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Informar</td>
+
+<td>Explicar oficialment l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Generar confiança</td>
+
+<td>Transmetre transparència.</td>
+
+</tr>
+
+<tr>
+
+<td>Evitar rumors</td>
+
+<td>Difondre informació contrastada.</td>
+
+</tr>
+
+<tr>
+
+<td>Protegir la reputació</td>
+
+<td>Gestionar la imatge corporativa.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinar el missatge</td>
+
+<td>Mantindre una comunicació coherent.</td>
+
+</tr>
+
+<tr>
+
+<td>Reduir la desinformació</td>
+
+<td>Facilitar informació oficial.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa pateix un atac que interromp temporalment els seus
+serveis. Davant l'interés dels mitjans, publica un comunicat oficial
+explicant la situació, les mesures adoptades i el compromís de
+restablir el servei tan prompte com siga possible.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUAN ÉS NECESSARI COMUNICAR
+========================================================== -->
+
+<section>
+
+<h2>Quan és necessari emetre un comunicat públic?</h2>
+
+<p>
+No tots els incidents requereixen una comunicació als mitjans. Aquesta
+decisió depén de la seua repercussió, del nombre de persones
+afectades, de l'interés públic i de l'impacte que puga tindre sobre la
+continuïtat dels serveis o la reputació de l'organització.
+</p>
+
+<p>
+Quan existeix una gran visibilitat de l'incident o ja circula
+informació als mitjans o a les xarxes socials, una comunicació oficial
+pot ajudar a oferir dades fiables i reduir les especulacions.
+</p>
+
+<h3>Situacions habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Comunicat públic</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Incident amb gran impacte mediàtic</td>
+
+<td>Habitualment sí.</td>
+
+</tr>
+
+<tr>
+
+<td>Interrupció prolongada dels serveis</td>
+
+<td>Recomanable.</td>
+
+</tr>
+
+<tr>
+
+<td>Filtració de dades de gran abast</td>
+
+<td>Pot ser necessari.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident menor sense repercussió externa</td>
+
+<td>Generalment no.</td>
+
+</tr>
+
+<tr>
+
+<td>Informacions incorrectes als mitjans</td>
+
+<td>Pot ser convenient aclarir la situació.</td>
+
+</tr>
+
+<tr>
+
+<td>Manteniment programat</td>
+
+<td>No és un incident.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Decisió sobre la comunicació pública</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident important]
+--> B[Comitè de crisi]
+--> C{Cal comunicat públic?}
+
+C -->|Sí| D[Preparar comunicat]
+
+D --> E[Portaveu]
+
+E --> F[Mitjans]
+
+</div>
+
+<p>
+El comitè de crisi analitza la situació i decideix si és convenient
+emetre un comunicat públic. En cas afirmatiu, es prepara el missatge i
+el portaveu autoritzat s'encarrega de la comunicació amb els mitjans.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     QUI PARLA DAVANT DELS MITJANS
+========================================================== -->
+
+<section>
+
+<h2>Qui parla davant dels mitjans?</h2>
+
+<p>
+Durant un incident de ciberseguretat és fonamental que la comunicació
+externa siga coherent i estiga controlada. Per aquest motiu,
+l'organització designa una o diverses persones autoritzades per actuar
+com a portaveus davant dels mitjans de comunicació.
+</p>
+
+<p>
+El portaveu representa oficialment l'organització i transmet
+informació validada pels responsables de la gestió de l'incident. La
+resta del personal ha d'evitar fer declaracions públiques sense
+autorització.
+</p>
+
+<h3>Responsables habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Responsable</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Portaveu oficial</td>
+
+<td>Representar l'organització davant dels mitjans.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció General</td>
+
+<td>Assumir la comunicació institucional.</td>
+
+</tr>
+
+<tr>
+
+<td>Departament de Comunicació</td>
+
+<td>Preparar els comunicats oficials.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable de Seguretat</td>
+
+<td>Validar la informació tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Departament Jurídic</td>
+
+<td>Revisar els aspectes legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Comitè de crisi</td>
+
+<td>Coordinar totes les comunicacions.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una única veu oficial evita contradiccions i transmet una imatge de
+coordinació i professionalitat durant la gestió de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PREPARACIÓ DEL COMUNICAT
+========================================================== -->
+
+<section>
+
+<h2>Preparació del comunicat</h2>
+
+<p>
+Abans de publicar qualsevol informació és necessari preparar un
+comunicat clar, coherent i adaptat al públic general. El document ha
+de ser revisat pels responsables corresponents i ha d'estar alineat
+amb les actuacions tècniques que s'estan desenvolupant.
+</p>
+
+<p>
+El comunicat ha d'explicar la situació sense generar alarma
+innecessària i sense revelar informació que puga dificultar la
+investigació o afavorir futurs atacs.
+</p>
+
+<h3>Elements principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Descripció de l'incident</td>
+
+<td>Informar sobre els fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte general</td>
+
+<td>Explicar les conseqüències.</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures adoptades</td>
+
+<td>Mostrar la resposta de l'organització.</td>
+
+</tr>
+
+<tr>
+
+<td>Situació actual</td>
+
+<td>Informar de l'estat dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Compromís</td>
+
+<td>Transmetre responsabilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Canals de contacte</td>
+
+<td>Facilitar informació addicional.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Abans de publicar el comunicat, comprova que totes les dades han estat
+confirmades i que el llenguatge és comprensible per a qualsevol
+persona.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ QUE S'HA D'OFERIR
+========================================================== -->
+
+<section>
+
+<h2>Informació que s'ha d'oferir</h2>
+
+<p>
+El contingut del comunicat ha d'estar orientat a informar la societat
+de manera responsable. S'ha d'explicar què ha passat, quin impacte ha
+tingut l'incident i quines mesures està adoptant l'organització per
+gestionar la situació.
+</p>
+
+<p>
+No és convenient publicar informació tècnica detallada, vulnerabilitats
+específiques o dades que puguen posar en risc la investigació o la
+seguretat dels sistemes.
+</p>
+
+<h3>Informació recomanada</h3>
+
+<ul>
+
+<li>Descripció general de l'incident.</li>
+
+<li>Serveis afectats.</li>
+
+<li>Impacte conegut fins al moment.</li>
+
+<li>Mesures adoptades.</li>
+
+<li>Treballs de recuperació en curs.</li>
+
+<li>Recomanacions, si escauen.</li>
+
+<li>Canals oficials per obtenir informació.</li>
+
+<li>Compromís de facilitar noves actualitzacions.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     CANALS DE COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Canals de comunicació pública</h2>
+
+<p>
+La informació oficial pot difondre's mitjançant diferents canals,
+segons la magnitud de l'incident i el públic al qual es dirigeix.
+Tots els canals han de transmetre un missatge coherent i actualitzat.
+</p>
+
+<h3>Canals habituals</h3>
+
+<ul>
+
+<li>Notes de premsa.</li>
+
+<li>Rodes de premsa.</li>
+
+<li>Lloc web corporatiu.</li>
+
+<li>Xarxes socials oficials.</li>
+
+<li>Blog corporatiu.</li>
+
+<li>Comunicats institucionals.</li>
+
+<li>Entrevistes autoritzades.</li>
+
+<li>Conferències informatives.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Principals canals de comunicació pública</h2>
+
+<div class="mermaid">
+flowchart TD
+
+A[Comunicació pública]
+
+A --> B[Nota de premsa]
+
+A --> C[Roda de premsa]
+
+A --> D[Web corporativa]
+
+A --> E[Xarxes socials]
+
+</div>
+
+<p>
+L'organització pot utilitzar diversos canals per informar la societat.
+Independentment del canal escollit, el contingut ha de ser coherent,
+oficial i estar coordinat amb la resta de les actuacions relacionades
+amb l'incident.
+</p>
+
+</section>
+
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la comunicació amb els mitjans</h2>
+
+<p>
+Una comunicació pública ben gestionada contribueix a transmetre
+confiança, minimitzar l'impacte reputacional i evitar la difusió
+d'informació incorrecta. Els comunicats han de preparar-se de manera
+coordinada amb els equips tècnics, jurídics i de comunicació.
+</p>
+
+<p>
+L'objectiu no és únicament informar, sinó també demostrar que
+l'organització està gestionant l'incident de forma responsable i
+professional.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Comunicar únicament informació confirmada.</li>
+
+<li>Utilitzar un llenguatge clar i comprensible.</li>
+
+<li>Designar un únic portaveu oficial.</li>
+
+<li>Coordinar tots els canals de comunicació.</li>
+
+<li>Mostrar transparència sense revelar informació sensible.</li>
+
+<li>Actualitzar els comunicats quan hi haja noves dades.</li>
+
+<li>Preparar respostes per a les preguntes més probables.</li>
+
+<li>Mantindre un to professional i respectuós.</li>
+
+<li>Registrar totes les comunicacions públiques.</li>
+
+<li>Aprendre de cada incident per millorar futurs comunicats.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Un bon comunicat explica què se sap, què s'està fent i quan s'oferiran
+noves actualitzacions. Evita les especulacions i les promeses que no
+es puguen complir.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals</h2>
+
+<p>
+Alguns errors de comunicació poden agreujar la situació i afectar la
+credibilitat de l'organització. Una gestió inadequada dels mitjans pot
+provocar confusió, rumors o una pèrdua de confiança.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Retardar excessivament el comunicat oficial.</li>
+
+<li>Publicar informació no confirmada.</li>
+
+<li>Oferir dades contradictòries.</li>
+
+<li>Fer declaracions improvisades.</li>
+
+<li>Ocultar informació rellevant.</li>
+
+<li>Utilitzar un llenguatge excessivament tècnic.</li>
+
+<li>Prometre terminis que no es poden garantir.</li>
+
+<li>Ignorar les preguntes dels mitjans.</li>
+
+<li>No coordinar la comunicació amb els equips tècnics.</li>
+
+<li>Permetre declaracions de persones no autoritzades.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Intentar ocultar un incident que ja és conegut públicament acostuma a
+empitjorar la situació. Una comunicació transparent i ben gestionada
+sol generar més confiança que el silenci.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     GESTIÓ DE LA REPUTACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Gestió de la reputació corporativa</h2>
+
+<p>
+La manera com una organització comunica un incident pot influir
+directament en la confiança dels clients, dels proveïdors i de la
+societat. Una resposta ràpida, coherent i responsable contribueix a
+protegir la reputació corporativa.
+</p>
+
+<p>
+La reputació no depén únicament de l'existència de l'incident, sinó
+també de la qualitat de la resposta i de la comunicació pública
+realitzada.
+</p>
+
+<h3>Accions recomanades</h3>
+
+<ul>
+
+<li>Reconèixer l'existència de l'incident quan siga procedent.</li>
+
+<li>Explicar les mesures adoptades.</li>
+
+<li>Mostrar compromís amb la resolució.</li>
+
+<li>Informar periòdicament sobre l'evolució.</li>
+
+<li>Respondre amb transparència.</li>
+
+<li>Escoltar les preocupacions dels afectats.</li>
+
+<li>Coordinar els missatges en tots els canals.</li>
+
+<li>Avaluar posteriorment l'impacte reputacional.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La confiança és un dels actius més valuosos d'una organització. Una
+comunicació responsable durant una crisi contribueix a preservar-la.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Els següents casos mostren diferents situacions en què una
+organització pot decidir comunicar-se amb els mitjans de comunicació.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Actuació recomanada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Atac amb interrupció del servei</td>
+
+<td>Publicar un comunicat oficial.</td>
+
+</tr>
+
+<tr>
+
+<td>Filtració de dades de gran impacte</td>
+
+<td>Informar els mitjans i els afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Rumors difosos en xarxes socials</td>
+
+<td>Publicar informació oficial contrastada.</td>
+
+</tr>
+
+<tr>
+
+<td>Incident menor sense repercussió pública</td>
+
+<td>No és necessari un comunicat als mitjans.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació completa del servei</td>
+
+<td>Informar del restabliment i de les mesures adoptades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Una empresa de serveis en línia pateix una interrupció provocada per un
+ciberatac que afecta milers d'usuaris. Davant la repercussió pública,
+el portaveu oficial compareix davant dels mitjans, explica la situació,
+informa de les mesures adoptades, evita especular sobre les causes i
+anuncia que s'oferiran actualitzacions periòdiques a través del lloc
+web corporatiu.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Durant una crisi de ciberseguretat, la comunicació pública és tan
+important com la resposta tècnica. Un missatge clar, coherent i
+transparent contribueix a reduir la incertesa, evita rumors i reforça
+la confiança dels clients, dels col·laboradors i de la societat.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Designa sempre un únic portaveu oficial.</li>
+
+<li>Comunica únicament informació confirmada.</li>
+
+<li>Utilitza un llenguatge senzill i comprensible.</li>
+
+<li>No especules sobre les causes de l'incident.</li>
+
+<li>Explica les mesures adoptades per l'organització.</li>
+
+<li>Actualitza periòdicament la informació pública.</li>
+
+<li>Coordina tots els canals oficials.</li>
+
+<li>Mostra empatia cap a les persones afectades.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La comunicació amb els mitjans ha d'estar integrada dins del pla de
+gestió d'incidents. Les declaracions públiques han de ser coherents
+amb la informació proporcionada als responsables interns, a les
+autoritats competents i a les persones afectades.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La transparència no implica revelar tota la informació tècnica.</li>
+
+<li>La investigació de l'incident no s'ha de veure compromesa.</li>
+
+<li>Els comunicats han d'estar autoritzats.</li>
+
+<li>La informació ha de ser objectiva i verificable.</li>
+
+<li>Cal protegir les dades sensibles.</li>
+
+<li>Les declaracions improvisades poden generar problemes.</li>
+
+<li>Totes les comunicacions públiques han de quedar documentades.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu principal no és protegir la imatge de l'organització a
+qualsevol preu, sinó oferir informació fiable, mantenir la confiança
+del públic i facilitar una comunicació responsable durant tota la
+gestió de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Molts incidents es coneixen primer per les xarxes socials</strong>
+
+<p>
+
+En nombroses ocasions, els primers indicis d'un incident apareixen a
+les xarxes socials abans que als mitjans tradicionals. Per això és
+important disposar d'un procediment de comunicació ràpid i coordinat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La reputació també depén de la comunicació</strong>
+
+<p>
+
+Les organitzacions que informen de manera transparent solen conservar
+una major confiança dels seus clients que aquelles que retarden o
+eviten la comunicació pública.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els periodistes busquen fonts oficials</strong>
+
+<p>
+
+Quan existeix un comunicat oficial clar i actualitzat, és més probable
+que els mitjans utilitzen aquesta informació en lloc de recórrer a
+rumors o fonts no verificades.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La comunicació continua després de la crisi</strong>
+
+<p>
+
+Quan l'incident es resol, és recomanable informar del restabliment dels
+serveis i de les millores implantades per reduir el risc que es torne
+a produir una situació similar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa de transport pateix un ciberatac que interromp diversos
+serveis durant unes hores. La incidència genera nombroses consultes
+als mitjans de comunicació i comentaris a les xarxes socials. El
+comitè de crisi decideix publicar un comunicat oficial i designa un
+portaveu per atendre les preguntes dels periodistes.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tipus d'incident</td>
+
+<td>Interrupció dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Gran repercussió pública.</td>
+
+</tr>
+
+<tr>
+
+<td>Portaveu</td>
+
+<td>Director de Comunicació.</td>
+
+</tr>
+
+<tr>
+
+<td>Canals utilitzats</td>
+
+<td>Nota de premsa, web i xarxes socials.</td>
+
+</tr>
+
+<tr>
+
+<td>Objectiu</td>
+
+<td>Informar i reduir la desinformació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Explica si consideres adequada la decisió d'emetre un comunicat públic.</li>
+
+<li>Identifica la informació que hauria d'incloure la nota de premsa.</li>
+
+<li>Justifica per què és convenient designar un únic portaveu.</li>
+
+<li>Proposa dues preguntes que podrien formular els periodistes.</li>
+
+<li>Descriu com actualitzaries la informació si la recuperació dels serveis es retardara.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica simularàs la gestió de la comunicació pública
+després d'un incident de ciberseguretat amb gran repercussió mediàtica.
+Treballaràs com a membre del comitè de crisi i prepararàs un comunicat
+oficial destinat als mitjans de comunicació.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa que presta serveis en línia pateix un atac informàtic que
+provoca una interrupció temporal dels seus serveis. Diversos mitjans
+de comunicació publiquen notícies sobre l'incident abans que
+l'organització faça cap declaració oficial. El comitè de crisi decideix
+emetre un comunicat públic i organitzar una compareixença del portaveu.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Informe tècnic preliminar de l'incident.</li>
+
+<li>Protocol de comunicació en situacions de crisi.</li>
+
+<li>Plantilla de nota de premsa.</li>
+
+<li>Guia de preguntes freqüents (FAQ).</li>
+
+<li>Normes internes de comunicació corporativa.</li>
+
+<li>Cronologia dels fets.</li>
+
+<li>Checklist de validació del comunicat.</li>
+
+<li>Llistat de canals oficials de comunicació.</li>
+
+<li>Informe sobre l'impacte reputacional.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar la situació i decidir si és necessari un comunicat públic.</li>
+
+<li>Identificar el portaveu oficial.</li>
+
+<li>Preparar una nota de premsa.</li>
+
+<li>Redactar un missatge per al lloc web corporatiu.</li>
+
+<li>Elaborar una publicació per a les xarxes socials oficials.</li>
+
+<li>Preparar respostes per a possibles preguntes dels periodistes.</li>
+
+<li>Revisar el comunicat abans de la seua publicació.</li>
+
+<li>Registrar totes les comunicacions efectuades.</li>
+
+<li>Presentar el procediment complet davant de la resta de la classe.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu és transmetre informació clara, fiable i coherent. La
+comunicació pública ha d'ajudar a reduir la incertesa, protegir la
+confiança dels usuaris i evitar la propagació de rumors.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és la comunicació amb els mitjans de comunicació.</li>
+
+<li>Explica quan és convenient publicar un comunicat oficial.</li>
+
+<li>Descriu les funcions del portaveu.</li>
+
+<li>Identifica la informació que ha d'incloure una nota de premsa.</li>
+
+<li>Relaciona diferents incidents amb el tipus de comunicació pública més adequat.</li>
+
+<li>Explica la importància de protegir la reputació corporativa.</li>
+
+<li>Analitza els errors més habituals durant una roda de premsa.</li>
+
+<li>Redacta una nota de premsa a partir d'un cas pràctic.</li>
+
+<li>Proposa preguntes que podrien formular els periodistes i prepara les respostes.</li>
+
+<li>Justifica la necessitat de coordinar tots els canals oficials de comunicació.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La comunicació amb els mitjans de comunicació és una part essencial de
+la gestió dels incidents amb repercussió pública. Un comunicat oficial
+ben preparat contribueix a informar la societat, reduir la
+desinformació i reforçar la confiança en l'organització.
+
+</p>
+
+<p>
+
+Les comunicacions públiques han de ser autoritzades, coordinades amb
+els equips tècnics i jurídics, i difoses a través dels canals oficials.
+La transparència, la coherència i la rapidesa són factors clau per a
+una gestió eficaç de la crisi.
+
+</p>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La comunicació pública forma part del pla de resposta davant incidents.</li>
+
+<li>Només les persones autoritzades poden actuar com a portaveus.</li>
+
+<li>La informació ha de ser clara, objectiva i verificable.</li>
+
+<li>Cal evitar rumors i especulacions.</li>
+
+<li>Els canals oficials garanteixen una comunicació coherent.</li>
+
+<li>La reputació corporativa depén també de la qualitat del comunicat.</li>
+
+<li>Totes les comunicacions han de quedar documentades.</li>
+
+<li>La coordinació entre equips és fonamental.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir la comunicació amb els mitjans de comunicació.</li>
+
+<li>Explicar quan és necessari un comunicat públic.</li>
+
+<li>Identificar les funcions del portaveu oficial.</li>
+
+<li>Descriure la informació que ha d'incloure una nota de premsa.</li>
+
+<li>Seleccionar els canals de comunicació més adequats.</li>
+
+<li>Reconèixer bones pràctiques i errors habituals.</li>
+
+<li>Explicar la relació entre comunicació i reputació corporativa.</li>
+
+<li>Aplicar el procediment a un cas pràctic.</li>
+
+<li>Justificar la necessitat de coordinar tots els missatges públics.</li>
+
+<li>Valorar la importància de la transparència durant una crisi.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos recursos
+orientats a la preparació de comunicats públics i a la gestió de la
+relació amb els mitjans de comunicació durant un incident de
+ciberseguretat.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla de nota de premsa.</li>
+
+<li>📄 Protocol de comunicació de crisi.</li>
+
+<li>📄 Guia del portaveu oficial.</li>
+
+<li>📄 Checklist de revisió abans de publicar un comunicat.</li>
+
+<li>📄 Model de preguntes freqüents (FAQ).</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Exercicis de redacció de comunicats públics.</li>
+
+<li>📄 Plantilla de registre de comunicacions externes.</li>
+
+<li>📄 Guia de gestió de la reputació corporativa.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Una organització no pot evitar sempre els incidents de
+ciberseguretat, però sí que pot gestionar-los de manera responsable.
+Una comunicació pública clara, coherent i transparent contribueix a
+preservar la confiança dels usuaris, dels clients i de la societat,
+fins i tot en situacions de gran complexitat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

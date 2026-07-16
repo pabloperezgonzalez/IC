@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 1c - Pla de conscienciació en ciberseguretat</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+                 <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 </button>
+                    <!-- Canvi de tema --> 
+                </h2>   
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_01.html"> 
+                    RA1 
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA1c
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 1c - Pla de conscienciació en ciberseguretat
+                    </h1> 
+                    <p>
+                        Disseny i planificació d'un programa de conscienciació que
+                        fomente una cultura de ciberseguretat entre els membres de
+                        l'organització mitjançant accions formatives i divulgatives.
+                    </p>
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 20 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🛡️ 
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+  <nav data-ca-navigation></nav>
+
+<!-- ================================================= -->
+<!-- Què aprendràs                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🎯 Què aprendràs</h2>
+
+    <p>
+
+        En aquest criteri d'avaluació aprendràs a dissenyar un <strong>pla de
+        conscienciació en ciberseguretat</strong> destinat als treballadors
+        d'una organització. Descobriràs quins són els objectius d'aquest tipus
+        de plans, quines accions solen incloure i com aconseguir que els
+        empleats adopten hàbits segurs en el seu treball diari.
+
+    </p>
+
+    <div class="info">
+
+        <strong>Objectius del criteri</strong>
+
+        <ul>
+
+            <li>Comprendre la importància de la conscienciació en ciberseguretat.</li>
+
+            <li>Diferenciar entre formació i conscienciació.</li>
+
+            <li>Conèixer els elements d'un pla de conscienciació.</li>
+
+            <li>Dissenyar campanyes adaptades als diferents perfils d'usuaris.</li>
+
+            <li>Reduir el risc provocat pel factor humà.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Introducció                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📖 Introducció</h2>
+
+    <p>
+
+        Les organitzacions inverteixen grans quantitats de diners en
+        tallafocs, antivirus, sistemes EDR, SIEM i altres tecnologies de
+        protecció. No obstant això, molts incidents continuen produint-se per
+        una causa molt més senzilla: <strong>l'error humà</strong>.
+
+    </p>
+
+    <p>
+
+        Obrir un correu fraudulent, reutilitzar una contrasenya o connectar una
+        memòria USB desconeguda poden provocar una bretxa de seguretat tan greu
+        com una vulnerabilitat tècnica.
+
+    </p>
+
+    <p>
+
+        Per aquest motiu, tota organització hauria de disposar d'un
+        <strong>pla de conscienciació en ciberseguretat</strong> que ajude els
+        treballadors a identificar els riscos i actuar de forma segura.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Què és la conscienciació                          -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🛡️ Què és la conscienciació en ciberseguretat?</h2>
+
+    <p>
+
+        La <strong>conscienciació en ciberseguretat</strong> és el conjunt
+        d'accions dirigides a desenvolupar una cultura de seguretat dins de
+        l'organització, de manera que tots els empleats siguen conscients dels
+        riscos existents i coneguen com actuar davant d'ells.
+
+    </p>
+
+    <div class="remember">
+
+        <strong>Definició</strong>
+
+        <p>
+
+            Conscienciar no significa ensenyar conceptes tècnics, sinó
+            aconseguir que les persones adopten comportaments segurs de manera
+            habitual.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Per què és necessària                             -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>❓ Per què és necessària?</h3>
+
+    <p>
+
+        Segons nombrosos informes de ciberseguretat, una gran part dels
+        incidents tenen el seu origen en errors comesos pels usuaris.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Error humà</th>
+
+                <th>Possible conseqüència</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Obrir un correu de phishing</td>
+
+                <td>Robatori de credencials.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Contrasenya feble</td>
+
+                <td>Accés no autoritzat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>USB infectat</td>
+
+                <td>Infecció per malware.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Compartir informació sensible</td>
+
+                <td>Fuga de dades.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>No actualitzar l'equip</td>
+
+                <td>Explotació de vulnerabilitats.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Formació vs conscienciació                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎓 Formació o conscienciació?</h3>
+
+    <p>
+
+        Encara que sovint s'utilitzen com a sinònims, són conceptes diferents.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Formació</th>
+
+                <th>Conscienciació</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Ensenya coneixements.</td>
+
+                <td>Canvia comportaments.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Normalment és puntual.</td>
+
+                <td>És un procés continu.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Explica com funciona una tecnologia.</td>
+
+                <td>Explica com actuar davant un risc.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Dirigida a adquirir competències.</td>
+
+                <td>Dirigida a crear hàbits segurs.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="important">
+
+        <strong>Important</strong>
+
+        <p>
+
+            Una organització necessita tant formació tècnica com
+            conscienciació. La primera proporciona coneixements; la segona
+            aconsegueix que aquests coneixements s'apliquen en el dia a dia.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Objectius                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎯 Objectius d'un pla de conscienciació</h3>
+
+    <ul>
+
+        <li>Reduir els errors humans.</li>
+
+        <li>Fomentar una cultura de ciberseguretat.</li>
+
+        <li>Millorar la detecció de possibles incidents.</li>
+
+        <li>Incrementar la notificació d'incidents.</li>
+
+        <li>Protegir la informació de l'organització.</li>
+
+        <li>Complir la normativa vigent.</li>
+
+        <li>Reduir l'impacte dels atacs d'enginyeria social.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- El factor humà                                    -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>👤 El factor humà</h3>
+
+    <p>
+
+        En ciberseguretat es considera que les persones són el primer objectiu
+        dels atacants. Per aquest motiu, els ciberdelinqüents utilitzen
+        tècniques d'<strong>enginyeria social</strong> per manipular els
+        empleats i aconseguir que siguen ells mateixos els qui faciliten
+        l'accés als sistemes.
+
+    </p>
+
+    <div class="example">
+
+        <strong>Exemple</strong>
+
+        <p>
+
+            Un atacant envia un correu simulant ser el departament
+            d'informàtica indicant que cal canviar la contrasenya de manera
+            urgent. Si l'usuari accedeix a l'enllaç fraudulent, lliura les seues
+            credencials sense adonar-se'n.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Diagrama                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 El paper de la conscienciació</h3>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Persona] --> B(Formació) --> C(Conscienciació) --> D[Bons hàbits] --> E[Reducció dels incidents]
+
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Els exercicis de simulació de <strong>phishing</strong> són una de les eines
+més utilitzades per mesurar el nivell de conscienciació dels treballadors.
+Moltes organitzacions envien correus falsos als seus empleats per comprovar
+si són capaços d'identificar-los abans que ho faça un atacant real.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Què és la conscienciació en ciberseguretat.</li>
+
+<li>☐ Per què el factor humà és un dels principals riscos.</li>
+
+<li>☐ La diferència entre formació i conscienciació.</li>
+
+<li>☐ Els objectius principals d'un pla de conscienciació.</li>
+
+<li>☐ La relació entre enginyeria social i conscienciació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- Disseny del pla                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🗂️ Disseny d'un pla de conscienciació</h2>
+
+    <p>
+
+        Un pla de conscienciació és un conjunt organitzat d'accions destinades
+        a augmentar el nivell de seguretat dels treballadors. No consisteix en
+        impartir una única xarrada, sinó en establir un procés continu de
+        millora.
+
+    </p>
+
+    <p>
+
+        Perquè siga efectiu, el pla ha de definir clarament els objectius,
+        el públic destinatari, les activitats previstes, el calendari i els
+        mecanismes per mesurar-ne els resultats.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Fases                                             -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📋 Fases d'un pla de conscienciació</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Fase</th>
+
+                <th>Objectiu</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Anàlisi inicial</td>
+
+                <td>Identificar riscos i necessitats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Planificació</td>
+
+                <td>Definir objectius i activitats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Execució</td>
+
+                <td>Dur a terme les campanyes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Avaluació</td>
+
+                <td>Mesurar els resultats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Millora contínua</td>
+
+                <td>Corregir i actualitzar el pla.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Públic objectiu                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>👥 Identificació del públic objectiu</h3>
+
+    <p>
+
+        No tots els treballadors tenen les mateixes responsabilitats ni
+        estan exposats als mateixos riscos. Per això és convenient adaptar les
+        campanyes al perfil dels destinataris.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Perfil</th>
+
+                <th>Temes prioritaris</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Personal administratiu</td>
+
+                <td>Phishing, correu electrònic i gestió documental.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Departament TIC</td>
+
+                <td>Configuracions segures, vulnerabilitats i accessos.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Direcció</td>
+
+                <td>Riscos, presa de decisions i compliment normatiu.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Teletreballadors</td>
+
+                <td>VPN, Wi-Fi, dispositius portàtils i BYOD.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Objectius SMART                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎯 Definició d'objectius SMART</h3>
+
+    <p>
+
+        Els objectius d'una campanya han de ser <strong>SMART</strong>, és a
+        dir, específics, mesurables, assolibles, rellevants i limitats en el
+        temps.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Inicial</th>
+
+                <th>Objectiu SMART</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Millorar la seguretat.</td>
+
+                <td>Reduir un 30% els clics en simulacions de phishing abans de final de curs.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Fer formació.</td>
+
+                <td>Que el 100% dels treballadors complete el curs abans de juny.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="tip">
+
+        <strong>Consell</strong>
+
+        <p>
+
+            Si un objectiu no es pot mesurar, serà molt difícil saber si la
+            campanya ha tingut èxit.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Calendari                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🗓️ Calendari anual</h3>
+
+    <p>
+
+        La conscienciació és un procés continu. És preferible realitzar
+        activitats curtes durant tot l'any que una única sessió intensiva.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Mes</th>
+
+                <th>Activitat</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Gener</td>
+
+                <td>Presentació del pla.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Març</td>
+
+                <td>Campanya sobre phishing.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Maig</td>
+
+                <td>Taller de contrasenyes segures.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Setembre</td>
+
+                <td>Simulació de phishing.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Desembre</td>
+
+                <td>Avaluació del pla.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Canals                                            -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📢 Canals de comunicació</h3>
+
+    <p>
+
+        Els missatges de conscienciació poden arribar als treballadors per
+        diferents canals. La combinació de diversos mitjans augmenta la seua
+        eficàcia.
+
+    </p>
+
+    <ul>
+
+        <li>📧 Correu electrònic.</li>
+
+        <li>💬 Intranet corporativa.</li>
+
+        <li>🖥️ Pantalles informatives.</li>
+
+        <li>📱 Aplicacions de missatgeria.</li>
+
+        <li>📄 Cartelleria.</li>
+
+        <li>🎥 Vídeos curts.</li>
+
+        <li>🎙️ Sessions presencials.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Simulacions                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎣 Simulacions de phishing</h3>
+
+    <p>
+
+        Una de les tècniques més efectives consisteix a enviar correus
+        electrònics simulats als treballadors per comprovar si són capaços
+        d'identificar intents de phishing.
+
+    </p>
+
+    <div class="example">
+
+        <strong>Exemple</strong>
+
+        <p>
+
+            El departament de ciberseguretat envia un correu fals informant
+            d'un problema amb la nòmina. Els treballadors que fan clic a
+            l'enllaç són redirigits a una pàgina de conscienciació on
+            s'expliquen els indicadors que haurien d'haver detectat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Diagrama                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📊 Cicle d'una campanya de conscienciació</h2>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Anàlisi] --> B[Planificació] --> C[Execució]
+--> D[Avaluació] --> E[Millora] --> A
+
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Moltes organitzacions envien simulacions de phishing sense avisar els
+treballadors. Els resultats permeten detectar quins departaments necessiten
+més formació i adaptar les futures campanyes de conscienciació.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Les fases d'un pla de conscienciació.</li>
+
+<li>☐ Com definir objectius SMART.</li>
+
+<li>☐ Per què cal adaptar les campanyes al públic objectiu.</li>
+
+<li>☐ Els principals canals de comunicació.</li>
+
+<li>☐ En què consisteixen les simulacions de phishing.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- Continguts d'una campanya                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📚 Continguts d'una campanya de conscienciació</h2>
+
+    <p>
+
+        Les campanyes de conscienciació han d'abordar els principals riscos de
+        ciberseguretat als quals estan exposats els treballadors. Els
+        continguts han de ser pràctics, senzills i fàcils d'aplicar en el dia
+        a dia.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Phishing                                          -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎣 Phishing</h3>
+
+    <p>
+
+        El phishing continua sent una de les principals amenaces per a les
+        organitzacions. Els atacants intenten enganyar els usuaris perquè
+        revelen informació confidencial o executen accions que comprometen la
+        seguretat.
+
+    </p>
+
+    <h3>Què ha d'aprendre l'usuari?</h3>
+
+    <ul>
+
+        <li>Com identificar remitents sospitosos.</li>
+
+        <li>Detectar enllaços fraudulents.</li>
+
+        <li>Reconèixer missatges urgents o alarmistes.</li>
+
+        <li>No facilitar credencials per correu electrònic.</li>
+
+        <li>Comunicar immediatament qualsevol intent de phishing.</li>
+
+    </ul>
+
+    <div class="example">
+
+        <strong>Exemple</strong>
+
+        <p>
+
+            "El teu compte serà bloquejat en 24 hores. Accedeix ara per
+            verificar les teues dades."
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Ransomware                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>💣 Ransomware</h3>
+
+    <p>
+
+        El ransomware xifra els fitxers de l'organització i exigeix un rescat
+        econòmic per recuperar-los.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Mesura</th>
+
+                <th>Finalitat</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>No obrir fitxers desconeguts.</td>
+
+                <td>Evitar la infecció.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Mantindre el sistema actualitzat.</td>
+
+                <td>Corregir vulnerabilitats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Realitzar còpies de seguretat.</td>
+
+                <td>Facilitar la recuperació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Informar immediatament.</td>
+
+                <td>Contindre l'incident.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Enginyeria social                                 -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🧠 Enginyeria social</h3>
+
+    <p>
+
+        L'enginyeria social consisteix a manipular les persones perquè siguen
+        elles mateixes qui faciliten l'accés als sistemes.
+
+    </p>
+
+    <ul>
+
+        <li>Suplantació d'identitat.</li>
+
+        <li>Trucades telefòniques fraudulentes.</li>
+
+        <li>Missatges SMS falsos.</li>
+
+        <li>Perfils falsos en xarxes socials.</li>
+
+        <li>Visites presencials no autoritzades.</li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>Important</strong>
+
+        <p>
+
+            Els atacants no necessiten vulnerar un servidor si aconsegueixen
+            convèncer un treballador perquè els facilite les credencials.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Contrasenyes                                      -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔑 Contrasenyes segures</h3>
+
+    <p>
+
+        La campanya ha de recordar periòdicament les bones pràctiques en la
+        gestió de credencials.
+
+    </p>
+
+    <ul>
+
+        <li>Contrasenyes llargues.</li>
+
+        <li>No reutilitzar-les.</li>
+
+        <li>No compartir-les.</li>
+
+        <li>Utilitzar un gestor de contrasenyes.</li>
+
+        <li>Activar MFA sempre que siga possible.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- USB                                               -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>💾 Dispositius USB</h3>
+
+    <p>
+
+        Les memòries USB continuen sent un vector habitual de propagació de
+        malware.
+
+    </p>
+
+    <ul>
+
+        <li>No connectar dispositius desconeguts.</li>
+
+        <li>Utilitzar únicament USB corporatius.</li>
+
+        <li>Xifrar la informació sensible.</li>
+
+        <li>Escanejar els dispositius abans d'utilitzar-los.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Xarxes socials                                    -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📱 Xarxes socials</h3>
+
+    <p>
+
+        La informació publicada pels treballadors pot ser utilitzada pels
+        atacants per preparar campanyes d'enginyeria social.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>No publicar...</th>
+
+                <th>Per què?</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Credencials o captures.</td>
+
+                <td>Poden revelar informació sensible.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Organigrames.</td>
+
+                <td>Faciliten la suplantació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Informació sobre clients.</td>
+
+                <td>Pot vulnerar la confidencialitat.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- IA Generativa                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🤖 IA generativa i deepfakes</h3>
+
+    <p>
+
+        Les eines d'intel·ligència artificial permeten generar textos, imatges,
+        àudios i vídeos molt convincents. Això incrementa el risc de noves
+        formes de phishing i d'enginyeria social.
+
+    </p>
+
+    <div class="tip">
+
+        <strong>Consell</strong>
+
+        <p>
+
+            Davant qualsevol petició inusual, especialment si implica diners,
+            dades personals o credencials, verifica sempre la identitat del
+            remitent mitjançant un canal diferent.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Activitats                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>✍️ Activitats proposades</h2>
+
+    <ol>
+
+        <li>Analitza un correu de phishing i identifica els indicadors que el delaten.</li>
+
+        <li>Elabora un cartell sobre l'ús segur de les contrasenyes.</li>
+
+        <li>Dissenya una infografia sobre ransomware.</li>
+
+        <li>Prepara un tríptic informatiu sobre enginyeria social.</li>
+
+        <li>Crea un decàleg de bones pràctiques per al teletreball.</li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Diagrama                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 Temes habituals d'una campanya</h3>
+
+<pre class="mermaid">
+mindmap
+  root((Campanya))
+    Phishing
+    Ransomware
+    Malware
+    USB
+    Contrasenyes
+    MFA
+    Enginyeria social
+    Xarxes socials
+    IA generativa
+    Teletreball
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Els primers atacs de phishing eren fàcils de detectar perquè contenien errors
+ortogràfics o traduccions deficients. Actualment, gràcies a la intel·ligència
+artificial generativa, els correus fraudulents poden estar perfectament
+redactats i adaptar-se al context de cada víctima.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Quins temes ha d'incloure una campanya de conscienciació.</li>
+
+<li>☐ Les bones pràctiques davant del phishing.</li>
+
+<li>☐ Les mesures bàsiques de protecció contra el ransomware.</li>
+
+<li>☐ Els riscos de l'enginyeria social.</li>
+
+<li>☐ La importància del MFA i de les contrasenyes robustes.</li>
+
+<li>☐ Els nous riscos associats a la IA generativa i als deepfakes.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- Avaluació del pla                                 -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📈 Avaluació del pla de conscienciació</h2>
+
+    <p>
+
+        Una vegada executades les accions de conscienciació és necessari
+        comprovar si han tingut l'efecte esperat. L'objectiu de l'avaluació no
+        és només conèixer els resultats, sinó identificar punts de millora i
+        adaptar les futures campanyes.
+
+    </p>
+
+    <p>
+
+        Per aconseguir-ho s'utilitzen diferents indicadors (KPI) i mecanismes
+        d'avaluació.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- KPI                                               -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📊 Indicadors (KPI)</h3>
+
+    <p>
+
+        Els <strong>Key Performance Indicators (KPI)</strong> són mètriques que
+        permeten valorar l'eficàcia d'una campanya.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Indicador</th>
+
+                <th>Què mesura?</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Assistència</td>
+
+                <td>Percentatge de treballadors que han participat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Finalització</td>
+
+                <td>Usuaris que han completat la formació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Resultats dels qüestionaris</td>
+
+                <td>Nivell d'aprenentatge.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Simulacions de phishing</td>
+
+                <td>Percentatge d'usuaris que fan clic.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Incidents notificats</td>
+
+                <td>Increment de la detecció d'incidents.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Mètodes d'avaluació                               -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📝 Mètodes d'avaluació</h3>
+
+    <ul>
+
+        <li>Qüestionaris abans i després de la campanya.</li>
+
+        <li>Simulacions periòdiques de phishing.</li>
+
+        <li>Entrevistes als treballadors.</li>
+
+        <li>Auditories internes.</li>
+
+        <li>Anàlisi dels incidents notificats.</li>
+
+        <li>Observació del compliment de les normes.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Simulacions                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎣 Resultats d'una simulació de phishing</h3>
+
+    <p>
+
+        Les simulacions de phishing són una de les eines més utilitzades per
+        comprovar si els treballadors han desenvolupat hàbits segurs.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Resultat</th>
+
+                <th>Interpretació</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Fa clic a l'enllaç.</td>
+
+                <td>Necessita reforçar la formació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Obri el correu però no interactua.</td>
+
+                <td>Mostra prudència.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Notifica el correu.</td>
+
+                <td>Comportament desitjat.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="remember">
+
+        <strong>Recorda</strong>
+
+        <p>
+
+            L'objectiu d'aquestes simulacions no és sancionar els empleats,
+            sinó detectar necessitats de formació i millorar la cultura de
+            seguretat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Millora contínua                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>♻️ Millora contínua</h3>
+
+    <p>
+
+        Els resultats de l'avaluació s'han d'utilitzar per actualitzar el pla
+        de conscienciació. Les amenaces evolucionen constantment i també ho
+        han de fer les campanyes.
+
+    </p>
+
+    <ul>
+
+        <li>Actualitzar els continguts.</li>
+
+        <li>Incorporar nous exemples reals.</li>
+
+        <li>Adaptar els materials als nous riscos.</li>
+
+        <li>Programar noves activitats.</li>
+
+        <li>Corregir les deficiències detectades.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Gamificació                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎮 Gamificació</h3>
+
+    <p>
+
+        Moltes organitzacions utilitzen tècniques de gamificació per augmentar
+        la participació dels treballadors i fer més atractives les campanyes de
+        conscienciació.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Element</th>
+
+                <th>Exemple</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Puntuacions</td>
+
+                <td>Obtindre punts per completar cursos.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Insígnies</td>
+
+                <td>Reconèixer els usuaris més actius.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Classificacions</td>
+
+                <td>Rànquing per departaments.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Reptes</td>
+
+                <td>Competicions mensuals.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Dashboard                                         -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📊 Cicle de millora del pla</h2>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Campanya]
+
+--> B[Mesura dels KPI]
+
+--> C[Avaluació]
+
+--> D[Millores]
+
+--> E[Nova campanya]
+
+--> A
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Informe                                           -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📄 Exemple d'informe final</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Indicador</th>
+
+                <th>Valor</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Participació</td>
+
+                <td>96%</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Qüestionaris aprovats</td>
+
+                <td>91%</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Clics en phishing</td>
+
+                <td>7%</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Incidents notificats</td>
+
+                <td>+28%</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Valoració global</td>
+
+                <td>Campanya satisfactòria.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Diversos estudis indiquen que, després de diverses campanyes de conscienciació,
+el percentatge d'usuaris que cauen en simulacions de phishing pot reduir-se
+dràsticament. Això demostra que la conscienciació és una de les mesures de
+ciberseguretat més rendibles.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Què és un KPI.</li>
+
+<li>☐ Quins indicadors s'utilitzen per mesurar una campanya.</li>
+
+<li>☐ Com s'avaluen les simulacions de phishing.</li>
+
+<li>☐ En què consisteix la gamificació.</li>
+
+<li>☐ Per què és important la millora contínua.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+   <nav data-ca-navigation></nav>        
+
+
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+      <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+</body> 
+</html>

@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 5a Procediment de notificació d'incidents </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_05.html"> 
+                    RA5
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA5a
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#1e6f6f, #0e6767);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 5a Procediment de notificació d'incidents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    📢
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com es realitza la notificació
+d'un incident de ciberseguretat des del moment en què és detectat fins
+que arriba als responsables corresponents. Coneixeràs qui ha de
+notificar, quan s'ha de fer, quina informació és necessària i quins
+canals de comunicació són els més adequats segons la gravetat de
+l'incident.
+</p>
+
+<p>
+També comprendràs la importància d'una notificació ràpida, precisa i
+documentada per facilitar una resposta coordinada, reduir l'impacte de
+l'incident i complir les obligacions legals i organitzatives.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el procediment de notificació d'un incident.</li>
+
+<li>Identificar els responsables de la notificació.</li>
+
+<li>Conèixer la informació mínima que ha d'incloure una notificació.</li>
+
+<li>Aprendre els canals habituals de comunicació.</li>
+
+<li>Relacionar la notificació amb l'escalat dels incidents.</li>
+
+<li>Entendre la importància de la rapidesa i la traçabilitat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+La notificació és una de les primeres actuacions que es realitzen
+després de detectar un incident de ciberseguretat. Informar les
+persones adequades en el moment oportú permet activar els equips de
+resposta, coordinar les actuacions i reduir el temps necessari per
+controlar la situació.
+</p>
+
+<p>
+Una notificació incompleta, tardana o enviada al destinatari
+equivocat pot retardar la resposta, augmentar l'impacte de l'incident
+i dificultar la investigació posterior.
+</p>
+
+<p>
+Per aquest motiu, totes les organitzacions han de disposar d'un
+procediment clar que establisca qui ha de comunicar els incidents,
+quins canals s'han d'utilitzar i quina informació és imprescindible
+transmetre.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Detectar un incident és només el primer pas. La notificació ràpida i
+correcta és la que permet activar la resposta davant l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PROCEDIMENT DE NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Procediment de notificació d'incidents</h2>
+
+<p>
+El procediment de notificació defineix els passos que s'han de seguir
+des del moment en què una persona detecta un incident fins que la
+informació arriba als responsables encarregats de gestionar-lo.
+</p>
+
+<p>
+Aquest procediment forma part del pla de resposta davant incidents i
+ha d'estar documentat perquè tots els membres de l'organització
+coneguen com actuar davant qualsevol situació de risc.
+</p>
+
+<p>
+L'objectiu és garantir que la informació circule de manera ràpida,
+segura i ordenada, evitant retards, pèrdues d'informació o
+comunicacions contradictòries.
+</p>
+
+<h3>Fases del procediment</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Detecció</td>
+
+<td>Identificació de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Notificació inicial</td>
+
+<td>Comunicació immediata.</td>
+
+</tr>
+
+<tr>
+
+<td>Classificació</td>
+
+<td>Avaluació de la gravetat.</td>
+
+</tr>
+
+<tr>
+
+<td>Escalat</td>
+
+<td>Informar els responsables.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Activació dels equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment</td>
+
+<td>Actualització de la informació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un treballador detecta un correu sospitós amb un fitxer adjunt
+maliciós. Ho comunica immediatament al Servei d'Assistència TIC, que
+registra l'incident, informa el SOC i activa el procediment de
+resposta.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE LA NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Objectius de la notificació</h2>
+
+<p>
+La notificació té com a finalitat garantir que totes les persones
+responsables coneguen l'existència de l'incident amb la suficient
+rapidesa per poder prendre decisions i coordinar les actuacions
+necessàries.
+</p>
+
+<p>
+Una notificació eficaç també permet conservar la traçabilitat de les
+comunicacions, facilitar la investigació i complir les obligacions
+establides pels procediments interns i la normativa aplicable.
+</p>
+
+<h3>Objectius principals</h3>
+
+<ul>
+
+<li>Informar ràpidament dels incidents.</li>
+
+<li>Activar els equips de resposta.</li>
+
+<li>Facilitar la presa de decisions.</li>
+
+<li>Coordinar tots els participants.</li>
+
+<li>Garantir la traçabilitat.</li>
+
+<li>Complir les obligacions legals.</li>
+
+<li>Reduir l'impacte de l'incident.</li>
+
+<li>Millorar la gestió de la resposta.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+La notificació inicial ha de comunicar els fets coneguts en aquell
+moment. Si posteriorment apareixen noves evidències, aquestes
+s'incorporaran mitjançant actualitzacions successives.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUI HA DE NOTIFICAR
+========================================================== -->
+
+<section>
+
+<h2>Qui ha de notificar un incident?</h2>
+
+<p>
+Qualsevol persona que detecte una situació anòmala susceptible de ser
+un incident de ciberseguretat ha d'iniciar el procediment de
+notificació, encara que no puga confirmar amb certesa que es tracta
+d'un atac.
+</p>
+
+<p>
+Posteriorment, els responsables tècnics verificaran la informació,
+classificaran l'incident i decidiran si és necessari escalar-lo a
+altres equips o organismes externs.
+</p>
+
+<h3>Responsables habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Actor</th>
+
+<th>Responsabilitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Usuari</td>
+
+<td>Comunicar l'anomalia detectada.</td>
+
+</tr>
+
+<tr>
+
+<td>Servei d'Assistència</td>
+
+<td>Registrar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Analitzar i classificar.</td>
+
+</tr>
+
+<tr>
+
+<td>CSIRT</td>
+
+<td>Coordinar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Responsable de seguretat</td>
+
+<td>Decidir l'escalat.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Gestionar incidents crítics.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Flux del procediment de notificació</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Detecció]
+--> B[Notificació]
+--> C[Classificació]
+--> D[Escalat]
+--> E[Resposta]
+
+</div>
+
+<p>
+Aquest diagrama representa el flux bàsic del procediment de
+notificació. La informació passa progressivament pels diferents nivells
+de responsabilitat fins que s'activen els equips encarregats de
+gestionar l'incident.
+</p>
+
+</section>
+
+
+<!-- ==========================================================
+     QUAN S'HA DE NOTIFICAR
+========================================================== -->
+
+<section>
+
+<h2>Quan s'ha de notificar un incident?</h2>
+
+<p>
+La notificació ha de realitzar-se tan prompte com es detecte una
+situació que puga comprometre la seguretat de la informació, encara
+que en aquell moment no es dispose de totes les dades necessàries.
+</p>
+
+<p>
+Retardar la notificació pot augmentar l'impacte de l'incident, dificultar
+la contenció i reduir les possibilitats de preservar correctament les
+evidències digitals.
+</p>
+
+<p>
+La informació inicial podrà ampliar-se posteriorment conforme avance
+la investigació, però és preferible comunicar un possible incident a
+temps que esperar a tindre una confirmació absoluta.
+</p>
+
+<h3>Moments en què cal notificar</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Acció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Detecció d'una anomalia</td>
+
+<td>Notificació immediata.</td>
+
+</tr>
+
+<tr>
+
+<td>Confirmació de l'incident</td>
+
+<td>Actualitzar la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Canvi de gravetat</td>
+
+<td>Escalar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Aparició de noves evidències</td>
+
+<td>Comunicar les novetats.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació dels serveis</td>
+
+<td>Informar de l'estat.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancament</td>
+
+<td>Notificació final.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+No és necessari conèixer totes les causes de l'incident abans de
+notificar-lo. La investigació es desenvolupa després de la notificació
+inicial.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INFORMACIÓ MÍNIMA
+========================================================== -->
+
+<section>
+
+<h2>Informació mínima de la notificació</h2>
+
+<p>
+Perquè la resposta siga eficaç, la notificació ha d'aportar una
+informació mínima que permeta identificar l'incident i valorar-ne la
+gravetat inicial.
+</p>
+
+<p>
+No és necessari elaborar un informe complet en aquesta fase, però sí
+facilitar dades suficients perquè els equips tècnics puguen iniciar la
+investigació.
+</p>
+
+<h3>Informació recomanada</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Data i hora</td>
+
+<td>Situar l'incident en el temps.</td>
+
+</tr>
+
+<tr>
+
+<td>Persona notificadora</td>
+
+<td>Contacte per ampliar informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Ubicació o sistema</td>
+
+<td>Identificar l'actiu afectat.</td>
+
+</tr>
+
+<tr>
+
+<td>Descripció dels fets</td>
+
+<td>Explicar què ha ocorregut.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte observat</td>
+
+<td>Valorar la gravetat.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències disponibles</td>
+
+<td>Facilitar la investigació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+"El dia 15 de març a les 09:25 s'ha detectat que diversos usuaris no
+poden accedir al servidor de fitxers. El sistema mostra un missatge de
+xifrat i s'observen fitxers amb una extensió desconeguda."
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CANALS DE NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Canals de notificació</h2>
+
+<p>
+Cada organització estableix els canals oficials que han d'utilitzar-se
+per comunicar incidents de ciberseguretat. L'ús de canals
+estandarditzats garanteix que la informació arriba als responsables
+adequats i queda registrada per a futures consultes.
+</p>
+
+<p>
+Els canals utilitzats poden variar segons la criticitat de l'incident,
+l'horari o la disponibilitat dels equips de resposta.
+</p>
+
+<h3>Canals més habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Canal</th>
+
+<th>Ús principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Aplicació de ticketing</td>
+
+<td>Registre oficial.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu corporatiu</td>
+
+<td>Incidents no urgents.</td>
+
+</tr>
+
+<tr>
+
+<td>Telèfon</td>
+
+<td>Incidents crítics.</td>
+
+</tr>
+
+<tr>
+
+<td>Portal intern</td>
+
+<td>Comunicacions habituals.</td>
+
+</tr>
+
+<tr>
+
+<td>Aplicació de missatgeria corporativa</td>
+
+<td>Coordinació dels equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Centre d'operacions (SOC)</td>
+
+<td>Incidents de seguretat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les comunicacions importants han de quedar sempre registrades, encara
+que inicialment s'hagen realitzat per telèfon o per altres canals
+verbals.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESCALAT DE LA NOTIFICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Escalat de la notificació</h2>
+
+<p>
+L'escalat consisteix a informar progressivament nivells superiors de
+responsabilitat quan la gravetat o l'impacte de l'incident així ho
+requereixen.
+</p>
+
+<p>
+Aquest procés assegura que les decisions més importants siguen
+adoptades pels responsables adequats i que els recursos necessaris
+s'activen sense demora.
+</p>
+
+<h3>Exemple d'escalat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nivell</th>
+
+<th>Responsable</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>1</td>
+
+<td>Servei d'Assistència.</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+
+<td>Analista SOC.</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+
+<td>CSIRT intern.</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+
+<td>Responsable de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+
+<td>Direcció.</td>
+
+</tr>
+
+<tr>
+
+<td>6</td>
+
+<td>Organismes externs (si escau).</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+L'escalat no depén únicament de la gravetat tècnica. També pot estar
+condicionat per l'impacte econòmic, legal, operatiu o reputacional de
+l'incident.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Seqüència de notificació</h2>
+
+<div class="mermaid">
+sequenceDiagram
+
+participant U as Usuari
+participant H as Help Desk
+participant S as SOC
+participant C as CSIRT
+participant D as Direcció
+
+U->>H: Comunica l'incident
+H->>S: Registra i trasllada
+S->>C: Classifica i escala
+C->>D: Informa si és crític
+
+</div>
+
+<p>
+Aquest diagrama representa una seqüència típica de notificació. Cada
+nivell rep la informació, la valida i decideix si és necessari
+continuar escalant l'incident segons la seua criticitat.
+</p>
+
+</section>
+
+
+<!-- ==========================================================
+     NOTIFICACIONS INTERNES I EXTERNES
+========================================================== -->
+
+<section>
+
+<h2>Notificacions internes i externes</h2>
+
+<p>
+No totes les notificacions tenen els mateixos destinataris. Algunes
+es realitzen exclusivament dins de l'organització, mentre que altres
+han de comunicar-se a organismes externs, proveïdors o autoritats
+competents, especialment quan així ho exigeix la normativa o quan
+l'impacte de l'incident afecta tercers.
+</p>
+
+<p>
+La classificació correcta de les notificacions garanteix que la
+informació arriba únicament a les persones o entitats que han
+d'intervindre en la gestió de l'incident, evitant tant la manca de
+comunicació com la divulgació innecessària d'informació sensible.
+</p>
+
+<h3>Tipus de notificacions</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Destinataris</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Interna</td>
+
+<td>Personal i responsables.</td>
+
+<td>Coordinar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Tècnica</td>
+
+<td>SOC, CSIRT, administradors.</td>
+
+<td>Gestionar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Executiva</td>
+
+<td>Direcció.</td>
+
+<td>Facilitar la presa de decisions.</td>
+
+</tr>
+
+<tr>
+
+<td>Legal</td>
+
+<td>Assessoria jurídica.</td>
+
+<td>Analitzar obligacions legals.</td>
+
+</tr>
+
+<tr>
+
+<td>Externa</td>
+
+<td>Clients o proveïdors.</td>
+
+<td>Informar les parts afectades.</td>
+
+</tr>
+
+<tr>
+
+<td>Oficial</td>
+
+<td>Autoritats competents.</td>
+
+<td>Complir la normativa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si una empresa detecta una filtració de dades personals, a més de la
+notificació interna als equips tècnics i a la direcció, pot ser
+necessari informar les persones afectades i comunicar l'incident a les
+autoritats competents quan així ho establisca la legislació aplicable.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en la notificació</h2>
+
+<p>
+Una notificació ben estructurada facilita el treball dels equips de
+resposta, evita malentesos i accelera la gestió dels incidents.
+Seguir unes pautes comunes contribueix a millorar la coordinació entre
+tots els participants.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Notificar immediatament qualsevol sospita raonable.</li>
+
+<li>Utilitzar únicament els canals oficials.</li>
+
+<li>Descriure els fets de manera objectiva.</li>
+
+<li>Indicar sempre la data i l'hora de detecció.</li>
+
+<li>Adjuntar les evidències disponibles.</li>
+
+<li>Actualitzar la informació quan apareguen noves dades.</li>
+
+<li>Mantindre la confidencialitat de la informació.</li>
+
+<li>Registrar totes les comunicacions realitzades.</li>
+
+<li>Respectar els procediments establits.</li>
+
+<li>Evitar especulacions o conclusions precipitades.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una notificació breu però precisa és més útil que un missatge llarg
+amb informació poc rellevant o sense verificar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals en la notificació</h2>
+
+<p>
+Els errors comesos durant la notificació poden retardar la resposta,
+provocar decisions incorrectes o dificultar la investigació de
+l'incident. Conèixer-los ajuda a evitar-los.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Retardar la notificació esperant més informació.</li>
+
+<li>Utilitzar canals no autoritzats.</li>
+
+<li>No registrar la comunicació.</li>
+
+<li>Enviar informació incompleta.</li>
+
+<li>Exagerar o minimitzar la gravetat.</li>
+
+<li>No conservar les evidències associades.</li>
+
+<li>Informar persones que no necessiten conèixer l'incident.</li>
+
+<li>Difondre informació confidencial.</li>
+
+<li>No actualitzar la notificació inicial.</li>
+
+<li>No seguir el procediment establit.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Esperar a confirmar completament un incident abans de comunicar-lo pot
+fer perdre un temps molt valuós durant les primeres fases de la
+resposta.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Segons el tipus d'incident, la notificació pot variar en contingut,
+urgència i destinataris. Els exemples següents mostren diferents
+situacions habituals.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Primera notificació</th>
+
+<th>Destinatari principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Correu de phishing</td>
+
+<td>Servei d'Assistència.</td>
+
+<td>SOC.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Alerta immediata.</td>
+
+<td>CSIRT.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga de dades</td>
+
+<td>Comunicació urgent.</td>
+
+<td>Responsable de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>DDoS</td>
+
+<td>Incidència crítica.</td>
+
+<td>Centre d'operacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Pèrdua d'un portàtil</td>
+
+<td>Notificació interna.</td>
+
+<td>Departament TIC.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Una treballadora observa que el seu equip mostra una finestra
+sol·licitant un rescat econòmic. Sense apagar l'ordinador ni intentar
+resoldre el problema pel seu compte, comunica immediatament la
+situació al Servei d'Assistència utilitzant el procediment establit.
+El tècnic registra l'incident, informa el SOC i inicia el procés
+d'escalat segons la criticitat detectada.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una notificació eficaç és el punt de partida d'una bona resposta davant
+incidents. La rapidesa, la precisió i l'ús dels canals adequats són
+elements clau per reduir l'impacte de qualsevol incident de
+ciberseguretat.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Notifica qualsevol sospita sense demora.</li>
+
+<li>Utilitza sempre els canals oficials de comunicació.</li>
+
+<li>Descriu únicament fets verificables.</li>
+
+<li>Adjunta evidències quan siga possible.</li>
+
+<li>Indica la data, l'hora i el sistema afectat.</li>
+
+<li>Actualitza la notificació si apareixen noves dades.</li>
+
+<li>Respecta la confidencialitat de la informació.</li>
+
+<li>Conserva el registre de totes les comunicacions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La notificació és un procés formal que ha de seguir els procediments
+definits per l'organització. Una comunicació incorrecta pot retardar
+la resposta, generar confusió o provocar l'incompliment d'obligacions
+legals.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>Qualsevol persona pot detectar un incident.</li>
+
+<li>La notificació ha de realitzar-se tan prompte com siga possible.</li>
+
+<li>Cal utilitzar exclusivament els canals autoritzats.</li>
+
+<li>Les comunicacions han de quedar registrades.</li>
+
+<li>Les evidències no s'han d'alterar abans de notificar.</li>
+
+<li>Només s'ha de compartir la informació necessària.</li>
+
+<li>Els incidents crítics requereixen un escalat immediat.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una notificació ràpida no significa una notificació precipitada. És
+important comunicar els fets coneguts amb claredat i completar la
+informació conforme avance la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els primers minuts són determinants</strong>
+
+<p>
+
+En molts incidents de ciberseguretat, el temps transcorregut entre la
+detecció i la notificació condiciona l'eficàcia de la resposta i
+l'impacte final sobre l'organització.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Moltes alertes són notificades pels usuaris</strong>
+
+<p>
+
+Encara que les eines automàtiques detecten nombroses amenaces, moltes
+incidències continuen descobrint-se gràcies a les notificacions del
+personal que observa comportaments anòmals als seus equips.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La notificació forma part de la traçabilitat</strong>
+
+<p>
+
+Registrar totes les comunicacions permet reconstruir posteriorment la
+seqüència dels fets i justificar les decisions adoptades durant la
+gestió de l'incident.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>No tots els incidents es comuniquen als mateixos destinataris</strong>
+
+<p>
+
+Els destinataris de la notificació depenen de la gravetat de
+l'incident, dels actius afectats i de les obligacions establides pels
+procediments interns i la normativa aplicable.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta que diversos treballadors han rebut un correu
+electrònic fraudulent que suplanta el departament de Recursos Humans i
+sol·licita introduir les credencials corporatives en una pàgina web
+falsa. Alguns empleats comuniquen immediatament la situació mentre que
+altres intenten solucionar-la pel seu compte.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tipus d'incident</td>
+
+<td>Campanya de phishing.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris afectats</td>
+
+<td>15 empleats.</td>
+
+</tr>
+
+<tr>
+
+<td>Credencials compromeses</td>
+
+<td>3 comptes.</td>
+
+</tr>
+
+<tr>
+
+<td>Canal de notificació</td>
+
+<td>Portal intern d'incidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat</td>
+
+<td>En investigació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Identifica qui hauria de realitzar la primera notificació.</li>
+
+<li>Indica quina informació mínima hauria d'incloure.</li>
+
+<li>Descriu el procés d'escalat corresponent.</li>
+
+<li>Decideix quins responsables haurien de ser informats.</li>
+
+<li>Explica quines actuacions serien prioritàries després de la notificació.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica simularàs el procés complet de notificació d'un
+incident de ciberseguretat. A partir d'una situació plantejada,
+hauràs d'identificar la informació rellevant, elaborar la notificació
+inicial, seleccionar els canals adequats i decidir l'escalat de
+l'incident segons la seua gravetat.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Un empleat informa que, després d'obrir un fitxer adjunt rebut per
+correu electrònic, el seu equip mostra un comportament anòmal i
+estableix connexions de xarxa no habituals. El sistema EDR també ha
+generat una alerta de possible malware.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Procediment intern de notificació d'incidents.</li>
+
+<li>Plantilla de notificació inicial.</li>
+
+<li>Registres de l'EDR.</li>
+
+<li>Captura de la notificació del SIEM.</li>
+
+<li>Inventari dels actius afectats.</li>
+
+<li>Directori de responsables.</li>
+
+<li>Sistema de ticketing.</li>
+
+<li>Checklist de classificació inicial.</li>
+
+<li>Guia d'escalat dels incidents.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Identificar la informació rellevant de l'incident.</li>
+
+<li>Redactar la notificació inicial.</li>
+
+<li>Registrar l'incident al sistema de ticketing.</li>
+
+<li>Seleccionar el canal de comunicació adequat.</li>
+
+<li>Determinar el nivell d'escalat necessari.</li>
+
+<li>Justificar els responsables que han de ser informats.</li>
+
+<li>Actualitzar la notificació amb noves dades.</li>
+
+<li>Registrar totes les comunicacions efectuades.</li>
+
+<li>Presentar el procediment complet seguit.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu principal de la notificació és activar la resposta tan
+ràpidament com siga possible, aportant informació fiable i suficient
+perquè els equips tècnics puguen començar a treballar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és la notificació d'un incident.</li>
+
+<li>Descriu les fases del procediment de notificació.</li>
+
+<li>Explica qui pot iniciar una notificació.</li>
+
+<li>Identifica la informació mínima que ha d'incloure.</li>
+
+<li>Descriu els canals habituals de comunicació.</li>
+
+<li>Explica el concepte d'escalat dels incidents.</li>
+
+<li>Diferencia les notificacions internes de les externes.</li>
+
+<li>Analitza els errors més freqüents durant la notificació.</li>
+
+<li>Redacta una notificació inicial a partir d'un cas pràctic.</li>
+
+<li>Justifica la importància de la traçabilitat de les comunicacions.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La notificació constitueix una de les primeres fases de la gestió
+d'incidents de ciberseguretat. Una comunicació ràpida, precisa i
+documentada permet activar els equips de resposta, coordinar les
+actuacions i reduir l'impacte sobre els sistemes afectats.
+
+</p>
+
+<p>
+
+El procediment de notificació estableix qui ha d'informar, quan s'ha
+de fer, quina informació és necessària i com s'ha d'escalar
+l'incident. L'ús dels canals oficials, la traçabilitat de les
+comunicacions i el compliment dels procediments interns contribueixen
+a una gestió més eficaç i segura.
+
+</p>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La notificació ha de realitzar-se tan prompte com siga possible.</li>
+
+<li>Qualsevol persona pot detectar un incident.</li>
+
+<li>La informació inicial ha de ser clara i objectiva.</li>
+
+<li>Els canals oficials garanteixen la traçabilitat.</li>
+
+<li>L'escalat depén de la gravetat i de l'impacte.</li>
+
+<li>Totes les comunicacions han de quedar registrades.</li>
+
+<li>La notificació facilita la coordinació dels equips.</li>
+
+<li>Una bona notificació accelera la resposta davant incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir el procediment de notificació d'incidents.</li>
+
+<li>Explicar els objectius de la notificació.</li>
+
+<li>Identificar qui ha de comunicar un incident.</li>
+
+<li>Descriure la informació mínima d'una notificació.</li>
+
+<li>Reconèixer els canals oficials de comunicació.</li>
+
+<li>Explicar el procés d'escalat dels incidents.</li>
+
+<li>Diferenciar notificacions internes i externes.</li>
+
+<li>Identificar errors habituals en la notificació.</li>
+
+<li>Aplicar el procediment a un cas pràctic.</li>
+
+<li>Justificar la importància de la traçabilitat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos materials
+orientats a la notificació dels incidents i a la correcta gestió de
+les comunicacions durant la resposta.
+
+</p>
+
+<ul>
+
+<li>📄 Procediment de notificació d'incidents.</li>
+
+<li>📄 Plantilla de notificació inicial.</li>
+
+<li>📄 Formulari de registre d'incidents.</li>
+
+<li>📄 Guia d'escalat dels incidents.</li>
+
+<li>📄 Checklist d'informació mínima.</li>
+
+<li>📄 Model de comunicació interna.</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Exercicis de notificació i escalat.</li>
+
+<li>📄 Plantilla de seguiment de comunicacions.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Una organització preparada no només detecta incidents amb rapidesa,
+sinó que també disposa d'un procediment clar perquè qualsevol persona
+sàpia a qui informar, com comunicar els fets i quina informació
+proporcionar. Una notificació correcta és el primer pas cap a una
+resposta eficaç i coordinada.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

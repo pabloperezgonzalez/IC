@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 1b - Normativa de protecció del lloc de treball</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 </button>
+                    <!-- Canvi de tema --> 
+                </h2>   
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_01.html"> 
+                    RA1 
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA1b
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 1b - Normativa de protecció del lloc de treball
+                    </h1> 
+                    <p> 
+                         Identificació i aplicació de les normes i bones pràctiques
+                        que permeten protegir el lloc de treball, els equips i la
+                         informació davant les principals amenaces de ciberseguretat.
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 20 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🛡️ 
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+     
+     <nav data-ca-navigation></nav>
+<!-- ================================================= -->
+<!-- Què aprendràs                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🎯 Què aprendràs</h2>
+
+    <div class="learn-box">
+
+        <ul>
+
+            <li>Comprendre què és la protecció del lloc de treball en ciberseguretat.</li>
+
+            <li>Identificar els principals riscos que afecten els equips dels usuaris.</li>
+
+            <li>Conèixer les mesures de seguretat que ha d'implantar una organització.</li>
+
+            <li>Entendre la importància de les polítiques d'ús dels equips informàtics.</li>
+
+            <li>Aplicar bones pràctiques per reduir la superfície d'atac.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Introducció                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📖 Introducció</h2>
+
+    <p>
+
+        El lloc de treball és un dels principals objectius dels ciberdelinqüents.
+        Cada ordinador, portàtil o dispositiu mòbil constitueix un possible punt
+        d'entrada a la xarxa corporativa.
+
+    </p>
+
+    <p>
+
+        La major part dels incidents de seguretat tenen el seu origen en els
+        equips dels usuaris: fitxers maliciosos, correus electrònics de phishing,
+        programari desactualitzat, dispositius USB infectats o credencials
+        compromeses.
+
+    </p>
+
+    <p>
+
+        Per aquest motiu, totes les organitzacions han d'establir una normativa
+        clara que definisca com s'han d'utilitzar els equips informàtics i quines
+        mesures de protecció són obligatòries.
+
+    </p>
+
+    <div class="info">
+
+        <strong>ℹ️ Informació</strong>
+
+        <p>
+
+            Actualment es parla d'<strong>Endpoint Security</strong> per referir-se
+            al conjunt de tecnologies i procediments destinats a protegir els
+            dispositius finals d'una organització.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Objectius                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎯 Objectius</h3>
+
+    <ul>
+
+        <li>Definir una normativa d'ús dels equips informàtics.</li>
+
+        <li>Identificar les principals mesures de protecció del lloc de treball.</li>
+
+        <li>Reduir els riscos derivats de l'activitat diària dels usuaris.</li>
+
+        <li>Conèixer les responsabilitats dels empleats.</li>
+
+        <li>Aplicar controls preventius sobre els equips.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Què és la protecció del lloc de treball           -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>💻 Què és la protecció del lloc de treball?</h2>
+
+    <p>
+
+        La protecció del lloc de treball consisteix a aplicar mesures
+        organitzatives i tècniques que garantisquen que els equips utilitzats
+        pels treballadors no es convertisquen en un punt d'entrada per als
+        atacants.
+
+    </p>
+
+    <p>
+
+        Aquestes mesures afecten tant els equips físics com els dispositius
+        mòbils, equips personals autoritzats (BYOD), màquines virtuals i
+        estacions de treball remotes.
+
+    </p>
+
+    <div class="example">
+
+        <strong>🧪 Exemple</strong>
+
+        <p>
+
+            Un empleat descarrega un fitxer aparentment inofensiu des d'un correu
+            electrònic fraudulent. En executar-lo, s'instal·la un ransomware que
+            xifra els fitxers compartits de tota l'empresa.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Amenaces habituals                                -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>⚠️ Principals amenaces al lloc de treball</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Amenaça</th>
+
+                <th>Conseqüència</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Phishing</td>
+
+                <td>Robatori de credencials.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Ransomware</td>
+
+                <td>Xifrat dels fitxers.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Malware</td>
+
+                <td>Control remot de l'equip.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>USB infectats</td>
+
+                <td>Introducció de codi maliciós.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Programari desactualitzat</td>
+
+                <td>Explotació de vulnerabilitats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Contrasenyes febles</td>
+
+                <td>Accés no autoritzat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Enginyeria social</td>
+
+                <td>Manipulació dels treballadors.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="important">
+
+        <strong>⚠️ Important</strong>
+
+        <p>
+
+            La tecnologia no elimina el risc si els usuaris no segueixen unes
+            normes bàsiques de seguretat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Principis de la normativa                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📋 Principis d'una normativa de protecció del lloc de treball</h3>
+
+    <p>
+
+        Una normativa eficaç ha de definir de manera clara què està permés,
+        què està prohibit i quines responsabilitats assumeixen tant
+        l'organització com els seus treballadors.
+
+    </p>
+
+    <ul>
+
+        <li>Ús exclusivament professional dels equips corporatius.</li>
+
+        <li>Protecció de les credencials d'accés.</li>
+
+        <li>Actualització obligatòria del programari.</li>
+
+        <li>Bloqueig automàtic de la sessió.</li>
+
+        <li>Prohibició d'instal·lar programari sense autorització.</li>
+
+        <li>Ús obligatori d'antivirus i EDR.</li>
+
+        <li>Connexions remotes mitjançant VPN.</li>
+
+        <li>Xifrat dels dispositius portàtils.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Segons diversos informes de ciberseguretat, una gran part dels atacs de
+<strong>ransomware</strong> comencen en un únic ordinador d'un empleat. Una vegada
+compromès aquest equip, el malware intenta propagar-se per la xarxa aprofitant
+credencials robades o vulnerabilitats dels sistemes.
+
+</p>
+
+<p>
+
+Per això, protegir adequadament cada lloc de treball és una de les mesures més
+efectives per reduir el risc global d'una organització.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Què és un lloc de treball (endpoint).</li>
+
+<li>☐ Les principals amenaces que afecten els equips dels usuaris.</li>
+
+<li>☐ Les mesures bàsiques de protecció.</li>
+
+<li>☐ La diferència entre una mesura organitzativa i una mesura tècnica.</li>
+
+<li>☐ Per què la normativa és imprescindible per reduir els incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Mesures de protecció                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🛡️ Mesures de protecció del lloc de treball</h3>
+
+    <p>
+
+        Una normativa de protecció del lloc de treball ha d'establir les
+        mesures tècniques i organitzatives necessàries per reduir el risc
+        d'incidents de ciberseguretat.
+
+    </p>
+
+    <p>
+
+        Aquestes mesures han d'aplicar-se a tots els equips corporatius i,
+        quan siga procedent, també als dispositius personals autoritzats
+        (BYOD).
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Contrasenyes                                      -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔑 Política de contrasenyes</h3>
+
+    <p>
+
+        Les credencials d'accés són la primera línia de defensa davant
+        accessos no autoritzats. Una política adequada ha d'establir com
+        s'han de crear, protegir i renovar les contrasenyes.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Recomanació</th>
+
+                <th>Descripció</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Longitud mínima</td>
+
+                <td>12 caràcters o més.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Frases de pas</td>
+
+                <td>Preferibles a contrasenyes curtes i complexes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Úniques</td>
+
+                <td>No reutilitzar la mateixa contrasenya.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Gestor de contrasenyes</td>
+
+                <td>Permet generar claus segures.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>MFA</td>
+
+                <td>Obligatori en serveis crítics.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            Una contrasenya robusta deixa de ser segura si es reutilitza en
+            diversos serveis.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- MFA                                               -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📱 Autenticació multifactor (MFA)</h3>
+
+    <p>
+
+        L'autenticació multifactor exigeix que l'usuari presente dues o més
+        evidències d'identitat abans d'accedir a un servei.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Factor</th>
+
+                <th>Exemple</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Allò que saps</td>
+
+                <td>Contrasenya.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Allò que tens</td>
+
+                <td>Telèfon mòbil, token.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Allò que eres</td>
+
+                <td>Empremta o reconeixement facial.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Usuari]
+
+--> B[Introdueix contrasenya]
+
+--> C[Verificació MFA]
+
+--> D[Accés concedit]
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Antivirus                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🦠 Antivirus, EDR i XDR</h3>
+
+    <p>
+
+        Les organitzacions modernes no es limiten a instal·lar un antivirus.
+        Actualment s'utilitzen plataformes de detecció i resposta capaces
+        d'identificar comportaments sospitosos i respondre automàticament.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Tecnologia</th>
+
+                <th>Funció principal</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Antivirus</td>
+
+                <td>Detecta malware conegut.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>EDR</td>
+
+                <td>Monitoritza i respon als incidents dels equips.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>XDR</td>
+
+                <td>Correlaciona incidents entre múltiples sistemes.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="info">
+
+        <strong>ℹ️ Informació</strong>
+
+        <p>
+
+            Actualment moltes empreses substitueixen els antivirus tradicionals
+            per plataformes EDR, molt més eficaces davant amenaces modernes.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Actualitzacions                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔄 Gestió d'actualitzacions</h3>
+
+    <p>
+
+        Mantindre el programari actualitzat és una de les mesures de
+        protecció més eficaces. La majoria dels atacs aprofiten
+        vulnerabilitats ja conegudes.
+
+    </p>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Vulnerabilitat]
+
+--> B[Pegat publicat]
+
+--> C[Actualització]
+
+--> D[Equip protegit]
+</pre>
+
+    <div class="important">
+
+        <strong>⚠️ Important</strong>
+
+        <p>
+
+            Retardar les actualitzacions incrementa considerablement el risc
+            que un atacant explote una vulnerabilitat coneguda.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Xifrat                                            -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>💾 Xifrat dels dispositius</h3>
+
+    <p>
+
+        Els ordinadors portàtils poden ser robats o extraviats. Per aquest
+        motiu, totes les dades emmagatzemades haurien d'estar protegides
+        mitjançant xifrat del disc.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Sistema operatiu</th>
+
+                <th>Eina</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Windows</td>
+
+                <td>BitLocker.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Linux</td>
+
+                <td>LUKS.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>macOS</td>
+
+                <td>FileVault.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Instal·lació de programari                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📦 Control del programari instal·lat</h3>
+
+    <p>
+
+        La normativa ha d'indicar clarament qui pot instal·lar programari i
+        quins procediments s'han de seguir.
+
+    </p>
+
+    <ul>
+
+        <li>Només programari autoritzat.</li>
+
+        <li>Repositoris oficials.</li>
+
+        <li>Prohibició de programari pirata.</li>
+
+        <li>Inventari actualitzat d'aplicacions.</li>
+
+        <li>Revisió periòdica del programari instal·lat.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Cas real                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+L'any 2017 el ransomware <strong>WannaCry</strong> va infectar més de
+200.000 equips en 150 països aprofitant una vulnerabilitat de Windows per
+a la qual Microsoft ja havia publicat un pegat mesos abans.
+
+</p>
+
+<p>
+
+Moltes organitzacions no havien aplicat les actualitzacions de seguretat,
+fet que va facilitar enormement la propagació del malware.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Les característiques d'una bona política de contrasenyes.</li>
+
+<li>☐ Què és l'autenticació multifactor.</li>
+
+<li>☐ Diferenciar Antivirus, EDR i XDR.</li>
+
+<li>☐ La importància de la gestió de pegats.</li>
+
+<li>☐ Per què cal xifrar els equips portàtils.</li>
+
+<li>☐ Qui hauria de poder instal·lar programari en un equip corporatiu.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Bloqueig de la sessió                             -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔒 Bloqueig automàtic de la sessió</h3>
+
+    <p>
+
+        Un equip desbloquejat representa un risc important, especialment en
+        oficines compartides o espais oberts. La normativa ha d'obligar els
+        usuaris a bloquejar la sessió sempre que abandonen temporalment el
+        lloc de treball.
+
+    </p>
+
+    <ul>
+
+        <li>Bloqueig manual abans d'abandonar l'equip.</li>
+
+        <li>Bloqueig automàtic després d'uns minuts d'inactivitat.</li>
+
+        <li>Reautenticació obligatòria per reprendre la sessió.</li>
+
+    </ul>
+
+    <div class="tip">
+
+        <strong>💡 Consell</strong>
+
+        <p>
+
+            Una configuració habitual és bloquejar automàticament la sessió
+            després de 5 o 10 minuts d'inactivitat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Dispositius USB                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>💾 Ús de dispositius USB</h3>
+
+    <p>
+
+        Les memòries USB continuen sent un dels principals vectors
+        d'infecció per malware. La normativa ha de limitar el seu ús.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Mesura</th>
+
+                <th>Objectiu</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>USB corporatius</td>
+
+                <td>Garantir l'origen dels dispositius.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Xifrat obligatori</td>
+
+                <td>Protegir la informació emmagatzemada.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Escaneig automàtic</td>
+
+                <td>Detectar malware abans de l'ús.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Bloqueig de dispositius desconeguts</td>
+
+                <td>Evitar connexions no autoritzades.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Correu electrònic                                 -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📧 Ús segur del correu electrònic</h3>
+
+    <p>
+
+        El correu electrònic continua sent el principal canal d'entrada de
+        phishing, malware i intents d'enginyeria social.
+
+    </p>
+
+    <ul>
+
+        <li>No obrir fitxers adjunts sospitosos.</li>
+
+        <li>Comprovar sempre el remitent.</li>
+
+        <li>Desconfiar dels missatges urgents.</li>
+
+        <li>No facilitar credencials mitjançant correu electrònic.</li>
+
+        <li>Informar immediatament de qualsevol missatge sospitós.</li>
+
+    </ul>
+
+    <div class="example">
+
+        <strong>🧪 Exemple</strong>
+
+        <p>
+
+            Un treballador rep un correu aparentment enviat pel departament
+            d'informàtica demanant que introduïsca les seues credencials en un
+            enllaç. Es tracta d'un atac de phishing.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Navegació web                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🌐 Navegació segura</h3>
+
+    <p>
+
+        La navegació per Internet també ha d'estar regulada dins de la
+        política de seguretat.
+
+    </p>
+
+    <ul>
+
+        <li>Utilitzar únicament navegadors actualitzats.</li>
+
+        <li>No descarregar programari des de webs desconegudes.</li>
+
+        <li>Comprovar que els llocs utilitzen HTTPS.</li>
+
+        <li>Evitar extensions no autoritzades.</li>
+
+        <li>No desactivar les mesures de seguretat del navegador.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Teletreball                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🏠 Normes per al teletreball</h3>
+
+    <p>
+
+        El treball remot obliga a ampliar la normativa de seguretat per
+        protegir els equips fora de les instal·lacions de l'organització.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Mesura</th>
+
+                <th>Finalitat</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Connexió VPN</td>
+
+                <td>Xifrar les comunicacions.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Xarxes Wi-Fi segures</td>
+
+                <td>Evitar interceptacions.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>No compartir l'equip</td>
+
+                <td>Protegir les dades corporatives.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Actualitzacions automàtiques</td>
+
+                <td>Mantindre l'equip protegit.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- BYOD                                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📱 Política BYOD (Bring Your Own Device)</h3>
+
+    <p>
+
+        Algunes organitzacions permeten utilitzar dispositius personals per
+        accedir als recursos corporatius. Aquesta pràctica només és acceptable
+        si existeix una normativa específica.
+
+    </p>
+
+    <ul>
+
+        <li>Dispositius actualitzats.</li>
+
+        <li>Xifrat obligatori.</li>
+
+        <li>PIN o biometria.</li>
+
+        <li>Possibilitat d'esborrat remot.</li>
+
+        <li>Separació entre dades personals i corporatives.</li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>⚠️ Important</strong>
+
+        <p>
+
+            Sense una política BYOD ben definida és molt difícil garantir la
+            seguretat de la informació corporativa.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Diagrama                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 Protecció integral del lloc de treball</h3>
+
+<pre class="mermaid">
+flowchart TD
+
+A[Usuari]
+
+--> B[Contrasenya robusta]
+
+--> C[MFA]
+
+--> D[Antivirus / EDR]
+
+--> E[Actualitzacions]
+
+--> F[Xifrat del disc]
+
+--> G[VPN]
+
+--> H[Accés segur als recursos]
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+L'any 2008 un treballador d'una agència governamental dels Estats Units va
+connectar una memòria USB infectada a un ordinador militar. El malware es va
+propagar per nombroses xarxes classificades i va donar lloc a una de les
+operacions de neteja més costoses del Departament de Defensa.
+
+</p>
+
+<p>
+
+Des d'aleshores, moltes organitzacions limiten o bloquegen completament
+l'ús de dispositius USB.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Quan s'ha de bloquejar la sessió.</li>
+
+<li>☐ Els riscos dels dispositius USB.</li>
+
+<li>☐ Les bones pràctiques d'ús del correu electrònic.</li>
+
+<li>☐ Les mesures bàsiques de navegació segura.</li>
+
+<li>☐ Els requisits mínims per al teletreball.</li>
+
+<li>☐ Què és una política BYOD.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Exemple de normativa                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📄 Exemple de normativa de protecció del lloc de treball</h3>
+
+    <p>
+
+        A continuació es mostra un exemple simplificat d'una normativa interna
+        que podria adoptar qualsevol organització.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Norma</th>
+
+                <th>Obligatòria</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Bloquejar l'equip en abandonar el lloc de treball.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+            <tr>
+
+                <td>No compartir credencials amb altres persones.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Utilitzar MFA en tots els serveis corporatius.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+            <tr>
+
+                <td>No instal·lar programari sense autorització.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Connectar únicament dispositius USB autoritzats.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Informar immediatament qualsevol incident de seguretat.</td>
+
+                <td>✔</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Responsabilitats                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>👥 Responsabilitats dels treballadors</h2>
+
+    <p>
+
+        La seguretat no depén únicament del departament d'informàtica. Tots els
+        empleats tenen responsabilitats en la protecció dels actius de
+        l'organització.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Responsabilitat</th>
+
+                <th>Exemple</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Protegir les credencials</td>
+
+                <td>No compartir contrasenyes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Mantindre l'equip actualitzat</td>
+
+                <td>No ajornar les actualitzacions.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Informar incidències</td>
+
+                <td>Comunicar un correu sospitós.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Respectar la normativa</td>
+
+                <td>No instal·lar aplicacions personals.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Errors habituals                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>❌ Errors més habituals</h2>
+
+    <p>
+
+        Molts incidents de ciberseguretat tenen el seu origen en errors
+        quotidians dels usuaris.
+
+    </p>
+
+    <div class="example">
+
+        <strong>🧪 Exemples</strong>
+
+        <ul>
+
+            <li>Deixar la sessió oberta durant una reunió.</li>
+
+            <li>Utilitzar la mateixa contrasenya per a diversos serveis.</li>
+
+            <li>Instal·lar programari descarregat d'Internet.</li>
+
+            <li>Connectar una memòria USB trobada.</li>
+
+            <li>Enviar informació confidencial per correu sense xifrar.</li>
+
+            <li>Compartir fitxers corporatius mitjançant serveis personals.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Bones pràctiques                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>✅ Bones pràctiques</h2>
+
+    <p>
+
+        Aquestes recomanacions ajuden a reduir considerablement el risc
+        d'incidents.
+
+    </p>
+
+    <ul>
+
+        <li>Bloquejar sempre la pantalla abans d'absentar-se.</li>
+
+        <li>Utilitzar un gestor de contrasenyes.</li>
+
+        <li>Activar l'autenticació multifactor.</li>
+
+        <li>Mantindre el sistema operatiu actualitzat.</li>
+
+        <li>Guardar la informació al servidor corporatiu.</li>
+
+        <li>Evitar xarxes Wi-Fi públiques sense VPN.</li>
+
+        <li>Comprovar l'origen dels correus electrònics.</li>
+
+        <li>Informar qualsevol comportament anòmal de l'equip.</li>
+
+    </ul>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            La millor eina de ciberseguretat continua sent un usuari format i
+            conscient dels riscos.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Autoavaluació                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📝 Autoavaluació</h2>
+
+    <p>
+
+        Comprova si compleixes les principals mesures de protecció del lloc de
+        treball.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Pregunta</th>
+
+                <th>Sí</th>
+
+                <th>No</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Utilitze MFA sempre que és possible.</td>
+
+                <td>☐</td>
+
+                <td>☐</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Bloquege l'equip quan m'absente.</td>
+
+                <td>☐</td>
+
+                <td>☐</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Mantinc el sistema actualitzat.</td>
+
+                <td>☐</td>
+
+                <td>☐</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Evite obrir fitxers sospitosos.</td>
+
+                <td>☐</td>
+
+                <td>☐</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Utilitze únicament programari autoritzat.</td>
+
+                <td>☐</td>
+
+                <td>☐</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+L'any 2023, el <strong>Cost of a Data Breach Report</strong> va indicar que una
+part important de les bretxes de seguretat continuaven estant relacionades amb
+l'error humà, com ara credencials compromeses, configuracions incorrectes o
+víctimes d'enginyeria social.
+
+</p>
+
+<p>
+
+Per aquest motiu, les polítiques de protecció del lloc de treball sempre han
+d'anar acompanyades de formació i conscienciació dels empleats.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☐ Quines responsabilitats tenen els treballadors.</li>
+
+<li>☐ Els errors més freqüents que provoquen incidents.</li>
+
+<li>☐ Les bones pràctiques de seguretat del lloc de treball.</li>
+
+<li>☐ Els elements que ha d'incloure una normativa interna.</li>
+
+<li>☐ La diferència entre una norma i una recomanació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Cas pràctic                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🏢 Cas pràctic</h2>
+
+    <p>
+
+        L'empresa <strong>TechSolutions S.L.</strong>, dedicada al desenvolupament
+        de programari, ha experimentat diversos incidents de seguretat durant els
+        últims mesos:
+
+    </p>
+
+    <ul>
+
+        <li>Un empleat ha instal·lat un programa descarregat d'Internet sense autorització.</li>
+
+        <li>S'han detectat diverses contrasenyes compartides entre companys.</li>
+
+        <li>Alguns ordinadors continuen sense instal·lar les últimes actualitzacions.</li>
+
+        <li>Un portàtil corporatiu s'ha perdut durant un viatge de negocis.</li>
+
+        <li>Alguns treballadors utilitzen memòries USB personals per transportar informació.</li>
+
+    </ul>
+
+    <h3>Qüestions</h3>
+
+    <ol>
+
+        <li>Identifica totes les normes de seguretat que no s'han complit.</li>
+
+        <li>Quins riscos comporta cadascuna d'aquestes situacions?</li>
+
+        <li>Quines mesures hauria d'implantar l'empresa?</li>
+
+        <li>Quines accions haurien de realitzar els treballadors?</li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Laboratori                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🧪 Laboratori</h3>
+
+    <p>
+
+        En aquesta pràctica elaboraràs una <strong>Normativa de protecció del lloc
+        de treball</strong> per a una organització fictícia.
+
+    </p>
+
+    <h3>Material proporcionat</h3>
+
+    <ul>
+
+        <li>📄 Plantilla de normativa del lloc de treball.</li>
+
+        <li>🏢 Descripció de l'empresa.</li>
+
+        <li>👥 Perfil dels treballadors.</li>
+
+        <li>💻 Inventari dels equips informàtics.</li>
+
+    </ul>
+
+    <h3>Tasca</h3>
+
+    <p>
+
+        Redacta una normativa que incloga, com a mínim, els apartats següents:
+
+    </p>
+
+    <ol>
+
+        <li>Objectiu.</li>
+
+        <li>Àmbit d'aplicació.</li>
+
+        <li>Normes d'ús dels equips.</li>
+
+        <li>Política de contrasenyes.</li>
+
+        <li>Ús del correu electrònic.</li>
+
+        <li>Dispositius USB.</li>
+
+        <li>Teletreball.</li>
+
+        <li>Actualitzacions.</li>
+
+        <li>Responsabilitats dels treballadors.</li>
+
+        <li>Procediment de notificació d'incidents.</li>
+
+    </ol>
+
+    <div class="tip">
+
+        <strong>💡 Consell</strong>
+
+        <p>
+
+            Intenta redactar la normativa utilitzant un llenguatge clar,
+            senzill i fàcil d'entendre per qualsevol empleat de
+            l'organització.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Activitats                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>✍️ Activitats proposades</h3>
+
+    <ol>
+
+        <li>
+
+            Elabora una política de contrasenyes per a una empresa de 50
+            treballadors.
+
+        </li>
+
+        <li>
+
+            Investiga quines mesures de protecció ofereixen Windows,
+            GNU/Linux i macOS per protegir els equips.
+
+        </li>
+
+        <li>
+
+            Busca tres exemples reals d'incidents provocats per una mala
+            protecció del lloc de treball.
+
+        </li>
+
+        <li>
+
+            Elabora un decàleg de bones pràctiques que puga penjar-se al
+            costat dels ordinadors dels empleats.
+
+        </li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Resum                                             -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📚 Resum</h2>
+
+    <ul>
+
+        <li>La normativa del lloc de treball redueix el risc d'incidents.</li>
+
+        <li>Les contrasenyes robustes i el MFA són mesures bàsiques.</li>
+
+        <li>Els equips han d'estar sempre actualitzats.</li>
+
+        <li>Només s'ha d'instal·lar programari autoritzat.</li>
+
+        <li>Els dispositius portàtils han d'estar xifrats.</li>
+
+        <li>El correu electrònic continua sent el principal vector d'atac.</li>
+
+        <li>La conscienciació dels usuaris és tan important com la tecnologia.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Moltes organitzacions realitzen auditories internes en les quals comproven
+si els empleats bloquegen la pantalla quan abandonen el seu lloc de treball.
+En alguns casos, els auditors deixen una nota sobre el teclat indicant que
+l'equip ha quedat desprotegit com a mesura de conscienciació.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de dominar...</strong>
+
+<ul>
+
+<li>☐ Què és una normativa de protecció del lloc de treball.</li>
+
+<li>☐ Les principals mesures tècniques de protecció d'un endpoint.</li>
+
+<li>☐ Les responsabilitats dels treballadors.</li>
+
+<li>☐ Les bones pràctiques en l'ús dels equips corporatius.</li>
+
+<li>☐ Les mesures aplicables al teletreball i al BYOD.</li>
+
+<li>☐ Els riscos associats a USB, phishing i programari no autoritzat.</li>
+
+<li>☐ Els apartats bàsics que ha d'incloure una normativa corporativa.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- Recursos descarregables                           -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="recursosdescarregables">
+    <h2>📂 Recursos descarregables</h2>
+
+    <p>
+
+        En aquesta secció trobaràs els materials necessaris per completar les
+        activitats i el laboratori d'aquest criteri d'avaluació.
+
+    </p>
+
+
+</div>
+
+
+</section>
+
+<nav data-ca-navigation></nav>
+
+
+
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+<!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>    
+    
+</body> 
+</html>

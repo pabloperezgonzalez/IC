@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="ca">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Incidents de Ciberseguretat - CE CETI</title>
+
+  <link rel="icon" href="ico/shield.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    @font-face {
+      font-family: 'CCSymbols';
+      src: url('fonts/CCSymbols.woff2') format('woff2'),
+           url('fonts/CCSymbols.woff') format('woff');
+      font-display: swap;
+      unicode-range: U+00A9, U+229C, U+1F10D-1F10F, U+1F16D-1F16F;
+    }
+
+    :root {
+      --bg1:#020617;
+      --bg2:#07111f;
+      --bg3:#0f172a;
+
+      --card:rgba(15,23,42,.72);
+      --border:rgba(255,255,255,.08);
+
+      --primary:#22d3ee;
+      --secondary:#3b82f6;
+      --success:#10b981;
+
+      --text:#f8fafc;
+      --text2:#cbd5e1;
+      --text3:#94a3b8;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+
+      background:
+        radial-gradient(circle at top right,
+        rgba(34,211,238,.12),
+        transparent 35%),
+
+        radial-gradient(circle at bottom left,
+        rgba(59,130,246,.10),
+        transparent 30%),
+
+        linear-gradient(
+        180deg,
+        var(--bg1),
+        var(--bg2),
+        var(--bg3));
+
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+
+      background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+
+      background-size:40px 40px;
+
+      pointer-events:none;
+      z-index:-2;
+    }
+
+    .progress{
+      position:fixed;
+      top:0;
+      left:0;
+      width:0%;
+      height:4px;
+
+      background:
+      linear-gradient(
+      90deg,
+      var(--primary),
+      var(--secondary));
+
+      z-index:1000;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+
+      backdrop-filter:blur(18px);
+
+      background:rgba(2,6,23,.55);
+
+      border-bottom:1px solid rgba(255,255,255,.05);
+
+      z-index:900;
+    }
+
+    nav .container{
+      max-width:1200px;
+      margin:auto;
+
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+
+      padding:18px 25px;
+    }
+
+    .logo{
+      font-size:1.15rem;
+      font-weight:700;
+      color:var(--primary);
+      letter-spacing:.5px;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:25px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--text2);
+      transition:.3s;
+    }
+
+    nav a:hover{
+      color:var(--primary);
+    }
+
+    header{
+      min-height:85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:60px 25px;
+      text-align:center;
+    }
+
+    .hero{
+      max-width:900px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:8px 16px;
+      border-radius:100px;
+
+      border:1px solid rgba(34,211,238,.3);
+      background:rgba(34,211,238,.08);
+
+      color:var(--primary);
+
+      margin-bottom:25px;
+
+      font-size:.9rem;
+      letter-spacing:.8px;
+    }
+
+    h1{
+      font-size:clamp(2.7rem,6vw,4.8rem);
+      line-height:1.1;
+      margin-bottom:25px;
+      font-weight:800;
+    }
+
+    .hero p{
+      max-width:760px;
+      margin:auto;
+
+      color:var(--text2);
+
+      font-size:1.2rem;
+      line-height:1.8;
+    }
+
+    .hero-buttons{
+      margin-top:45px;
+
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      border-radius:14px;
+
+      text-decoration:none;
+      font-weight:600;
+
+      transition:.35s;
+    }
+
+    .btn-primary{
+      background:
+      linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary));
+
+      color:white;
+
+      box-shadow:0 15px 35px rgba(34,211,238,.25);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.12);
+      color:white;
+      backdrop-filter:blur(10px);
+    }
+
+    .btn-outline:hover{
+      background:rgba(255,255,255,.06);
+    }
+
+    section{
+      padding:80px 25px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      margin-bottom:15px;
+      font-weight:800;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      color:var(--text3);
+      margin-bottom:55px;
+      font-size:1.05rem;
+    }
+        .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+
+      background:var(--card);
+
+      backdrop-filter:blur(18px);
+
+      border:1px solid var(--border);
+
+      border-radius:22px;
+
+      padding:32px;
+
+      transition:.35s;
+
+      opacity:0;
+      transform:translateY(45px);
+      
+    }
+
+    .card.visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(34,211,238,.35);
+      box-shadow:0 25px 45px rgba(34,211,238,.18);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:0;
+      width:100%;
+      height:5px;
+      background:linear-gradient(90deg,var(--primary),var(--secondary));
+    }
+
+    .card::after{
+      content:"";
+      position:absolute;
+      top:-120%;
+      left:-40%;
+      width:70%;
+      height:250%;
+      background:rgba(255,255,255,.05);
+      transform:rotate(25deg);
+      transition:.8s;
+    }
+
+    .card:hover::after{
+      left:150%;
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+
+      border-radius:18px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      background:rgba(34,211,238,.12);
+
+      color:var(--primary);
+
+      font-size:2rem;
+
+      margin-bottom:22px;
+    }
+
+    .card h3{
+      font-size:1.35rem;
+      margin-bottom:15px;
+    }
+
+    .card p{
+      color:var(--text2);
+      line-height:1.7;
+    }
+
+    .card a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .grid a{
+    text-decoration: none;
+    color: inherit;
+}
+
+    .faq{
+      max-width:900px;
+      margin:auto;
+    }
+
+    .faq-item{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      margin-bottom:18px;
+      overflow:hidden;
+    }
+
+    .faq-question{
+      padding:22px;
+      cursor:pointer;
+      font-weight:600;
+      color:var(--primary);
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s ease;
+      color:var(--text2);
+      line-height:1.8;
+      padding:0 22px;
+    }
+
+    .faq-item.active .faq-answer{
+      max-height:200px;
+      padding:0 22px 22px;
+    }
+
+    footer{
+      margin-top:80px;
+      padding:50px 25px;
+      text-align:center;
+      border-top:1px solid rgba(255,255,255,.06);
+      color:var(--text3);
+    }
+
+    footer h3{
+      color:var(--primary);
+      margin-bottom:12px;
+    }
+
+    footer a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    footer a:hover{
+      text-decoration:underline;
+    }
+
+    @media(max-width:760px){
+
+      nav ul{
+        display:none;
+      }
+
+      h1{
+        font-size:2.5rem;
+      }
+
+      .hero p{
+        font-size:1.05rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+<div class="progress"></div>
+<nav>
+  <div class="container">
+    <div class="logo">
+      🛡 Incident Response
+    </div>
+
+    <ul>
+      <li><a href="#inici">Inici</a></li>
+      <li><a href="#ra">Resultats d'aprenentatge</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<header id="inici">
+  <div class="hero">
+    <div class="badge">
+      Curs d'Especialització en Ciberseguretat en Entorns TI
+    </div>
+
+    <h1>
+      Incidents de<br>
+      Ciberseguretat
+    </h1>
+
+    <p>
+      Aprén a detectar, investigar, documentar i respondre davant incidents de
+      ciberseguretat utilitzant metodologies i eines professionals pròpies
+      d'un Centre d'Operacions de Seguretat (SOC).
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="#ra">          Explorar el mòdul       </a>
+      <a class="btn btn-outline" href="#faq">         Preguntes freqüents       </a>
+    </div>
+
+  </div>
+</header>
+
+<section id="ra">
+  <div class="container">
+    <h2 class="section-title">        Resultats d'Aprenentatge     </h2>
+
+    <p class="section-subtitle">       El mòdul està organitzat en cinc resultats d'aprenentatge que recorren
+      tot el cicle de gestió d'un incident de ciberseguretat.      </p>
+
+    <div class="grid">
+      <a href="ra_01.html">
+        <div class="card">
+          <div class="icon">              🛡           </div>
+
+          <h3>             RA1 · Prevenció i conscienciació           </h3>
+
+          <p>             Desenvolupa plans de prevenció i conscienciació en
+            ciberseguretat, establint normes, polítiques i mesures
+            de protecció per reduir el risc davant amenaces.
+          </p> 
+        </div>
+      </a>
+      <a href="ra_02.html">
+        <div class="card">
+          <div class="icon">       🚨          </div>
+          <h3>             RA2 · Detecció i anàlisi           </h3>
+
+          <p>
+            Analitza incidents de ciberseguretat utilitzant eines
+            de monitorització, sistemes de detecció, alertes
+            i mecanismes d'anàlisi per identificar activitats
+            sospitoses.           </p>
+
+        </div>
+      </a>
+
+      <a href="ra_03.html">
+        <div class="card">
+          <div class="icon">    🔎          </div>
+
+          <h3>            RA3 · Investigació d'incidents          </h3>
+
+          <p>
+            Investiga incidents de seguretat analitzant evidències,
+            valorant els riscos implicats i definint les mesures
+            correctores i preventives més adequades.
+          </p>
+
+        </div>
+      </a>
+
+       <a href="ra_04.html">
+        <div class="card">
+          <div class="icon">    ⚡          </div>
+
+          <h3>            RA4 · Resposta i protecció          </h3>
+
+          <p>
+            Implementa mesures de ciberseguretat en xarxes i sistemes
+            responent als incidents detectats, aplicant tècniques de
+            contenció, erradicació, recuperació i protecció.
+          </p>
+        </div>
+      </a>
+
+      <a href="ra_05.html">
+        <div class="card">
+          <div class="icon">   📢          </div>
+
+          <h3>            RA5 · Notificació i Documentació d'incidents          </h3>
+
+          <p>
+            Detecta, registra i documenta incidents de ciberseguretat
+            seguint els procediments establerts i elaborant informes
+            tècnics amb les evidències obtingudes.
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<section id="faq">
+
+  <div class="container faq">
+
+    <h2 class="section-title">
+      Preguntes freqüents
+    </h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Quin tipus de material trobaré en aquest mòdul?
+      </div>
+      <div class="faq-answer">
+        Cada resultat d'aprenentatge inclou apunts, presentacions,
+        laboratoris, casos pràctics, eines utilitzades en entorns
+        professionals i exercicis per consolidar els coneixements.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Necessite coneixements previs?
+      </div>
+      <div class="faq-answer">
+        És recomanable conéixer els fonaments de xarxes, sistemes
+        operatius i conceptes bàsics de ciberseguretat, encara que
+        cada unitat incorpora una introducció als conceptes necessaris.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Hi ha activitats pràctiques?
+      </div>
+      <div class="faq-answer">
+        Sí. Cada resultat d'aprenentatge incorpora activitats, casos pràctics
+        i laboratoris perquè pugues aplicar els coneixements adquirits en
+        situacions similars a les que es troben en un entorn professional.
+      </div>
+    </div>
+
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Els continguts estan relacionats amb l'entorn professional?
+      </div>
+      <div class="faq-answer">
+        Sí. Els materials segueixen el currículum oficial del curs
+        d'especialització i utilitzen metodologies, terminologia i exemples
+        inspirats en l'activitat real dels equips de resposta a incidents
+        i dels Centres d'Operacions de Seguretat (SOC).
+      </div>
+    </div>
+
+    <div class="faq-item">
+
+      <div class="faq-question">
+        Els continguts s'actualitzen?
+      </div>
+      <div class="faq-answer">
+        Sí. El material docent es revisa cada curs per incorporar
+        noves amenaces, eines i bones pràctiques del sector.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Quines eines aprendré a utilitzar?
+      </div>
+      <div class="faq-answer">
+        Al llarg del mòdul es presenten eines habituals en l'àmbit de la
+        ciberseguretat, com ara eines de monitorització, investigació,
+        anàlisi d'incidents i obtenció d'informació mitjançant fonts obertes
+        (OSINT).
+      </div>
+    </div>    
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Puc consultar els continguts des del mòbil o la tauleta?
+      </div>
+      <div class="faq-answer">
+        Sí. La plataforma està dissenyada perquè els materials siguen
+        accessibles des d'ordinadors, tauletes i telèfons mòbils.
+      </div>
+    </div>    
+
+    <div class="faq-item">
+      <div class="faq-question">
+        He de seguir els resultats d'aprenentatge en ordre?
+      </div>
+      <div class="faq-answer">
+        És recomanable, ja que els continguts estan organitzats de manera
+        progressiva: primer es treballa la prevenció, després la detecció,
+        la investigació, la resposta i, finalment, la notificació dels
+        incidents.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  <h3>    Mòdul · Incidents de Ciberseguretat  </h3>
+
+  <p>    Curs d'Especialització en Ciberseguretat en Entorns TI · CE CETI </p>  <br>
+
+  <p style="font-family: 'CCSymbols'; font-size:larger;" >
+         2026 · Enrique Iborra · Llicència: &#x1F16D; &#x1F16F; &#x1F10E; &#x1F10F;        </p>  <br>
+  <p>
+    <a href="#inici">Inici</a> ·
+    <a href="#ra">Resultats d'aprenentatge</a> ·
+    <a href="#faq">FAQ</a>
+  </p>
+
+</footer>
+
+<script>
+  const cards = document.querySelectorAll(".card");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  cards.forEach(card => observer.observe(card));
+
+  document.querySelectorAll(".faq-item").forEach(item => {
+    item.addEventListener("click", () => {
+      item.classList.toggle("active");
+    });
+  });
+
+  const progress = document.querySelector(".progress");
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const percent = (scrollTop / scrollHeight) * 100;
+    progress.style.width = percent + "%";
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function(e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
+</body>
+
+</html>

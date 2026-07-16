@@ -1,0 +1,2058 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 3d - Intercanvi d'informació sobre incidents </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_03.html"> 
+                    RA3
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA3d
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6b501a, #4a3809);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 3d - Intercanvi d'informació sobre incidents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🔎
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs la importància de
+<strong>compartir informació sobre els incidents de
+ciberseguretat</strong> amb els equips, organismes i proveïdors
+competents. L'intercanvi d'informació permet detectar campanyes
+d'atac, identificar noves amenaces i coordinar una resposta més
+ràpida i eficaç.
+</p>
+
+<p>
+També coneixeràs els principals estàndards utilitzats per compartir
+indicadors de compromís (IoC), les bones pràctiques de comunicació
+entre organitzacions i els mecanismes que garanteixen la
+confidencialitat de la informació.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la necessitat d'intercanviar informació sobre incidents.</li>
+
+<li>Identificar els organismes implicats en la resposta als incidents.</li>
+
+<li>Conèixer la informació que es comparteix durant una investigació.</li>
+
+<li>Aprendre els principis bàsics de la intel·ligència sobre amenaces (Threat Intelligence).</li>
+
+<li>Aplicar bones pràctiques de comunicació i confidencialitat.</li>
+
+<li>Valorar els beneficis de la cooperació entre organitzacions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Cap organització és capaç d'enfrontar-se sola a totes les amenaces de
+ciberseguretat. Els atacants reutilitzen eines, infraestructures i
+tècniques contra múltiples víctimes, de manera que compartir
+informació sobre els incidents beneficia tota la comunitat.
+</p>
+
+<p>
+Quan una empresa detecta un nou malware, una adreça IP maliciosa o un
+nou domini utilitzat en una campanya de phishing, aquesta informació
+pot ajudar altres organitzacions a protegir-se abans de patir el
+mateix atac.
+</p>
+
+<p>
+Per aquest motiu existeixen organismes especialitzats, equips de
+resposta davant incidents (CSIRT i CERT) i plataformes de Threat
+Intelligence que permeten compartir informació de manera ràpida,
+segura i estandarditzada.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Compartir informació no significa divulgar dades confidencials. Cal
+seleccionar únicament aquella informació necessària perquè altres
+organitzacions puguen protegir-se o col·laborar en la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS L'INTERCANVI D'INFORMACIÓ?
+========================================================== -->
+
+<section>
+
+<h2>Què és l'intercanvi d'informació sobre incidents?</h2>
+
+<p>
+L'<strong>intercanvi d'informació sobre incidents</strong> consisteix
+a comunicar de forma controlada i segura les dades obtingudes durant
+una investigació perquè altres equips puguen prevenir, detectar o
+respondre davant amenaces semblants.
+</p>
+
+<p>
+La informació compartida pot incloure indicadors de compromís (IoC),
+adreces IP malicioses, dominis, signatures de malware, vulnerabilitats
+detectades, tècniques utilitzades pels atacants o recomanacions de
+mitigació.
+</p>
+
+<p>
+Aquest intercanvi afavoreix la cooperació entre organitzacions,
+redueix el temps de resposta davant incidents i contribueix a millorar
+la seguretat col·lectiva.
+</p>
+
+<h3>Beneficis principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Benefici</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Prevenció</td>
+
+<td>Permet anticipar-se a noves amenaces.</td>
+
+</tr>
+
+<tr>
+
+<td>Detecció</td>
+
+<td>Facilita identificar incidents similars.</td>
+
+</tr>
+
+<tr>
+
+<td>Resposta</td>
+
+<td>Accelera les actuacions davant l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Cooperació</td>
+
+<td>Millora la coordinació entre organitzacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Aprenentatge</td>
+
+<td>Permet compartir experiències i coneixement.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta una nova campanya de phishing i comparteix els
+dominis utilitzats pels atacants amb el seu CSIRT. Aquest organisme
+difon la informació a altres entitats perquè bloquegen aquests
+dominis abans que siguen utilitzats en nous atacs.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[Investigació]
+
+--> C[Informació]
+
+--> D[CSIRT]
+
+--> E[Altres organitzacions]
+
+--> F[Prevenció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE L'INTERCANVI D'INFORMACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Objectius de l'intercanvi d'informació</h2>
+
+<p>
+L'objectiu principal és augmentar la capacitat de defensa davant les
+amenaces de ciberseguretat. Compartir informació permet detectar
+patrons comuns, identificar noves campanyes i coordinar accions de
+resposta entre diferents organitzacions.
+</p>
+
+<p>
+A més, aquesta cooperació contribueix a millorar la qualitat de la
+intel·ligència sobre amenaces i facilita l'elaboració de mesures
+preventives més eficaces.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Alertar</td>
+
+<td>Informar sobre noves amenaces.</td>
+
+</tr>
+
+<tr>
+
+<td>Prevenir</td>
+
+<td>Evitar incidents similars.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinar</td>
+
+<td>Facilitar una resposta conjunta.</td>
+
+</tr>
+
+<tr>
+
+<td>Investigar</td>
+
+<td>Compartir evidències i coneixement.</td>
+
+</tr>
+
+<tr>
+
+<td>Millorar</td>
+
+<td>Incrementar la protecció global.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Compartir informació de forma ràpida pot evitar que un mateix atac
+afecte desenes o centenars d'organitzacions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUI PARTICIPA EN L'INTERCANVI?
+========================================================== -->
+
+<section>
+
+<h2>Qui participa en l'intercanvi d'informació?</h2>
+
+<p>
+L'intercanvi d'informació implica diferents actors, cadascun amb un
+paper específic en la prevenció, detecció i resposta davant
+incidents. La cooperació entre tots ells és fonamental per reduir
+l'impacte de les amenaces.
+</p>
+
+<p>
+Segons el tipus d'incident, la informació pot compartir-se amb
+organismes públics, proveïdors tecnològics, equips de resposta o
+altres empreses afectades.
+</p>
+
+<h3>Participants habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Organisme o equip</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>CSIRT</td>
+
+<td>Resposta tècnica davant incidents.</td>
+
+</tr>
+
+<tr>
+
+<td>CERT</td>
+
+<td>Coordinació i suport especialitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Monitorització i detecció.</td>
+
+</tr>
+
+<tr>
+
+<td>Proveïdors</td>
+
+<td>Assistència tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Fabricants</td>
+
+<td>Correcció de vulnerabilitats.</td>
+
+</tr>
+
+<tr>
+
+<td>Autoritats competents</td>
+
+<td>Coordinació institucional.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+mindmap
+Cooperacio
+    CSIRT
+    CERT
+    SOC
+    Proveïdors
+    Fabricants
+    Organitzacions
+    Autoritats
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+La cooperació entre organitzacions és una de les eines més eficaces
+per reduir el temps de detecció i resposta davant incidents de
+ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     INFORMACIÓ QUE ES COMPARTEIX
+========================================================== -->
+
+<section>
+
+<h2>Informació que es comparteix</h2>
+
+<p>
+L'objectiu de l'intercanvi d'informació és proporcionar dades útils
+perquè altres organitzacions puguen detectar, prevenir o respondre
+als mateixos incidents. No es tracta de compartir tota la informació
+de la investigació, sinó únicament aquella que siga rellevant,
+verificada i necessària.
+</p>
+
+<p>
+La informació compartida ha de ser precisa, actualitzada i fàcilment
+utilitzable per altres equips de seguretat. Per això s'utilitzen
+formats estandarditzats que permeten automatitzar el seu processament.
+</p>
+
+<h3>Informació habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Adreces IP</td>
+
+<td>203.0.113.15</td>
+
+</tr>
+
+<tr>
+
+<td>Dominis</td>
+
+<td>actualitzacio-seguretat.com</td>
+
+</tr>
+
+<tr>
+
+<td>Hash de fitxers</td>
+
+<td>SHA-256 del malware</td>
+
+</tr>
+
+<tr>
+
+<td>URL malicioses</td>
+
+<td>Pàgines de phishing</td>
+
+</tr>
+
+<tr>
+
+<td>Correu electrònic</td>
+
+<td>Adreça utilitzada en la campanya</td>
+
+</tr>
+
+<tr>
+
+<td>Tècniques d'atac</td>
+
+<td>Tàctiques MITRE ATT&amp;CK</td>
+
+</tr>
+
+<tr>
+
+<td>Vulnerabilitats</td>
+
+<td>CVE explotades</td>
+
+</tr>
+
+<tr>
+
+<td>Mesures aplicades</td>
+
+<td>Bloquejos i mitigacions</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'investigar un ransomware, una empresa comparteix amb el
+seu CSIRT les adreces IP utilitzades pels atacants, els hash dels
+fitxers maliciosos i les regles que han permés detectar l'amenaça.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FORMATS ESTÀNDARD
+========================================================== -->
+
+<section>
+
+<h2>Formats estàndard per compartir informació</h2>
+
+<p>
+Per facilitar la col·laboració entre organitzacions s'utilitzen
+formats internacionals que permeten descriure incidents,
+vulnerabilitats i indicadors de compromís d'una manera estructurada i
+compatible entre diferents eines de seguretat.
+</p>
+
+<p>
+Gràcies a aquests estàndards és possible automatitzar l'intercanvi
+d'informació entre plataformes de Threat Intelligence, SIEM i equips
+CSIRT.
+</p>
+
+<h3>Principals estàndards</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estàndard</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>IoC</td>
+
+<td>Indicadors de compromís.</td>
+
+</tr>
+
+<tr>
+
+<td>IoA</td>
+
+<td>Indicadors d'atac.</td>
+
+</tr>
+
+<tr>
+
+<td>STIX</td>
+
+<td>Descripció estructurada d'amenaces.</td>
+
+</tr>
+
+<tr>
+
+<td>TAXII</td>
+
+<td>Intercanvi automàtic d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>CVE</td>
+
+<td>Identificador de vulnerabilitats.</td>
+
+</tr>
+
+<tr>
+
+<td>CVSS</td>
+
+<td>Valoració de la gravetat d'una vulnerabilitat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Investigació]
+
+--> B[IoC]
+
+--> C[STIX]
+
+--> D[TAXII]
+
+--> E[Altres organitzacions]
+
+</div>
+
+<div class="info">
+
+<strong>Què és un IoC?</strong>
+
+<p>
+
+Un <strong>Indicador de Compromís (IoC)</strong> és qualsevol dada
+que indica que un sistema pot haver estat atacat. Alguns exemples són
+adreces IP, dominis, hash de fitxers, processos sospitosos o claus del
+registre modificades.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CANALS SEGURS DE COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Canals segurs de comunicació</h2>
+
+<p>
+La informació sobre incidents pot contenir dades sensibles que no han
+de ser accessibles per persones no autoritzades. Per aquest motiu és
+imprescindible utilitzar canals de comunicació segurs que garantisquen
+la confidencialitat, la integritat i l'autenticitat de la informació.
+</p>
+
+<p>
+Els canals utilitzats dependran del tipus d'informació compartida i
+del nivell de confidencialitat establit entre les organitzacions.
+</p>
+
+<h3>Canals més habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Canal</th>
+
+<th>Utilització</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>HTTPS</td>
+
+<td>Plataformes de Threat Intelligence.</td>
+
+</tr>
+
+<tr>
+
+<td>VPN</td>
+
+<td>Comunicacions entre organitzacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu xifrat</td>
+
+<td>Informació confidencial.</td>
+
+</tr>
+
+<tr>
+
+<td>Portals CSIRT</td>
+
+<td>Compartició d'incidents.</td>
+
+</tr>
+
+<tr>
+
+<td>TAXII</td>
+
+<td>Intercanvi automatitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>API autenticades</td>
+
+<td>Integració entre eines.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Mai s'ha d'enviar informació sensible mitjançant correu electrònic
+sense protecció o canals no xifrats.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CLASSIFICACIÓ DE LA INFORMACIÓ (TLP)
+========================================================== -->
+
+<section>
+
+<h2>Classificació de la informació (TLP)</h2>
+
+<p>
+Abans de compartir qualsevol informació és necessari determinar qui
+pot accedir-hi. El protocol <strong>TLP (Traffic Light
+Protocol)</strong> és un sistema internacional que classifica la
+informació segons el nivell de difusió permés.
+</p>
+
+<p>
+Aquest sistema ajuda a protegir la informació sensible i evita que
+dades confidencials arriben a destinataris no autoritzats.
+</p>
+
+<h3>Nivells TLP</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Nivell</th>
+
+<th>Difusió</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>TLP:CLEAR</td>
+
+<td>Informació pública.</td>
+
+</tr>
+
+<tr>
+
+<td>TLP:GREEN</td>
+
+<td>Dins de la comunitat professional.</td>
+
+</tr>
+
+<tr>
+
+<td>TLP:AMBER</td>
+
+<td>Només dins de l'organització i col·laboradors.</td>
+
+</tr>
+
+<tr>
+
+<td>TLP:RED</td>
+
+<td>Únicament els destinataris autoritzats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[TLP:CLEAR]
+
+--> B[TLP:GREEN]
+
+--> C[TLP:AMBER]
+
+--> D[TLP:RED]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Abans de compartir qualsevol informació pregunta't sempre:
+<strong>Qui necessita conèixer aquesta informació?</strong> La
+classificació TLP ajuda a respondre aquesta pregunta.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     COORDINACIÓ AMB ALTRES ORGANITZACIONS
+========================================================== -->
+
+<section>
+
+<h2>Coordinació amb altres organitzacions</h2>
+
+<p>
+La resposta davant d'un incident de ciberseguretat no sempre depén
+d'una única organització. Molts incidents afecten proveïdors,
+clients, administracions públiques o altres empreses, fet que obliga
+a coordinar les actuacions per compartir informació, evitar la
+propagació de l'amenaça i accelerar la recuperació.
+</p>
+
+<p>
+La coordinació facilita que cada organització aporte informació
+complementària sobre l'incident, com ara nous indicadors de
+compromís, tècniques observades o mesures de mitigació que han
+resultat eficaces.
+</p>
+
+<h3>Organitzacions implicades</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Organització</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>CSIRT</td>
+
+<td>Coordinació tècnica de la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>CERT</td>
+
+<td>Assistència i difusió d'alertes.</td>
+
+</tr>
+
+<tr>
+
+<td>Proveïdors TIC</td>
+
+<td>Resolució d'incidències dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Fabricants</td>
+
+<td>Publicació de pegats i actualitzacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Clients</td>
+
+<td>Aplicació de mesures preventives.</td>
+
+</tr>
+
+<tr>
+
+<td>Autoritats</td>
+
+<td>Coordinació institucional i legal.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Empresa]
+
+--> B[CSIRT]
+
+--> C[Proveïdor]
+
+--> D[Fabricant]
+
+--> E[Autoritats]
+
+--> F[Altres organitzacions]
+
+</div>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta una vulnerabilitat crítica en un programari de
+gestió documental. Després d'informar el fabricant, aquest publica un
+pegat de seguretat que evita que milers d'organitzacions siguen
+víctimes del mateix atac.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ASPECTES LEGALS I CONFIDENCIALITAT
+========================================================== -->
+
+<section>
+
+<h2>Aspectes legals i confidencialitat</h2>
+
+<p>
+L'intercanvi d'informació ha de respectar sempre la legislació
+vigent i les polítiques internes de l'organització. Compartir dades
+personals, informació confidencial o secrets empresarials sense
+autorització pot comportar responsabilitats legals.
+</p>
+
+<p>
+Abans de comunicar qualsevol informació és necessari determinar
+quina informació és imprescindible compartir i quina ha de romandre
+protegida.
+</p>
+
+<h3>Aspectes que cal considerar</h3>
+
+<ul>
+
+<li>Protecció de dades personals.</li>
+
+<li>Confidencialitat empresarial.</li>
+
+<li>Secret professional.</li>
+
+<li>Clàusules contractuals.</li>
+
+<li>Normativa sectorial.</li>
+
+<li>Conservació de les evidències.</li>
+
+<li>Traçabilitat de les comunicacions.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els indicadors de compromís (IoC) solen poder compartir-se sense
+problemes, però les dades personals, els informes interns o les
+evidències forenses només s'han de comunicar quan siga necessari i
+estiga legalment justificat.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Informació]
+
+--> B{Es pot compartir?}
+
+B -->|Sí| C[Compartir]
+
+B -->|No| D[Protegir]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en l'intercanvi d'informació</h2>
+
+<p>
+Compartir informació és molt útil, però només aporta valor si la
+informació és fiable, està actualitzada i és fàcilment reutilitzable
+per altres equips de seguretat.
+</p>
+
+<p>
+Seguir una metodologia comuna facilita la cooperació entre
+organitzacions i evita errors durant la resposta als incidents.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Verificar sempre la informació abans de compartir-la.</li>
+
+<li>Utilitzar formats estàndard (STIX, TAXII, IoC).</li>
+
+<li>Classificar la informació amb el protocol TLP.</li>
+
+<li>Eliminar dades personals innecessàries.</li>
+
+<li>Compartir la informació tan prompte com siga possible.</li>
+
+<li>Mantenir els indicadors actualitzats.</li>
+
+<li>Documentar totes les comunicacions realitzades.</li>
+
+<li>Utilitzar canals xifrats.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És preferible compartir poca informació però ben verificada que
+difondre dades incorrectes que puguen generar falses alarmes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals</h2>
+
+<p>
+Durant l'intercanvi d'informació poden produir-se errors que
+redueixen la utilitat de les dades compartides o comprometen la
+seguretat de les organitzacions implicades.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Compartir informació sense verificar.</li>
+
+<li>Difondre dades personals innecessàries.</li>
+
+<li>No classificar correctament la informació.</li>
+
+<li>Utilitzar canals de comunicació insegurs.</li>
+
+<li>Enviar informació desactualitzada.</li>
+
+<li>No documentar les comunicacions.</li>
+
+<li>Compartir massa tard els indicadors.</li>
+
+<li>No actualitzar els IoC quan apareixen noves evidències.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Esperar a finalitzar completament la investigació abans de compartir
+els primers indicadors pot provocar que altres organitzacions siguen
+víctimes del mateix atac.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+    Informació incorrecta
+    Sense verificar
+    Sense TLP
+    Sense xifrat
+    Massa tard
+    Sense documentació
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+L'intercanvi d'informació és una activitat habitual en els equips de
+resposta davant incidents. Compartir indicadors de compromís,
+vulnerabilitats o tècniques d'atac permet que altres organitzacions
+detecten abans les amenaces i apliquen mesures preventives.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Informació compartida</th>
+
+<th>Destinatari</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Campanya de phishing</td>
+
+<td>Dominis i adreces IP malicioses.</td>
+
+<td>CSIRT i altres empreses.</td>
+
+</tr>
+
+<tr>
+
+<td>Nou ransomware</td>
+
+<td>Hash del malware i IoC.</td>
+
+<td>Comunitat de Threat Intelligence.</td>
+
+</tr>
+
+<tr>
+
+<td>Vulnerabilitat crítica</td>
+
+<td>CVE i mesures de mitigació.</td>
+
+<td>Fabricant i clients.</td>
+
+</tr>
+
+<tr>
+
+<td>Botnet</td>
+
+<td>Servidors de comandament (C2).</td>
+
+<td>Autoritats competents.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió en un servidor</td>
+
+<td>Tècniques MITRE ATT&amp;CK utilitzades.</td>
+
+<td>Equip SOC.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'investigar un atac de phishing, una empresa comparteix amb
+el seu CSIRT els hash dels fitxers maliciosos, els dominis utilitzats
+i les adreces IP dels servidors de comandament. Altres organitzacions
+bloquegen aquests indicadors abans de rebre la mateixa campanya.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Compartir informació és útil només quan aquesta és fiable, està
+actualitzada i arriba als destinataris adequats.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Verifica sempre la informació abans de compartir-la.</li>
+
+<li>Utilitza formats estàndard.</li>
+
+<li>Empra canals de comunicació segurs.</li>
+
+<li>Actualitza els IoC quan apareguen noves evidències.</li>
+
+<li>Indica el nivell TLP corresponent.</li>
+
+<li>Comparteix únicament la informació necessària.</li>
+
+<li>Documenta totes les comunicacions.</li>
+
+<li>Respecta la confidencialitat de les dades.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+L'intercanvi d'informació ha d'equilibrar dos objectius: ajudar altres
+organitzacions a protegir-se i preservar la confidencialitat de les
+dades sensibles.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>No tota la informació pot compartir-se.</li>
+
+<li>Les dades personals han d'estar protegides.</li>
+
+<li>Els IoC han de ser verificats.</li>
+
+<li>La informació ha d'estar actualitzada.</li>
+
+<li>Cal respectar la classificació TLP.</li>
+
+<li>Les comunicacions han de quedar registrades.</li>
+
+<li>Els canals han d'estar xifrats.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Compartir informació massa tard pot reduir considerablement la seua
+utilitat per prevenir nous incidents.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els IoC es comparteixen automàticament</strong>
+
+<p>
+
+Moltes plataformes de Threat Intelligence distribueixen automàticament
+nous indicadors de compromís als SIEM i EDR perquè aquests bloquegen
+les amenaces en temps real.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>El protocol TLP és internacional</strong>
+
+<p>
+
+El Traffic Light Protocol és utilitzat per governs, empreses,
+universitats i equips CSIRT de tot el món per indicar el nivell de
+confidencialitat de la informació compartida.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Una mateixa amenaça pot afectar milers d'empreses</strong>
+
+<p>
+
+Moltes campanyes de phishing i ransomware reutilitzen la mateixa
+infraestructura durant diversos dies. Compartir ràpidament els IoC
+pot impedir centenars de nous atacs.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La Threat Intelligence és col·laborativa</strong>
+
+<p>
+
+Gran part de la informació sobre noves amenaces prové de la
+col·laboració entre empreses, fabricants, organismes públics i
+investigadors de seguretat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta un malware que utilitza una vulnerabilitat recent
+per accedir als servidors interns. Després de la investigació es
+disposa de la informació següent.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element detectat</th>
+
+<th>Valor</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>IP maliciosa</td>
+
+<td>198.51.100.45</td>
+
+</tr>
+
+<tr>
+
+<td>Domini</td>
+
+<td>actualitzacio-urgent.net</td>
+
+</tr>
+
+<tr>
+
+<td>Hash SHA-256</td>
+
+<td>Fitxer executat pel malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Vulnerabilitat</td>
+
+<td>CVE explotada.</td>
+
+</tr>
+
+<tr>
+
+<td>Tècnica</td>
+
+<td>Execució remota de codi.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Identifica quina informació és convenient compartir.</li>
+
+<li>Indica amb quins organismes la compartiries.</li>
+
+<li>Assigna un nivell TLP justificat.</li>
+
+<li>Explica quin format utilitzaries (IoC, STIX, etc.).</li>
+
+<li>Proposa els canals de comunicació més adequats.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista d'un
+<strong>CSIRT</strong>. Després d'investigar un incident de
+ciberseguretat, hauràs de preparar la informació necessària perquè
+altres organitzacions puguen protegir-se davant la mateixa amenaça,
+respectant els criteris de confidencialitat i utilitzant formats
+estandarditzats.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa ha patit un atac de ransomware. La investigació ha
+identificat diverses adreces IP malicioses, dominis de phishing,
+hash dels fitxers executats i la vulnerabilitat utilitzada pels
+atacants. El teu equip ha de comunicar aquesta informació al CSIRT
+corresponent i als proveïdors afectats.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Informe complet de la investigació.</li>
+
+<li>Llista d'Indicadors de Compromís (IoC).</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Captura de trànsit de xarxa.</li>
+
+<li>Hash SHA-256 dels fitxers maliciosos.</li>
+
+<li>Informació sobre la vulnerabilitat explotada.</li>
+
+<li>Plantilla STIX.</li>
+
+<li>Documentació del protocol TLP.</li>
+
+<li>Accés a una plataforma de Threat Intelligence.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Seleccionar la informació rellevant per compartir.</li>
+
+<li>Classificar la informació segons el protocol TLP.</li>
+
+<li>Identificar els organismes destinataris.</li>
+
+<li>Preparar una llista d'IoC.</li>
+
+<li>Justificar el format d'intercanvi utilitzat.</li>
+
+<li>Escollir el canal de comunicació adequat.</li>
+
+<li>Redactar un resum tècnic de l'incident.</li>
+
+<li>Registrar totes les comunicacions efectuades.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu no és compartir tota la investigació, sinó únicament la
+informació necessària perquè altres organitzacions puguen detectar,
+prevenir o mitigar el mateix incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és l'intercanvi d'informació sobre incidents.</li>
+
+<li>Explica per què és important compartir Indicadors de Compromís (IoC).</li>
+
+<li>Diferencia els conceptes d'IoC i IoA.</li>
+
+<li>Descriu les funcions d'un CSIRT i d'un CERT.</li>
+
+<li>Explica per a què serveixen STIX i TAXII.</li>
+
+<li>Classifica diversos exemples segons el protocol TLP.</li>
+
+<li>Identifica quina informació no hauria de compartir-se.</li>
+
+<li>Proposa un canal segur per comunicar un incident crític.</li>
+
+<li>Analitza un avís publicat per un CSIRT i identifica els IoC inclosos.</li>
+
+<li>Elabora una fitxa resum amb els principals estàndards d'intercanvi d'informació.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+L'intercanvi d'informació és una peça fonamental en la resposta davant
+incidents de ciberseguretat. Compartir indicadors de compromís,
+vulnerabilitats, tècniques d'atac i mesures de mitigació permet que
+altres organitzacions detecten abans les amenaces i coordinen una
+resposta més eficaç.
+
+</p>
+
+<p>
+
+Perquè aquest intercanvi siga útil és imprescindible utilitzar
+formats estàndard, canals segurs de comunicació i sistemes de
+classificació com el protocol TLP, preservant sempre la
+confidencialitat de la informació sensible.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Investigació]
+
+--> B[IoC]
+
+--> C[Classificació TLP]
+
+--> D[Compartició]
+
+--> E[Threat Intelligence]
+
+--> F[Millora de la defensa]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La cooperació millora la ciberseguretat de totes les organitzacions.</li>
+
+<li>Els IoC permeten detectar incidents similars.</li>
+
+<li>STIX i TAXII faciliten l'intercanvi automatitzat.</li>
+
+<li>El protocol TLP regula la difusió de la informació.</li>
+
+<li>Cal utilitzar canals de comunicació segurs.</li>
+
+<li>No tota la informació ha de compartir-se.</li>
+
+<li>La informació ha d'estar verificada i actualitzada.</li>
+
+<li>La documentació de les comunicacions és essencial.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és l'intercanvi d'informació sobre incidents.</li>
+
+<li>Explicar els beneficis de la cooperació entre organitzacions.</li>
+
+<li>Identificar els principals organismes implicats (CSIRT, CERT, SOC).</li>
+
+<li>Diferenciar IoC i IoA.</li>
+
+<li>Descriure els estàndards STIX i TAXII.</li>
+
+<li>Explicar la funció del protocol TLP.</li>
+
+<li>Identificar canals segurs de comunicació.</li>
+
+<li>Indicar quina informació és convenient compartir.</li>
+
+<li>Descriure les bones pràctiques de Threat Intelligence.</li>
+
+<li>Resoldre un cas pràctic de classificació i compartició d'informació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proporcionen diversos
+materials de suport que permeten practicar l'intercanvi d'informació
+sobre incidents de manera estructurada.
+
+</p>
+
+<ul>
+
+<li>📄 Guia sobre Threat Intelligence.</li>
+
+<li>📄 Plantilla per compartir Indicadors de Compromís (IoC).</li>
+
+<li>📄 Exemple d'informe STIX.</li>
+
+<li>📄 Resum dels protocols STIX i TAXII.</li>
+
+<li>📄 Guia ràpida del protocol TLP.</li>
+
+<li>📄 Cas pràctic complet resolt.</li>
+
+<li>📄 Exercicis de classificació d'informació.</li>
+
+<li>📄 Fitxer d'IoC per importar en un SIEM.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Esquema visual del procés d'intercanvi d'informació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri completa la fase d'investigació de l'incident. En el
+següent criteri (<strong>CA3e - Mesures inicials de contenció dels
+incidents</strong>) aprendràs a aplicar les primeres actuacions per
+limitar els danys causats per un atac mentre es prepara la recuperació
+dels sistemes afectats.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

@@ -1,0 +1,2044 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 2b - Controls, eines i mecanismes de detecció</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_02.html"> 
+                    RA2
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA2b
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#0ca982, #268968);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 2b - Controls, eines i mecanismes de detecció
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🚨
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+
+<nav data-ca-navigation></nav>
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs quins són els principals
+controls, eines i mecanismes utilitzats per detectar incidents de
+ciberseguretat abans que provoquen un impacte greu sobre els
+sistemes d'una organització. Coneixeràs el funcionament dels
+sistemes de monitorització, els sensors de xarxa, les plataformes
+de gestió d'esdeveniments i les tecnologies utilitzades pels
+equips SOC per identificar activitats sospitoses.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és un control de detecció.</li>
+
+<li>Distingir els diferents tipus de controls de seguretat.</li>
+
+<li>Conèixer els principals mecanismes de monitorització.</li>
+
+<li>Entendre el funcionament de la detecció basada en esdeveniments.</li>
+
+<li>Identificar les eines més utilitzades en un SOC.</li>
+
+<li>Relacionar la detecció amb la resposta davant incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Cap sistema és completament segur. Per molt bones que siguen les
+mesures preventives implantades, sempre existeix la possibilitat
+que es produïsca un incident de ciberseguretat. Per aquest motiu,
+les organitzacions necessiten mecanismes capaços de detectar
+qualsevol activitat anòmala tan prompte com siga possible.
+</p>
+
+<p>
+La detecció primerenca és un dels pilars fonamentals de la
+ciberseguretat moderna. Localitzar ràpidament un atac permet
+reduir considerablement el temps de resposta, minimitzar els
+danys i evitar que els atacants continuen expandint-se per la
+infraestructura.
+</p>
+
+<p>
+Actualment aquesta tasca és desenvolupada principalment pels
+<strong>Security Operations Center (SOC)</strong>, que monitoritzen
+de forma contínua els sistemes mitjançant eines especialitzades,
+correlacionen milions d'esdeveniments i generen alertes quan
+detecten comportaments sospitosos.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+La prevenció mai és suficient per si sola. Detectar ràpidament un
+incident és essencial per reduir el seu impacte i facilitar la
+recuperació dels serveis afectats.
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONTROLS DE DETECCIÓ
+========================================================== -->
+
+<section>
+
+<h3>Què són els controls de detecció?</h3>
+
+<p>
+Els <strong>controls de detecció</strong> són mecanismes de
+seguretat dissenyats per identificar activitats sospitoses,
+vulneracions de les polítiques de seguretat o possibles
+incidents de ciberseguretat. El seu objectiu no és impedir
+l'atac, sinó descobrir-lo tan aviat com siga possible perquè
+l'organització puga reaccionar.
+</p>
+
+<p>
+Aquests controls recopilen informació procedent de servidors,
+equips, aplicacions, dispositius de xarxa o serveis al núvol,
+analitzen els esdeveniments registrats i generen alertes quan
+detecten comportaments que poden indicar una amenaça.
+</p>
+
+<p>
+La detecció és una activitat contínua. Els sistemes funcionen
+les vint-i-quatre hores del dia recollint informació que
+posteriorment serà analitzada automàticament o pels analistes
+de seguretat.
+</p>
+
+<h3>Objectius principals</h3>
+
+<ul>
+
+<li>Detectar accessos no autoritzats.</li>
+
+<li>Identificar programari maliciós.</li>
+
+<li>Descobrir configuracions insegures.</li>
+
+<li>Localitzar activitats anòmales.</li>
+
+<li>Generar alertes primerenques.</li>
+
+<li>Facilitar la resposta davant incidents.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un servidor registra centenars d'intents fallits d'inici de
+sessió en pocs minuts. Encara que l'atac no aconseguisca entrar
+al sistema, el control de detecció identifica el patró i genera
+una alerta perquè els administradors investiguen la situació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Activitat del sistema]
+
+--> B[Control de detecció]
+
+--> C{Comportament anòmal?}
+
+C -- No --> D[Continuar monitoritzant]
+
+C -- Sí --> E[Generar alerta]
+
+E --> F[Analista SOC]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     MONITORITZACIÓ
+========================================================== -->
+
+<section>
+
+<h3>La monitorització de la seguretat</h3>
+
+<p>
+La <strong>monitorització</strong> consisteix en observar de forma
+contínua l'estat dels sistemes d'informació per detectar
+qualsevol comportament que puga indicar un incident de
+ciberseguretat.
+</p>
+
+<p>
+Per aconseguir-ho es recopilen registres (logs), trànsit de
+xarxa, esdeveniments dels sistemes operatius, accessos
+d'usuaris, processos en execució, consultes a bases de dades i
+moltes altres fonts d'informació.
+</p>
+
+<p>
+La monitorització moderna combina processos automàtics i
+intel·ligència artificial amb la supervisió dels analistes del
+SOC, que revisen les alertes més rellevants i decideixen si
+realment existeix un incident.
+</p>
+
+<h3>Fonts habituals d'informació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Font</th>
+
+<th>Informació que aporta</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Logs del sistema</td>
+
+<td>Errors, accessos i activitats dels usuaris.</td>
+
+</tr>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Connexions autoritzades i bloquejades.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor web</td>
+
+<td>Peticions HTTP i accessos sospitosos.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor de correu</td>
+
+<td>Spam, phishing i fitxers adjunts.</td>
+
+</tr>
+
+<tr>
+
+<td>Antivirus/EDR</td>
+
+<td>Malware detectat.</td>
+
+</tr>
+
+<tr>
+
+<td>Equips de xarxa</td>
+
+<td>Trànsit i anomalies de comunicació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una bona monitorització no consisteix a recopilar totes les
+dades possibles, sinó aquelles que aporten informació útil per
+identificar incidents sense generar un excés d'alertes.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Servidors]
+
+A --> E[Logs]
+
+B[Firewall]
+
+B --> E
+
+C[Equips]
+
+C --> E
+
+D[Xarxa]
+
+D --> E
+
+E --> F[Monitorització]
+
+F --> G[Alertes]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     TIPUS DE CONTROLS DE SEGURETAT
+========================================================== -->
+
+<section>
+
+<h3>Tipus de controls de seguretat</h3>
+
+<p>
+Els controls de seguretat constitueixen el conjunt de mesures
+implantades per protegir els sistemes d'informació d'una
+organització. Segons la seua finalitat, poden classificar-se en
+controls preventius, detectius i correctius. Aquesta classificació
+ajuda a comprendre en quin moment actua cada mecanisme dins del
+cicle de vida d'un incident.
+</p>
+
+<p>
+Cap tipus de control és suficient per si mateix. La protecció
+efectiva d'una infraestructura requereix combinar mesures de
+prevenció, sistemes de detecció i procediments de resposta que
+treballen conjuntament.
+</p>
+
+<h3>Controls preventius</h3>
+
+<p>
+Els controls preventius intenten impedir que l'incident arribe a
+produir-se. Redueixen la superfície d'atac i dificulten que una
+amenaça puga aprofitar una vulnerabilitat existent.
+</p>
+
+<ul>
+
+<li>Autenticació multifactor (MFA).</li>
+
+<li>Polítiques de contrasenyes.</li>
+
+<li>Actualitzacions de seguretat.</li>
+
+<li>Tallafocs (Firewall).</li>
+
+<li>Xifrat de la informació.</li>
+
+<li>Control d'accés.</li>
+
+</ul>
+
+<h3>Controls detectius</h3>
+
+<p>
+Entren en funcionament quan l'incident ja està produint-se o
+s'acaba de produir. El seu objectiu és identificar-lo ràpidament
+i proporcionar informació suficient perquè els equips de resposta
+puguen actuar.
+</p>
+
+<ul>
+
+<li>Sistemes IDS.</li>
+
+<li>SIEM.</li>
+
+<li>EDR.</li>
+
+<li>Monitorització de logs.</li>
+
+<li>Alertes automàtiques.</li>
+
+</ul>
+
+<h3>Controls correctius</h3>
+
+<p>
+Una vegada detectat l'incident, els controls correctius intenten
+eliminar-ne la causa, recuperar els serveis afectats i restaurar
+el funcionament normal dels sistemes.
+</p>
+
+<ul>
+
+<li>Còpies de seguretat.</li>
+
+<li>Restauració de servidors.</li>
+
+<li>Aplicació de pegats.</li>
+
+<li>Aïllament d'equips.</li>
+
+<li>Plans de recuperació.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Control</th>
+
+<th>Objectiu</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Preventiu</td>
+
+<td>Evitar l'incident.</td>
+
+<td>Firewall.</td>
+
+</tr>
+
+<tr>
+
+<td>Detectiu</td>
+
+<td>Descobrir l'incident.</td>
+
+<td>IDS.</td>
+
+</tr>
+
+<tr>
+
+<td>Correctiu</td>
+
+<td>Recuperar el sistema.</td>
+
+<td>Restauració d'una còpia de seguretat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els controls detectius no substitueixen els preventius. Els dos
+tipus són complementaris i formen part d'una estratègia de
+defensa en profunditat.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Prevenció]
+
+--> B[Detecció]
+
+--> C[Resposta]
+
+--> D[Recuperació]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     EINES DE DETECCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Eines de detecció d'incidents. IDS SIEM EDR</h2>
+
+<p>
+Les eines de detecció recopilen i analitzen informació procedent
+de múltiples fonts amb l'objectiu d'identificar activitats
+anòmales. Algunes treballen sobre el trànsit de xarxa, altres
+sobre els equips dels usuaris i altres centralitzen tota la
+informació per facilitar-ne l'anàlisi.
+</p>
+
+<p>
+En les organitzacions modernes aquestes eines funcionen de forma
+coordinada, compartint informació per detectar patrons que
+difícilment podrien identificar-se manualment.
+</p>
+
+<h3>Principals eines</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Filtrar les comunicacions de xarxa.</td>
+
+</tr>
+
+<tr>
+
+<td>IDS</td>
+
+<td>Detectar activitats sospitoses.</td>
+
+</tr>
+
+<tr>
+
+<td>IPS</td>
+
+<td>Detectar i bloquejar atacs.</td>
+
+</tr>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>Correlacionar esdeveniments.</td>
+
+</tr>
+
+<tr>
+
+<td>EDR</td>
+
+<td>Monitoritzar els equips finals.</td>
+
+</tr>
+
+<tr>
+
+<td>Antivirus</td>
+
+<td>Detectar programari maliciós.</td>
+
+</tr>
+
+<tr>
+
+<td>Escàners de vulnerabilitats</td>
+
+<td>Detectar debilitats dels sistemes.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+
+Cap eina detecta tots els incidents. La detecció eficaç
+requereix combinar diverses tecnologies que aporten informació
+complementària.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Firewall]
+
+B[IDS]
+
+C[EDR]
+
+D[Antivirus]
+
+E[Logs]
+
+A --> F[Centre de monitorització]
+
+B --> F
+
+C --> F
+
+D --> F
+
+E --> F
+
+F --> G[Analista SOC]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     IDS I IPS
+========================================================== -->
+
+<section>
+
+<h3>Sistemes IDS i IPS</h3>
+
+<p>
+Els sistemes <strong>IDS (Intrusion Detection System)</strong> i
+<strong>IPS (Intrusion Prevention System)</strong> són dues de les
+tecnologies més utilitzades per detectar activitats malicioses en
+una xarxa. Encara que comparteixen moltes característiques, la
+seua funció principal és diferent.
+</p>
+
+<h3>IDS (Intrusion Detection System)</h3>
+
+<p>
+Un IDS supervisa contínuament el trànsit de xarxa o l'activitat
+d'un sistema per identificar comportaments sospitosos. Quan
+detecta una possible amenaça genera una alerta perquè siga
+analitzada pels administradors.
+</p>
+
+<p>
+L'IDS no bloqueja les comunicacions; únicament informa que
+s'ha produït una activitat potencialment maliciosa.
+</p>
+
+<h3>IPS (Intrusion Prevention System)</h3>
+
+<p>
+L'IPS incorpora les funcions d'un IDS però, a més, és capaç
+d'actuar automàticament bloquejant el trànsit, tancant connexions
+o impedint que l'atac continue avançant.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>IDS</th>
+
+<th>IPS</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Detecta atacs</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Genera alertes</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Bloqueja connexions</td>
+
+<td>✘</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Actua automàticament</td>
+
+<td>✘</td>
+
+<td>✔</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si un atacant intenta explotar una vulnerabilitat en un servidor
+web, un IDS informarà de l'intent perquè siga investigat,
+mentre que un IPS podrà bloquejar immediatament la connexió i
+impedir que l'atac arribe al servidor.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Trànsit de xarxa]
+
+--> B{IDS}
+
+B --> C[Alerta]
+
+A --> D{IPS}
+
+D --> E[Bloqueig]
+
+D --> F[Alerta]
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     SIEM
+========================================================== -->
+
+<section>
+
+<h3>SIEM (Security Information and Event Management)</h3>
+
+<p>
+Un <strong>SIEM</strong> és una plataforma que recopila,
+centralitza i analitza els esdeveniments de seguretat generats
+pels diferents sistemes d'una organització. El seu objectiu és
+detectar incidents que podrien passar desapercebuts si cada
+equip s'analitzara de manera independent.
+</p>
+
+<p>
+Els SIEM són una de les eines principals dels
+<strong>Security Operations Center (SOC)</strong>, ja que
+permeten visualitzar tota la informació de seguretat en un únic
+panell de control i generar alertes automàtiques quan es
+detecten patrons sospitosos.
+</p>
+
+<p>
+A més de recopilar informació, aquestes plataformes correlacionen
+esdeveniments procedents de múltiples fonts, cosa que facilita
+identificar atacs complexos distribuïts entre diversos equips o
+serveis.
+</p>
+
+<h3>Funcions principals d'un SIEM</h3>
+
+<ul>
+
+<li>Centralitzar els registres (logs).</li>
+
+<li>Correlacionar esdeveniments.</li>
+
+<li>Generar alertes automàtiques.</li>
+
+<li>Detectar comportaments anòmals.</li>
+
+<li>Crear informes de seguretat.</li>
+
+<li>Facilitar les investigacions forenses.</li>
+
+</ul>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Firewall]
+
+B[Servidors]
+
+C[EDR]
+
+D[IDS]
+
+E[Aplicacions]
+
+A --> F[SIEM]
+
+B --> F
+
+C --> F
+
+D --> F
+
+E --> F
+
+F --> G[Correlació]
+
+G --> H[Alerta]
+
+H --> I[Analista SOC]
+
+</div>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un SIEM detecta que un mateix usuari inicia sessió des de
+València i, cinc minuts després, des d'un altre país. Tot i que
+cada inici de sessió és vàlid per separat, la correlació dels
+esdeveniments genera una alerta d'accés impossible
+(<em>Impossible Travel</em>).
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     EDR I XDR
+========================================================== -->
+
+<section>
+
+<h3>EDR i XDR</h3>
+
+<p>
+Els sistemes <strong>EDR (Endpoint Detection and Response)</strong>
+i <strong>XDR (Extended Detection and Response)</strong> són
+tecnologies modernes orientades a detectar i respondre davant
+amenaces avançades.
+</p>
+
+<p>
+A diferència dels antivirus tradicionals, aquestes plataformes
+analitzen contínuament el comportament dels equips, identifiquen
+activitats sospitoses i poden iniciar accions automàtiques per
+limitar la propagació dels atacs.
+</p>
+
+<h3>EDR</h3>
+
+<p>
+Un EDR protegeix els dispositius finals (ordinadors, servidors,
+portàtils...) registrant processos, connexions, modificacions
+del sistema i comportaments potencialment maliciosos.
+</p>
+
+<h3>XDR</h3>
+
+<p>
+L'XDR amplia aquest concepte integrant informació procedent de
+diverses fonts, com ara el correu electrònic, els servidors, la
+xarxa, el núvol o les aplicacions, proporcionant una visió
+global dels incidents.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>EDR</th>
+
+<th>XDR</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Protecció dels equips</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Informació de xarxa</td>
+
+<td>Limitada</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Correlació entre plataformes</td>
+
+<td>✘</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Visió global de l'organització</td>
+
+<td>✘</td>
+
+<td>✔</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+
+Els EDR han substituït progressivament els antivirus tradicionals
+en moltes empreses, ja que permeten detectar tècniques d'atac
+que no depenen únicament de signatures de malware.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Equip]
+
+--> B[EDR]
+
+C[Servidor]
+
+--> D[XDR]
+
+E[Firewall]
+
+--> D
+
+F[Correu]
+
+--> D
+
+B --> D
+
+D --> G[Resposta]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     MONITORITZACIÓ DE LOGS
+========================================================== -->
+
+<section>
+
+<h2>Monitorització de registres (Logs)</h2>
+
+<p>
+Els <strong>logs</strong> són fitxers o bases de dades que
+emmagatzemen informació sobre totes les activitats que es
+produeixen en un sistema informàtic. Analitzar aquests registres
+és una de les tècniques més importants per detectar incidents de
+ciberseguretat.
+</p>
+
+<p>
+Els registres permeten reconstruir el que ha ocorregut abans,
+durant i després d'un incident. Per aquest motiu són una peça
+fonamental tant en la detecció com en la investigació forense.
+</p>
+
+<h3>Informació habitual dels logs</h3>
+
+<ul>
+
+<li>Data i hora.</li>
+
+<li>Usuari.</li>
+
+<li>Adreça IP.</li>
+
+<li>Servei utilitzat.</li>
+
+<li>Acció realitzada.</li>
+
+<li>Resultat de l'operació.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus de log</th>
+
+<th>Exemples d'informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sistema operatiu</td>
+
+<td>Errors, processos, inici de sessió.</td>
+
+</tr>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Connexions permeses o bloquejades.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor web</td>
+
+<td>Peticions HTTP.</td>
+
+</tr>
+
+<tr>
+
+<td>Base de dades</td>
+
+<td>Consultes executades.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu electrònic</td>
+
+<td>Missatges enviats i rebuts.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els logs han d'emmagatzemar-se de forma segura i protegits contra
+modificacions. En moltes investigacions constitueixen una prova
+fonamental dels fets ocorreguts.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ALERTES I CORRELACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Alertes i correlació d'esdeveniments</h2>
+
+<p>
+Un únic esdeveniment rarament és suficient per confirmar un
+incident de ciberseguretat. Per aquest motiu les plataformes de
+monitorització utilitzen tècniques de
+<strong>correlació d'esdeveniments</strong>, combinant informació
+procedent de diverses fonts per identificar patrons sospitosos.
+</p>
+
+<p>
+Quan es compleixen determinades regles o es detecta un
+comportament anòmal, el sistema genera una alerta perquè siga
+revisada pels analistes de seguretat.
+</p>
+
+<h3>Exemples de correlació</h3>
+
+<ul>
+
+<li>Diversos intents fallits seguits d'un inici de sessió correcte.</li>
+
+<li>Inici de sessió des de dos països en pocs minuts.</li>
+
+<li>Execució d'un procés desconegut després d'obrir un correu.</li>
+
+<li>Increment sobtat del trànsit de xarxa.</li>
+
+<li>Accés simultani a diversos servidors sensibles.</li>
+
+</ul>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Logs]
+
+B[Firewall]
+
+C[EDR]
+
+D[IDS]
+
+A --> E[Motor de correlació]
+
+B --> E
+
+C --> E
+
+D --> E
+
+E --> F{Regla complida?}
+
+F -->|Sí| G[Alerta]
+
+F -->|No| H[Continuar monitoritzant]
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una alerta no implica necessàriament que existisca un incident.
+L'analista ha de verificar les evidències abans de confirmar-lo i
+iniciar el procediment de resposta.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples d'utilització de controls i eines de detecció</h2>
+
+<p>
+Els controls de detecció treballen de forma contínua analitzant el
+comportament dels sistemes. Els exemples següents mostren situacions
+habituals en què aquestes eines permeten identificar un possible
+incident abans que provoque conseqüències greus.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Eina implicada</th>
+
+<th>Acció realitzada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Centenars d'intents d'inici de sessió.</td>
+
+<td>IDS</td>
+
+<td>Genera una alerta de força bruta.</td>
+
+</tr>
+
+<tr>
+
+<td>Execució d'un ransomware.</td>
+
+<td>EDR</td>
+
+<td>Aïlla automàticament l'equip.</td>
+
+</tr>
+
+<tr>
+
+<td>Escaneig massiu de ports.</td>
+
+<td>Firewall + IDS</td>
+
+<td>Detecta l'activitat sospitosa.</td>
+
+</tr>
+
+<tr>
+
+<td>Connexió des de dos països diferents.</td>
+
+<td>SIEM</td>
+
+<td>Correlaciona els esdeveniments.</td>
+
+</tr>
+
+<tr>
+
+<td>Increment sobtat del trànsit.</td>
+
+<td>Monitorització</td>
+
+<td>Genera una alerta d'anomalia.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un treballador obri un fitxer adjunt rebut per correu electrònic.
+Immediatament l'EDR detecta que el document intenta executar un
+procés desconegut, bloqueja l'activitat i envia una alerta al SIEM,
+que relaciona aquest fet amb altres equips afectats.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Bones pràctiques en la monitorització</h2>
+
+<p>
+Implantar eines de detecció és només el primer pas. Perquè siguen
+realment efectives és necessari configurar-les correctament,
+mantindre-les actualitzades i revisar periòdicament les alertes
+generades.
+</p>
+
+<div class="tip">
+
+<strong>Consells</strong>
+
+<ul>
+
+<li>Centralitza tots els logs en un únic repositori.</li>
+
+<li>Sincronitza l'hora dels equips mitjançant NTP.</li>
+
+<li>Redueix les alertes falses configurant adequadament les regles.</li>
+
+<li>Actualitza periòdicament les signatures dels IDS i EDR.</li>
+
+<li>Documenta totes les alertes importants.</li>
+
+<li>Comprova regularment que les eines continuen funcionant.</li>
+
+<li>Realitza proves periòdiques de detecció.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Els sistemes de detecció són molt potents, però també poden generar
+problemes si no s'administren correctament. Un excés d'alertes o una
+configuració deficient poden dificultar enormement el treball dels
+analistes.
+</p>
+
+<div class="important">
+
+<strong>Errors freqüents</strong>
+
+<ul>
+
+<li>Ignorar les alertes repetitives.</li>
+
+<li>No revisar els registres periòdicament.</li>
+
+<li>No protegir els fitxers de log.</li>
+
+<li>Generar milers de falsos positius.</li>
+
+<li>No conservar els registres durant el temps necessari.</li>
+
+<li>Utilitzar regles de detecció obsoletes.</li>
+
+<li>No supervisar els propis sistemes de monitorització.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una alerta és només un indici. Sempre cal confirmar-la abans de
+considerar-la un incident de ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>El temps és fonamental</strong>
+
+<p>
+
+Diversos estudis indiquen que moltes organitzacions poden tardar
+dies o fins i tot setmanes a detectar un atac si no disposen d'un
+SOC o d'eines de monitorització adequades. Reduir aquest temps és
+una de les principals prioritats dels equips de ciberseguretat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els falsos positius són habituals</strong>
+
+<p>
+
+Una part important de les alertes generades pels sistemes IDS o SIEM
+no corresponen a incidents reals. Per això és imprescindible la
+intervenció dels analistes abans d'iniciar qualsevol resposta.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Una sola alerta pot ocultar un atac complex</strong>
+
+<p>
+
+Molts ciberatacs avançats es detecten gràcies a la correlació de
+centenars o milers d'esdeveniments aparentment independents.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> acaba d'implantar un nou
+SOC. Durant una mateixa jornada es registren diverses alertes
+procedents de diferents eines de monitorització.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació detectada</th>
+
+<th>Eina més adequada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Increment sobtat del trànsit de xarxa.</td>
+
+<td>..............................</td>
+
+</tr>
+
+<tr>
+
+<td>Execució d'un procés desconegut.</td>
+
+<td>..............................</td>
+
+</tr>
+
+<tr>
+
+<td>Milers d'intents d'inici de sessió.</td>
+
+<td>..............................</td>
+
+</tr>
+
+<tr>
+
+<td>Correlació entre diversos servidors.</td>
+
+<td>..............................</td>
+
+</tr>
+
+<tr>
+
+<td>Escaneig automàtic de vulnerabilitats.</td>
+
+<td>..............................</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Objectiu</strong>
+
+<p>
+
+Per a cada situació indica:
+
+</p>
+
+<ul>
+
+<li>Quina eina detectaria millor l'incident.</li>
+
+<li>Quina informació obtindria.</li>
+
+<li>Si generaria una alerta o actuaria automàticament.</li>
+
+<li>Quina seria la primera actuació de l'analista.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h3>💻 Laboratori</h3>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista d'un
+<strong>Security Operations Center (SOC)</strong>. La teua missió
+consistirà a analitzar les alertes generades per diferents eines
+de monitorització i determinar si corresponen a incidents reals
+o a falsos positius.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa disposa d'un SIEM que centralitza els registres dels
+servidors, del firewall, dels equips dels usuaris i dels sensors
+IDS. Durant el matí s'han generat diverses alertes i és necessari
+analitzar-les abans d'activar el procediment de resposta.
+
+</p>
+
+</div>
+
+<h3>Material proporcionat</h3>
+
+<ul>
+
+<li>Fitxer de logs del servidor web.</li>
+
+<li>Registres del firewall.</li>
+
+<li>Alertes d'un IDS.</li>
+
+<li>Informe d'un EDR.</li>
+
+<li>Panell d'un SIEM.</li>
+
+<li>Plantilla d'anàlisi d'incidents.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar els logs proporcionats.</li>
+
+<li>Identificar les alertes rellevants.</li>
+
+<li>Distingir els falsos positius dels incidents reals.</li>
+
+<li>Indicar quina eina ha detectat cada incidència.</li>
+
+<li>Explicar per què s'ha generat cada alerta.</li>
+
+<li>Proposar una actuació inicial davant cada incident detectat.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu principal d'un SOC no és generar moltes alertes, sinó
+identificar ràpidament aquelles que representen un risc real per
+a l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>
+Explica la diferència entre un control preventiu, detectiu i
+correctiu.
+</li>
+
+<li>
+Investiga tres eines SIEM comercials i tres de codi obert.
+</li>
+
+<li>
+Realitza una taula comparativa entre IDS i IPS.
+</li>
+
+<li>
+Explica les diferències entre un antivirus tradicional i un EDR.
+</li>
+
+<li>
+Identifica quines fonts d'informació monitoritzaries en una
+empresa de comerç electrònic.
+</li>
+
+<li>
+Analitza un exemple de log i indica si podria correspondre a un
+incident de ciberseguretat.
+</li>
+
+<li>
+Dissenya un esquema simplificat d'un SOC indicant les eines que
+utilitzaries.
+</li>
+
+<li>
+Investiga què és un fals positiu i un fals negatiu, i explica
+quines conseqüències poden tenir.
+</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+Els controls de detecció permeten identificar activitats
+sospitoses abans que provoquen conseqüències greus sobre els
+sistemes d'informació. Mitjançant la monitorització contínua,
+l'anàlisi de registres i la correlació d'esdeveniments és
+possible detectar atacs de forma primerenca i iniciar els
+procediments de resposta.
+
+</p>
+
+
+<div class="mermaid">
+mindmap
+  Detecció
+    Controls
+      Preventius
+      Detectius
+      Correctius
+    Monitorització
+      Logs
+      Xarxa
+      Equips
+      Aplicacions
+    Eines
+      Firewall
+      IDS
+      IPS
+      SIEM
+      EDR
+      XDR
+    Resultat
+      Alertes
+      Investigació
+      Resposta
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La detecció complementa la prevenció.</li>
+
+<li>Els logs constitueixen una font essencial d'informació.</li>
+
+<li>Els SIEM correlacionen esdeveniments procedents de múltiples fonts.</li>
+
+<li>Els IDS detecten; els IPS també poden bloquejar.</li>
+
+<li>Els EDR i XDR proporcionen una visió molt més completa dels incidents.</li>
+
+<li>Una alerta sempre ha de ser validada abans de confirmar un incident.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Conceptes que has de dominar</strong>
+
+<ul>
+
+<li>Què és un control de detecció.</li>
+
+<li>Diferències entre controls preventius, detectius i correctius.</li>
+
+<li>Concepte de monitorització contínua.</li>
+
+<li>Funcionament dels sistemes IDS i IPS.</li>
+
+<li>Objectius i funcions d'un SIEM.</li>
+
+<li>Diferències entre EDR i XDR.</li>
+
+<li>Importància dels logs.</li>
+
+<li>Correlació d'esdeveniments.</li>
+
+<li>Fals positiu i fals negatiu.</li>
+
+<li>Funcions principals d'un Security Operations Center (SOC).</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per aprofundir en els continguts d'aquest criteri d'avaluació es
+proporcionen els següents materials de suport.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla d'anàlisi de logs.</li>
+
+<li>📄 Guia d'interpretació d'alertes SIEM.</li>
+
+<li>📄 Taula comparativa IDS / IPS / EDR / XDR.</li>
+
+<li>📄 Exercicis resolts de monitorització.</li>
+
+<li>📄 Casos pràctics de detecció d'incidents.</li>
+
+<li>📄 Infografia sobre l'arquitectura d'un SOC.</li>
+
+<li>📄 Glossari de terminologia.</li>
+
+<li>📄 Plantilla de laboratori.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Full d'autoavaluació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Guarda aquestes plantilles perquè les reutilitzaràs en els
+criteris següents dedicats a la detecció física, OSINT,
+investigació forense i resposta davant incidents.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->  
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

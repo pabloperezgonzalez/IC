@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4f Seguiment dels incidents</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4f
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4f Seguiment dels incidents
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com es realitza el seguiment
+dels incidents de ciberseguretat una vegada s'han aplicat les mesures
+de resposta i recuperació. Coneixeràs com supervisar l'evolució dels
+incidents, verificar que les mesures implantades continuen sent
+efectives i assegurar que no es produeixen recaigudes o noves
+compromissions.
+</p>
+
+<p>
+També comprendràs la importància de mantenir una monitorització
+continuada, actualitzar l'estat dels incidents i establir criteris
+objectius per determinar quan un incident pot considerar-se
+definitivament tancat.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és el seguiment d'un incident.</li>
+
+<li>Conèixer els diferents estats d'un incident.</li>
+
+<li>Aprendre a supervisar l'evolució dels incidents.</li>
+
+<li>Identificar els objectius del seguiment.</li>
+
+<li>Relacionar el seguiment amb la monitorització contínua.</li>
+
+<li>Entendre quan un incident pot donar-se per finalitzat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+La resolució tècnica d'un incident no implica necessàriament que aquest
+haja finalitzat. Després de restaurar els serveis és necessari
+realitzar un període de seguiment durant el qual es verifica que les
+mesures aplicades continuen sent eficaces i que no apareixen nous
+indicadors de compromís.
+</p>
+
+<p>
+Aquest seguiment permet detectar possibles reinfeccions, comprovar
+l'estabilitat dels sistemes recuperats i garantir que totes les
+accions correctives han estat implementades correctament.
+</p>
+
+<p>
+El seguiment també facilita el control de les tasques pendents, la
+coordinació entre equips i el compliment dels procediments establits
+per l'organització.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Un incident només es considera completament tancat quan el seguiment
+confirma que els sistemes funcionen amb normalitat i no existeixen
+nous indicadors d'activitat maliciosa.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SEGUIMENT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Seguiment dels incidents</h2>
+
+<p>
+El seguiment dels incidents consisteix en supervisar totes les accions
+realitzades després de la fase de recuperació amb l'objectiu de
+confirmar que l'incident ha estat completament resolt.
+</p>
+
+<p>
+Durant aquest període es revisen els sistemes afectats, es controlen
+els registres de seguretat, es verifica el funcionament normal dels
+serveis i es comprova que les vulnerabilitats explotades han estat
+corregides.
+</p>
+
+<p>
+Aquest procés redueix el risc que l'atacant mantinga persistència dins
+de la infraestructura o que l'incident torne a reproduir-se poc temps
+després de la recuperació.
+</p>
+
+<h3>Principals activitats</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Activitat</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Monitorització</td>
+
+<td>Detectar noves anomalies.</td>
+
+</tr>
+
+<tr>
+
+<td>Validació</td>
+
+<td>Confirmar el funcionament.</td>
+
+</tr>
+
+<tr>
+
+<td>Revisió de logs</td>
+
+<td>Buscar indicadors de compromís.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment de tasques</td>
+
+<td>Controlar accions pendents.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificació</td>
+
+<td>Confirmar les correccions.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancament</td>
+
+<td>Finalitzar oficialment l'incident.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un atac de ransomware, durant dues setmanes es revisen
+diàriament els registres del SIEM, es comprova el correcte
+funcionament dels servidors restaurats i es verifica que no apareixen
+nous fitxers maliciosos.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DEL SEGUIMENT
+========================================================== -->
+
+<section>
+
+<h2>Objectius del seguiment</h2>
+
+<p>
+El seguiment té com a objectiu principal assegurar que totes les
+accions realitzades durant la resposta han sigut efectives i que els
+serveis continuen funcionant sense incidències.
+</p>
+
+<p>
+A més de confirmar la recuperació dels sistemes, el seguiment permet
+avaluar el comportament dels controls de seguretat, detectar possibles
+nous riscos i verificar que les mesures correctives han eliminat la
+causa original de l'incident.
+</p>
+
+<h3>Objectius principals</h3>
+
+<ul>
+
+<li>Confirmar la recuperació completa.</li>
+
+<li>Detectar possibles reinfeccions.</li>
+
+<li>Supervisar el funcionament dels serveis.</li>
+
+<li>Verificar les mesures correctives.</li>
+
+<li>Comprovar el compliment dels procediments.</li>
+
+<li>Garantir l'estabilitat dels sistemes.</li>
+
+<li>Controlar les tasques pendents.</li>
+
+<li>Preparar el tancament definitiu.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És recomanable mantenir una monitorització reforçada durant els dies
+posteriors a la recuperació, especialment en incidents greus o que han
+afectat serveis crítics.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ESTAT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Estat dels incidents</h2>
+
+<p>
+Al llarg del seu cicle de vida, un incident passa per diferents estats
+que permeten conèixer en tot moment la situació de la investigació i
+faciliten la coordinació entre els equips tècnics.
+</p>
+
+<p>
+La definició d'aquests estats depén de cada organització, però la
+majoria utilitzen un conjunt reduït de fases fàcilment identificables.
+</p>
+
+<h3>Estats habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estat</th>
+
+<th>Significat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Obert</td>
+
+<td>S'ha notificat l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>En investigació</td>
+
+<td>S'estan analitzant les causes.</td>
+
+</tr>
+
+<tr>
+
+<td>Contingut</td>
+
+<td>L'incident està controlat.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació</td>
+
+<td>Restabliment dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment</td>
+
+<td>Monitorització reforçada.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancat</td>
+
+<td>Incident finalitzat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Diagrama del cicle de seguiment</h2>
+
+<div class="mermaid">
+flowchart LR
+
+A[Incident recuperat]
+--> B[Seguiment]
+--> C[Monitorització]
+--> D[Verificació]
+--> E[Tancament]
+
+</div>
+
+<p>
+Aquest diagrama mostra les fases bàsiques del seguiment després de la
+recuperació dels serveis. Només quan la monitorització confirma que no
+existeixen noves incidències es pot procedir al tancament definitiu de
+l'incident.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     INDICADORS DE SEGUIMENT
+========================================================== -->
+
+<section>
+
+<h2>Indicadors de seguiment</h2>
+
+<p>
+El seguiment dels incidents ha d'estar recolzat per indicadors que
+permeten conèixer de manera objectiva l'evolució de la situació. Els
+KPIs (Key Performance Indicators) faciliten l'avaluació de
+l'eficàcia de les mesures adoptades i permeten detectar desviacions
+que requerisquen noves actuacions.
+</p>
+
+<p>
+Aquests indicadors poden mesurar el temps necessari per completar les
+tasques pendents, la disponibilitat dels serveis recuperats, la
+detecció de noves alertes o el compliment dels acords de nivell de
+servei (SLA).
+</p>
+
+<h3>Indicadors habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Indicador</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Disponibilitat del servei</td>
+
+<td>Comprovar l'estabilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Noves alertes</td>
+
+<td>Detectar recaigudes.</td>
+
+</tr>
+
+<tr>
+
+<td>Temps de seguiment</td>
+
+<td>Mesurar la duració del control.</td>
+
+</tr>
+
+<tr>
+
+<td>Tasques pendents</td>
+
+<td>Controlar accions obertes.</td>
+
+</tr>
+
+<tr>
+
+<td>Compliment d'SLA</td>
+
+<td>Verificar els terminis.</td>
+
+</tr>
+
+<tr>
+
+<td>Incidents reoberts</td>
+
+<td>Mesurar reincidències.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després de recuperar un servidor crític, el SOC comprova durant una
+setmana que no apareixen noves alertes, que la disponibilitat és del
+100 % i que totes les tasques correctives han estat completades.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     MONITORITZACIÓ POSTERIOR
+========================================================== -->
+
+<section>
+
+<h2>Monitorització posterior</h2>
+
+<p>
+La monitorització posterior consisteix en augmentar temporalment la
+vigilància sobre els sistemes que han estat afectats per un incident.
+L'objectiu és detectar qualsevol comportament anòmal que puga indicar
+una persistència de l'atacant o una recuperació incompleta.
+</p>
+
+<p>
+Durant aquest període és habitual incrementar la revisió dels
+registres, configurar alertes específiques al SIEM i supervisar els
+equips més sensibles.
+</p>
+
+<h3>Elements que solen monitoritzar-se</h3>
+
+<ul>
+
+<li>Registres d'autenticació.</li>
+
+<li>Connexions de xarxa.</li>
+
+<li>Processos en execució.</li>
+
+<li>Integritat dels fitxers.</li>
+
+<li>Ús dels recursos del sistema.</li>
+
+<li>Alertes del SIEM.</li>
+
+<li>Comunicacions externes.</li>
+
+<li>Comptes privilegiats.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+La monitorització reforçada ha de mantenir-se el temps suficient per
+garantir que els sistemes han recuperat un comportament normal i que
+no existeixen indicadors de compromís.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     REOBERTURA D'INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Reobertura d'incidents</h2>
+
+<p>
+En algunes ocasions un incident que es considerava resolt torna a
+presentar evidències d'activitat maliciosa. Quan això ocorre és
+necessari reobrir oficialment l'incident i reprendre la investigació.
+</p>
+
+<p>
+La reobertura evita crear múltiples incidents relacionats amb el mateix
+problema i permet conservar tota la informació associada dins del
+mateix expedient.
+</p>
+
+<h3>Causes habituals de reobertura</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Acció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Nova alerta</td>
+
+<td>Analitzar l'origen.</td>
+
+</tr>
+
+<tr>
+
+<td>Persistència detectada</td>
+
+<td>Reprendre la investigació.</td>
+
+</tr>
+
+<tr>
+
+<td>Nova evidència</td>
+
+<td>Actualitzar l'anàlisi.</td>
+
+</tr>
+
+<tr>
+
+<td>Reinfecció</td>
+
+<td>Aplicar noves mesures.</td>
+
+</tr>
+
+<tr>
+
+<td>Error en la recuperació</td>
+
+<td>Corregir la incidència.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Reobrir un incident no significa que la resposta anterior haja estat
+incorrecta. Sovint apareixen noves evidències que només poden detectar-se
+durant el període de seguiment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     TANCAMENT DEFINITIU
+========================================================== -->
+
+<section>
+
+<h2>Tancament definitiu</h2>
+
+<p>
+El tancament definitiu és l'última fase del seguiment. Només es du a
+terme quan totes les verificacions confirmen que els sistemes funcionen
+correctament, les vulnerabilitats han estat corregides i no existeixen
+nous indicadors d'activitat maliciosa.
+</p>
+
+<p>
+Abans de tancar l'incident és necessari comprovar que totes les tasques
+assignades han estat completades, la documentació està actualitzada i
+les lliçons apreses s'han incorporat als procediments de
+l'organització.
+</p>
+
+<h3>Criteris de tancament</h3>
+
+<ul>
+
+<li>Serveis totalment operatius.</li>
+
+<li>Sense noves alertes de seguretat.</li>
+
+<li>Mesures correctives implantades.</li>
+
+<li>Documentació finalitzada.</li>
+
+<li>Lliçons apreses registrades.</li>
+
+<li>Tasques pendents completades.</li>
+
+<li>Aprovació del responsable de l'incident.</li>
+
+</ul>
+
+</section>
+
+<!-- ==========================================================
+     📊 DIAGRAMA MERMAID
+========================================================== -->
+
+<section>
+
+<h2>📊 Procés de tancament d'un incident</h2>
+
+<div class="mermaid">
+flowchart TD
+
+A[Seguiment]
+--> B[Monitorització]
+
+B --> C[Verificació]
+
+C --> D[Accions completades]
+
+D --> E[Tancament definitiu]
+
+</div>
+
+<p>
+El procés de tancament garanteix que totes les verificacions s'han
+realitzat abans de donar per finalitzat l'incident i arxivar la seua
+documentació.
+</p>
+
+</section>
+
+<!-- ==========================================================
+     EINES DE SEGUIMENT DELS INCIDENTS
+========================================================== -->
+
+<section>
+
+<h2>Eines de seguiment dels incidents</h2>
+
+<p>
+El seguiment dels incidents es realitza habitualment mitjançant eines
+que permeten centralitzar la informació, coordinar els equips i
+controlar l'estat de totes les actuacions pendents. Aquestes eines
+faciliten la traçabilitat de l'incident des de la seua detecció fins
+al tancament definitiu.
+</p>
+
+<p>
+En moltes organitzacions les plataformes de monitorització,
+ticketing, SIEM i SOAR treballen de manera integrada perquè els
+analistes disposen d'una visió completa de l'evolució de cada
+incident.
+</p>
+
+<h3>Principals eines</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>Centralitzar i analitzar registres.</td>
+
+</tr>
+
+<tr>
+
+<td>SOAR</td>
+
+<td>Automatitzar respostes.</td>
+
+</tr>
+
+<tr>
+
+<td>Ticketing</td>
+
+<td>Gestionar incidències i tasques.</td>
+
+</tr>
+
+<tr>
+
+<td>EDR/XDR</td>
+
+<td>Supervisar els equips.</td>
+
+</tr>
+
+<tr>
+
+<td>CMDB</td>
+
+<td>Consultar els actius afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Dashboards</td>
+
+<td>Visualitzar l'estat dels incidents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Quan un incident entra en fase de seguiment, el sistema de ticketing
+manté obertes totes les tasques pendents mentre el SIEM continua
+monitoritzant possibles indicadors de compromís. Quan totes les
+verificacions són correctes, el responsable autoritza el tancament del
+tiquet.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques en el seguiment</h2>
+
+<p>
+Un seguiment eficaç requereix metodologia, coordinació i una revisió
+constant de la informació disponible. Aplicar bones pràctiques permet
+reduir el risc de recaigudes i garanteix que totes les actuacions
+queden correctament registrades.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Mantindre actualitzat l'estat de cada incident.</li>
+
+<li>Registrar totes les actuacions realitzades.</li>
+
+<li>Revisar periòdicament els registres del SIEM.</li>
+
+<li>Controlar totes les tasques pendents.</li>
+
+<li>Validar la recuperació dels serveis.</li>
+
+<li>Comprovar la desaparició dels indicadors de compromís.</li>
+
+<li>Comunicar qualsevol incidència als responsables.</li>
+
+<li>Documentar qualsevol canvi d'estat.</li>
+
+<li>Realitzar reunions periòdiques de seguiment.</li>
+
+<li>Tancar únicament els incidents completament resolts.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Un bon seguiment és proactiu. No consisteix únicament a esperar que no
+apareguen problemes, sinó a buscar activament qualsevol indici que
+puga indicar una nova amenaça.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals durant el seguiment</h2>
+
+<p>
+Molts incidents tornen a aparèixer perquè el seguiment es realitza de
+forma insuficient o perquè es dóna l'incident per finalitzat abans de
+temps. Evitar aquests errors contribueix a augmentar la qualitat del
+procés de resposta.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Tancar l'incident massa prompte.</li>
+
+<li>No revisar els registres de seguretat.</li>
+
+<li>Oblidar tasques pendents.</li>
+
+<li>No actualitzar la documentació.</li>
+
+<li>No informar els responsables.</li>
+
+<li>No verificar totes les mesures correctives.</li>
+
+<li>No supervisar els serveis recuperats.</li>
+
+<li>No controlar possibles reinfeccions.</li>
+
+<li>No revisar els indicadors del SIEM.</li>
+
+<li>No conservar l'historial del seguiment.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Considerar que un incident ha finalitzat simplement perquè els serveis
+tornen a funcionar pot provocar que una persistència de l'atacant
+passe desapercebuda durant setmanes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+El seguiment varia segons el tipus d'incident, però en tots els casos
+es manté una vigilància activa fins que existeixen garanties que el
+risc ha desaparegut completament.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Seguiment realitzat</th>
+
+<th>Resultat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Revisió dels accessos.</td>
+
+<td>Sense nous compromisos.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Monitorització dels servidors.</td>
+
+<td>Recuperació estable.</td>
+
+</tr>
+
+<tr>
+
+<td>DDoS</td>
+
+<td>Control del trànsit.</td>
+
+<td>Servei estabilitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>Malware</td>
+
+<td>Escanejos periòdics.</td>
+
+<td>Sense reinfecció.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga de dades</td>
+
+<td>Auditoria dels accessos.</td>
+
+<td>Sense noves filtracions.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple complet</strong>
+
+<p>
+
+Una empresa manté durant quinze dies una monitorització reforçada
+després d'una infecció per ransomware. El SIEM no detecta noves
+connexions sospitoses, els EDR no generen alertes i tots els servidors
+funcionen amb normalitat. Després de revisar les tasques pendents i
+actualitzar la documentació, el responsable autoritza el tancament
+definitiu de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+El seguiment és una fase fonamental per assegurar que les mesures
+aplicades durant la resposta continuen sent efectives. Una
+monitorització adequada permet detectar problemes abans que tornen a
+afectar els serveis de l'organització.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Mantén la monitorització reforçada durant el temps establit.</li>
+
+<li>Actualitza periòdicament l'estat dels incidents.</li>
+
+<li>Documenta totes les actuacions realitzades.</li>
+
+<li>Comprova que totes les accions correctives s'han completat.</li>
+
+<li>Revisa diàriament els registres més crítics.</li>
+
+<li>Comunica qualsevol incidència als responsables.</li>
+
+<li>No tanques un incident sense totes les verificacions.</li>
+
+<li>Conserva tota la documentació per a futures consultes.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+Durant el seguiment poden aparèixer noves evidències que obliguen a
+reobrir la investigació o a aplicar mesures addicionals. Per aquest
+motiu és imprescindible mantindre una actitud proactiva fins al
+tancament definitiu.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>Els serveis recuperats han de continuar monitoritzats.</li>
+
+<li>Les vulnerabilitats explotades han d'estar corregides.</li>
+
+<li>Cal comprovar que no existeixen nous indicadors de compromís.</li>
+
+<li>Totes les tasques pendents han d'estar finalitzades.</li>
+
+<li>La documentació ha d'estar completament actualitzada.</li>
+
+<li>Els responsables han d'autoritzar el tancament.</li>
+
+<li>El seguiment pot variar segons la criticitat de l'incident.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La recuperació posa els serveis en funcionament; el seguiment confirma
+que continuen sent segurs i estables al llarg del temps.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Molts atacs es detecten durant el seguiment</strong>
+
+<p>
+
+És relativament habitual descobrir intents de persistència o noves
+connexions malicioses dies després de la recuperació dels sistemes,
+gràcies a la monitorització reforçada.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els SIEM faciliten el seguiment continu</strong>
+
+<p>
+
+Les plataformes SIEM permeten crear alertes específiques per als
+actius recuperats i supervisar-los de manera prioritària durant el
+període de seguiment.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els incidents crítics poden romandre oberts setmanes</strong>
+
+<p>
+
+Quan l'impacte és molt elevat, algunes organitzacions mantenen
+l'incident en fase de seguiment fins que totes les auditories i
+verificacions confirmen la desaparició del risc.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>El seguiment també genera informació valuosa</strong>
+
+<p>
+
+Les dades recopilades durant aquesta fase s'utilitzen posteriorment
+per calcular indicadors, millorar els procediments i reforçar la
+ciberresiliència de l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Després de recuperar els serveis afectats per un atac de ransomware,
+l'organització inicia un període de seguiment de quinze dies. Durant
+aquest temps es revisen els registres del SIEM, es monitoritzen els
+equips restaurats i es comprova que totes les mesures correctives
+continuen sent efectives.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Situació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Serveis restaurats</td>
+
+<td>Operatius.</td>
+
+</tr>
+
+<tr>
+
+<td>Alertes del SIEM</td>
+
+<td>Cap incidència crítica.</td>
+
+</tr>
+
+<tr>
+
+<td>Tasques pendents</td>
+
+<td>Dues actualitzacions menors.</td>
+
+</tr>
+
+<tr>
+
+<td>Monitorització</td>
+
+<td>Reforçada durant quinze dies.</td>
+
+</tr>
+
+<tr>
+
+<td>Estat actual</td>
+
+<td>En seguiment.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Indica si l'incident pot considerar-se tancat.</li>
+
+<li>Justifica quines verificacions encara falten.</li>
+
+<li>Proposa tres indicadors que revisaries diàriament.</li>
+
+<li>Descriu quines situacions obligarien a reobrir l'incident.</li>
+
+<li>Explica quan autoritzaries el tancament definitiu.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica realitzaràs el seguiment d'un incident de
+ciberseguretat després de la recuperació dels serveis. Hauràs de
+supervisar els sistemes afectats, analitzar les alertes generades,
+actualitzar l'estat de l'incident i decidir si pot donar-se per
+tancat o si és necessari reprendre la investigació.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa ha recuperat els seus servidors després d'un atac de
+ransomware. Durant els pròxims deu dies s'ha establit un període de
+seguiment reforçat per comprovar que no apareixen nous indicadors de
+compromís.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Registres del SIEM.</li>
+
+<li>Alertes dels EDR.</li>
+
+<li>Sistema de ticketing.</li>
+
+<li>Informe de recuperació.</li>
+
+<li>Inventari dels actius afectats.</li>
+
+<li>Checklist de verificació.</li>
+
+<li>Llista de tasques pendents.</li>
+
+<li>Procediment de seguiment dels incidents.</li>
+
+<li>Plantilla d'informe de tancament.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Revisar els registres generats durant el seguiment.</li>
+
+<li>Comprovar l'estat dels serveis recuperats.</li>
+
+<li>Verificar que no existeixen nous indicadors de compromís.</li>
+
+<li>Actualitzar l'estat del tiquet d'incident.</li>
+
+<li>Completar les tasques pendents.</li>
+
+<li>Valorar si és necessari reobrir la investigació.</li>
+
+<li>Redactar l'informe final de seguiment.</li>
+
+<li>Justificar el tancament o la continuïtat de l'incident.</li>
+
+<li>Presentar les conclusions obtingudes.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+El seguiment no consisteix únicament a esperar que no apareguen
+problemes. Cal revisar activament els sistemes i verificar que totes
+les mesures aplicades continuen sent efectives.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és el seguiment dels incidents.</li>
+
+<li>Descriu els diferents estats del cicle de vida d'un incident.</li>
+
+<li>Explica la finalitat de la monitorització posterior.</li>
+
+<li>Identifica diversos indicadors útils per al seguiment.</li>
+
+<li>Descriu els criteris per reobrir un incident.</li>
+
+<li>Explica quan un incident pot considerar-se definitivament tancat.</li>
+
+<li>Analitza un cas pràctic de seguiment després d'un ransomware.</li>
+
+<li>Relaciona el seguiment amb la millora contínua.</li>
+
+<li>Proposa bones pràctiques per a la monitorització posterior.</li>
+
+<li>Elabora un informe de seguiment complet.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+El seguiment dels incidents garanteix que les mesures adoptades durant
+la resposta continuen sent efectives després de la recuperació dels
+serveis. Aquesta fase permet detectar noves anomalies, verificar les
+accions correctives i assegurar que els sistemes funcionen de manera
+estable.
+
+</p>
+
+<p>
+
+Mitjançant la monitorització reforçada, l'ús d'indicadors, la revisió
+de les tasques pendents i la validació dels serveis, l'organització
+pot decidir amb garanties quan un incident està completament resolt i
+pot donar-se per tancat.
+
+</p>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>El seguiment continua després de la recuperació.</li>
+
+<li>La monitorització detecta possibles recaigudes.</li>
+
+<li>Els KPIs permeten avaluar l'evolució de l'incident.</li>
+
+<li>Els incidents poden reobrir-se si apareixen noves evidències.</li>
+
+<li>El tancament requereix verificacions completes.</li>
+
+<li>La documentació ha d'actualitzar-se durant el seguiment.</li>
+
+<li>Les eines SIEM, SOAR i ITSM faciliten el control.</li>
+
+<li>Un bon seguiment augmenta la ciberresiliència.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir el seguiment dels incidents.</li>
+
+<li>Explicar els objectius de la monitorització posterior.</li>
+
+<li>Descriure els diferents estats d'un incident.</li>
+
+<li>Identificar indicadors utilitzats durant el seguiment.</li>
+
+<li>Explicar quan cal reobrir un incident.</li>
+
+<li>Descriure els criteris de tancament definitiu.</li>
+
+<li>Reconèixer les eines utilitzades per al seguiment.</li>
+
+<li>Aplicar bones pràctiques de monitorització.</li>
+
+<li>Analitzar un cas pràctic de seguiment.</li>
+
+<li>Justificar la importància del seguiment en la resposta davant incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar els coneixements sobre el seguiment dels incidents es
+proposen diversos materials pràctics orientats a la monitorització, la
+gestió dels tiquets i el control de les actuacions posteriors a la
+recuperació.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla de seguiment d'incidents.</li>
+
+<li>📄 Checklist de verificació posterior a la recuperació.</li>
+
+<li>📄 Model de registre de monitorització.</li>
+
+<li>📄 Plantilla d'actualització d'estat dels incidents.</li>
+
+<li>📄 Guia de revisió de registres del SIEM.</li>
+
+<li>📄 Full de seguiment de tasques pendents.</li>
+
+<li>📄 Casos pràctics resolts.</li>
+
+<li>📄 Exercicis sobre KPIs i seguiment.</li>
+
+<li>📄 Model d'informe de tancament definitiu.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+El seguiment és la garantia que la resposta davant un incident ha estat
+realment efectiva. Una monitorització adequada, una documentació
+actualitzada i una verificació exhaustiva dels sistemes recuperats
+permeten reduir el risc de recaigudes i consolidar una resposta madura
+i orientada a la millora contínua.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+ <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

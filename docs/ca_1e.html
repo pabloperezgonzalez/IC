@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 1e - Auditoria del pla de prevenció</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 </button>
+                    <!-- Canvi de tema --> 
+                </h2>   
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_01.html"> 
+                    RA1 
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA1e
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 1e - Auditoria del pla de prevenció
+                    </h1> 
+                            <p>
+                        Avaluació del grau d'implantació i eficàcia del pla de
+                        prevenció i conscienciació mitjançant auditories,
+                        evidències i propostes de millora contínua.
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 20 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🛡️ 
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+                
+<nav data-ca-navigation></nav>
+
+<!-- ================================================= -->
+<!-- Què aprendràs                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🎯 Què aprendràs</h2>
+
+    <p>
+
+        En aquest criteri d'avaluació aprendràs a comprovar si un pla de
+        prevenció i conscienciació en ciberseguretat s'ha implantat
+        correctament dins d'una organització. Coneixeràs les diferents fases
+        d'una auditoria, les evidències que cal recopilar i la manera
+        d'elaborar un informe amb les conclusions i les accions de millora
+        necessàries.
+
+    </p>
+
+    <div class="info">
+
+        <strong>Objectius del criteri</strong>
+
+        <ul>
+
+            <li>Comprendre què és una auditoria de ciberseguretat.</li>
+
+            <li>Conèixer les fases d'una auditoria.</li>
+
+            <li>Identificar les evidències necessàries.</li>
+
+            <li>Elaborar una checklist d'auditoria.</li>
+
+            <li>Redactar un informe professional.</li>
+
+            <li>Proposar accions correctores i de millora.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Introducció                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📖 Introducció</h2>
+
+    <p>
+
+        Una organització no pot considerar que el seu pla de prevenció i
+        conscienciació és eficaç simplement perquè ha impartit formació o ha
+        distribuït materials informatius. És necessari verificar que els
+        treballadors han assimilat els coneixements i que les mesures
+        implantades s'apliquen realment en el treball diari.
+
+    </p>
+
+    <p>
+
+        L'auditoria és el procés que permet comprovar el grau de compliment del
+        pla, detectar possibles deficiències i establir accions de millora que
+        reforcen la cultura de ciberseguretat de l'organització.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Què és una auditoria                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🔍 Què és una auditoria del pla de conscienciació?</h2>
+
+    <p>
+
+        Una auditoria és un procés sistemàtic i documentat mitjançant el qual
+        es recopilen evidències objectives per determinar si les activitats
+        desenvolupades compleixen els requisits establerts per
+        l'organització.
+
+    </p>
+
+    <p>
+
+        En el context de la conscienciació en ciberseguretat, l'auditoria
+        permet verificar si el pla s'ha implantat correctament, si els
+        treballadors el coneixen i si les mesures adoptades contribueixen a
+        reduir els riscos.
+
+    </p>
+
+    <div class="remember">
+
+        <strong>Recorda</strong>
+
+        <p>
+
+            Una auditoria no busca trobar culpables. El seu objectiu és
+            detectar oportunitats de millora i ajudar l'organització a
+            incrementar el seu nivell de seguretat.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Objectius                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎯 Objectius d'una auditoria</h3>
+
+    <ul>
+
+        <li>Comprovar el compliment de les polítiques de seguretat.</li>
+
+        <li>Verificar que els treballadors han rebut la formació prevista.</li>
+
+        <li>Analitzar l'eficàcia de la campanya de conscienciació.</li>
+
+        <li>Detectar desviacions respecte al pla inicial.</li>
+
+        <li>Identificar riscos no contemplats.</li>
+
+        <li>Proposar accions correctores.</li>
+
+        <li>Fomentar la millora contínua.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Tipus d'auditoria                                 -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📋 Tipus d'auditories</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Tipus</th>
+
+                <th>Característiques</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Interna</td>
+
+                <td>Realitzada pel personal de la mateixa organització.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Externa</td>
+
+                <td>Realitzada per una empresa o auditor independent.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Ordinària</td>
+
+                <td>Programada periòdicament.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Extraordinària</td>
+
+                <td>Realitzada després d'un incident greu.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Beneficis                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>✅ Beneficis d'auditar el pla</h3>
+
+    <ul>
+
+        <li>Detectar punts febles abans que siguen explotats.</li>
+
+        <li>Millorar la conscienciació dels treballadors.</li>
+
+        <li>Comprovar el compliment de la normativa interna.</li>
+
+        <li>Augmentar la confiança de clients i proveïdors.</li>
+
+        <li>Facilitar el compliment d'estàndards com ISO/IEC 27001.</li>
+
+        <li>Millorar la capacitat de resposta davant incidents.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Principi                                          -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>⚖️ Principis d'una auditoria</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Principi</th>
+
+                <th>Descripció</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Objectivitat</td>
+
+                <td>Les conclusions han de basar-se en evidències.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Confidencialitat</td>
+
+                <td>La informació auditada ha de protegir-se.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Independència</td>
+
+                <td>L'auditor ha d'actuar sense conflictes d'interès.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Traçabilitat</td>
+
+                <td>Totes les evidències han de poder justificar-se.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="important">
+
+        <strong>Important</strong>
+
+        <p>
+
+            Les conclusions d'una auditoria només són vàlides si estan
+            sustentades per evidències verificables i objectives.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Diagrama                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 Finalitat d'una auditoria</h3>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Pla de conscienciació]
+
+-->
+
+B[Auditoria]
+
+-->
+
+C[Obtenció d'evidències]
+
+-->
+
+D[Informe]
+
+-->
+
+E[Accions de millora]
+
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Les normes internacionals de seguretat de la informació, com la
+<strong>ISO/IEC 27001</strong>, exigeixen la realització periòdica
+d'auditories internes per comprovar que el Sistema de Gestió de Seguretat de
+la Informació continua sent eficaç.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☑ Definir què és una auditoria.</li>
+
+<li>☑ Explicar els objectius d'una auditoria.</li>
+
+<li>☑ Diferenciar una auditoria interna d'una externa.</li>
+
+<li>☑ Conèixer els principis bàsics que ha de complir qualsevol auditoria.</li>
+
+<li>☑ Comprendre la finalitat de les evidències d'auditoria.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- part 2 -->
+<!-- ================================================= -->
+<!-- Fases d'una auditoria                             -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📋 Fases d'una auditoria del pla de conscienciació</h2>
+
+<p>
+
+Una auditoria ha de seguir un procés ordenat que permeta obtenir evidències
+objectives i elaborar conclusions fiables. Tot i que cada organització pot
+adaptar el procediment a les seues necessitats, habitualment es diferencien
+les fases següents.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Planificació</td>
+
+<td>Definir l'abast, els objectius i el calendari.</td>
+
+</tr>
+
+<tr>
+
+<td>Recollida d'informació</td>
+
+<td>Obtenir documentació i evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Execució</td>
+
+<td>Realitzar entrevistes, observacions i comprovacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi</td>
+
+<td>Comparar les evidències amb els requisits.</td>
+
+</tr>
+
+<tr>
+
+<td>Informe</td>
+
+<td>Presentar conclusions i recomanacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment</td>
+
+<td>Verificar la implantació de les millores.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Planificació                                      -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>🗓️ 1. Planificació de l'auditoria</h3>
+
+<p>
+
+Abans de començar és imprescindible definir què es revisarà i quins recursos
+seran necessaris.
+
+</p>
+
+<h3>Aspectes que cal definir</h3>
+
+<ul>
+
+<li>Objectius de l'auditoria.</li>
+
+<li>Abast (departaments, seus o serveis).</li>
+
+<li>Normativa aplicable.</li>
+
+<li>Calendari.</li>
+
+<li>Persones entrevistades.</li>
+
+<li>Documentació necessària.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una bona planificació evita interrupcions i facilita la col·laboració dels
+diferents departaments.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Evidències                                        -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📂 Evidències d'auditoria</h3>
+
+<p>
+
+Les conclusions només poden basar-se en evidències objectives i verificables.
+
+</p>
+
+<p>
+
+Una evidència és qualsevol informació que demostra si un requisit es compleix
+o no.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Evidència</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Documents</td>
+
+<td>Polítiques de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Registres</td>
+
+<td>Assistència als cursos.</td>
+
+</tr>
+
+<tr>
+
+<td>Resultats</td>
+
+<td>Qüestionaris i exàmens.</td>
+
+</tr>
+
+<tr>
+
+<td>Captures</td>
+
+<td>Configuracions dels equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Correus</td>
+
+<td>Campanyes enviades als empleats.</td>
+
+</tr>
+
+<tr>
+
+<td>Observacions</td>
+
+<td>Comportament dels treballadors.</td>
+
+</tr>
+
+<tr>
+
+<td>Entrevistes</td>
+
+<td>Respostes del personal.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Revisió documental                                -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📑 Revisió documental</h3>
+
+<p>
+
+L'auditor ha de comprovar que la documentació està actualitzada, aprovada per
+la direcció i accessible per als treballadors.
+
+</p>
+
+<h3>Documentació habitual</h3>
+
+<ul>
+
+<li>Política de ciberseguretat.</li>
+
+<li>Normativa del lloc de treball.</li>
+
+<li>Pla de conscienciació.</li>
+
+<li>Materials formatius.</li>
+
+<li>Registres d'assistència.</li>
+
+<li>Resultats dels qüestionaris.</li>
+
+<li>Informes d'incidents.</li>
+
+<li>Plans de millora.</li>
+
+</ul>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una política molt ben redactada però desconeguda pels treballadors no
+aconsegueix l'objectiu de conscienciar l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Entrevistes                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>🎤 Entrevistes</h3>
+
+<p>
+
+Les entrevistes permeten comprovar el nivell real de coneixement dels
+treballadors.
+
+</p>
+
+<h3>Exemples de preguntes</h3>
+
+<ul>
+
+<li>Què faries si reps un correu sospitós?</li>
+
+<li>Saps on consultar la política de seguretat?</li>
+
+<li>Has participat en alguna acció formativa?</li>
+
+<li>Saps com comunicar un incident?</li>
+
+<li>Utilitzes autenticació multifactor?</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Observació                                        -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>👀 Observació directa</h3>
+
+<p>
+
+L'auditor també pot observar directament el comportament dels treballadors i
+l'entorn de treball.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecte</th>
+
+<th>Què es comprova</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Pantalles</td>
+
+<td>Bloqueig quan l'usuari s'absenta.</td>
+
+</tr>
+
+<tr>
+
+<td>Contrasenyes</td>
+
+<td>No visibles en notes adhesives.</td>
+
+</tr>
+
+<tr>
+
+<td>Documents</td>
+
+<td>No abandonats sobre la taula.</td>
+
+</tr>
+
+<tr>
+
+<td>Equips</td>
+
+<td>Bloqueig automàtic.</td>
+
+</tr>
+
+<tr>
+
+<td>Visitants</td>
+
+<td>Control d'accés.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Checklist                                         -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>☑️ Exemple de checklist d'auditoria</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecte</th>
+
+<th>Sí</th>
+
+<th>No</th>
+
+<th>Observacions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Existeix una política aprovada?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Els treballadors la coneixen?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>S'han impartit cursos?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Existeixen registres?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>S'han realitzat simulacions?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Es documenten els incidents?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Mermaid                                           -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 Procés d'una auditoria</h3>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Planificar]
+
+-->
+
+B[Revisar documentació]
+
+-->
+
+C[Entrevistar]
+
+-->
+
+D[Recollir evidències]
+
+-->
+
+E[Analitzar]
+
+-->
+
+F[Informe]
+
+-->
+
+G[Seguiment]
+
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+En moltes auditories es detecta que els treballadors han assistit als cursos
+de formació, però no recorden el procediment per comunicar un incident. Això
+demostra que assistir a una formació no garanteix necessàriament l'adquisició
+dels coneixements.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☑ Les fases d'una auditoria.</li>
+
+<li>☑ Què és una evidència d'auditoria.</li>
+
+<li>☑ La documentació que s'ha de revisar.</li>
+
+<li>☑ La importància de les entrevistes.</li>
+
+<li>☑ Com elaborar una checklist d'auditoria.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!--   part 3    -->
+<!-- ================================================= -->
+<!-- Informe d'auditoria                               -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📄 L'informe d'auditoria</h2>
+
+<p>
+
+Una vegada finalitzada la recollida d'evidències, l'auditor ha d'elaborar un
+informe que descriga de manera clara els resultats de l'auditoria.
+
+</p>
+
+<p>
+
+L'informe constitueix el document oficial que servirà a la direcció per
+prendre decisions i planificar les accions de millora.
+
+</p>
+
+<div class="info">
+
+<strong>Objectiu de l'informe</strong>
+
+<p>
+
+Documentar les evidències obtingudes, les desviacions detectades i les
+recomanacions que permetran augmentar el nivell de ciberseguretat de
+l'organització.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Estructura                                        -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📑 Estructura d'un informe d'auditoria</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Apartat</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectiu</td>
+
+<td>Finalitat de l'auditoria.</td>
+
+</tr>
+
+<tr>
+
+<td>Abast</td>
+
+<td>Àrees i processos revisats.</td>
+
+</tr>
+
+<tr>
+
+<td>Metodologia</td>
+
+<td>Tècniques emprades durant l'auditoria.</td>
+
+</tr>
+
+<tr>
+
+<td>Evidències</td>
+
+<td>Documents i proves recopilades.</td>
+
+</tr>
+
+<tr>
+
+<td>Resultats</td>
+
+<td>Compliments i desviacions detectades.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Valoració global.</td>
+
+</tr>
+
+<tr>
+
+<td>Recomanacions</td>
+
+<td>Accions correctores proposades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- No conformitats                                   -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>⚠️ No conformitats</h3>
+
+<p>
+
+Una <strong>no conformitat</strong> és qualsevol incompliment respecte als
+requisits establerts en la normativa, les polítiques o el pla de
+conscienciació.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Lleu</td>
+
+<td>Un document no està actualitzat.</td>
+
+</tr>
+
+<tr>
+
+<td>Greu</td>
+
+<td>Els treballadors desconeixen el procediment de notificació.</td>
+
+</tr>
+
+<tr>
+
+<td>Molt greu</td>
+
+<td>No existeix cap pla de conscienciació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+No totes les incidències tenen la mateixa gravetat. L'auditor ha de valorar
+l'impacte i el risc abans de classificar-les.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Accions correctores                               -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>🛠️ Accions correctores</h3>
+
+<p>
+
+Per cada no conformitat detectada és necessari definir una acció correctora
+que elimine la causa del problema.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>No conformitat</th>
+
+<th>Acció correctora</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>No s'imparteixen cursos.</td>
+
+<td>Planificar una nova acció formativa.</td>
+
+</tr>
+
+<tr>
+
+<td>No existeixen registres.</td>
+
+<td>Crear un sistema de registre.</td>
+
+</tr>
+
+<tr>
+
+<td>Baixa participació.</td>
+
+<td>Programar noves sessions.</td>
+
+</tr>
+
+<tr>
+
+<td>Política desactualitzada.</td>
+
+<td>Revisar i aprovar una nova versió.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- KPI                                               -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📈 Indicadors de seguiment (KPI)</h3>
+
+<p>
+
+Els indicadors permeten mesurar objectivament l'eficàcia del pla de
+conscienciació.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Indicador</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>% de treballadors formats</td>
+
+<td>&gt;95%</td>
+
+</tr>
+
+<tr>
+
+<td>% d'assistència</td>
+
+<td>&gt;90%</td>
+
+</tr>
+
+<tr>
+
+<td>Resultat dels qüestionaris</td>
+
+<td>&gt;80%</td>
+
+</tr>
+
+<tr>
+
+<td>Incidents notificats</td>
+
+<td>Increment inicial esperat</td>
+
+</tr>
+
+<tr>
+
+<td>Incidents reals</td>
+
+<td>Disminució progressiva</td>
+
+</tr>
+
+<tr>
+
+<td>Temps de notificació</td>
+
+<td>Inferior a 30 minuts</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- PDCA                                              -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>🔄 Millora contínua</h3>
+
+<p>
+
+L'auditoria no representa el final del procés. Les conclusions obtingudes han
+de servir per millorar contínuament el pla de conscienciació.
+
+</p>
+
+<pre class="mermaid">
+flowchart LR
+
+A[Planificar]
+
+-->
+
+B[Implantar]
+
+-->
+
+C[Auditar]
+
+-->
+
+D[Millorar]
+
+-->
+
+A
+
+</pre>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Cada auditoria proporciona informació molt valuosa per planificar la següent
+campanya de conscienciació.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Cas pràctic                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+L'empresa <strong>TecnoVal S.L.</strong> va iniciar fa sis mesos un pla de
+conscienciació en ciberseguretat. L'auditor ha recopilat la informació
+següent:
+
+</p>
+
+<ul>
+
+<li>Només el 72% dels empleats ha assistit als cursos.</li>
+
+<li>La política de seguretat no s'ha actualitzat des de fa tres anys.</li>
+
+<li>Els cartells continuen exposats, però molts estan deteriorats.</li>
+
+<li>No existeixen registres de les simulacions de phishing.</li>
+
+<li>Només la meitat dels treballadors sap com comunicar un incident.</li>
+
+</ul>
+
+<h3>Activitat</h3>
+
+<p>
+
+Identifica les no conformitats detectades i proposa almenys una acció
+correctora per a cadascuna d'elles.
+
+</p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+En moltes organitzacions, la primera auditoria de conscienciació detecta que
+els treballadors coneixen les normes, però no les apliquen en el seu treball
+quotidià. Per això, les observacions directes i les simulacions són eines tan
+importants com la revisió documental.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☑ L'estructura d'un informe d'auditoria.</li>
+
+<li>☑ Què és una no conformitat.</li>
+
+<li>☑ Diferenciar una acció correctora d'una recomanació.</li>
+
+<li>☑ Els principals KPI d'un pla de conscienciació.</li>
+
+<li>☑ El cicle de millora contínua (PDCA).</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!--  Part 4-->
+<!-- ================================================= -->
+<!-- Laboratori                                        -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>💻 Laboratori: Auditoria d'un pla de conscienciació</h2>
+
+<p>
+
+En aquesta pràctica assumiràs el paper d'un auditor de ciberseguretat.
+El teu objectiu serà analitzar la documentació d'una empresa fictícia,
+comprovar el grau de compliment del seu pla de conscienciació i elaborar
+l'informe final amb les conclusions.
+
+</p>
+
+<h3>Objectius</h3>
+
+<ul>
+
+<li>Aplicar una metodologia d'auditoria.</li>
+
+<li>Analitzar documentació realista.</li>
+
+<li>Detectar no conformitats.</li>
+
+<li>Proposar accions correctores.</li>
+
+<li>Redactar un informe professional.</li>
+
+</ul>
+
+<h3>Documentació facilitada</h3>
+
+<ul>
+
+<li>📄 Política de seguretat.</li>
+
+<li>📘 Normativa del lloc de treball.</li>
+
+<li>📅 Pla de conscienciació.</li>
+
+<li>🖼️ Materials de la campanya.</li>
+
+<li>📋 Resultats dels qüestionaris.</li>
+
+<li>📈 Estadístiques d'incidents.</li>
+
+<li>📑 Registre d'assistència.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Tasques                                           -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📝 Tasques a realitzar</h3>
+
+<ol>
+
+<li>Analitzar tota la documentació disponible.</li>
+
+<li>Preparar una checklist d'auditoria.</li>
+
+<li>Detectar els incompliments.</li>
+
+<li>Classificar les no conformitats.</li>
+
+<li>Proposar accions correctores.</li>
+
+<li>Redactar les conclusions.</li>
+
+<li>Presentar l'informe final.</li>
+
+</ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Plantilla checklist                               -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>☑️ Plantilla de checklist</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecte</th>
+
+<th>Complix</th>
+
+<th>No complix</th>
+
+<th>Observacions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Existeix una política de seguretat?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>La política està aprovada?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Els treballadors la coneixen?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>S'ha impartit la formació?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Hi ha registres d'assistència?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Existeixen materials de conscienciació?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>S'han realitzat simulacions?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Els incidents es documenten?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Existeix un pla de millora?</td>
+
+<td>☐</td>
+
+<td>☐</td>
+
+<td></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Informe                                           -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📄 Plantilla d'informe d'auditoria</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Apartat</th>
+
+<th>Contingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectiu</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Abast</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Metodologia</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Evidències</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>No conformitats</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Accions correctores</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Rúbrica                                           -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📊 Rúbrica d'avaluació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Criteri</th>
+
+<th>Pes</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Identificació de les evidències</td>
+
+<td>20%</td>
+
+</tr>
+
+<tr>
+
+<td>Detecció de no conformitats</td>
+
+<td>25%</td>
+
+</tr>
+
+<tr>
+
+<td>Accions correctores</td>
+
+<td>20%</td>
+
+</tr>
+
+<tr>
+
+<td>Qualitat de l'informe</td>
+
+<td>25%</td>
+
+</tr>
+
+<tr>
+
+<td>Presentació</td>
+
+<td>10%</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Projecte final                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>🏆 Projecte final del RA1</h2>
+
+<p>
+
+Aquest laboratori integra tots els criteris d'avaluació del primer resultat
+d'aprenentatge.
+
+</p>
+
+<p>
+
+Treballant en equips, haureu d'auditar la documentació elaborada al llarg del
+RA1 o bé la proporcionada pel professor.
+
+</p>
+
+<h3>Documentació a revisar</h3>
+
+<ul>
+
+<li>CA1a — Principis generals.</li>
+
+<li>CA1b — Normativa del lloc de treball.</li>
+
+<li>CA1c — Pla de conscienciació.</li>
+
+<li>CA1d — Materials de conscienciació.</li>
+
+</ul>
+
+<h3>Productes finals</h3>
+
+<ul>
+
+<li>☑ Checklist completa.</li>
+
+<li>☑ Informe d'auditoria.</li>
+
+<li>☑ Presentació oral.</li>
+
+<li>☑ Pla d'accions correctores.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Autoavaluació                                     -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>✅ Autoavaluació</h3>
+
+<ul>
+
+<li>☐ Sé planificar una auditoria.</li>
+
+<li>☐ Sé identificar evidències.</li>
+
+<li>☐ Sé elaborar una checklist.</li>
+
+<li>☐ Sé detectar no conformitats.</li>
+
+<li>☐ Sé redactar un informe.</li>
+
+<li>☐ Sé proposar accions correctores.</li>
+
+<li>☐ Sé presentar les conclusions.</li>
+
+</ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Resum                                             -->
+<!-- ================================================= -->
+
+<section>
+
+<h3>📚 Resum del criteri</h3>
+
+<p>
+
+L'auditoria és una eina fonamental per verificar que el pla de prevenció i
+conscienciació en ciberseguretat funciona correctament. Mitjançant la
+recollida d'evidències, la revisió documental, les entrevistes i les
+observacions és possible detectar desviacions, proposar millores i reforçar
+la cultura de seguretat de l'organització.
+
+</p>
+
+<pre class="mermaid">
+mindmap
+root((Auditoria))
+    Planificació
+    Evidències
+    Revisió
+    Entrevistes
+    Checklist
+    Informe
+    No conformitats
+    Accions correctores
+    Seguiment
+    Millora contínua
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Sabies que...?                                    -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="didyouknow">
+
+<strong>📦 Sabies que...?</strong>
+
+<p>
+
+Moltes organitzacions descobreixen durant les auditories que els incidents no
+augmenten perquè hi haja més atacs, sinó perquè els treballadors han après a
+identificar-los i comunicar-los correctament. Un augment inicial de les
+notificacions pot ser, en realitat, un indicador positiu de la cultura de
+ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- En l'examen                                       -->
+<!-- ================================================= -->
+
+<section>
+
+<div class="exam">
+
+<strong>🎯 En l'examen has de saber...</strong>
+
+<ul>
+
+<li>☑ Les fases completes d'una auditoria.</li>
+
+<li>☑ La diferència entre evidència, observació i no conformitat.</li>
+
+<li>☑ L'estructura d'un informe d'auditoria.</li>
+
+<li>☑ Els principals KPI d'un pla de conscienciació.</li>
+
+<li>☑ El procés de millora contínua (PDCA).</li>
+
+<li>☑ Com elaborar una checklist i proposar accions correctores.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Recursos                                          -->
+<!-- ================================================= -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<ul>
+
+<li>📄 Plantilla d'informe d'auditoria.</li>
+
+<li>📋 Checklist editable.</li>
+
+<li>📊 Full de seguiment de KPI.</li>
+
+<li>📝 Model d'entrevista a treballadors.</li>
+
+<li>📑 Acta d'auditoria.</li>
+
+<li>📈 Pla d'accions correctores.</li>
+
+<li>📚 Exemple complet d'auditoria resolta.</li>
+
+<li>🎯 Rúbrica del laboratori.</li>
+
+</ul>
+
+</section>
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+    <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+        
+
+</body> 
+</html>

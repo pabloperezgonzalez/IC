@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 1a - Principis generals de ciberseguretat</title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_01.html"> 
+                    RA1 
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA1a
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 1a - Principis generals de ciberseguretat
+                    </h1> 
+                    <p> 
+                        Desenvolupament dels principis generals que han de regir
+                        la política de ciberseguretat d'una organització i el
+                        suport necessari per part de la direcció. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🛡️ 
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+
+<!-- ================================================= -->
+<!-- Targetes de navegació entre CAs                   -->
+<!-- ================================================= -->
+<nav data-ca-navigation></nav>
+
+
+<!-- ================================================= -->
+<!-- Què aprendràs                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🎯 Què aprendràs</h2>
+
+    <div class="learn-box">
+
+        <ul>
+
+            <li>Comprendre què és la governança de la ciberseguretat i la seua importància dins d'una organització.</li>
+
+            <li>Conèixer els principis fonamentals sobre els quals es basa la seguretat de la informació.</li>
+
+            <li>Identificar els principals marcs de referència internacionals en matèria de ciberseguretat.</li>
+
+            <li>Entendre el paper de la direcció en l'establiment d'una política de seguretat eficaç.</li>
+
+            <li>Relacionar els principis generals amb la gestió diària dels sistemes d'informació.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Introducció                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📖 Introducció</h2>
+
+    <p>
+
+        La ciberseguretat ja no és únicament una qüestió tècnica. Actualment
+        forma part de l'estratègia de qualsevol organització, independentment
+        de la seua grandària o sector d'activitat.
+
+    </p>
+
+    <p>
+
+        Les empreses depenen dels seus sistemes d'informació per a desenvolupar
+        pràcticament totes les seues activitats: gestió econòmica, producció,
+        comunicació amb clients, comerç electrònic o serveis en línia. Un únic
+        incident greu pot provocar pèrdues econòmiques, sancions legals,
+        interrupció dels serveis o un greu perjudici per a la reputació de
+        l'organització.
+
+    </p>
+
+    <p>
+
+        Per aquest motiu, abans d'instal·lar tallafocs, antivirus o sistemes de
+        detecció d'intrusions, és necessari definir una estratègia global de
+        seguretat que establisca els objectius, les responsabilitats i les
+        normes que han de seguir totes les persones de l'organització.
+
+    </p>
+
+    <div class="info">
+
+        <strong>ℹ️ Informació</strong>
+
+        <p>
+
+            La tecnologia per si sola no garanteix la seguretat. Les persones,
+            els processos i la tecnologia formen els tres pilars fonamentals
+            d'una estratègia de ciberseguretat efectiva.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Objectius                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎯 Objectius</h3>
+
+    <ul>
+
+        <li>Comprendre el concepte de governança de la ciberseguretat.</li>
+
+        <li>Identificar els principis generals que han de guiar qualsevol organització.</li>
+
+        <li>Conèixer els principals estàndards i marcs de referència internacionals.</li>
+
+        <li>Entendre la importància del suport de la direcció.</li>
+
+        <li>Aplicar aquests principis al disseny d'una política de seguretat.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Governança de la ciberseguretat                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🏛️ Què és la governança de la ciberseguretat?</h3>
+
+    <p>
+
+        La <strong>governança de la ciberseguretat</strong> és el conjunt de
+        polítiques, processos, normes i mecanismes que permeten dirigir,
+        controlar i supervisar la seguretat de la informació dins d'una
+        organització.
+
+    </p>
+
+    <p>
+
+        L'objectiu principal és assegurar que totes les decisions relacionades
+        amb la ciberseguretat estiguen alineades amb els objectius estratègics
+        de l'organització i compten amb el suport explícit de la direcció.
+
+    </p>
+
+    <div class="example">
+
+        <strong>🧪 Exemple</strong>
+
+        <p>
+
+            Una empresa pot adquirir el millor tallafoc del mercat, però si els
+            treballadors comparteixen contrasenyes, no existeix una política de
+            còpies de seguretat o ningú sap com actuar davant un ransomware,
+            la seguretat continuarà sent deficient.
+
+        </p>
+
+    </div>
+
+    <h3>Els tres pilars de la ciberseguretat</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Pilar</th>
+
+                <th>Objectiu</th>
+
+                <th>Exemples</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>👥 Persones</td>
+
+                <td>Reduir els errors humans i fomentar la cultura de seguretat.</td>
+
+                <td>Formació, conscienciació, polítiques internes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>⚙️ Processos</td>
+
+                <td>Definir procediments homogenis davant qualsevol situació.</td>
+
+                <td>Gestió d'incidents, còpies de seguretat, control d'accessos.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>💻 Tecnologia</td>
+
+                <td>Implementar mesures tècniques de protecció.</td>
+
+                <td>Tallafocs, SIEM, EDR, MFA, IDS/IPS, antivirus.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            La tecnologia és només una part de la ciberseguretat. La majoria
+            dels incidents tenen l'origen en errors humans o en processos
+            inadequats.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Per què és necessària?                            -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>❓ Per què és necessària una política de ciberseguretat?</h3>
+
+    <p>
+
+        Sense unes directrius comunes, cada departament podria adoptar
+        pràctiques diferents, generant vulnerabilitats difícils de detectar i
+        gestionar.
+
+    </p>
+
+    <p>
+
+        Una política de ciberseguretat permet establir un marc de treball únic,
+        definir responsabilitats, prioritzar les inversions en seguretat i
+        garantir el compliment de la legislació vigent.
+
+    </p>
+
+    <div class="important">
+
+        <strong>⚠️ Important</strong>
+
+        <p>
+
+            La direcció és la màxima responsable de la ciberseguretat de
+            l'organització. Sense el seu suport, qualsevol política de
+            seguretat està condemnada al fracàs.
+
+        </p>
+
+    </div>
+
+</section>
+<!-- ================================================= -->
+<!-- Principis fonamentals de la ciberseguretat        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🛡️ Principis fonamentals de la ciberseguretat</h2>
+
+    <p>
+
+        Tota estratègia de ciberseguretat es basa en una sèrie de principis
+        generals que orienten les decisions tècniques, organitzatives i
+        legals. Aquests principis són independents de la tecnologia
+        utilitzada i continuen sent vàlids encara que evolucionen les
+        amenaces o apareguen noves eines.
+
+    </p>
+
+    <div class="info">
+
+        <strong>ℹ️ Informació</strong>
+
+        <p>
+
+            Els estàndards internacionals com ISO 27001, el NIST Cybersecurity
+            Framework o l'Esquema Nacional de Seguretat parteixen d'aquests
+            mateixos principis generals.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Tríada CIA                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔐 La tríada CIA</h3>
+
+    <p>
+
+        La tríada <strong>CIA</strong> és el model més conegut de la
+        ciberseguretat. Defineix els tres objectius fonamentals que qualsevol
+        sistema d'informació ha de protegir.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Principi</th>
+
+                <th>Objectiu</th>
+
+                <th>Exemple</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td><strong>Confidencialitat</strong></td>
+
+                <td>Només les persones autoritzades poden accedir a la informació.</td>
+
+                <td>Xifrat, control d'accessos, MFA.</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Integritat</strong></td>
+
+                <td>Garantir que les dades no són modificades sense autorització.</td>
+
+                <td>Hash, signatures digitals, control de versions.</td>
+
+            </tr>
+
+            <tr>
+
+                <td><strong>Disponibilitat</strong></td>
+
+                <td>La informació ha d'estar accessible quan siga necessària.</td>
+
+                <td>Redundància, còpies de seguretat, alta disponibilitat.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            Moltes mesures de seguretat milloren un principi però poden afectar
+            un altre. Per exemple, exigir múltiples factors d'autenticació
+            augmenta la confidencialitat però pot reduir lleugerament la
+            disponibilitat per als usuaris.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Altres principis                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>⚖️ Altres principis de seguretat</h3>
+
+    <p>
+
+        Amb el temps, la tríada CIA s'ha ampliat amb nous principis que són
+        essencials en qualsevol organització moderna.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Principi</th>
+
+                <th>Finalitat</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Autenticitat</td>
+
+                <td>Garantir la identitat real dels usuaris i sistemes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Traçabilitat</td>
+
+                <td>Poder reconstruir totes les accions realitzades.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>No repudi</td>
+
+                <td>Evitar que una persona puga negar una acció que ha realitzat.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Zero Trust                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🚫 Zero Trust</h3>
+
+    <p>
+
+        El model <strong>Zero Trust</strong> parteix d'una idea molt simple:
+
+    </p>
+
+    <blockquote>
+
+        <strong>"Mai confies. Verifica sempre."</strong>
+
+    </blockquote>
+
+    <p>
+
+        Tradicionalment es considerava segura qualsevol persona que es trobava
+        dins de la xarxa corporativa. Actualment aquesta idea ja no és vàlida.
+
+    </p>
+
+    <p>
+
+        Amb el teletreball, el núvol i els dispositius mòbils, qualsevol
+        connexió ha de ser verificada independentment de la seua ubicació.
+
+    </p>
+
+    <div class="example">
+
+        <strong>🧪 Exemple</strong>
+
+        <p>
+
+            Un administrador connectat des de l'oficina també haurà de
+            demostrar la seua identitat mitjançant autenticació multifactor
+            abans d'accedir als servidors crítics.
+
+        </p>
+
+    </div>
+
+    <pre class="mermaid">
+flowchart LR
+
+A[Usuari]
+
+--> B{Verificació}
+
+B -->|Autoritzat| C[Accés mínim necessari]
+
+B -->|No autoritzat| D[Accés denegat]
+    </pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Mínim privilegi                                   -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🔑 Principi del mínim privilegi</h3>
+
+    <p>
+
+        Cada usuari, aplicació o servei només ha de disposar dels permisos
+        imprescindibles per desenvolupar la seua funció.
+
+    </p>
+
+    <p>
+
+        Aquesta pràctica limita l'impacte d'un possible atac, ja que un compte
+        compromès només podrà accedir als recursos estrictament necessaris.
+
+    </p>
+
+    <div class="important">
+
+        <strong>⚠️ Error habitual</strong>
+
+        <p>
+
+            Assignar permisos d'administrador "per comoditat" incrementa
+            considerablement la superfície d'atac de l'organització.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Defensa en profunditat                            -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🏰 Defensa en profunditat</h3>
+
+    <p>
+
+        La defensa en profunditat consisteix a utilitzar diverses capes de
+        protecció independents. Si una d'elles falla, les següents continuen
+        protegint els actius de l'organització.
+
+    </p>
+
+    <pre class="mermaid">
+flowchart LR
+
+A[Internet]
+
+--> B[Tallafoc]
+
+--> C[IDS/IPS]
+
+--> D[EDR]
+
+--> E[Servidor]
+
+--> F[Dades]
+    </pre>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Capa</th>
+
+                <th>Exemple</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Perímetre</td>
+
+                <td>Tallafocs, WAF, VPN.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Xarxa</td>
+
+                <td>Segmentació VLAN, IDS, IPS.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Equips</td>
+
+                <td>Antivirus, EDR, control d'aplicacions.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Identitat</td>
+
+                <td>MFA, IAM, gestió de privilegis.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Dades</td>
+
+                <td>Xifrat, DLP, còpies de seguretat.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="tip">
+
+        <strong>💡 Consell</strong>
+
+        <p>
+
+            No existeix cap eina capaç d'aturar totes les amenaces. La
+            combinació de diverses mesures independents és molt més efectiva
+            que confiar en una única solució.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Marc normatiu                                     -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📜 Principals marcs de referència en ciberseguretat</h2>
+
+    <p>
+
+        Encara que cada organització defineix les seues pròpies polítiques,
+        la majoria es basen en estàndards internacionals que recullen les
+        millors pràctiques de seguretat.
+
+    </p>
+
+    <p>
+
+        Aquests marcs no indiquen quins productes cal instal·lar, sinó que
+        proporcionen una metodologia perquè l'organització gestione la
+        seguretat de manera contínua.
+
+    </p>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ISO 27001                                         -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🌍 ISO/IEC 27001</h3>
+
+    <p>
+
+        La norma <strong>ISO/IEC 27001</strong> és l'estàndard internacional
+        més conegut per implantar un Sistema de Gestió de la Seguretat de la
+        Informació (SGSI).
+
+    </p>
+
+    <p>
+
+        El seu objectiu és protegir els actius d'informació mitjançant una
+        gestió sistemàtica dels riscos.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Aspecte</th>
+
+                <th>Descripció</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Objectiu</td>
+
+                <td>Gestionar la seguretat de la informació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Enfocament</td>
+
+                <td>Basat en la gestió del risc.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Aplicació</td>
+
+                <td>Qualsevol organització.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Certificació</td>
+
+                <td>És certificable mitjançant auditories externes.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="info">
+
+        <strong>ℹ️ Informació</strong>
+
+        <p>
+
+            Moltes empreses exigeixen que els seus proveïdors disposen de la
+            certificació ISO 27001 abans de contractar determinats serveis.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- NIST                                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🛡️ NIST Cybersecurity Framework 2.0</h3>
+
+    <p>
+
+        El <strong>NIST Cybersecurity Framework (CSF)</strong>, desenvolupat
+        pel National Institute of Standards and Technology dels Estats Units,
+        és un dels marcs de referència més utilitzats a escala mundial.
+
+    </p>
+
+    <p>
+
+        Organitza la ciberseguretat en sis funcions principals.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Funció</th>
+
+                <th>Objectiu</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Govern</td>
+
+                <td>Definir l'estratègia, responsabilitats i supervisió.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Identificar</td>
+
+                <td>Conèixer els actius, riscos i vulnerabilitats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Protegir</td>
+
+                <td>Aplicar controls preventius.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Detectar</td>
+
+                <td>Identificar incidents al més prompte possible.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Respondre</td>
+
+                <td>Gestionar els incidents detectats.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Recuperar</td>
+
+                <td>Restablir el funcionament normal.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <pre class="mermaid">
+flowchart LR
+
+A[Govern]
+
+--> B[Identificar]
+
+--> C[Protegir]
+
+--> D[Detectar]
+
+--> E[Respondre]
+
+--> F[Recuperar]
+    </pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ENS                                               -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🏛️ Esquema Nacional de Seguretat (ENS)</h3>
+
+    <p>
+
+        L'<strong>Esquema Nacional de Seguretat</strong> és el marc normatiu
+        que regula la seguretat dels sistemes d'informació de les
+        administracions públiques espanyoles i de totes aquelles empreses que
+        els presten serveis.
+
+    </p>
+
+    <p>
+
+        L'ENS estableix els principis bàsics, els requisits mínims i les
+        mesures de seguretat necessàries per garantir la protecció dels
+        sistemes d'informació.
+
+    </p>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            Si una empresa treballa amb una administració pública és molt
+            probable que haja de complir també els requisits de l'ENS.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Comparativa                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📊 Comparativa dels principals marcs</h3>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Marc</th>
+
+                <th>Àmbit</th>
+
+                <th>Objectiu</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>ISO 27001</td>
+
+                <td>Internacional</td>
+
+                <td>Implantar un SGSI.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>NIST CSF 2.0</td>
+
+                <td>Internacional</td>
+
+                <td>Millorar la gestió integral de la ciberseguretat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>ENS</td>
+
+                <td>Espanya</td>
+
+                <td>Protegir els sistemes del sector públic.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Política de seguretat                             -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📄 Política de ciberseguretat</h2>
+
+    <p>
+
+        La política de ciberseguretat és el document que estableix els
+        principis generals que han de seguir totes les persones de
+        l'organització.
+
+    </p>
+
+    <p>
+
+        Constitueix el punt de partida sobre el qual es desenvolupen la resta
+        de normes, procediments i instruccions de treball.
+
+    </p>
+
+    <h3>Una política de seguretat ha d'incloure:</h3>
+
+    <ul>
+
+        <li>Objectius generals de seguretat.</li>
+
+        <li>Àmbit d'aplicació.</li>
+
+        <li>Responsabilitats dels diferents rols.</li>
+
+        <li>Normes bàsiques d'ús dels sistemes.</li>
+
+        <li>Gestió dels incidents.</li>
+
+        <li>Compromís de la direcció.</li>
+
+        <li>Procés de revisió i actualització.</li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>⚠️ Important</strong>
+
+        <p>
+
+            Una política de seguretat no és un document tècnic. És un document
+            de gestió aprovat per la direcció que serveix de guia per a tota
+            l'organització.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Paper de la Direcció                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>👔 El paper de la direcció</h3>
+
+    <p>
+
+        El primer criteri d'avaluació d'aquest resultat d'aprenentatge indica
+        que els principis generals de ciberseguretat han de ser
+        <strong>coneguts i recolzats per la direcció</strong>.
+
+    </p>
+
+    <p>
+
+        Sense aquest suport resulta molt difícil implantar mesures de
+        seguretat, assignar pressupost, formar el personal o exigir el
+        compliment de les polítiques internes.
+
+    </p>
+
+    <div class="example">
+
+        <strong>🧪 Exemple real</strong>
+
+        <p>
+
+            Si la direcció obliga a utilitzar autenticació multifactor però els
+            propis directius continuen utilitzant contrasenyes simples o
+            comparteixen comptes, la resta de treballadors difícilment
+            consideraran important la política de seguretat.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Bones pràctiques                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>✅ Bones pràctiques per establir els principis generals de ciberseguretat</h2>
+
+    <p>
+
+        Definir uns bons principis generals és el primer pas per construir una
+        organització resilient davant les amenaces. Aquests principis han de
+        ser senzills, coneguts per tot el personal i aprovats formalment per la
+        direcció.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Principi</th>
+
+                <th>Aplicació pràctica</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>La seguretat és responsabilitat de tots.</td>
+
+                <td>Tots els treballadors han de seguir les polítiques establertes.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Mínim privilegi.</td>
+
+                <td>Cada usuari només disposa dels permisos imprescindibles.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Defensa en profunditat.</td>
+
+                <td>Aplicar diverses capes de protecció.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Millora contínua.</td>
+
+                <td>Revisar periòdicament els controls de seguretat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Gestió basada en el risc.</td>
+
+                <td>Prioritzar les mesures segons l'impacte dels riscos.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <div class="tip">
+
+        <strong>💡 Consell</strong>
+
+        <p>
+
+            Els principis generals no haurien de canviar amb freqüència. El que
+            evoluciona són els procediments i les mesures tècniques que els
+            desenvolupen.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Cas pràctic                                       -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🏢 Cas pràctic</h2>
+
+    <h3>Empresa LogiTrans S.L.</h3>
+
+    <p>
+
+        LogiTrans és una empresa de transport amb 120 treballadors que disposa
+        de diverses delegacions connectades per VPN. La direcció vol elaborar
+        la seua primera política de ciberseguretat.
+
+    </p>
+
+    <p>
+
+        Després d'una reunió amb els responsables dels diferents departaments,
+        s'han detectat diversos problemes:
+
+    </p>
+
+    <ul>
+
+        <li>Els empleats comparteixen contrasenyes.</li>
+
+        <li>No existeix una política comuna de còpies de seguretat.</li>
+
+        <li>Cada departament compra el programari que considera necessari.</li>
+
+        <li>No hi ha procediments davant incidents.</li>
+
+        <li>No existeix cap responsable de ciberseguretat.</li>
+
+    </ul>
+
+    <div class="important">
+
+        <strong>⚠️ Reflexiona</strong>
+
+        <p>
+
+            Quin d'aquests problemes és tecnològic i quin correspon a una manca
+            de governança?
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Activitat guiada                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📝 Activitat 1. Definició dels principis generals</h3>
+
+    <p>
+
+        Treballant en grups de 3 o 4 alumnes, redacteu una proposta de
+        principis generals de ciberseguretat per a l'empresa LogiTrans.
+
+    </p>
+
+    <h3>Els principis han d'incloure com a mínim:</h3>
+
+    <ul>
+
+        <li>Compromís de la direcció.</li>
+
+        <li>Responsabilitat dels treballadors.</li>
+
+        <li>Protecció de la informació.</li>
+
+        <li>Compliment de la legislació.</li>
+
+        <li>Millora contínua.</li>
+
+        <li>Resposta davant incidents.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Activitat individual                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>✍️ Activitat 2. Anàlisi crítica</h3>
+
+    <p>
+
+        Busca a Internet la política de seguretat d'una organització pública o
+        privada (universitat, ajuntament, empresa, etc.) i respon les
+        qüestions següents:
+
+    </p>
+
+    <ol>
+
+        <li>Qui aprova la política?</li>
+
+        <li>Quins són els seus objectius?</li>
+
+        <li>Quins principis generals defineix?</li>
+
+        <li>Com es reparteixen les responsabilitats?</li>
+
+        <li>Quan s'ha revisat per última vegada?</li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Laboratori                                        -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🧪 Laboratori</h3>
+
+    <h3>Creació d'una política de ciberseguretat</h3>
+
+    <p>
+
+        En aquest laboratori elaborarem l'estructura bàsica d'una política de
+        ciberseguretat per a una empresa fictícia.
+
+    </p>
+
+    <h3>Objectius</h3>
+
+    <ul>
+
+        <li>Identificar els actius principals.</li>
+
+        <li>Definir els principis generals.</li>
+
+        <li>Assignar responsabilitats.</li>
+
+        <li>Establir normes bàsiques.</li>
+
+    </ul>
+
+    <h3>Material necessari</h3>
+
+    <ul>
+
+        <li>Editor de text (LibreOffice Writer o Microsoft Word).</li>
+
+        <li>Plantilla de política de seguretat proporcionada pel professor.</li>
+
+    </ul>
+
+    <div class="example">
+
+        <strong>🧪 Resultat esperat</strong>
+
+        <p>
+
+            Al final del laboratori cada grup haurà elaborat una política de
+            ciberseguretat inicial formada per entre dues i quatre pàgines,
+            preparada per ser presentada a la direcció de l'empresa.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Errors habituals                                  -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>❌ Errors més habituals</h3>
+
+    <ul>
+
+        <li>Confondre una política de seguretat amb un manual tècnic.</li>
+
+        <li>No implicar la direcció.</li>
+
+        <li>Redactar normes impossibles de complir.</li>
+
+        <li>No revisar periòdicament la política.</li>
+
+        <li>No comunicar-la als treballadors.</li>
+
+        <li>No definir responsables.</li>
+
+    </ul>
+
+    <div class="remember">
+
+        <strong>🧠 Recorda</strong>
+
+        <p>
+
+            Una política de ciberseguretat només és efectiva si és coneguda,
+            compresa, aplicada i revisada periòdicament per tota
+            l'organització.
+
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- Resum                                              -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>📋 Resum</h2>
+
+    <p>
+
+        Els principis generals de ciberseguretat constitueixen el fonament
+        sobre el qual es desenvolupa tota l'estratègia de seguretat d'una
+        organització. Sense una política clara, coneguda i recolzada per la
+        direcció, les mesures tècniques resulten insuficients.
+
+    </p>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Concepte</th>
+
+                <th>Idea clau</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>Governança</td>
+
+                <td>Dirigir i supervisar la ciberseguretat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Política de seguretat</td>
+
+                <td>Document que estableix els principis generals.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>CIA</td>
+
+                <td>Confidencialitat, Integritat i Disponibilitat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Zero Trust</td>
+
+                <td>No confiar en cap usuari o dispositiu per defecte.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Mínim privilegi</td>
+
+                <td>Només els permisos estrictament necessaris.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Defensa en profunditat</td>
+
+                <td>Diverses capes de protecció independents.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>ISO 27001</td>
+
+                <td>Gestió de la seguretat de la informació.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>NIST CSF</td>
+
+                <td>Marc per gestionar la ciberseguretat.</td>
+
+            </tr>
+
+            <tr>
+
+                <td>ENS</td>
+
+                <td>Marc de seguretat del sector públic espanyol.</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Mapa conceptual                                    -->
+<!-- ================================================= -->
+
+<section>
+
+    <h2>🧩 Mapa conceptual</h2>
+
+<pre class="mermaid">
+mindmap
+  root((Governança de la
+Ciberseguretat))
+
+    Política
+
+        Principis
+
+        Normes
+
+        Procediments
+
+    Persones
+
+        Formació
+
+        Conscienciació
+
+        Responsabilitats
+
+    Processos
+
+        Gestió del risc
+
+        Gestió d'incidents
+
+        Auditories
+
+    Tecnologia
+
+        Tallafocs
+
+        EDR
+
+        SIEM
+
+        MFA
+
+    Estàndards
+
+        ISO 27001
+
+        NIST CSF
+
+        ENS
+</pre>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Autoavaluació                                      -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>✅ Autoavaluació</h3>
+
+    <ol>
+
+        <li>
+
+            Quin és l'objectiu principal d'una política de ciberseguretat?
+
+        </li>
+
+        <li>
+
+            Qui és el màxim responsable de la ciberseguretat dins d'una
+            organització?
+
+        </li>
+
+        <li>
+
+            En què consisteix el principi del mínim privilegi?
+
+        </li>
+
+        <li>
+
+            Quins són els tres pilars de la tríada CIA?
+
+        </li>
+
+        <li>
+
+            Quina diferència hi ha entre ISO 27001 i el NIST CSF?
+
+        </li>
+
+        <li>
+
+            Per què és important la conscienciació dels treballadors?
+
+        </li>
+
+    </ol>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Checklist                                          -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>✔️ Checklist del criteri d'avaluació</h3>
+
+    <p>
+
+        Abans de continuar amb el següent criteri, comprova que eres capaç de:
+
+    </p>
+
+    <ul>
+
+        <li>☐ Explicar què és la governança de la ciberseguretat.</li>
+
+        <li>☐ Descriure els principis generals d'una política de seguretat.</li>
+
+        <li>☐ Diferenciar confidencialitat, integritat i disponibilitat.</li>
+
+        <li>☐ Explicar els principis Zero Trust i Mínim Privilegi.</li>
+
+        <li>☐ Comprendre el concepte de Defensa en Profunditat.</li>
+
+        <li>☐ Identificar els principals marcs normatius (ISO 27001, NIST CSF i ENS).</li>
+
+        <li>☐ Justificar la necessitat del suport de la direcció.</li>
+
+        <li>☐ Redactar una proposta bàsica de principis generals de ciberseguretat.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Recursos                                           -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>📚 Recursos recomanats</h3>
+
+    <ul>
+
+        <li>📄 Presentació del professor.</li>
+
+        <li>📄 Plantilla de política de ciberseguretat.</li>
+
+        <li>📄 Guia resum dels principis CIA.</li>
+
+        <li>📄 Exercicis proposats.</li>
+
+        <li>🧪 Laboratori de governança.</li>
+
+        <li>🌐 Documentació oficial d'ISO 27001.</li>
+
+        <li>🌐 NIST Cybersecurity Framework 2.0.</li>
+
+        <li>🌐 Esquema Nacional de Seguretat.</li>
+
+    </ul>
+
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- Conclusió                                          -->
+<!-- ================================================= -->
+
+<section>
+
+    <h3>🎓 Conclusions</h3>
+
+    <p>
+
+        La tecnologia és només una part de la ciberseguretat. Les
+        organitzacions que obtenen millors resultats són aquelles que
+        estableixen una estratègia global basada en principis generals,
+        polítiques clares, procediments definits i una cultura de seguretat
+        compartida per totes les persones.
+
+    </p>
+
+    <div class="remember">
+
+        <strong>🧠 Idea clau del criteri 1a</strong>
+
+        <p>
+
+            <strong>La direcció ha d'aprovar, impulsar i donar suport als
+            principis generals de ciberseguretat, perquè siguen coneguts i
+            aplicats per tota l'organització.</strong>
+
+        </p>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h3>📦 Sabies que...?</h3>
+
+    <div class="didyouknow">
+
+        <p>
+
+        L'any 2021 l'atac de ransomware contra l'empresa Colonial Pipeline va
+        provocar la interrupció del principal oleoducte de la costa est dels
+        Estats Units. L'incident va afectar el subministrament de combustible,
+        demostrant que un ciberatac pot tenir conseqüències sobre
+        infraestructures crítiques i la vida quotidiana de milions de persones.
+
+    </p>
+
+    </div>
+    
+
+    <h3>📦 Cas real</h3>
+
+    <h4>Colonial Pipeline (2021)</h4>
+
+    <table>
+
+        <tr>
+            <th>Tipus d'incident</th>
+            <td>Ransomware</td>
+        </tr>
+
+        <tr>
+            <th>Conseqüència</th>
+            <td>Paralització del principal oleoducte dels EUA.</td>
+        </tr>
+
+        <tr>
+            <th>Impacte</th>
+            <td>Escassetat temporal de combustible en diversos estats.</td>
+        </tr>
+
+        <tr>
+            <th>Lliçó apresa</th>
+            <td>La ciberseguretat és també un problema de negoci, no només tecnològic.</td>
+        </tr>
+
+    </table>    
+
+</section>
+
+
+<section>
+<div class="exam">
+
+        <h3>🎯 En l'examen...</h3>
+
+        <ul>
+
+        <li>☐ Has de saber definir la governança de la ciberseguretat.</li>
+
+        <li>☐ Diferenciar una política de seguretat d'un procediment.</li>
+
+        <li>☐ Conèixer la tríada CIA i explicar cada principi.</li>
+
+        <li>☐ Explicar què és Zero Trust.</li>
+
+        <li>☐ Relacionar ISO 27001, NIST CSF i ENS amb la governança.</li>
+
+        <li>☐ Recordar que la direcció és la responsable última de la política de seguretat.</li>
+
+    </ul>
+
+</div>
+
+</section>
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+<!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

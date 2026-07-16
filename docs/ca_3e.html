@@ -1,0 +1,2006 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 3e - Mesures inicials de contenció </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_03.html"> 
+                    RA3
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA3e
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6b501a, #4a3809);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 3e - Mesures inicials de contenció
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🔎
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a aplicar les
+<strong>primeres mesures de contenció</strong> davant un incident de
+ciberseguretat. La contenció és una fase crítica perquè el seu
+objectiu és impedir que l'incident continue propagant-se mentre
+s'investiga i es prepara la recuperació dels sistemes afectats.
+</p>
+
+<p>
+També coneixeràs les diferents estratègies de contenció, els criteris
+per decidir quines accions aplicar i les bones pràctiques que
+permeten reduir els danys sense comprometre les evidències ni la
+continuïtat dels serveis.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el concepte de contenció d'un incident.</li>
+
+<li>Diferenciar les mesures de contenció immediata i permanent.</li>
+
+<li>Conèixer les primeres actuacions davant un incident.</li>
+
+<li>Aprendre a reduir l'impacte d'un atac.</li>
+
+<li>Preservar les evidències durant la contenció.</li>
+
+<li>Preparar la fase posterior d'erradicació i recuperació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan es detecta un incident de ciberseguretat no sempre és possible
+eliminar immediatament la causa del problema. En moltes ocasions cal
+actuar ràpidament per evitar que l'atac continue estenent-se mentre
+els especialistes investiguen què ha ocorregut.
+</p>
+
+<p>
+Aquest conjunt d'accions rep el nom de
+<strong>contenció</strong>. Les mesures de contenció busquen limitar
+els efectes de l'incident, protegir la informació crítica i mantindre
+els serveis essencials funcionant sempre que siga possible.
+</p>
+
+<p>
+Una bona contenció redueix les pèrdues econòmiques, facilita la
+investigació posterior i incrementa les probabilitats de recuperar
+els sistemes sense conseqüències greus.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu de la contenció no és solucionar definitivament
+l'incident, sinó impedir que continue provocant danys mentre es
+preparen les actuacions següents.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA CONTENCIÓ D'UN INCIDENT?
+========================================================== -->
+
+<section>
+
+<h2>Què és la contenció d'un incident?</h2>
+
+<p>
+La <strong>contenció</strong> és el conjunt de mesures aplicades
+immediatament després de detectar un incident amb la finalitat de
+limitar-ne la propagació, reduir l'impacte i protegir els actius de
+l'organització.
+</p>
+
+<p>
+Aquestes actuacions poden consistir en aïllar equips compromesos,
+bloquejar comptes d'usuari, interrompre determinades comunicacions o
+segmentar la xarxa per impedir que l'atac afecte altres sistemes.
+</p>
+
+<p>
+La contenció ha de realitzar-se de forma controlada per evitar
+destruir evidències útils per a la investigació o interrompre serveis
+crítics de manera innecessària.
+</p>
+
+<h3>Característiques principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Rapidesa</td>
+
+<td>S'aplica immediatament després de detectar l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Limitació</td>
+
+<td>Redueix la propagació de l'atac.</td>
+
+</tr>
+
+<tr>
+
+<td>Protecció</td>
+
+<td>Minimitza els danys als actius.</td>
+
+</tr>
+
+<tr>
+
+<td>Temporalitat</td>
+
+<td>És una mesura provisional.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinació</td>
+
+<td>Es realitza seguint els procediments establerts.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si un equip està infectat amb ransomware, una de les primeres mesures
+de contenció consisteix a desconnectar-lo de la xarxa per impedir que
+el malware xifre els fitxers compartits de la resta de l'organització.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Contenció]
+
+--> C[Investigació]
+
+--> D[Erradicació]
+
+--> E[Recuperació]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE LA CONTENCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Objectius de la contenció</h2>
+
+<p>
+Les mesures de contenció tenen com a finalitat reduir al màxim les
+conseqüències d'un incident fins que siga possible eliminar-ne la
+causa i recuperar completament els sistemes afectats.
+</p>
+
+<p>
+Per aconseguir-ho és necessari actuar de manera ràpida, coordinada i
+proporcionada, evitant que les mesures adoptades provoquen més danys
+que el mateix incident.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Limitar la propagació</td>
+
+<td>Evitar que l'atac arribe a altres sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Protegir les dades</td>
+
+<td>Reduir el risc de pèrdua o robatori d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Mantindre serveis</td>
+
+<td>Garantir la continuïtat del negoci.</td>
+
+</tr>
+
+<tr>
+
+<td>Preservar evidències</td>
+
+<td>Facilitar la investigació posterior.</td>
+
+</tr>
+
+<tr>
+
+<td>Guanyar temps</td>
+
+<td>Permetre planificar la resposta definitiva.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una contenció eficaç pot reduir enormement l'impacte d'un atac encara
+que l'amenaça continue present en algun sistema.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     TIPUS DE CONTENCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Tipus de contenció</h2>
+
+<p>
+No totes les situacions requereixen la mateixa resposta. Segons la
+gravetat de l'incident i el temps disponible, es poden aplicar
+diferents estratègies de contenció.
+</p>
+
+<p>
+Habitualment es diferencien dos tipus principals: la contenció a curt
+termini, orientada a actuar immediatament, i la contenció a llarg
+termini, destinada a mantenir el sistema protegit fins a eliminar
+completament la causa de l'incident.
+</p>
+
+<h3>Comparativa</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Objectiu</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Curt termini</td>
+
+<td>Aturar la propagació.</td>
+
+<td>Desconnectar un servidor.</td>
+
+</tr>
+
+<tr>
+
+<td>Llarg termini</td>
+
+<td>Mantindre el risc controlat.</td>
+
+<td>Aplicar regles temporals al Firewall.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident detectat]
+
+--> B{Contenció}
+
+B --> C[Curt termini]
+
+B --> D[Llarg termini]
+
+C --> E[Limitar propagació]
+
+D --> F[Mantenir el servei fins a l'erradicació]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Sempre que siga possible, la contenció ha de permetre continuar
+prestant els serveis essencials de l'organització sense posar en risc
+la resta dels sistemes.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     MESURES INICIALS DE CONTENCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Mesures inicials de contenció</h2>
+
+<p>
+Les primeres actuacions són decisives per evitar que un incident
+continue propagant-se. Aquestes mesures han d'aplicar-se tan prompte
+com siga possible, però sempre de manera controlada i seguint els
+procediments definits pel pla de resposta davant incidents.
+</p>
+
+<p>
+L'objectiu és reduir el risc immediat mentre es preserven les
+evidències i es prepara la fase d'erradicació. Les accions
+dependran del tipus d'incident, dels sistemes afectats i de l'impacte
+sobre l'organització.
+</p>
+
+<h3>Mesures més habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Mesura</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Aïllar equips</td>
+
+<td>Evitar la propagació.</td>
+
+</tr>
+
+<tr>
+
+<td>Bloquejar comptes</td>
+
+<td>Impedir accessos no autoritzats.</td>
+
+</tr>
+
+<tr>
+
+<td>Bloquejar IP o dominis</td>
+
+<td>Interrompre les comunicacions amb l'atacant.</td>
+
+</tr>
+
+<tr>
+
+<td>Segmentar la xarxa</td>
+
+<td>Reduir la superfície afectada.</td>
+
+</tr>
+
+<tr>
+
+<td>Aturar serveis</td>
+
+<td>Evitar més danys.</td>
+
+</tr>
+
+<tr>
+
+<td>Incrementar la monitorització</td>
+
+<td>Detectar nous moviments.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si un servidor mostra connexions constants cap a una IP maliciosa,
+una mesura inicial consisteix a bloquejar aquesta comunicació al
+Firewall mentre continua la investigació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Incident]
+
+--> B[Aïllar]
+
+--> C[Bloquejar]
+
+--> D[Monitoritzar]
+
+--> E[Investigar]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     AÏLLAMENT DELS SISTEMES AFECTATS
+========================================================== -->
+
+<section>
+
+<h2>Aïllament dels sistemes afectats</h2>
+
+<p>
+L'aïllament consisteix a separar els equips compromesos de la resta de
+la infraestructura per impedir que l'atac continue expandint-se.
+Aquesta és una de les primeres actuacions que duen a terme els equips
+CSIRT i SOC davant incidents greus.
+</p>
+
+<p>
+L'aïllament pot ser físic, desconnectant el dispositiu de la xarxa, o
+lògic, aplicant regles de Firewall, VLAN o sistemes de control
+d'accés que restringisquen les comunicacions.
+</p>
+
+<h3>Formes d'aïllament</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tècnica</th>
+
+<th>Aplicació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Desconnexió de xarxa</td>
+
+<td>Retirar el cable o desactivar la interfície.</td>
+
+</tr>
+
+<tr>
+
+<td>Quarantena EDR</td>
+
+<td>Aïllament automàtic de l'equip.</td>
+
+</tr>
+
+<tr>
+
+<td>Segmentació VLAN</td>
+
+<td>Separar la màquina de la resta.</td>
+
+</tr>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Bloquejar comunicacions.</td>
+
+</tr>
+
+<tr>
+
+<td>NAC</td>
+
+<td>Restringir l'accés a la xarxa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Abans d'apagar un equip és necessari valorar si aquesta acció pot
+eliminar evidències importants, especialment les que resideixen en la
+memòria RAM.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Equip compromés]
+
+--> B{Aïllar}
+
+B --> C[Quarantena]
+
+B --> D[Desconnexió]
+
+B --> E[VLAN]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BLOQUEIG DE COMPTES, SERVEIS I COMUNICACIONS
+========================================================== -->
+
+<section>
+
+<h2>Bloqueig de comptes, serveis i comunicacions</h2>
+
+<p>
+Molts incidents aprofiten comptes compromesos o serveis vulnerables
+per continuar avançant dins de la xarxa. Per això és habitual aplicar
+bloquejos temporals fins que finalitze la investigació.
+</p>
+
+<p>
+Aquestes actuacions impedeixen que l'atacant continue utilitzant els
+mateixos mecanismes d'accés mentre els equips tècnics preparen les
+mesures definitives.
+</p>
+
+<h3>Accions habituals</h3>
+
+<ul>
+
+<li>Desactivar comptes d'usuari compromesos.</li>
+
+<li>Forçar el canvi de contrasenyes.</li>
+
+<li>Revocar certificats digitals.</li>
+
+<li>Bloquejar accessos VPN.</li>
+
+<li>Desactivar serveis vulnerables.</li>
+
+<li>Bloquejar IP, dominis i URL malicioses.</li>
+
+<li>Aplicar regles temporals al Firewall.</li>
+
+<li>Bloquejar fitxers mitjançant EDR o antivirus.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Sempre que siga possible, aplica bloquejos selectius. Això permet
+reduir l'impacte sobre els serveis sense afectar la resta dels
+usuaris.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONSERVACIÓ DE LES EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Conservació de les evidències durant la contenció</h2>
+
+<p>
+Una de les dificultats principals és aplicar mesures de contenció
+sense destruir les evidències necessàries per a la investigació.
+Algunes actuacions aparentment senzilles, com apagar un ordinador,
+poden eliminar informació molt valuosa.
+</p>
+
+<p>
+Per aquest motiu, abans d'executar qualsevol acció és recomanable
+avaluar si és possible capturar la memòria RAM, recopilar els logs o
+realitzar una còpia forense del sistema afectat.
+</p>
+
+<h3>Bones pràctiques</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Acció</th>
+
+<th>Motiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Capturar la RAM</td>
+
+<td>Preservar processos i connexions actives.</td>
+
+</tr>
+
+<tr>
+
+<td>Guardar els logs</td>
+
+<td>Evitar la seua sobreescriptura.</td>
+
+</tr>
+
+<tr>
+
+<td>Realitzar una imatge forense</td>
+
+<td>Mantindre la integritat de les proves.</td>
+
+</tr>
+
+<tr>
+
+<td>Registrar les actuacions</td>
+
+<td>Garantir la traçabilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Calcular els hash</td>
+
+<td>Verificar la integritat de les evidències.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una bona contenció no només limita els danys; també preserva les
+proves que permetran comprendre què ha ocorregut i, si és necessari,
+utilitzar-les com a evidències en un procediment judicial.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detectar]
+
+--> B[Capturar evidències]
+
+--> C[Aplicar contenció]
+
+--> D[Investigar]
+
+--> E[Recuperar]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     PRESA DE DECISIONS DURANT LA CONTENCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Presa de decisions durant la contenció</h2>
+
+<p>
+La fase de contenció requereix prendre decisions en molt poc temps i,
+sovint, amb informació incompleta. L'objectiu és reduir l'impacte de
+l'incident sense comprometre la investigació ni provocar una aturada
+innecessària dels serveis.
+</p>
+
+<p>
+Per aquest motiu és fonamental que l'organització dispose d'un
+procediment de resposta, una cadena de comandament clara i criteris
+predefinits per decidir quines mesures aplicar segons la gravetat de
+l'incident.
+</p>
+
+<h3>Factors que influeixen en la decisió</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Factor</th>
+
+<th>Influència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Impacte sobre el negoci</td>
+
+<td>Determina si cal mantenir el servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Gravetat de l'incident</td>
+
+<td>Condiciona la rapidesa de la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Propagació de l'atac</td>
+
+<td>Pot requerir un aïllament immediat.</td>
+
+</tr>
+
+<tr>
+
+<td>Valor de les evidències</td>
+
+<td>Pot retardar algunes actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Disponibilitat de serveis</td>
+
+<td>Ajuda a prioritzar les actuacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Recursos disponibles</td>
+
+<td>Condiciona la capacitat de resposta.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Si un servidor de còpies de seguretat està compromés però continua
+funcionant, pot ser preferible aïllar-lo de la xarxa abans que apagar-lo,
+ja que així es preserven les evidències i s'evita la propagació del
+malware.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident detectat]
+
+--> B{Avaluació}
+
+B --> C[Impacte]
+
+B --> D[Risc]
+
+B --> E[Evidències]
+
+C --> F[Decisió]
+
+D --> F
+
+E --> F
+
+F --> G[Mesura de contenció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONTINUÏTAT DEL NEGOCI I SEGURETAT
+========================================================== -->
+
+<section>
+
+<h2>Equilibri entre continuïtat del negoci i seguretat</h2>
+
+<p>
+Una de les decisions més complexes consisteix a trobar l'equilibri
+entre protegir els sistemes i mantenir operatius els serveis
+essencials. Una contenció massa agressiva pot paralitzar
+l'organització, mentre que una resposta massa permissiva pot afavorir
+la propagació de l'atac.
+</p>
+
+<p>
+Per aquest motiu, moltes organitzacions elaboren plans de continuïtat
+del negoci (BCP) i plans de recuperació davant desastres (DRP), que
+defineixen les prioritats i les actuacions en cada situació.
+</p>
+
+<h3>Possibles estratègies</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Estratègia</th>
+
+<th>Avantatge</th>
+
+<th>Inconvenient</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Apagar el sistema</td>
+
+<td>Atura l'atac ràpidament.</td>
+
+<td>Interromp el servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Aïllar-lo</td>
+
+<td>Redueix la propagació.</td>
+
+<td>Pot limitar la funcionalitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Monitoritzar-lo</td>
+
+<td>Permet continuar investigant.</td>
+
+<td>L'atac pot continuar actiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Activar sistemes alternatius</td>
+
+<td>Manté el servei.</td>
+
+<td>Requereix infraestructura redundant.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La millor decisió no sempre és la més ràpida. Cal valorar
+simultàniament els riscos tècnics, econòmics i operacionals abans
+d'actuar.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS DURANT LA CONTENCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals durant la contenció</h2>
+
+<p>
+Molts incidents s'agreugen perquè les primeres actuacions es realitzen
+sense seguir un procediment establit. Alguns errors poden destruir
+evidències, dificultar la investigació o incrementar l'impacte de
+l'atac.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Apagar immediatament els equips sense valorar les conseqüències.</li>
+
+<li>No conservar la memòria RAM abans de reiniciar un sistema.</li>
+
+<li>No documentar les actuacions realitzades.</li>
+
+<li>Desconnectar serveis crítics sense autorització.</li>
+
+<li>Comunicar informació incompleta o incorrecta.</li>
+
+<li>Retardar massa les mesures de contenció.</li>
+
+<li>No coordinar les actuacions amb l'equip CSIRT.</li>
+
+<li>Bloquejar únicament un equip quan la infecció ja s'ha propagat.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Intentar eliminar el malware abans d'haver recopilat les evidències
+pot dificultar enormement la investigació posterior.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+    Sense procediment
+    Sense documentació
+
+    Sense evidències
+
+    Contenció tardana
+
+    Mala coordinació
+
+    Excés d'interrupcions
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques durant la contenció</h2>
+
+<p>
+L'experiència dels equips CSIRT ha permés definir un conjunt de bones
+pràctiques que milloren l'eficàcia de les primeres actuacions davant
+un incident.
+</p>
+
+<p>
+Aplicar aquestes recomanacions facilita la coordinació, redueix
+l'impacte de l'incident i prepara adequadament les fases
+d'erradicació i recuperació.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Seguir sempre el pla de resposta davant incidents.</li>
+
+<li>Actuar tan prompte com siga possible.</li>
+
+<li>Prioritzar la protecció dels actius crítics.</li>
+
+<li>Preservar totes les evidències.</li>
+
+<li>Documentar totes les decisions adoptades.</li>
+
+<li>Coordinar-se amb la direcció i el CSIRT.</li>
+
+<li>Comunicar les actuacions als responsables.</li>
+
+<li>Revisar contínuament l'eficàcia de les mesures aplicades.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Una bona contenció és aquella que limita els danys, preserva les
+evidències i facilita una recuperació ràpida dels serveis sense crear
+nous problemes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+Les mesures de contenció varien segons el tipus d'incident detectat.
+L'objectiu sempre és el mateix: impedir que l'atac continue
+propagant-se mentre es prepara l'erradicació i la recuperació dels
+sistemes afectats.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Mesura de contenció</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Aïllar l'equip de la xarxa.</td>
+
+<td>Evitar el xifrat d'altres equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Bloquejar el domini fraudulent.</td>
+
+<td>Evitar noves víctimes.</td>
+
+</tr>
+
+<tr>
+
+<td>Compte compromés</td>
+
+<td>Desactivar el compte.</td>
+
+<td>Impedir nous accessos.</td>
+
+</tr>
+
+<tr>
+
+<td>Malware</td>
+
+<td>Posar l'equip en quarantena.</td>
+
+<td>Evitar moviments laterals.</td>
+
+</tr>
+
+<tr>
+
+<td>Intrusió remota</td>
+
+<td>Bloquejar la IP atacant.</td>
+
+<td>Interrompre la connexió.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un EDR detecta un comportament compatible amb ransomware en un
+ordinador. Automàticament posa l'equip en quarantena, talla totes les
+connexions de xarxa i alerta el SOC perquè inicie la investigació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+La rapidesa és important, però totes les actuacions han d'estar
+planificades i documentades. Una decisió precipitada pot agreujar
+l'incident o dificultar la investigació posterior.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Actua segons el pla de resposta als incidents.</li>
+
+<li>Prioritza els actius crítics.</li>
+
+<li>Conserva sempre les evidències.</li>
+
+<li>Documenta totes les actuacions.</li>
+
+<li>Coordina't amb la direcció i el CSIRT.</li>
+
+<li>Utilitza eines automàtiques quan siga possible.</li>
+
+<li>Comprova l'eficàcia de les mesures aplicades.</li>
+
+<li>Comunica qualsevol canvi important.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La contenció és una mesura temporal. Una vegada limitat l'incident,
+cal continuar amb les fases d'erradicació, recuperació i revisió de
+les lliçons apreses.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La contenció no elimina la causa de l'incident.</li>
+
+<li>No sempre és convenient apagar els equips.</li>
+
+<li>Cal preservar la memòria RAM quan siga necessari.</li>
+
+<li>Les decisions han de quedar documentades.</li>
+
+<li>La coordinació és fonamental.</li>
+
+<li>Els serveis crítics requereixen una atenció especial.</li>
+
+<li>Les evidències han de mantenir la seua integritat.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una bona contenció permet reduir els danys sense comprometre la
+investigació ni la recuperació posterior.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Molts EDR poden actuar automàticament</strong>
+
+<p>
+
+Les plataformes modernes d'EDR són capaces d'aïllar un ordinador de
+la xarxa en pocs segons quan detecten un comportament sospitós.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els primers minuts són crítics</strong>
+
+<p>
+
+Diversos estudis indiquen que la rapidesa de la contenció és un dels
+factors que més influeix en la reducció de l'impacte econòmic d'un
+incident de ciberseguretat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La segmentació limita els moviments laterals</strong>
+
+<p>
+
+Dividir la xarxa en segments independents dificulta que un atacant
+puga comprometre tota la infraestructura després d'infectar un únic
+equip.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>No tots els incidents requereixen apagar els sistemes</strong>
+
+<p>
+
+En moltes investigacions és preferible mantindre els equips en
+funcionament, però aïllats, per conservar evidències que desapareixen
+quan es reinicia el sistema.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta que diversos ordinadors estan intentant
+connectar-se a un servidor extern desconegut mentre es produeix un
+increment anòmal de l'activitat del disc.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Observació</th>
+
+<th>Situació detectada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Equips afectats</td>
+
+<td>8 estacions de treball.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor afectat</td>
+
+<td>Servidor de fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>Activitat</td>
+
+<td>Xifrat massiu de documents.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicacions</td>
+
+<td>Connexions cap a una IP desconeguda.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Serveis compartits degradats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Identifica les primeres mesures de contenció que aplicaries.</li>
+
+<li>Decideix quins equips s'han d'aïllar.</li>
+
+<li>Explica quines comunicacions bloquejaries.</li>
+
+<li>Indica quines evidències conservaries abans d'actuar.</li>
+
+<li>Justifica les teues decisions segons el risc existent.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica actuaràs com a membre d'un <strong>equip CSIRT</strong>
+que ha detectat un incident de ransomware dins de la xarxa d'una
+empresa. El teu objectiu serà aplicar les primeres mesures de
+contenció per limitar els danys, preservar les evidències i garantir,
+sempre que siga possible, la continuïtat dels serveis essencials.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Diversos equips informen que no poden accedir als documents compartits.
+El SIEM mostra un increment anòmal de trànsit SMB entre diversos
+ordinadors i un EDR detecta processos compatibles amb un ransomware.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Registres del SIEM.</li>
+
+<li>Alertes de l'EDR.</li>
+
+<li>Captura de trànsit de xarxa.</li>
+
+<li>Llista d'equips afectats.</li>
+
+<li>Topologia de la xarxa.</li>
+
+<li>Política de resposta davant incidents.</li>
+
+<li>Consola del Firewall.</li>
+
+<li>Inventari dels actius.</li>
+
+<li>Pla de continuïtat del negoci.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Identificar els sistemes compromesos.</li>
+
+<li>Prioritzar els actius crítics.</li>
+
+<li>Aïllar els equips afectats.</li>
+
+<li>Bloquejar les comunicacions malicioses.</li>
+
+<li>Preservar les evidències digitals.</li>
+
+<li>Documentar totes les actuacions.</li>
+
+<li>Valorar si cal interrompre algun servei.</li>
+
+<li>Preparar la fase d'erradicació.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La contenció és una fase temporal. Les mesures adoptades han de
+permetre continuar amb la investigació i facilitar la recuperació dels
+sistemes.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és la contenció d'un incident.</li>
+
+<li>Diferencia entre contenció a curt termini i a llarg termini.</li>
+
+<li>Explica per què és important preservar les evidències durant la contenció.</li>
+
+<li>Descriu cinc mesures inicials de contenció.</li>
+
+<li>Indica quan és recomanable aïllar un equip de la xarxa.</li>
+
+<li>Explica els avantatges i inconvenients d'apagar un servidor compromés.</li>
+
+<li>Analitza un cas pràctic i proposa una estratègia de contenció.</li>
+
+<li>Descriu com actuaria un EDR davant una infecció per ransomware.</li>
+
+<li>Relaciona les mesures de contenció amb la continuïtat del negoci.</li>
+
+<li>Elabora un protocol bàsic de contenció per a una petita empresa.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La contenció és la primera resposta operativa davant un incident de
+ciberseguretat. El seu objectiu és limitar la propagació de l'atac,
+reduir els danys i protegir els actius de l'organització mentre es
+continua la investigació.
+
+</p>
+
+<p>
+
+Una contenció eficaç combina rapidesa, coordinació i preservació de
+les evidències. Les decisions adoptades durant aquesta fase
+condicionaran l'èxit de l'erradicació i de la recuperació posterior.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Contenció]
+
+--> C[Preservació d'evidències]
+
+--> D[Erradicació]
+
+--> E[Recuperació]
+
+--> F[Lliçons apreses]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La contenció limita la propagació de l'incident.</li>
+
+<li>No elimina directament la causa del problema.</li>
+
+<li>Cal preservar sempre les evidències digitals.</li>
+
+<li>L'aïllament és una de les mesures més habituals.</li>
+
+<li>Les actuacions han de quedar documentades.</li>
+
+<li>La coordinació amb el CSIRT és essencial.</li>
+
+<li>La continuïtat del negoci també forma part de la presa de decisions.</li>
+
+<li>La contenció prepara les fases d'erradicació i recuperació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és una mesura de contenció.</li>
+
+<li>Diferenciar entre contenció temporal i permanent.</li>
+
+<li>Identificar les primeres actuacions davant un incident.</li>
+
+<li>Explicar la importància de preservar les evidències.</li>
+
+<li>Descriure tècniques d'aïllament de sistemes.</li>
+
+<li>Relacionar la contenció amb la continuïtat del negoci.</li>
+
+<li>Identificar errors habituals durant la contenció.</li>
+
+<li>Justificar la necessitat de documentar totes les actuacions.</li>
+
+<li>Analitzar un cas pràctic i seleccionar les mesures més adequades.</li>
+
+<li>Ordenar correctament les fases de resposta davant incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proporcionen diversos
+materials que permeten practicar les tècniques de contenció
+utilitzades pels equips de resposta davant incidents.
+
+</p>
+
+<ul>
+
+<li>📄 Guia de contenció d'incidents.</li>
+
+<li>📄 Checklist d'actuacions immediates.</li>
+
+<li>📄 Protocol d'aïllament d'equips.</li>
+
+<li>📄 Plantilla de registre de decisions.</li>
+
+<li>📄 Exemple de pla de resposta davant incidents.</li>
+
+<li>📄 Cas pràctic complet resolt.</li>
+
+<li>📄 Exercicis de presa de decisions.</li>
+
+<li>📄 Esquema del procés de resposta als incidents.</li>
+
+<li>📄 Resum de bones pràctiques CSIRT.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri tanca el <strong>RA3 - Investigació d'incidents de
+ciberseguretat</strong>. Els coneixements adquirits sobre recopilació
+d'evidències, investigació, intercanvi d'informació i contenció
+constitueixen la base per abordar el següent resultat d'aprenentatge,
+centrat en la resposta, recuperació i millora contínua davant
+incidents de ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+ 
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

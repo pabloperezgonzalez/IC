@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 2d - Investigació mitjançant fonts obertes (OSINT) </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_02.html"> 
+                    RA2
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA2d
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#0ca982, #268968);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 2d - Investigació mitjançant fonts obertes (OSINT)
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🚨
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació descobriràs com utilitzar les
+<strong>fonts obertes d'informació (OSINT, Open Source
+Intelligence)</strong> per obtenir dades útils durant la detecció
+i investigació d'incidents de ciberseguretat.
+</p>
+
+<p>
+Aprendràs a localitzar informació pública sobre dominis,
+adreces IP, organitzacions, correus electrònics o certificats
+digitals mitjançant eines especialitzades, sempre respectant la
+legalitat i l'ètica professional.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és OSINT i quina és la seua finalitat.</li>
+
+<li>Diferenciar informació pública d'intel·ligència.</li>
+
+<li>Conèixer les principals fonts obertes d'informació.</li>
+
+<li>Aprendre a obtenir informació sobre dominis, IP i serveis.</li>
+
+<li>Identificar les eines OSINT més utilitzades.</li>
+
+<li>Comprendre la importància de l'OSINT en la detecció d'incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan es produeix un incident de ciberseguretat, una de les primeres
+tasques dels analistes consisteix a recopilar tota la informació
+possible sobre els sistemes implicats. En moltes ocasions aquesta
+informació es pot obtenir sense necessitat d'accedir als equips de
+l'organització, simplement consultant fonts públiques disponibles a
+Internet.
+</p>
+
+<p>
+Aquesta disciplina rep el nom d'<strong>OSINT (Open Source
+Intelligence)</strong>. No consisteix únicament a buscar informació
+a Google, sinó a recopilar, verificar, relacionar i analitzar dades
+procedents de múltiples fonts obertes per convertir-les en
+intel·ligència útil.
+</p>
+
+<p>
+L'OSINT és utilitzat diàriament pels equips de resposta davant
+incidents (CSIRT), pels centres d'operacions de seguretat (SOC),
+pels investigadors forenses i pels equips de Threat Intelligence
+per detectar amenaces abans que provoquen un incident greu.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'OSINT utilitza únicament informació accessible públicament.
+L'objectiu no és obtenir dades de forma il·legal, sinó saber
+localitzar-les, verificar-les i interpretar-les correctament.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS L'OSINT?
+========================================================== -->
+
+<section>
+
+<h3>Què és l'OSINT?</h3>
+
+<p>
+<strong>OSINT (Open Source Intelligence)</strong> és el procés de
+recopilar, analitzar i relacionar informació procedent de fonts
+obertes amb la finalitat d'obtenir coneixement útil per a la presa
+de decisions o la investigació d'un incident.
+</p>
+
+<p>
+La informació pot provenir de pàgines web, xarxes socials,
+registres públics, motors de cerca, bases de dades de dominis,
+certificats digitals o altres serveis accessibles des d'Internet.
+</p>
+
+<p>
+Per si sola, la informació no sempre té valor. El treball de
+l'analista consisteix a validar les dades, eliminar la informació
+incorrecta i relacionar diferents fonts fins obtenir una visió
+completa dels fets.
+</p>
+
+<h3>Informació vs intel·ligència</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Intel·ligència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Dades aïllades.</td>
+
+<td>Dades analitzades i verificades.</td>
+
+</tr>
+
+<tr>
+
+<td>No sempre són fiables.</td>
+
+<td>S'han contrastat diverses fonts.</td>
+
+</tr>
+
+<tr>
+
+<td>No tenen context.</td>
+
+<td>Permeten prendre decisions.</td>
+
+</tr>
+
+<tr>
+
+<td>Poden ser incompletes.</td>
+
+<td>Ofereixen una visió global.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Trobar una adreça IP en un registre és només informació.
+Relacionar aquesta IP amb un domini, un certificat digital,
+una empresa i diverses alertes de malware permet obtenir
+intel·ligència útil durant una investigació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Fonts obertes]
+
+--> B[Recopilació]
+
+--> C[Verificació]
+
+--> D[Anàlisi]
+
+--> E[Intel·ligència]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FONTS OBERTES D'INFORMACIÓ
+========================================================== -->
+
+<section>
+
+<h3>Fonts obertes d'informació</h3>
+
+<p>
+Una investigació OSINT pot utilitzar centenars de fonts
+d'informació diferents. Cada font proporciona una peça del
+trencaclosques i, combinades, permeten construir una imatge molt
+més completa sobre una organització, una infraestructura o un
+possible atacant.
+</p>
+
+<p>
+L'analista ha de seleccionar les fonts més adequades segons el
+tipus d'investigació que estiga realitzant.
+</p>
+
+<h3>Principals fonts OSINT</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Font</th>
+
+<th>Informació que proporciona</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Motors de cerca</td>
+
+<td>Pàgines web, documents i informació pública.</td>
+
+</tr>
+
+<tr>
+
+<td>Xarxes socials</td>
+
+<td>Perfils, publicacions i relacions.</td>
+
+</tr>
+
+<tr>
+
+<td>DNS</td>
+
+<td>Registres dels dominis.</td>
+
+</tr>
+
+<tr>
+
+<td>WHOIS</td>
+
+<td>Dades de registre dels dominis.</td>
+
+</tr>
+
+<tr>
+
+<td>Certificats digitals</td>
+
+<td>Subdominis i serveis publicats.</td>
+
+</tr>
+
+<tr>
+
+<td>Repositoris Git</td>
+
+<td>Codi font i possibles credencials exposades.</td>
+
+</tr>
+
+<tr>
+
+<td>Mitjans digitals</td>
+
+<td>Notícies i incidents públics.</td>
+
+</tr>
+
+<tr>
+
+<td>Bases de dades públiques</td>
+
+<td>Informació tècnica diversa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+No confies mai en una única font d'informació. En qualsevol
+investigació és recomanable contrastar les dades utilitzant
+diverses fonts independents.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+mindmap
+  OSINT
+    Fonts
+      Motors de cerca
+      Xarxes socials
+      DNS
+      WHOIS
+      Certificats
+      Git
+      Mitjans
+      Bases de dades
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     TÈCNIQUES D'INVESTIGACIÓ OSINT
+========================================================== -->
+
+<section>
+
+<h2>Tècniques d'investigació OSINT</h2>
+
+<p>
+Una investigació OSINT no consisteix únicament a buscar informació
+a Internet. L'analista segueix una metodologia ordenada per
+localitzar dades, verificar-les i convertir-les en informació útil.
+L'objectiu és obtindre evidències fiables que ajuden a comprendre
+un incident de ciberseguretat o a identificar possibles amenaces.
+</p>
+
+<p>
+Segons la informació que es necessite obtenir, poden aplicar-se
+diferents tècniques d'investigació. Algunes només consulten fonts
+públiques sense interactuar amb el sistema analitzat, mentre que
+altres impliquen una interacció mínima per descobrir serveis o
+informació addicional.
+</p>
+
+<h3>Reconeixement passiu</h3>
+
+<p>
+El <strong>reconeixement passiu</strong> consisteix a recopilar
+informació sense interactuar directament amb el sistema objectiu.
+Tota la informació s'obté a partir de fonts obertes, de manera que
+és pràcticament impossible que l'organització investigada detecte
+l'activitat de l'analista.
+</p>
+
+<p>
+És la tècnica més utilitzada en les primeres fases d'una
+investigació perquè permet conèixer la infraestructura d'una
+empresa sense generar trànsit cap als seus servidors.
+</p>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Consultar el registre WHOIS d'un domini, buscar informació sobre
+una empresa als motors de cerca o analitzar els certificats
+digitals publicats són exemples de reconeixement passiu.
+
+</p>
+
+</div>
+
+<h3>Reconeixement actiu</h3>
+
+<p>
+En el <strong>reconeixement actiu</strong> sí que existeix una
+interacció directa amb els sistemes analitzats. L'objectiu és
+obtenir informació addicional mitjançant consultes als serveis
+publicats, sempre dins dels límits autoritzats.
+</p>
+
+<p>
+Aquest tipus de tècniques poden deixar rastre als registres dels
+servidors, per la qual cosa només s'han d'utilitzar quan estiguen
+degudament autoritzades.
+</p>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Realitzar escanejos o proves sobre sistemes aliens sense
+autorització pot constituir una infracció legal. En aquest mòdul
+es treballarà exclusivament amb laboratoris o recursos autoritzats.
+
+</p>
+
+</div>
+
+<h3>Footprinting</h3>
+
+<p>
+El <strong>footprinting</strong> és el procés d'identificar tota
+la informació pública disponible sobre una organització abans
+d'iniciar una investigació més profunda.
+</p>
+
+<p>
+Durant aquesta fase es recopilen dominis, subdominis, adreces IP,
+servidors de correu, informació sobre empleats, tecnologies
+utilitzades i qualsevol altre element que permeta conèixer la
+infraestructura de l'organització.
+</p>
+
+<h3>Enumeració</h3>
+
+<p>
+L'<strong>enumeració</strong> consisteix a obtenir informació més
+detallada sobre els recursos identificats durant el footprinting.
+Per exemple, es poden identificar serveis publicats, versions de
+programari, usuaris o recursos compartits sempre que siga possible
+i estiga autoritzat.
+</p>
+
+<h3>Correlació de dades</h3>
+
+<p>
+La fase final consisteix a relacionar la informació obtinguda de
+diferents fonts. Una única dada pot tenir poc valor, però la
+combinació de diverses fonts permet identificar patrons, detectar
+amenaces o descobrir informació que inicialment passava
+desapercebuda.
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Recopilació]
+
+--> B[Footprinting]
+
+--> C[Enumeració]
+
+--> D[Correlació]
+
+--> E[Intel·ligència]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     EINES OSINT
+========================================================== -->
+
+<section>
+
+<h2>Eines d'investigació OSINT</h2>
+
+<p>
+Existeixen nombroses eines especialitzades que faciliten la
+recopilació i l'anàlisi d'informació pública. Algunes estan
+orientades a la cerca d'actius exposats a Internet, mentre que
+altres permeten relacionar dades procedents de múltiples fonts.
+</p>
+
+<p>
+Cap eina proporciona tota la informació necessària. Els analistes
+combinen diverses aplicacions per obtenir una visió completa de la
+infraestructura investigada.
+</p>
+
+<h3>Principals eines</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Utilitat principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Google Dorks</td>
+
+<td>Cerques avançades mitjançant operadors.</td>
+
+</tr>
+
+<tr>
+
+<td>Shodan</td>
+
+<td>Dispositius connectats a Internet.</td>
+
+</tr>
+
+<tr>
+
+<td>Censys</td>
+
+<td>Inventari de serveis i certificats.</td>
+
+</tr>
+
+<tr>
+
+<td>Maltego</td>
+
+<td>Relació gràfica entre entitats.</td>
+
+</tr>
+
+<tr>
+
+<td>SpiderFoot</td>
+
+<td>Automatització d'investigacions OSINT.</td>
+
+</tr>
+
+<tr>
+
+<td>theHarvester</td>
+
+<td>Correus electrònics, dominis i hosts.</td>
+
+</tr>
+
+<tr>
+
+<td>Recon-ng</td>
+
+<td>Framework modular d'OSINT.</td>
+
+</tr>
+
+<tr>
+
+<td>VirusTotal</td>
+
+<td>Anàlisi de fitxers, URL i dominis.</td>
+
+</tr>
+
+<tr>
+
+<td>URLScan</td>
+
+<td>Anàlisi de pàgines web.</td>
+
+</tr>
+
+<tr>
+
+<td>crt.sh</td>
+
+<td>Consulta de certificats digitals.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Quina eina utilitzar?</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Necessitat</th>
+
+<th>Eina recomanada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Localitzar serveis exposats.</td>
+
+<td>Shodan o Censys.</td>
+
+</tr>
+
+<tr>
+
+<td>Buscar subdominis.</td>
+
+<td>crt.sh o theHarvester.</td>
+
+</tr>
+
+<tr>
+
+<td>Analitzar un fitxer sospitós.</td>
+
+<td>VirusTotal.</td>
+
+</tr>
+
+<tr>
+
+<td>Relacionar persones, dominis i empreses.</td>
+
+<td>Maltego.</td>
+
+</tr>
+
+<tr>
+
+<td>Automatitzar una investigació.</td>
+
+<td>SpiderFoot.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Abans d'utilitzar eines avançades, és recomanable consultar fonts
+senzilles com WHOIS, DNS o motors de cerca. En moltes ocasions
+proporcionen informació suficient per iniciar una investigació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Objectiu]
+
+--> B[WHOIS]
+
+A --> C[DNS]
+
+A --> D[Google]
+
+A --> E[Shodan]
+
+A --> F[VirusTotal]
+
+B --> G[Anàlisi]
+
+C --> G
+
+D --> G
+
+E --> G
+
+F --> G
+
+G --> H[Informe]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     APLICACIONS D'OSINT EN CIBERSEGURETAT
+========================================================== -->
+
+<section>
+
+<h3>Aplicacions d'OSINT en ciberseguretat</h3>
+
+<p>
+L'OSINT té nombroses aplicacions dins de la ciberseguretat. Les
+organitzacions utilitzen aquesta disciplina tant per prevenir
+incidents com per investigar-los una vegada s'han produït.
+Mitjançant la informació pública és possible identificar actius
+exposats, detectar possibles vulnerabilitats o obtenir informació
+sobre grups d'atacants i campanyes malicioses.
+</p>
+
+<p>
+Actualment, els Centres d'Operacions de Seguretat (SOC), els
+equips CSIRT i els analistes de <em>Threat Intelligence</em>
+incorporen eines OSINT en el seu treball diari per complementar
+la informació obtinguda pels sistemes interns de monitorització.
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Fonts obertes]
+
+--> B[Anàlisi OSINT]
+
+--> C[Detecció]
+
+--> D[Investigació]
+
+--> E[Resposta]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INVESTIGACIÓ D'INCIDENTS
+========================================================== -->
+
+<section>
+
+<h3>Investigació d'incidents</h3>
+
+<p>
+Quan es detecta un incident de ciberseguretat, una de les primeres
+tasques consisteix a recopilar informació sobre els elements
+implicats. L'OSINT permet ampliar la investigació sense necessitat
+d'accedir directament als sistemes afectats.
+</p>
+
+<p>
+Per exemple, una simple adreça IP sospitosa pot consultar-se en
+diverses bases de dades públiques per comprovar si està associada
+a activitats malicioses, centres de comandament (<em>Command &
+Control</em>) o campanyes de phishing.
+</p>
+
+<h3>Informació que pot obtenir-se</h3>
+
+<ul>
+
+<li>Reputació d'una adreça IP.</li>
+
+<li>Historial d'un domini.</li>
+
+<li>Subdominis associats.</li>
+
+<li>Certificats digitals utilitzats.</li>
+
+<li>Serveis accessibles des d'Internet.</li>
+
+<li>Localització aproximada.</li>
+
+<li>Organització propietària.</li>
+
+<li>Relació amb incidents coneguts.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta connexions repetides des de la IP
+<code>185.xxx.xxx.xxx</code>. Consultant diverses fonts OSINT es
+descobreix que aquesta adreça apareix relacionada amb una xarxa de
+botnets utilitzada per distribuir ransomware.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     THREAT INTELLIGENCE
+========================================================== -->
+
+<section>
+
+<h2>Threat Intelligence</h2>
+
+<p>
+La <strong>Threat Intelligence</strong> és el procés de recopilar,
+analitzar i compartir informació sobre amenaces actuals per
+anticipar possibles atacs.
+</p>
+
+<p>
+L'OSINT constitueix una de les principals fonts d'informació per
+als equips d'intel·ligència, ja que permet conèixer noves
+campanyes de malware, vulnerabilitats recentment descobertes,
+infraestructures malicioses o grups de ciberdelinqüents.
+</p>
+
+<h3>Indicadors de compromís (IoC)</h3>
+
+<p>
+Durant les investigacions és habitual recopilar
+<strong>Indicadors de Compromís (Indicators of Compromise,
+IoC)</strong>, és a dir, evidències que poden indicar que un
+sistema ha estat atacat.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>IoC</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Adreça IP</td>
+
+<td>185.xxx.xxx.xxx</td>
+
+</tr>
+
+<tr>
+
+<td>Domini</td>
+
+<td>malware-example.com</td>
+
+</tr>
+
+<tr>
+
+<td>Hash</td>
+
+<td>SHA-256 d'un fitxer maliciós.</td>
+
+</tr>
+
+<tr>
+
+<td>URL</td>
+
+<td>Pàgina de phishing.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu electrònic</td>
+
+<td>atacant@example.com</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>IoC</strong>
+
+<p>
+
+Els Indicadors de Compromís permeten detectar altres equips
+afectats i bloquejar activitats malicioses abans que provoquen
+nous incidents.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B[Obtenció d'IoC]
+
+--> C[OSINT]
+
+--> D[Threat Intelligence]
+
+--> E[Protecció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     REPUTACIÓ D'IPS I DOMINIS
+========================================================== -->
+
+<section>
+
+<h2>Reputació d'IPs i dominis</h2>
+
+<p>
+Moltes eines OSINT mantenen bases de dades sobre la reputació
+d'adreces IP, dominis i URL. Aquestes plataformes recopilen
+informació procedent de milions d'anàlisis i permeten identificar
+ràpidament recursos relacionats amb activitats malicioses.
+</p>
+
+<p>
+Consultar la reputació d'un domini és una pràctica habitual abans
+d'accedir a un lloc web desconegut o d'investigar un possible
+incident de phishing.
+</p>
+
+<h3>Informació disponible</h3>
+
+<ul>
+
+<li>Historial del domini.</li>
+
+<li>Data de registre.</li>
+
+<li>País d'allotjament.</li>
+
+<li>Servidor DNS.</li>
+
+<li>Certificats digitals.</li>
+
+<li>Reputació.</li>
+
+<li>Incidents associats.</li>
+
+<li>Malware detectat.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Un domini registrat fa pocs dies i relacionat amb nombroses
+alertes pot ser un indicador de possibles campanyes de phishing o
+de distribució de programari maliciós.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     AVANTATGES I LIMITACIONS
+========================================================== -->
+
+<section>
+
+<h2>Avantatges i limitacions de l'OSINT</h2>
+
+<p>
+L'OSINT és una eina molt potent, però també presenta limitacions.
+Els analistes han de valorar la fiabilitat de les fonts i evitar
+prendre decisions basant-se exclusivament en una única dada.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Avantatges</th>
+
+<th>Limitacions</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Informació pública.</td>
+
+<td>Dades incompletes.</td>
+
+</tr>
+
+<tr>
+
+<td>Cost reduït.</td>
+
+<td>Informació desactualitzada.</td>
+
+</tr>
+
+<tr>
+
+<td>Gran quantitat de fonts.</td>
+
+<td>Possibles dades falses.</td>
+
+</tr>
+
+<tr>
+
+<td>Complementa altres investigacions.</td>
+
+<td>Cal verificar sempre les fonts.</td>
+
+</tr>
+
+<tr>
+
+<td>Facilita la detecció preventiva.</td>
+
+<td>Pot generar falsos positius.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+L'OSINT no substitueix les eines de monitorització internes de
+l'organització. És una font complementària que ajuda a obtenir
+context, validar informació i enriquir les investigacions.
+
+</p>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La qualitat d'una investigació OSINT depén més de la capacitat de
+l'analista per interpretar i relacionar la informació que de la
+quantitat d'eines utilitzades.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples d'investigació OSINT</h2>
+
+<p>
+Les tècniques OSINT permeten obtenir informació rellevant a partir
+de dades públiques. Els exemples següents mostren situacions
+habituals en què aquestes eines poden ajudar durant la detecció o
+investigació d'un incident de ciberseguretat.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Font OSINT</th>
+
+<th>Informació obtinguda</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Investigar un domini sospitós.</td>
+
+<td>WHOIS</td>
+
+<td>Propietari, dates de registre i DNS.</td>
+
+</tr>
+
+<tr>
+
+<td>Comprovar una IP desconeguda.</td>
+
+<td>Shodan</td>
+
+<td>Serveis publicats i ports oberts.</td>
+
+</tr>
+
+<tr>
+
+<td>Analitzar un fitxer sospitós.</td>
+
+<td>VirusTotal</td>
+
+<td>Detecció de malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Buscar subdominis.</td>
+
+<td>crt.sh</td>
+
+<td>Certificats digitals associats.</td>
+
+</tr>
+
+<tr>
+
+<td>Analitzar una URL.</td>
+
+<td>URLScan</td>
+
+<td>Captura i comportament del lloc web.</td>
+
+</tr>
+
+<tr>
+
+<td>Relacionar dominis i empreses.</td>
+
+<td>Maltego</td>
+
+<td>Mapa de relacions.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa rep un correu sospitós amb un enllaç desconegut.
+Abans d'obrir-lo, l'analista consulta VirusTotal i URLScan.
+Ambdues eines indiquen que el domini està relacionat amb una
+campanya recent de phishing, per la qual cosa es bloqueja
+preventivament.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Bones pràctiques en OSINT</h2>
+
+<p>
+Una investigació és més fiable quan segueix una metodologia
+estructurada i tota la informació és contrastada abans de prendre
+qualsevol decisió.
+</p>
+
+<div class="tip">
+
+<strong>Recomanacions</strong>
+
+<ul>
+
+<li>Contrasta sempre la informació amb diverses fonts.</li>
+
+<li>Documenta totes les consultes realitzades.</li>
+
+<li>Comprova la data d'actualització de les dades.</li>
+
+<li>No confongues informació pública amb informació fiable.</li>
+
+<li>Conserva captures de pantalla de les evidències.</li>
+
+<li>Utilitza eines diferents per validar els resultats.</li>
+
+<li>Respecta sempre la normativa vigent.</li>
+
+<li>Evita accedir a sistemes sense autorització.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+L'OSINT utilitza informació pública, però això no significa que
+qualsevol ús siga acceptable. Les investigacions han de respectar
+la legislació vigent, la privacitat de les persones i els codis
+ètics de la professió.
+</p>
+
+<div class="important">
+
+<strong>Aspectes que cal recordar</strong>
+
+<ul>
+
+<li>La informació pública també pot ser incorrecta.</li>
+
+<li>No totes les fonts tenen el mateix nivell de confiança.</li>
+
+<li>Cal verificar sempre la informació crítica.</li>
+
+<li>L'OSINT no autoritza l'accés als sistemes investigats.</li>
+
+<li>Les dades personals estan protegides per la legislació.</li>
+
+<li>Una mala interpretació pot conduir a conclusions errònies.</li>
+
+<li>Els resultats han d'estar degudament documentats.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'OSINT consisteix a transformar informació pública en
+intel·ligència útil. La qualitat de la investigació depén de
+l'anàlisi de les dades, no de la quantitat d'informació
+recopilada.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Google no indexa tot Internet</strong>
+
+<p>
+
+Els motors de cerca només mostren una part de la informació
+disponible. Gran quantitat de dades es troben en bases de dades,
+API, repositoris o serveis que no apareixen en les cerques
+habituals.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Shodan és conegut com "el Google dels dispositius"</strong>
+
+<p>
+
+A diferència dels motors de cerca tradicionals, Shodan indexa
+servidors, routers, càmeres IP, dispositius IoT i molts altres
+equips connectats a Internet.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Moltes filtracions s'han descobert gràcies a l'OSINT</strong>
+
+<p>
+
+Investigadors de ciberseguretat utilitzen fonts obertes per
+detectar bases de dades exposades, repositoris públics amb
+credencials o servidors configurats incorrectament abans que els
+ciberdelinqüents els aprofiten.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> ha detectat connexions
+repetides cap al domini <strong>secure-login-support.com</strong>.
+Abans de bloquejar-lo, l'equip de seguretat decideix realitzar una
+investigació OSINT.
+
+</p>
+
+<h3>Informació disponible</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Dada</th>
+
+<th>Valor</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Domini</td>
+
+<td>secure-login-support.com</td>
+
+</tr>
+
+<tr>
+
+<td>Adreça IP</td>
+
+<td>198.51.100.45</td>
+
+</tr>
+
+<tr>
+
+<td>Protocol</td>
+
+<td>HTTPS</td>
+
+</tr>
+
+<tr>
+
+<td>Data de detecció</td>
+
+<td>Fa 30 minuts</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Activitat</h3>
+
+<p>
+Indica quines eines OSINT utilitzaries per obtenir la informació
+següent.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació buscada</th>
+
+<th>Eina recomanada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Propietari del domini.</td>
+
+<td>...................................</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis accessibles.</td>
+
+<td>...................................</td>
+
+</tr>
+
+<tr>
+
+<td>Reputació de la IP.</td>
+
+<td>...................................</td>
+
+</tr>
+
+<tr>
+
+<td>Subdominis.</td>
+
+<td>...................................</td>
+
+</tr>
+
+<tr>
+
+<td>Certificats digitals.</td>
+
+<td>...................................</td>
+
+</tr>
+
+<tr>
+
+<td>Detecció de malware.</td>
+
+<td>...................................</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Reflexiona</strong>
+
+<p>
+
+Una vegada recopilada la informació, determina si el domini
+presenta indicadors que justifiquen el seu bloqueig preventiu o si
+és necessari continuar la investigació amb altres fonts.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h3>💻 Laboratori</h3>
+
+<p>
+En aquesta pràctica assumiràs el paper d'un analista d'un
+<strong>Centre d'Operacions de Seguretat (SOC)</strong>. La teua
+missió serà investigar un domini sospitós utilitzant únicament
+fonts obertes (OSINT), documentar totes les evidències i elaborar
+un informe amb les conclusions obtingudes.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> ha detectat trànsit de
+xarxa cap a un domini desconegut. No existeixen alertes internes
+que indiquen si és legítim o maliciós, per la qual cosa es decideix
+iniciar una investigació OSINT abans d'aplicar mesures de bloqueig.
+
+</p>
+
+</div>
+
+<h3>Material proporcionat</h3>
+
+<ul>
+
+<li>Nom del domini sospitós.</li>
+
+<li>Adreça IP associada.</li>
+
+<li>Registre de connexions del tallafoc.</li>
+
+<li>Llistat d'URLs visitades.</li>
+
+<li>Plantilla d'informe d'investigació.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Consultar el registre WHOIS del domini.</li>
+
+<li>Analitzar els registres DNS.</li>
+
+<li>Buscar certificats digitals associats.</li>
+
+<li>Consultar la reputació de la IP.</li>
+
+<li>Investigar el domini amb VirusTotal.</li>
+
+<li>Comprovar si apareix a Shodan.</li>
+
+<li>Relacionar totes les evidències obtingudes.</li>
+
+<li>Redactar un informe tècnic amb les conclusions.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu no és acumular informació, sinó determinar si existeixen
+indicadors suficients que permeten considerar el domini una
+possible amenaça.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>Explica amb les teues paraules què significa OSINT.</li>
+
+<li>Diferencia informació pública d'intel·ligència.</li>
+
+<li>Investiga quines dades proporciona un registre WHOIS.</li>
+
+<li>Descriu les diferències entre Shodan i un motor de cerca convencional.</li>
+
+<li>Busca informació sobre les funcions principals de VirusTotal.</li>
+
+<li>Investiga què és un certificat digital i per què pot ser útil durant una investigació.</li>
+
+<li>Realitza una taula comparativa entre Maltego, SpiderFoot i theHarvester.</li>
+
+<li>Explica què és un Indicador de Compromís (IoC) i posa tres exemples.</li>
+
+<li>Descriu un cas real en què l'OSINT haja ajudat a detectar una campanya de phishing o malware.</li>
+
+<li>Debateix amb els companys quins són els límits legals i ètics de les investigacions OSINT.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+L'OSINT és una disciplina fonamental dins de la investigació
+d'incidents de ciberseguretat. Permet recopilar informació
+procedent de fonts obertes, verificar-la i transformar-la en
+intel·ligència útil per detectar amenaces, investigar incidents i
+prendre decisions amb major rapidesa.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Fonts obertes]
+
+--> B[Recopilació]
+
+--> C[Verificació]
+
+--> D[Correlació]
+
+--> E[Intel·ligència]
+
+--> F[Resposta davant incidents]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>L'OSINT utilitza exclusivament informació pública.</li>
+
+<li>La informació ha de ser sempre verificada.</li>
+
+<li>És una eina essencial durant la investigació d'incidents.</li>
+
+<li>Existeixen nombroses fonts obertes: DNS, WHOIS, certificats, xarxes socials, etc.</li>
+
+<li>Cap eina proporciona tota la informació necessària.</li>
+
+<li>Els Indicadors de Compromís (IoC) ajuden a identificar amenaces.</li>
+
+<li>L'OSINT complementa els sistemes interns de monitorització.</li>
+
+<li>Les investigacions han de respectar sempre la legalitat i l'ètica professional.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Conceptes que has de dominar</strong>
+
+<ul>
+
+<li>Definició d'OSINT.</li>
+
+<li>Diferència entre informació i intel·ligència.</li>
+
+<li>Fonts obertes d'informació.</li>
+
+<li>Reconeixement passiu i actiu.</li>
+
+<li>Footprinting i enumeració.</li>
+
+<li>Indicadors de Compromís (IoC).</li>
+
+<li>Principals eines OSINT.</li>
+
+<li>Investigació de dominis i adreces IP.</li>
+
+<li>Avantatges i limitacions de l'OSINT.</li>
+
+<li>Aspectes legals i ètics.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per ampliar els continguts d'aquest criteri d'avaluació es
+proporcionen els següents recursos.
+
+</p>
+
+<ul>
+
+<li>📄 Guia d'introducció a OSINT.</li>
+
+<li>📄 Plantilla d'investigació d'un domini.</li>
+
+<li>📄 Checklist d'una investigació OSINT.</li>
+
+<li>📄 Taula resum de les principals eines OSINT.</li>
+
+<li>📄 Exercici resolt sobre investigació d'una IP.</li>
+
+<li>📄 Infografia del procés d'investigació OSINT.</li>
+
+<li>📄 Glossari de terminologia.</li>
+
+<li>📄 Col·lecció de Google Dorks bàsics.</li>
+
+<li>📄 Plantilla d'informe tècnic.</li>
+
+<li>📄 Full d'autoavaluació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Conserva aquestes plantilles, ja que seran molt útils en els
+criteris següents dedicats a l'anàlisi d'evidències digitals,
+la investigació forense i la resposta davant incidents de
+ciberseguretat.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+    
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

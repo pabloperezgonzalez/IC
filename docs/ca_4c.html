@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4c Flux de presa de decisions i escalat </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4c
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4c Flux de presa de decisions i escalat
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com es prenen les decisions
+durant la gestió d'un incident de ciberseguretat i quins mecanismes
+d'escalat permeten involucrar les persones adequades en cada moment.
+</p>
+
+<p>
+Coneixeràs els diferents nivells de responsabilitat, els criteris que
+determinen quan un incident ha d'escalar-se i la importància de la
+coordinació entre els equips tècnics, la direcció i els organismes
+externs.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el flux de presa de decisions durant un incident.</li>
+
+<li>Conèixer els diferents nivells d'escalat.</li>
+
+<li>Identificar els actors implicats en cada fase.</li>
+
+<li>Aprendre els criteris que justifiquen un escalat.</li>
+
+<li>Comprendre la importància de la comunicació entre equips.</li>
+
+<li>Aplicar bones pràctiques en la presa de decisions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan es produeix un incident de ciberseguretat és necessari actuar amb
+rapidesa, però també amb criteri. Les decisions precipitades poden
+empitjorar la situació, mentre que una resposta excessivament lenta pot
+incrementar els danys ocasionats per l'incident.
+</p>
+
+<p>
+Per aquest motiu les organitzacions defineixen un
+<strong>flux de presa de decisions</strong>, és a dir, un conjunt de
+procediments que indiquen qui pren cada decisió, quan s'ha d'escalar
+l'incident i quins responsables han d'intervindre.
+</p>
+
+<p>
+Aquest procés permet coordinar tots els participants, reduir el temps
+de resposta i assegurar que cada actuació siga coherent amb les
+polítiques de seguretat i els objectius de l'organització.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+No totes les decisions corresponen al personal tècnic. Algunes
+requereixen l'autorització de la direcció o fins i tot la participació
+d'organismes externs.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS EL FLUX DE PRESA DE DECISIONS?
+========================================================== -->
+
+<section>
+
+<h2>Què és el flux de presa de decisions?</h2>
+
+<p>
+El <strong>flux de presa de decisions</strong> és el conjunt ordenat de
+passos que segueix una organització per analitzar un incident,
+determinar les actuacions necessàries, assignar responsabilitats i
+coordinar la resposta.
+</p>
+
+<p>
+Aquest flux estableix qui ha d'intervindre en cada moment, quina
+informació és necessària abans de prendre una decisió i quan és
+obligatori escalar l'incident a un nivell superior.
+</p>
+
+<p>
+Disposar d'un procés clar evita improvisacions, duplicitats de tasques
+i retards en la resposta, especialment en incidents crítics.
+</p>
+
+<h3>Fases generals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Recepció</td>
+
+<td>Registrar l'alerta.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi</td>
+
+<td>Avaluar la situació.</td>
+
+</tr>
+
+<tr>
+
+<td>Decisió</td>
+
+<td>Seleccionar la resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Execució</td>
+
+<td>Aplicar les mesures.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguiment</td>
+
+<td>Comprovar els resultats.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancament</td>
+
+<td>Documentar l'incident.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un analista del SOC detecta una activitat sospitosa en un servidor.
+Després d'analitzar les evidències, comunica la situació al responsable
+del CSIRT, que decideix activar el procediment de resposta i escalar
+l'incident a la direcció perquè autoritze l'aturada temporal del
+servei.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Alerta]
+
+--> B[Anàlisi]
+
+--> C[Decisió]
+
+--> D[Resposta]
+
+--> E[Seguiment]
+
+--> F[Tancament]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PRINCIPIS DE LA PRESA DE DECISIONS
+========================================================== -->
+
+<section>
+
+<h2>Principis de la presa de decisions durant un incident</h2>
+
+<p>
+Les decisions adoptades durant un incident han de basar-se en
+informació fiable, criteris objectius i procediments prèviament
+definits. L'objectiu és actuar amb rapidesa sense comprometre la
+seguretat ni dificultar la investigació.
+</p>
+
+<p>
+Les organitzacions solen establir protocols que defineixen quina
+informació és necessària abans de prendre cada decisió i quins
+responsables han de validar les actuacions més crítiques.
+</p>
+
+<h3>Principis bàsics</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Principi</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Rapidesa</td>
+
+<td>Reduir el temps de resposta.</td>
+
+</tr>
+
+<tr>
+
+<td>Coordinació</td>
+
+<td>Evitar actuacions contradictòries.</td>
+
+</tr>
+
+<tr>
+
+<td>Proporcionalitat</td>
+
+<td>Aplicar mesures adequades al risc.</td>
+
+</tr>
+
+<tr>
+
+<td>Traçabilitat</td>
+
+<td>Registrar totes les decisions.</td>
+
+</tr>
+
+<tr>
+
+<td>Basat en evidències</td>
+
+<td>Evitar suposicions.</td>
+
+</tr>
+
+<tr>
+
+<td>Comunicació</td>
+
+<td>Mantindre informats els responsables.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Les decisions preses durant un incident han de quedar documentades,
+indicant qui les ha autoritzat, quan s'han aplicat i quina informació
+les justificava.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ACTORS IMPLICATS
+========================================================== -->
+
+<section>
+
+<h2>Actors implicats en la presa de decisions</h2>
+
+<p>
+La gestió d'un incident implica diferents perfils professionals, cadascun
+amb unes responsabilitats específiques. La coordinació entre tots ells
+és essencial perquè la resposta siga ràpida i eficaç.
+</p>
+
+<p>
+Els rols poden variar segons la mida de l'organització, però en general
+sempre existeixen responsables tècnics, responsables de seguretat i
+responsables de negoci.
+</p>
+
+<h3>Participants habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Actor</th>
+
+<th>Responsabilitat principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SOC</td>
+
+<td>Detectar i analitzar les alertes.</td>
+
+</tr>
+
+<tr>
+
+<td>CSIRT</td>
+
+<td>Coordinar la resposta tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Administradors</td>
+
+<td>Aplicar les mesures tècniques.</td>
+
+</tr>
+
+<tr>
+
+<td>CISO</td>
+
+<td>Dirigir la gestió de la seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Autoritzar decisions estratègiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Organismes externs</td>
+
+<td>Proporcionar suport o coordinació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[SOC]
+
+--> B[CSIRT]
+
+B --> C[CISO]
+
+C --> D[Direcció]
+
+B --> E[Administradors]
+
+C --> F[Organismes externs]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Definir clarament els rols abans que es produïsca un incident evita
+confusions i accelera la presa de decisions quan cada minut és
+important.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     NIVELLS D'ESCALAT
+========================================================== -->
+
+<section>
+
+<h2>Nivells d'escalat</h2>
+
+<p>
+L'<strong>escalat</strong> consisteix a transferir la gestió d'un
+incident a un nivell superior quan supera la capacitat tècnica,
+organitzativa o de decisió de l'equip que l'està gestionant.
+</p>
+
+<p>
+Escalar un incident no significa que s'haja gestionat incorrectament,
+sinó que és necessari involucrar altres persones amb més competències,
+autoritat o recursos per continuar la resposta de manera eficaç.
+</p>
+
+<p>
+Els procediments de resposta defineixen clarament quan s'ha de produir
+l'escalat, a qui s'ha d'informar i quina informació s'ha de
+proporcionar perquè la gestió continue sense interrupcions.
+</p>
+
+<h3>Tipus d'escalat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Funcional</td>
+
+<td>Incorporar especialistes tècnics.</td>
+
+</tr>
+
+<tr>
+
+<td>Jeràrquic</td>
+
+<td>Informar responsables amb major autoritat.</td>
+
+</tr>
+
+<tr>
+
+<td>Executiu</td>
+
+<td>Permetre decisions estratègiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Extern</td>
+
+<td>Coordinar-se amb proveïdors o organismes.</td>
+
+</tr>
+
+<tr>
+
+<td>Legal</td>
+
+<td>Comunicar l'incident a les autoritats competents.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una intrusió en un servidor pot iniciar-se amb una investigació del
+SOC. Si es confirma que hi ha una fuga de dades personals, l'incident
+s'escala al CISO, a la direcció i al delegat de protecció de dades per
+coordinar les actuacions corresponents.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[SOC]
+
+--> B[CSIRT]
+
+--> C[CISO]
+
+--> D[Direcció]
+
+--> E[Organismes externs]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CRITERIS PER ESCALAR UN INCIDENT
+========================================================== -->
+
+<section>
+
+<h2>Criteris per escalar un incident</h2>
+
+<p>
+No tots els incidents requereixen el mateix nivell d'intervenció. Per
+aquest motiu les organitzacions estableixen criteris objectius que
+permeten determinar quan és necessari escalar la gestió.
+</p>
+
+<p>
+Aquests criteris solen basar-se en l'impacte sobre els serveis, la
+gravetat de l'amenaça, el nombre d'actius afectats o les obligacions
+legals derivades de l'incident.
+</p>
+
+<h3>Criteris habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Criteri</th>
+
+<th>Exemple</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Impacte</td>
+
+<td>Interrupció dels serveis crítics.</td>
+
+</tr>
+
+<tr>
+
+<td>Gravetat</td>
+
+<td>Atac de ransomware.</td>
+
+</tr>
+
+<tr>
+
+<td>Abast</td>
+
+<td>Gran nombre d'equips afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Dades compromeses</td>
+
+<td>Fuga d'informació confidencial.</td>
+
+</tr>
+
+<tr>
+
+<td>Compliment legal</td>
+
+<td>Notificació obligatòria.</td>
+
+</tr>
+
+<tr>
+
+<td>Recursos necessaris</td>
+
+<td>Cal suport extern.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els criteris d'escalat han d'estar definits abans que es produïsca
+l'incident. Prendre aquesta decisió enmig de la crisi pot retardar la
+resposta.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B{Impacte elevat?}
+
+B -->|No| C[Gestió local]
+
+B -->|Sí| D[Escalat]
+
+D --> E[Resposta ampliada]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FLUX DE COMUNICACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Flux de comunicació</h2>
+
+<p>
+La comunicació és un element essencial durant qualsevol incident. Les
+persones responsables han de rebre informació clara, actualitzada i
+adaptada a les seues funcions perquè puguen prendre decisions
+fonamentades.
+</p>
+
+<p>
+Els plans de resposta defineixen els canals de comunicació, la
+freqüència de les actualitzacions i els responsables d'emetre la
+informació tant a nivell intern com extern.
+</p>
+
+<h3>Destinataris habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Destinatari</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Equip tècnic</td>
+
+<td>Detalls operatius.</td>
+
+</tr>
+
+<tr>
+
+<td>CISO</td>
+
+<td>Evolució de l'incident.</td>
+
+</tr>
+
+<tr>
+
+<td>Direcció</td>
+
+<td>Impacte sobre el negoci.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris</td>
+
+<td>Mesures de protecció.</td>
+
+</tr>
+
+<tr>
+
+<td>Proveïdors</td>
+
+<td>Coordinació tècnica.</td>
+
+</tr>
+
+<tr>
+
+<td>Autoritats</td>
+
+<td>Notificacions oficials.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És recomanable designar un únic responsable de les comunicacions
+externes per garantir la coherència dels missatges.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[CSIRT]
+
+--> B[Equip tècnic]
+
+A --> C[CISO]
+
+A --> D[Direcció]
+
+A --> E[Usuaris]
+
+A --> F[Autoritats]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     MODELS DE PRESA DE DECISIONS
+========================================================== -->
+
+<section>
+
+<h2>Models de presa de decisions</h2>
+
+<p>
+Per facilitar la coordinació, moltes organitzacions utilitzen models
+que defineixen les responsabilitats de cada participant durant la
+gestió d'un incident. Aquests models permeten saber qui executa una
+tasca, qui pren la decisió final i qui ha de ser informat.
+</p>
+
+<p>
+Un dels més utilitzats és la <strong>matriu RACI</strong>, que assigna
+els diferents rols implicats en cada activitat del procés de resposta.
+</p>
+
+<h3>Matriu RACI</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Sigla</th>
+
+<th>Significat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>R</td>
+
+<td>Responsible (executa la tasca).</td>
+
+</tr>
+
+<tr>
+
+<td>A</td>
+
+<td>Accountable (assumeix la responsabilitat final).</td>
+
+</tr>
+
+<tr>
+
+<td>C</td>
+
+<td>Consulted (és consultat abans de decidir).</td>
+
+</tr>
+
+<tr>
+
+<td>I</td>
+
+<td>Informed (rep informació sobre la decisió).</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+En l'aïllament d'un servidor compromés, l'administrador és el
+<strong>Responsible</strong>, el CISO és
+<strong>Accountable</strong>, el CSIRT és
+<strong>Consulted</strong> i la direcció és
+<strong>Informed</strong>.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Decisió]
+
+--> B[Responsible]
+
+--> C[Accountable]
+
+--> D[Consulted]
+
+--> E[Informed]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     DECISIONS TÈCNIQUES I DECISIONS DE NEGOCI
+========================================================== -->
+
+<section>
+
+<h2>Decisions tècniques i decisions de negoci</h2>
+
+<p>
+Durant la gestió d'un incident no totes les decisions tenen la mateixa
+naturalesa. Algunes són eminentment tècniques i corresponen als equips
+de ciberseguretat o d'administració de sistemes, mentre que altres
+afecten directament el funcionament del negoci i han de ser aprovades
+per la direcció.
+</p>
+
+<p>
+Distingir entre aquests dos tipus de decisions permet evitar
+conflictes de responsabilitats i garanteix que cada actuació siga
+autoritzada pel nivell adequat de l'organització.
+</p>
+
+<h3>Comparació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Decisions tècniques</th>
+
+<th>Decisions de negoci</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Aïllar un servidor.</td>
+
+<td>Aturar un servei crític.</td>
+
+</tr>
+
+<tr>
+
+<td>Bloquejar una IP.</td>
+
+<td>Comunicar l'incident als clients.</td>
+
+</tr>
+
+<tr>
+
+<td>Actualitzar una regla del firewall.</td>
+
+<td>Activar el Pla de Continuïtat del Negoci.</td>
+
+</tr>
+
+<tr>
+
+<td>Restaurar una còpia de seguretat.</td>
+
+<td>Assumir el cost de la recuperació.</td>
+
+</tr>
+
+<tr>
+
+<td>Analitzar evidències.</td>
+
+<td>Notificar l'incident a les autoritats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'equip tècnic pot decidir bloquejar immediatament una connexió
+maliciosa, però la decisió d'interrompre un servei de comerç
+electrònic durant diverses hores correspon habitualment a la direcció,
+ja que afecta directament el negoci.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Incident]
+
+--> B{Tipus de decisió}
+
+B --> C[Tècnica]
+
+B --> D[Negoci]
+
+C --> E[Equip tècnic]
+
+D --> F[Direcció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals en la presa de decisions</h2>
+
+<p>
+La pressió existent durant un incident pot provocar errors que
+incrementen l'impacte del problema o dificulten la recuperació dels
+serveis. Per aquest motiu és imprescindible seguir els procediments
+definits i evitar actuacions improvisades.
+</p>
+
+<h3>Errors més freqüents</h3>
+
+<ul>
+
+<li>Escalar massa tard un incident crític.</li>
+
+<li>Escalar incidents poc rellevants de manera innecessària.</li>
+
+<li>Prendre decisions sense disposar d'evidències suficients.</li>
+
+<li>No registrar les decisions adoptades.</li>
+
+<li>Comunicar informació no verificada.</li>
+
+<li>No definir clarament els responsables.</li>
+
+<li>Duplicar actuacions entre diferents equips.</li>
+
+<li>Ignorar els procediments establerts.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Retardar l'escalat perquè es pensa que l'incident es resoldrà
+ràpidament pot provocar un augment considerable dels danys i dificultar
+la recuperació posterior.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+Errors
+
+    Escalat tardà
+
+    Improvisació
+
+    Sense evidències
+
+    Mala comunicació
+
+    Sense documentació
+
+    Responsabilitats poc clares
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques</h2>
+
+<p>
+Les organitzacions amb una resposta madura davant incidents disposen
+de procediments clarament documentats, responsabilitats ben definides
+i mecanismes de comunicació eficients. Això facilita la presa de
+decisions i redueix el temps necessari per controlar la situació.
+</p>
+
+<p>
+Aquestes bones pràctiques també afavoreixen la coordinació entre els
+equips tècnics i la direcció, millorant la qualitat de les decisions
+preses durant tot el cicle de vida de l'incident.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Definir prèviament els criteris d'escalat.</li>
+
+<li>Assignar clarament les responsabilitats.</li>
+
+<li>Documentar totes les decisions adoptades.</li>
+
+<li>Utilitzar canals oficials de comunicació.</li>
+
+<li>Basar les decisions en evidències verificades.</li>
+
+<li>Aplicar el principi de proporcionalitat.</li>
+
+<li>Realitzar simulacres periòdics.</li>
+
+<li>Revisar el procés després de cada incident.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una bona presa de decisions no depén únicament dels coneixements
+tècnics. També requereix organització, comunicació, lideratge i una
+correcta distribució de responsabilitats.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Procediments]
+
+--> B[Decisions]
+
+--> C[Escalat]
+
+--> D[Resposta coordinada]
+
+--> E[Millora contínua]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+El flux de presa de decisions varia segons el tipus d'incident, però
+sempre ha de permetre actuar de forma ràpida, coordinada i
+proporcionada. Els exemples següents mostren situacions habituals en
+què és necessari prendre decisions i, si cal, escalar l'incident.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Decisió</th>
+
+<th>Escalat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Equip infectat per malware</td>
+
+<td>Aïllar l'equip.</td>
+
+<td>CSIRT.</td>
+
+</tr>
+
+<tr>
+
+<td>Fuga de dades</td>
+
+<td>Activar el protocol legal.</td>
+
+<td>CISO i Direcció.</td>
+
+</tr>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Activar el Pla de Resposta.</td>
+
+<td>Direcció.</td>
+
+</tr>
+
+<tr>
+
+<td>Atac DDoS</td>
+
+<td>Aplicar mesures de mitigació.</td>
+
+<td>Proveïdor d'Internet.</td>
+
+</tr>
+
+<tr>
+
+<td>Compromís d'un compte</td>
+
+<td>Desactivar credencials.</td>
+
+<td>Equip d'identitats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Durant un atac de ransomware, el SOC confirma que diversos servidors
+estan sent xifrats. El CSIRT decideix aïllar immediatament els
+sistemes afectats mentre el CISO informa la direcció perquè autoritze
+l'activació del Pla de Continuïtat del Negoci.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Les decisions adoptades durant un incident poden tenir conseqüències
+importants sobre la continuïtat dels serveis. Per això és convenient
+seguir sempre els procediments establerts i evitar actuacions
+improvisades.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Escala l'incident tan prompte com siga necessari.</li>
+
+<li>Consulta les persones responsables abans de les decisions crítiques.</li>
+
+<li>Documenta totes les actuacions.</li>
+
+<li>Comunica únicament informació confirmada.</li>
+
+<li>Utilitza els canals oficials de comunicació.</li>
+
+<li>Prioritza sempre la protecció dels serveis essencials.</li>
+
+<li>Revisa periòdicament els criteris d'escalat.</li>
+
+<li>Realitza simulacres de presa de decisions.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La presa de decisions durant un incident ha de ser ràpida, però també
+ha d'estar basada en informació fiable. Una decisió incorrecta pot
+incrementar l'impacte de l'incident o dificultar la recuperació dels
+serveis.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>Els criteris d'escalat han d'estar documentats.</li>
+
+<li>Cada decisió ha de tenir un responsable.</li>
+
+<li>Les actuacions s'han de registrar cronològicament.</li>
+
+<li>La comunicació és essencial durant tota la resposta.</li>
+
+<li>Les decisions han de basar-se en evidències.</li>
+
+<li>Els procediments s'han d'actualitzar periòdicament.</li>
+
+<li>Els simulacres permeten validar el procés de decisió.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Escalar un incident no significa perdre el control, sinó garantir que
+les persones adequades participen en la presa de decisions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els primers minuts són determinants</strong>
+
+<p>
+
+Diversos estudis indiquen que les decisions adoptades durant els
+primers minuts d'un incident condicionen en gran manera el temps
+necessari per recuperar els serveis.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Moltes organitzacions utilitzen matrius RACI</strong>
+
+<p>
+
+Aquestes matrius permeten definir clarament qui executa una tasca, qui
+pren la decisió final, qui ha de ser consultat i qui simplement ha de
+ser informat.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>L'escalat també pot ser extern</strong>
+
+<p>
+
+Quan un incident afecta proveïdors, clients o serveis essencials, pot
+ser necessari coordinar-se amb altres organitzacions o amb organismes
+especialitzats en resposta davant incidents.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La documentació facilita les investigacions</strong>
+
+<p>
+
+Registrar totes les decisions adoptades permet reconstruir
+cronològicament l'incident, justificar les actuacions realitzades i
+identificar oportunitats de millora.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta una activitat sospitosa en el seu servidor de
+fitxers. L'anàlisi inicial confirma que diversos equips estan
+descarregant programari maliciós i existeix el risc que l'atac
+s'estenga a altres sistemes crítics.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Incident detectat</td>
+
+<td>Malware en propagació.</td>
+
+</tr>
+
+<tr>
+
+<td>Equips afectats</td>
+
+<td>12 estacions de treball.</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis crítics</td>
+
+<td>Encara operatius.</td>
+
+</tr>
+
+<tr>
+
+<td>Impacte estimat</td>
+
+<td>Alt.</td>
+
+</tr>
+
+<tr>
+
+<td>Prioritat</td>
+
+<td>Crítica.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Decideix si cal escalar immediatament l'incident.</li>
+
+<li>Identifica els responsables que han d'intervindre.</li>
+
+<li>Ordena cronològicament les decisions que prendries.</li>
+
+<li>Indica quina informació comunicaries a la direcció.</li>
+
+<li>Explica com documentaries tot el procés de presa de decisions.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica assumiràs el paper del responsable de resposta
+davant incidents d'una organització. A partir d'un escenari simulat,
+hauràs d'analitzar la situació, decidir si cal escalar l'incident i
+coordinar les actuacions dels diferents equips implicats.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa detecta un increment sobtat del trànsit de xarxa cap a un
+servidor intern. El SOC confirma que existeixen connexions sospitoses,
+però encara desconeix l'abast real de l'incident.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Procediment de resposta davant incidents.</li>
+
+<li>Política d'escalat de l'organització.</li>
+
+<li>Inventari dels actius crítics.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Alertes de l'EDR.</li>
+
+<li>Diagrama de la infraestructura.</li>
+
+<li>Plantilla de registre de decisions.</li>
+
+<li>Llista de contactes dels responsables.</li>
+
+<li>Informe preliminar del SOC.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Analitzar la informació disponible.</li>
+
+<li>Classificar la gravetat de l'incident.</li>
+
+<li>Determinar si és necessari escalar-lo.</li>
+
+<li>Identificar el tipus d'escalat aplicable.</li>
+
+<li>Assignar les responsabilitats de cada participant.</li>
+
+<li>Elaborar un cronograma de les decisions adoptades.</li>
+
+<li>Redactar la comunicació destinada a la direcció.</li>
+
+<li>Documentar totes les actuacions realitzades.</li>
+
+<li>Proposar millores per optimitzar el procés d'escalat.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Una bona decisió presa en el moment adequat pot reduir considerablement
+l'impacte d'un incident i facilitar la recuperació dels serveis.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és el flux de presa de decisions.</li>
+
+<li>Explica el concepte d'escalat d'un incident.</li>
+
+<li>Diferencia entre escalat funcional i jeràrquic.</li>
+
+<li>Descriu els principals criteris d'escalat.</li>
+
+<li>Explica el paper del SOC, del CSIRT, del CISO i de la Direcció.</li>
+
+<li>Descriu el funcionament de la matriu RACI.</li>
+
+<li>Analitza un cas pràctic decidint quan escalar l'incident.</li>
+
+<li>Identifica errors habituals durant la presa de decisions.</li>
+
+<li>Proposa millores per reduir el temps de resposta.</li>
+
+<li>Elabora un diagrama amb el flux complet d'escalat.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+El flux de presa de decisions permet coordinar la resposta davant
+incidents de ciberseguretat assignant clarament les responsabilitats,
+els criteris d'escalat i els canals de comunicació. Aquest procés
+garanteix que cada decisió siga adoptada per les persones adequades i
+en el moment oportú.
+
+</p>
+
+<p>
+
+Els procediments documentats, els criteris objectius d'escalat, la
+matriu RACI i una comunicació eficient contribueixen a reduir el temps
+de resposta, minimitzar l'impacte dels incidents i millorar la
+coordinació entre els diferents equips.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Detecció]
+
+--> B[Anàlisi]
+
+--> C[Decisió]
+
+--> D[Escalat]
+
+--> E[Resposta]
+
+--> F[Seguiment]
+
+--> G[Millora contínua]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>Les decisions han d'estar basades en evidències.</li>
+
+<li>L'escalat facilita una resposta coordinada.</li>
+
+<li>Cada participant ha de conèixer les seues responsabilitats.</li>
+
+<li>La comunicació és fonamental durant tot l'incident.</li>
+
+<li>Les decisions importants han de quedar documentades.</li>
+
+<li>La matriu RACI facilita l'assignació de rols.</li>
+
+<li>Els simulacres permeten validar els procediments.</li>
+
+<li>La revisió posterior millora els processos futurs.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és el flux de presa de decisions.</li>
+
+<li>Explicar el concepte d'escalat.</li>
+
+<li>Diferenciar els tipus d'escalat.</li>
+
+<li>Identificar els criteris que justifiquen un escalat.</li>
+
+<li>Descriure les funcions del SOC, CSIRT, CISO i Direcció.</li>
+
+<li>Interpretar una matriu RACI.</li>
+
+<li>Analitzar un cas pràctic decidint les actuacions més adequades.</li>
+
+<li>Identificar errors habituals durant la presa de decisions.</li>
+
+<li>Explicar la importància de la comunicació.</li>
+
+<li>Documentar correctament el procés de resposta.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar aquest criteri d'avaluació es proposen diversos recursos
+que permeten practicar la presa de decisions, la coordinació dels
+equips i l'escalat d'incidents en diferents escenaris.
+
+</p>
+
+<ul>
+
+<li>📄 Procediment de presa de decisions davant incidents.</li>
+
+<li>📄 Plantilla de matriu RACI.</li>
+
+<li>📄 Guia dels nivells d'escalat.</li>
+
+<li>📄 Checklist de comunicació durant incidents.</li>
+
+<li>📄 Plantilla de registre de decisions.</li>
+
+<li>📄 Casos pràctics resolts d'escalat.</li>
+
+<li>📄 Exemple de cronologia d'un incident.</li>
+
+<li>📄 Esquema resum del flux de resposta.</li>
+
+<li>📄 Exercicis d'anàlisi de situacions.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri d'avaluació constitueix el pont entre la investigació
+dels incidents i les actuacions de recuperació. Comprendre com es
+prenen les decisions i quan cal escalar un incident és imprescindible
+per coordinar una resposta eficaç i garantir la continuïtat dels
+serveis.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

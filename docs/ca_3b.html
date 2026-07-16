@@ -1,0 +1,2326 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 3b - Anàlisi de les evidències digitals </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_03.html"> 
+                    RA3
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA3b
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6b501a, #4a3809);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 3b - Anàlisi de les evidències digitals
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🔎
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs a
+<strong>analitzar les evidències digitals</strong> recopilades durant
+una investigació de ciberseguretat per reconstruir els fets,
+identificar l'origen de l'incident i determinar les accions
+realitzades pels atacants.
+</p>
+
+<p>
+Coneixeràs les principals tècniques d'anàlisi forense, aprendràs a
+interpretar registres, examinar discs i memòria RAM, correlacionar
+informació procedent de diferents fonts i utilitzar eines
+especialitzades per obtenir informació rellevant durant una
+investigació.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre què és l'anàlisi forense digital.</li>
+
+<li>Conèixer els objectius d'una investigació forense.</li>
+
+<li>Identificar els diferents tipus d'evidències que poden analitzar-se.</li>
+
+<li>Interpretar la informació obtinguda dels sistemes afectats.</li>
+
+<li>Relacionar evidències per reconstruir els esdeveniments.</li>
+
+<li>Utilitzar metodologies sistemàtiques durant l'anàlisi.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Una vegada recopilades i preservades les evidències digitals,
+comença una de les fases més importants d'una investigació:
+<strong>l'anàlisi forense</strong>. L'objectiu és examinar totes les
+proves disponibles per comprendre què ha passat, quan ha ocorregut,
+quins sistemes s'han vist afectats i quines accions ha dut a terme
+l'atacant.
+</p>
+
+<p>
+L'anàlisi de les evidències no consisteix únicament a buscar fitxers
+o registres sospitosos. També implica relacionar informació
+procedent de diferents fonts, construir una cronologia dels fets i
+obtenir conclusions objectives basades exclusivament en les proves
+recollides.
+</p>
+
+<p>
+Aquest procés ha de realitzar-se sempre sobre còpies forenses,
+respectant la cadena de custòdia i mantenint la integritat de les
+evidències originals.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Durant una investigació forense no s'han de fer suposicions. Les
+conclusions sempre han d'estar sustentades per les evidències
+digitals analitzades.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS L'ANÀLISI FORENSE DIGITAL?
+========================================================== -->
+
+<section>
+
+<h2>Què és l'anàlisi forense digital?</h2>
+
+<p>
+L'<strong>anàlisi forense digital</strong> és el procés d'examinar les
+evidències digitals recopilades amb la finalitat d'obtenir
+informació rellevant sobre un incident de ciberseguretat. Aquest
+procés permet reconstruir els fets, identificar les causes,
+determinar les conseqüències i elaborar un informe tècnic fiable.
+</p>
+
+<p>
+L'investigador utilitza eines especialitzades per examinar discos,
+memòria RAM, registres del sistema, captures de xarxa, dispositius
+mòbils o qualsevol altra font d'informació relacionada amb
+l'incident.
+</p>
+
+<p>
+Una bona anàlisi forense ha de ser objectiva, repetible i
+perfectament documentada perquè qualsevol altre especialista puga
+obtenir els mateixos resultats a partir de les mateixes evidències.
+</p>
+
+<h3>Característiques d'una bona anàlisi</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Característica</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Objectiva</td>
+
+<td>Es basa únicament en les evidències disponibles.</td>
+
+</tr>
+
+<tr>
+
+<td>Reproduïble</td>
+
+<td>Altres investigadors poden repetir-la.</td>
+
+</tr>
+
+<tr>
+
+<td>Documentada</td>
+
+<td>Totes les actuacions queden registrades.</td>
+
+</tr>
+
+<tr>
+
+<td>Metòdica</td>
+
+<td>Segueix un procediment estructurat.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificable</td>
+
+<td>Les conclusions poden comprovar-se.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Durant una investigació de ransomware, l'anàlisi de la memòria RAM,
+dels registres del sistema i de les connexions de xarxa permet
+determinar quin procés va iniciar el xifrat dels fitxers i des de
+quina adreça IP es va controlar l'atac.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidències]
+
+--> B[Anàlisi]
+
+--> C[Interpretació]
+
+--> D[Reconstrucció dels fets]
+
+--> E[Informe]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE L'ANÀLISI D'EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Objectius de l'anàlisi d'evidències</h2>
+
+<p>
+L'anàlisi de les evidències té com a finalitat obtenir tota la
+informació necessària per comprendre l'incident i donar suport a la
+presa de decisions tècniques, organitzatives o legals.
+</p>
+
+<p>
+Els objectius poden variar segons el tipus d'incident, però tots
+busquen reconstruir els fets de la manera més precisa possible.
+</p>
+
+<h3>Objectius principals</h3>
+
+<ul>
+
+<li>Determinar l'origen de l'incident.</li>
+
+<li>Identificar els sistemes afectats.</li>
+
+<li>Conèixer el vector d'atac utilitzat.</li>
+
+<li>Detectar el malware o les eines emprades.</li>
+
+<li>Reconstruir la cronologia dels esdeveniments.</li>
+
+<li>Identificar possibles responsables.</li>
+
+<li>Avaluar l'impacte sobre l'organització.</li>
+
+<li>Obtenir proves per elaborar l'informe final.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Pregunta</th>
+
+<th>L'anàlisi intenta respondre...</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Què?</td>
+
+<td>Quin incident s'ha produït.</td>
+
+</tr>
+
+<tr>
+
+<td>Quan?</td>
+
+<td>Moment exacte dels fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Com?</td>
+
+<td>Mecanisme utilitzat per l'atacant.</td>
+
+</tr>
+
+<tr>
+
+<td>On?</td>
+
+<td>Sistemes afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Qui?</td>
+
+<td>Possible origen o responsable.</td>
+
+</tr>
+
+<tr>
+
+<td>Quines conseqüències?</td>
+
+<td>Impacte produït.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ==========================================================
+     TIPUS D'EVIDÈNCIES ANALITZADES
+========================================================== -->
+
+<section>
+
+<h2>Tipus d'evidències analitzades</h2>
+
+<p>
+Durant una investigació forense poden analitzar-se nombroses fonts
+d'informació. Cada tipus d'evidència aporta una visió diferent de
+l'incident i, combinades, permeten reconstruir amb precisió el que
+ha ocorregut.
+</p>
+
+<h3>Fonts d'informació habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Evidència</th>
+
+<th>Informació que aporta</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Disc dur</td>
+
+<td>Fitxers, documents, malware i metadades.</td>
+
+</tr>
+
+<tr>
+
+<td>Memòria RAM</td>
+
+<td>Processos actius, connexions i claus de xifrat.</td>
+
+</tr>
+
+<tr>
+
+<td>Logs del sistema</td>
+
+<td>Autenticacions, errors i activitats dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Captura de xarxa</td>
+
+<td>Comunicacions entre equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Correu electrònic</td>
+
+<td>Missatges de phishing o distribució de malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Dispositius USB</td>
+
+<td>Transferència de fitxers i extracció d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Navegador web</td>
+
+<td>Historial, galetes i descàrregues.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Cap evidència s'ha d'analitzar de manera aïllada. La informació més
+valuosa apareix quan es correlacionen dades procedents de diverses
+fonts.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Evidències]
+
+--> B[Disc]
+
+A --> C[RAM]
+
+A --> D[Logs]
+
+A --> E[Xarxa]
+
+A --> F[Correu]
+
+A --> G[USB]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     METODOLOGIA D'ANÀLISI FORENSE
+========================================================== -->
+
+<section>
+
+<h2>Metodologia d'anàlisi forense</h2>
+
+<p>
+L'anàlisi d'evidències digitals ha de seguir una metodologia
+estructurada que permeta obtindre conclusions fiables i
+reproduïbles. Encara que cada investigació presenta
+particularitats, totes comparteixen una sèrie de fases comunes que
+faciliten el treball de l'analista i asseguren la qualitat dels
+resultats.
+</p>
+
+<p>
+Aplicar una metodologia evita errors, permet documentar totes les
+actuacions i garanteix que les conclusions es basen exclusivament en
+les evidències disponibles.
+</p>
+
+<h3>Fases de l'anàlisi</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Preparació</td>
+
+<td>Verificar les evidències i preparar les eines.</td>
+
+</tr>
+
+<tr>
+
+<td>Examen</td>
+
+<td>Localitzar informació rellevant.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi</td>
+
+<td>Interpretar les dades recopilades.</td>
+
+</tr>
+
+<tr>
+
+<td>Correlació</td>
+
+<td>Relacionar totes les evidències.</td>
+
+</tr>
+
+<tr>
+
+<td>Conclusions</td>
+
+<td>Reconstruir els fets.</td>
+
+</tr>
+
+<tr>
+
+<td>Informe</td>
+
+<td>Documentar els resultats obtinguts.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Preparació]
+
+--> B[Examen]
+
+--> C[Anàlisi]
+
+--> D[Correlació]
+
+--> E[Conclusions]
+
+--> F[Informe]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És recomanable documentar les conclusions parcials durant tota la
+investigació. Esperar al final pot provocar que alguns detalls
+importants s'obliden.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ANÀLISI DE DISCS
+========================================================== -->
+
+<section>
+
+<h2>Anàlisi de discos</h2>
+
+<p>
+L'anàlisi del disc és una de les tasques més habituals de la
+informàtica forense. Consisteix a examinar una imatge forense del
+disc dur o de la unitat SSD per localitzar informació rellevant
+sobre l'incident.
+</p>
+
+<p>
+A més dels fitxers visibles, també és possible recuperar documents
+eliminats, analitzar les metadades dels arxius, estudiar les
+particions i identificar indicadors d'activitat maliciosa.
+</p>
+
+<h3>Informació que pot obtindre's</h3>
+
+<ul>
+
+<li>Documents i fitxers modificats.</li>
+
+<li>Fitxers eliminats.</li>
+
+<li>Metadades dels arxius.</li>
+
+<li>Historial de navegació.</li>
+
+<li>Registre de descàrregues.</li>
+
+<li>Aplicacions instal·lades.</li>
+
+<li>Malware ocult.</li>
+
+<li>Particions ocultes.</li>
+
+</ul>
+
+<h3>Tècniques habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tècnica</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Recuperació de fitxers</td>
+
+<td>Restaurar informació eliminada.</td>
+
+</tr>
+
+<tr>
+
+<td>Anàlisi de metadades</td>
+
+<td>Conèixer autoria i dates.</td>
+
+</tr>
+
+<tr>
+
+<td>Keyword Search</td>
+
+<td>Buscar paraules clau.</td>
+
+</tr>
+
+<tr>
+
+<td>Hash Analysis</td>
+
+<td>Detectar fitxers coneguts.</td>
+
+</tr>
+
+<tr>
+
+<td>File Carving</td>
+
+<td>Recuperar fitxers sense sistema de fitxers.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'analista descobreix que un document confidencial va ser eliminat
+pocs minuts abans de detectar-se una connexió sospitosa. Mitjançant
+la recuperació de fitxers és possible restaurar-lo i continuar la
+investigació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Imatge forense]
+
+--> B[Explorar fitxers]
+
+--> C[Metadades]
+
+--> D[Recuperació]
+
+--> E[Conclusions]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ANÀLISI DE LA MEMÒRIA RAM
+========================================================== -->
+
+<section>
+
+<h2>Anàlisi de la memòria RAM</h2>
+
+<p>
+La memòria RAM conté informació molt valuosa que desapareix quan
+l'ordinador s'apaga. Per aquest motiu, el seu estudi és una de les
+primeres tasques durant una investigació d'incidents.
+</p>
+
+<p>
+L'anàlisi de la memòria permet descobrir processos en execució,
+connexions de xarxa actives, credencials carregades en memòria,
+claus de xifrat o malware que mai arriba a escriure's al disc.
+</p>
+
+<h3>Informació disponible</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Informació</th>
+
+<th>Utilitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Processos</td>
+
+<td>Detectar malware actiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Connexions</td>
+
+<td>Identificar comunicacions remotes.</td>
+
+</tr>
+
+<tr>
+
+<td>DLL carregades</td>
+
+<td>Analitzar biblioteques utilitzades.</td>
+
+</tr>
+
+<tr>
+
+<td>Credencials</td>
+
+<td>Detectar robatori de contrasenyes.</td>
+
+</tr>
+
+<tr>
+
+<td>Claus de xifrat</td>
+
+<td>Recuperar informació protegida.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Eines habituals</h3>
+
+<ul>
+
+<li>Volatility.</li>
+
+<li>Volatility 3.</li>
+
+<li>Rekall.</li>
+
+<li>WinDbg.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Moltes amenaces modernes funcionen únicament en memòria
+(<em>fileless malware</em>). Si no s'analitza la RAM, aquest tipus
+de malware pot passar completament desapercebut.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Captura RAM]
+
+--> B[Processos]
+
+--> C[Connexions]
+
+--> D[Credencials]
+
+--> E[Malware]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ANÀLISI DELS LOGS
+========================================================== -->
+
+<section>
+
+<h2>Anàlisi dels registres (Logs)</h2>
+
+<p>
+Els <strong>logs</strong> constitueixen una de les fonts
+d'informació més importants durant qualsevol investigació. Cada
+servei, aplicació o dispositiu genera registres que documenten les
+operacions realitzades, els errors detectats i les activitats dels
+usuaris.
+</p>
+
+<p>
+Mitjançant l'estudi dels logs és possible reconstruir una gran part
+de la cronologia dels fets i identificar comportaments anòmals.
+</p>
+
+<h3>Fonts habituals de registres</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Origen</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Sistema operatiu</td>
+
+<td>Inicis de sessió, errors i serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor web</td>
+
+<td>Peticions HTTP.</td>
+
+</tr>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Connexions permeses o bloquejades.</td>
+
+</tr>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>Esdeveniments correlacionats.</td>
+
+</tr>
+
+<tr>
+
+<td>EDR</td>
+
+<td>Activitat dels equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Active Directory</td>
+
+<td>Autenticacions i permisos.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Logs]
+
+--> B[Filtrat]
+
+--> C[Correlació]
+
+--> D[Incidents]
+
+--> E[Conclusió]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RECUPERACIÓ D'INFORMACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Recuperació d'informació</h2>
+
+<p>
+Durant una investigació és habitual trobar informació que aparentment
+ha desaparegut. Els fitxers poden haver estat eliminats, ocultats,
+xifrats o modificats pels atacants amb l'objectiu d'eliminar proves.
+Mitjançant tècniques de recuperació forense és possible recuperar una
+part important d'aquestes dades.
+</p>
+
+<p>
+La recuperació d'informació no consisteix únicament a restaurar
+fitxers esborrats. També inclou la recuperació de particions,
+metadades, versions antigues de documents i informació residual que
+encara roman al dispositiu.
+</p>
+
+<h3>Informació que es pot recuperar</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Tècnica utilitzada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Fitxers eliminats</td>
+
+<td>File Recovery</td>
+
+</tr>
+
+<tr>
+
+<td>Documents parcials</td>
+
+<td>File Carving</td>
+
+</tr>
+
+<tr>
+
+<td>Particions eliminades</td>
+
+<td>Recuperació de particions</td>
+
+</tr>
+
+<tr>
+
+<td>Metadades</td>
+
+<td>Anàlisi del sistema de fitxers</td>
+
+</tr>
+
+<tr>
+
+<td>Historial web</td>
+
+<td>Anàlisi del navegador</td>
+
+</tr>
+
+<tr>
+
+<td>Correus eliminats</td>
+
+<td>Recuperació de bases de dades</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Factors que dificulten la recuperació</h3>
+
+<ul>
+
+<li>Sobreescriptura dels sectors del disc.</li>
+
+<li>Xifrat dels fitxers.</li>
+
+<li>Danys físics al dispositiu.</li>
+
+<li>Formateig complet.</li>
+
+<li>Temps transcorregut des de l'eliminació.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un empleat elimina una carpeta abans d'abandonar l'empresa.
+Mitjançant una anàlisi forense és possible recuperar bona part dels
+documents perquè els sectors del disc encara no han estat
+sobreescrits.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Disc]
+
+--> B[Recuperació]
+
+--> C[Fitxers eliminats]
+
+--> D[Anàlisi]
+
+--> E[Conclusions]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONSTRUCCIÓ DE LA LÍNIA TEMPORAL
+========================================================== -->
+
+<section>
+
+<h2>Construcció de la línia temporal (Timeline)</h2>
+
+<p>
+Una de les tècniques més importants de la informàtica forense és la
+construcció d'una <strong>línia temporal</strong>. Aquesta permet
+ordenar cronològicament tots els esdeveniments registrats durant
+l'incident per reconstruir amb precisió el que ha ocorregut.
+</p>
+
+<p>
+La informació pot procedir dels logs del sistema, dels fitxers,
+del navegador web, dels registres del sistema operatiu o de les
+captures de xarxa.
+</p>
+
+<h3>Avantatges del Timeline</h3>
+
+<ul>
+
+<li>Reconstruir la seqüència dels fets.</li>
+
+<li>Relacionar diferents evidències.</li>
+
+<li>Detectar accions sospitoses.</li>
+
+<li>Identificar el moment de la intrusió.</li>
+
+<li>Determinar la propagació de l'atac.</li>
+
+</ul>
+
+<h3>Exemple simplificat</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Hora</th>
+
+<th>Esdeveniment</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>08:12</td>
+
+<td>Recepció d'un correu de phishing.</td>
+
+</tr>
+
+<tr>
+
+<td>08:15</td>
+
+<td>L'usuari obri l'arxiu adjunt.</td>
+
+</tr>
+
+<tr>
+
+<td>08:16</td>
+
+<td>S'executa el malware.</td>
+
+</tr>
+
+<tr>
+
+<td>08:18</td>
+
+<td>Connexió amb el servidor de comandament.</td>
+
+</tr>
+
+<tr>
+
+<td>08:21</td>
+
+<td>Comença el xifrat dels fitxers.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+timeline
+    title Exemple de cronologia d'un incident
+    section Atac
+        08-12 : Correu de phishing
+        08-15 : Obertura de l'adjunt
+        08-16 : Execució del malware
+        08-18 : Comunicació C2
+        08-21 : Xifrat dels fitxers
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CORRELACIÓ D'EVIDÈNCIES
+========================================================== -->
+
+<section>
+
+<h2>Correlació d'evidències</h2>
+
+<p>
+Cap evidència explica per si sola tot el que ha passat durant un
+incident. Per aquest motiu és necessari relacionar la informació
+obtinguda de diferents fonts per construir una visió global dels
+esdeveniments.
+</p>
+
+<p>
+Aquest procés rep el nom de <strong>correlació d'evidències</strong>
+i és una de les competències més importants dels analistes de
+ciberseguretat.
+</p>
+
+<h3>Exemple de correlació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Font</th>
+
+<th>Informació aportada</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Firewall</td>
+
+<td>Connexió sospitosa.</td>
+
+</tr>
+
+<tr>
+
+<td>Logs Windows</td>
+
+<td>Inici de sessió d'un usuari.</td>
+
+</tr>
+
+<tr>
+
+<td>RAM</td>
+
+<td>Procés maliciós actiu.</td>
+
+</tr>
+
+<tr>
+
+<td>Navegador</td>
+
+<td>Descàrrega d'un executable.</td>
+
+</tr>
+
+<tr>
+
+<td>SIEM</td>
+
+<td>Alerta crítica.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<p>
+Quan totes aquestes evidències es relacionen entre si és possible
+determinar el vector d'atac, el moviment lateral de l'atacant i les
+accions realitzades sobre els sistemes afectats.
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Firewall]
+
+--> E[Correlació]
+
+B[Logs]
+
+--> E
+
+C[RAM]
+
+--> E
+
+D[SIEM]
+
+--> E
+
+E
+
+--> F[Reconstrucció dels fets]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     PRINCIPALS EINES D'ANÀLISI
+========================================================== -->
+
+<section>
+
+<h2>Principals eines d'anàlisi</h2>
+
+<p>
+L'anàlisi forense requereix eines especialitzades capaces
+d'examinar diferents tipus d'evidències digitals. Cap eina és capaç
+de resoldre tots els casos; per això és habitual combinar-ne
+diverses durant una investigació.
+</p>
+
+<h3>Eines més utilitzades</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Eina</th>
+
+<th>Funció principal</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Autopsy</td>
+
+<td>Anàlisi de discos i fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>Volatility</td>
+
+<td>Anàlisi de memòria RAM.</td>
+
+</tr>
+
+<tr>
+
+<td>Wireshark</td>
+
+<td>Anàlisi del trànsit de xarxa.</td>
+
+</tr>
+
+<tr>
+
+<td>FTK Imager</td>
+
+<td>Visualització d'imatges forenses.</td>
+
+</tr>
+
+<tr>
+
+<td>Timeline Explorer</td>
+
+<td>Anàlisi cronològica.</td>
+
+</tr>
+
+<tr>
+
+<td>YARA</td>
+
+<td>Detecció de malware.</td>
+
+</tr>
+
+<tr>
+
+<td>Plaso / log2timeline</td>
+
+<td>Construcció automàtica de timelines.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="info">
+
+<strong>Informació</strong>
+
+<p>
+
+Els equips SOC i CSIRT combinen habitualment diverses eines
+forenses. Per exemple, una investigació pot començar amb
+<strong>FTK Imager</strong>, continuar amb <strong>Autopsy</strong>,
+analitzar la memòria amb <strong>Volatility</strong> i finalitzar amb
+la correlació dels logs en un <strong>SIEM</strong>.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[FTK Imager]
+
+--> B[Autopsy]
+
+--> C[Volatility]
+
+--> D[Wireshark]
+
+--> E[Timeline]
+
+--> F[Informe]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+L'anàlisi de les evidències digitals permet descobrir informació que,
+a simple vista, passa desapercebuda. A continuació es mostren alguns
+casos habituals i el tipus d'informació que pot obtindre's durant la
+investigació.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Evidència analitzada</th>
+
+<th>Resultat obtingut</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Memòria RAM</td>
+
+<td>Procés responsable del xifrat.</td>
+
+</tr>
+
+<tr>
+
+<td>Phishing</td>
+
+<td>Capçalera del correu</td>
+
+<td>Servidor real d'origen.</td>
+
+</tr>
+
+<tr>
+
+<td>Robatori de dades</td>
+
+<td>Logs del servidor</td>
+
+<td>Usuari i hora de l'accés.</td>
+
+</tr>
+
+<tr>
+
+<td>Malware</td>
+
+<td>Disc dur</td>
+
+<td>Executable maliciós ocult.</td>
+
+</tr>
+
+<tr>
+
+<td>Moviment lateral</td>
+
+<td>SIEM i Firewall</td>
+
+<td>Equips compromesos.</td>
+
+</tr>
+
+<tr>
+
+<td>Exfiltració</td>
+
+<td>Captura de xarxa</td>
+
+<td>Destinació de les dades.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+L'anàlisi dels logs mostra que un usuari va iniciar sessió a les
+02:14 de la matinada. Posteriorment, la captura de xarxa revela una
+connexió cap a un servidor extern i, finalment, l'anàlisi del disc
+detecta un programa maliciós descarregat pocs minuts abans.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una investigació forense requereix paciència, metodologia i una bona
+organització. Les conclusions han de basar-se exclusivament en les
+evidències disponibles.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Analitza primer les evidències més rellevants.</li>
+
+<li>Documenta totes les troballes.</li>
+
+<li>No tragues conclusions precipitades.</li>
+
+<li>Correlaciona informació de diverses fonts.</li>
+
+<li>Verifica totes les hipòtesis.</li>
+
+<li>Conserva una cronologia actualitzada.</li>
+
+<li>Utilitza eines diferents per validar els resultats.</li>
+
+<li>Guarda captures de pantalla de les troballes importants.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+L'anàlisi de les evidències és una activitat crítica. Un error
+d'interpretació pot conduir a conclusions incorrectes i dificultar
+la resposta davant l'incident.
+</p>
+
+<div class="important">
+
+<strong>Errors habituals</strong>
+
+<ul>
+
+<li>Treballar directament sobre l'evidència original.</li>
+
+<li>Ignorar la informació temporal dels registres.</li>
+
+<li>No correlacionar diferents fonts d'informació.</li>
+
+<li>Basar-se únicament en una evidència.</li>
+
+<li>Eliminar informació considerada poc important.</li>
+
+<li>No verificar els resultats obtinguts.</li>
+
+<li>No conservar la documentació de l'anàlisi.</li>
+
+<li>Interpretar dades sense context.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+L'objectiu de l'anàlisi no és demostrar una teoria prèvia, sinó
+descobrir què ha passat realment a partir de les proves disponibles.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els atacants també manipulen els logs</strong>
+
+<p>
+
+Molts programes maliciosos intenten eliminar o modificar els
+registres del sistema per dificultar la investigació. Per això és
+important disposar de còpies centralitzades dels logs.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La memòria RAM revela informació invisible al disc</strong>
+
+<p>
+
+Moltes amenaces modernes només existeixen en memòria i desapareixen
+quan l'equip s'apaga. Sense una anàlisi de la RAM poden passar
+completament desapercebudes.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Un Timeline pot contindre milions d'esdeveniments</strong>
+
+<p>
+
+Les eines actuals són capaces d'unificar informació procedent de
+discos, registres, navegadors, xarxa i memòria per construir una
+única línia temporal de tota la investigació.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La correlació és la clau</strong>
+
+<p>
+
+Una connexió sospitosa, un fitxer modificat i un inici de sessió
+inusual poden semblar incidents independents, però junts poden
+explicar completament un atac.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa detecta una connexió no autoritzada durant la nit. En
+analitzar les evidències disponibles apareixen les següents dades.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Hora</th>
+
+<th>Evidència</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>22:14</td>
+
+<td>Inici de sessió amb l'usuari administrador.</td>
+
+</tr>
+
+<tr>
+
+<td>22:16</td>
+
+<td>Descàrrega d'un executable des d'Internet.</td>
+
+</tr>
+
+<tr>
+
+<td>22:18</td>
+
+<td>Execució d'un procés desconegut.</td>
+
+</tr>
+
+<tr>
+
+<td>22:20</td>
+
+<td>Connexió a una IP estrangera.</td>
+
+</tr>
+
+<tr>
+
+<td>22:25</td>
+
+<td>Eliminació de diversos fitxers.</td>
+
+</tr>
+
+<tr>
+
+<td>22:27</td>
+
+<td>Esborrat parcial dels logs.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<p>
+
+Analitza les evidències i respon:
+
+</p>
+
+<ol>
+
+<li>Quin podria haver estat el vector d'entrada?</li>
+
+<li>Quina informació aportaria la memòria RAM?</li>
+
+<li>Quins logs consultaries primer?</li>
+
+<li>Construeix una cronologia resumida dels fets.</li>
+
+<li>Quines evidències utilitzaries per confirmar les conclusions?</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h3💻 Laboratori</h3>
+
+<p>
+En aquesta pràctica actuaràs com a membre d'un equip d'anàlisi
+forense. A partir d'un conjunt d'evidències digitals hauràs de
+reconstruir els fets ocorreguts durant un incident de
+ciberseguretat, identificant l'origen de l'atac i les accions
+realitzades sobre els sistemes afectats.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa detecta comportaments anòmals en un servidor Windows.
+S'han recopilat les evidències durant la fase anterior (CA3a) i ara
+cal analitzar-les per determinar què ha passat.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Imatge forense del disc.</li>
+
+<li>Captura de memòria RAM.</li>
+
+<li>Logs del sistema Windows.</li>
+
+<li>Logs del Firewall.</li>
+
+<li>Captura de trànsit amb Wireshark.</li>
+
+<li>Autopsy.</li>
+
+<li>Volatility 3.</li>
+
+<li>Timeline Explorer o Plaso.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Examinar el sistema de fitxers.</li>
+
+<li>Buscar fitxers eliminats.</li>
+
+<li>Analitzar els processos actius de la memòria RAM.</li>
+
+<li>Detectar connexions de xarxa sospitoses.</li>
+
+<li>Estudiar els registres del sistema.</li>
+
+<li>Construir una línia temporal dels fets.</li>
+
+<li>Correlacionar totes les evidències.</li>
+
+<li>Elaborar un informe amb les conclusions.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Les conclusions han d'estar basades exclusivament en les evidències
+analitzades. Si una hipòtesi no pot demostrar-se, ha d'indicar-se
+com a possibilitat i no com un fet.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>Defineix què és l'anàlisi forense digital.</li>
+
+<li>Explica les diferents fases d'una investigació forense.</li>
+
+<li>Descriu la informació que pot obtindre's d'una imatge forense.</li>
+
+<li>Per què és important analitzar la memòria RAM?</li>
+
+<li>Quina informació proporcionen els logs?</li>
+
+<li>Construeix una línia temporal a partir d'un conjunt de registres.</li>
+
+<li>Explica què significa correlacionar evidències.</li>
+
+<li>Compara les eines Autopsy, Volatility i Wireshark.</li>
+
+<li>Investiga què és el <em>file carving</em>.</li>
+
+<li>Descriu un procediment complet d'anàlisi d'evidències.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+L'anàlisi de les evidències digitals transforma la informació
+recopilada durant la investigació en coneixement útil per entendre
+l'incident. Mitjançant tècniques d'anàlisi forense és possible
+recuperar informació, estudiar processos, interpretar registres,
+construir cronologies i relacionar evidències procedents de
+diferents fonts.
+
+</p>
+
+<p>
+
+Les conclusions obtingudes serviran de base per a la investigació
+completa de l'incident i per elaborar l'informe tècnic final.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Evidències]
+
+--> B[Anàlisi]
+
+--> C[Timeline]
+
+--> D[Correlació]
+
+--> E[Conclusions]
+
+--> F[Informe]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>L'anàlisi forense es realitza sobre còpies de les evidències.</li>
+
+<li>Els discos, la memòria RAM i els logs són les principals fonts d'informació.</li>
+
+<li>La correlació permet reconstruir els fets.</li>
+
+<li>El Timeline ordena cronològicament tots els esdeveniments.</li>
+
+<li>Les conclusions han d'estar sustentades per proves.</li>
+
+<li>És necessari documentar totes les actuacions.</li>
+
+<li>Diverses eines poden complementar-se durant la investigació.</li>
+
+<li>L'informe final resumeix totes les conclusions obtingudes.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és l'anàlisi forense digital.</li>
+
+<li>Explicar la metodologia d'anàlisi.</li>
+
+<li>Distingir les principals fonts d'evidències.</li>
+
+<li>Descriure l'anàlisi de discos, memòria RAM i logs.</li>
+
+<li>Explicar què és una línia temporal (Timeline).</li>
+
+<li>Justificar la necessitat de correlacionar evidències.</li>
+
+<li>Identificar les eines forenses més habituals.</li>
+
+<li>Interpretar un cas pràctic senzill.</li>
+
+<li>Relacionar evidències amb les conclusions obtingudes.</li>
+
+<li>Conèixer els errors més freqüents durant una investigació.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per aprofundir en aquest criteri d'avaluació es proporcionen els
+següents materials de suport.
+
+</p>
+
+<ul>
+
+<li>📄 Guia d'anàlisi forense digital.</li>
+
+<li>📄 Manual bàsic d'Autopsy.</li>
+
+<li>📄 Guia d'introducció a Volatility 3.</li>
+
+<li>📄 Exercicis de construcció de Timelines.</li>
+
+<li>📄 Plantilla d'informe forense.</li>
+
+<li>📄 Cas pràctic complet resolt.</li>
+
+<li>📄 Col·lecció de fitxers de logs per practicar.</li>
+
+<li>📄 Glossari de terminologia forense.</li>
+
+<li>📄 Resum dels principals artefactes de Windows.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Aquest criteri completa el treball iniciat en el <strong>CA3a</strong>.
+En el següent criteri (<strong>CA3c - Investigació d'incidents de
+ciberseguretat</strong>) utilitzaràs tota la informació obtinguda
+durant l'anàlisi per reconstruir l'atac, identificar el vector
+d'entrada, determinar les tècniques emprades pels atacants i elaborar
+la investigació completa de l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+ <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

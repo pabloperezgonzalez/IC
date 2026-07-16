@@ -1,0 +1,1984 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 2c - Detecció d'incidents de seguretat física </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>30 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_02.html"> 
+                    RA2
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA2c
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#0ca982, #268968);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 2c - Detecció d'incidents de seguretat física
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 30 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    🚨
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs que la ciberseguretat no
+depén únicament del programari o de les xarxes. La protecció física
+de les instal·lacions és igualment important per evitar accessos no
+autoritzats, robatoris, sabotatges o desastres que puguen afectar
+els sistemes d'informació.
+</p>
+
+<p>
+Coneixeràs els principals controls de seguretat física utilitzats
+en empreses i centres de dades, així com els mecanismes que
+permeten detectar incidents abans que provoquen conseqüències
+greus sobre els actius de l'organització.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre la importància de la seguretat física dins de la ciberseguretat.</li>
+
+<li>Identificar els principals riscos físics d'una organització.</li>
+
+<li>Conèixer els mecanismes de detecció d'incidents físics.</li>
+
+<li>Distingir els diferents sistemes de control d'accés.</li>
+
+<li>Comprendre la funció dels sistemes de vigilància i dels sensors.</li>
+
+<li>Relacionar els incidents físics amb els incidents de ciberseguretat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan es parla de ciberseguretat és habitual pensar en virus,
+ransomware, tallafocs o sistemes de detecció d'intrusions. No
+obstant això, moltes incidències tenen el seu origen en problemes
+de seguretat física, com ara l'accés no autoritzat a una sala de
+servidors, el robatori d'equips, un incendi o una interrupció del
+subministrament elèctric.
+</p>
+
+<p>
+Els sistemes d'informació depenen d'una infraestructura física que
+ha d'estar protegida. Un atacant que aconsegueix accedir
+físicament als equips pot evitar moltes de les mesures de
+seguretat lògica implantades per l'organització.
+</p>
+
+<p>
+Per aquest motiu, les empreses combinen controls físics i controls
+lògics, creant una estratègia de defensa en profunditat que
+protegeix tant les instal·lacions com la informació que
+emmagatzemen.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La ciberseguretat no consisteix només a protegir dades i xarxes.
+També és necessari protegir les persones, els edificis, els equips
+i qualsevol infraestructura que done suport als sistemes
+d'informació.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA SEGURETAT FÍSICA
+========================================================== -->
+
+<section>
+
+<h3>Què és la seguretat física?</h3>
+
+<p>
+La <strong>seguretat física</strong> és el conjunt de mesures,
+procediments i tecnologies destinades a protegir les persones, les
+instal·lacions, els equips i els actius materials davant
+amenaces que poden causar danys o interrompre el funcionament
+normal d'una organització.
+</p>
+
+<p>
+Aquestes amenaces poden ser conseqüència d'accions
+malintencionades, com ara robatoris o sabotatges, però també de
+fenòmens naturals, accidents o errors humans.
+</p>
+
+<p>
+L'objectiu principal és impedir o detectar qualsevol situació que
+pose en risc la disponibilitat dels sistemes o la integritat dels
+actius físics.
+</p>
+
+<h3>Actius que protegeix</h3>
+
+<ul>
+
+<li>Persones.</li>
+
+<li>Edificis.</li>
+
+<li>Sales de servidors.</li>
+
+<li>Centres de processament de dades (CPD).</li>
+
+<li>Equips informàtics.</li>
+
+<li>Dispositius de comunicacions.</li>
+
+<li>Documents en paper.</li>
+
+<li>Sistemes d'alimentació elèctrica.</li>
+
+</ul>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa disposa d'un CPD amb accés restringit mitjançant
+targetes identificatives. Només el personal autoritzat pot entrar
+a la sala, evitant manipulacions dels servidors o robatoris
+d'equips.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Amenaces físiques]
+
+--> B[Controls físics]
+
+--> C[Protecció dels actius]
+
+--> D[Continuïtat del servei]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RELACIÓ ENTRE SEGURETAT FÍSICA I CIBERSEGURETAT
+========================================================== -->
+
+<section>
+
+<h3>Relació entre seguretat física i ciberseguretat</h3>
+
+<p>
+La seguretat física i la ciberseguretat no són disciplines
+independents. Totes dues formen part d'una mateixa estratègia de
+protecció dels actius d'una organització.
+</p>
+
+<p>
+Molts ciberatacs poden començar amb una vulneració de la seguretat
+física. Per exemple, un atacant que aconsegueix accedir a una sala
+de servidors podria connectar dispositius maliciosos, robar discs
+durs o manipular els equips sense necessitat d'explotar cap
+vulnerabilitat informàtica.
+</p>
+
+<p>
+De la mateixa manera, un incident físic, com un incendi o una
+inundació, pot provocar la interrupció dels serveis digitals i la
+pèrdua d'informació crítica.
+</p>
+
+<h3>Exemples de relació</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident físic</th>
+
+<th>Conseqüència sobre la ciberseguretat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Robatori d'un portàtil.</td>
+
+<td>Pèrdua o exposició d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Accés no autoritzat al CPD.</td>
+
+<td>Manipulació dels servidors.</td>
+
+</tr>
+
+<tr>
+
+<td>Incendi.</td>
+
+<td>Interrupció dels serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Tall del subministrament elèctric.</td>
+
+<td>Caiguda dels sistemes.</td>
+
+</tr>
+
+<tr>
+
+<td>Inundació.</td>
+
+<td>Danys als equips informàtics.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Quan s'analitza un incident de ciberseguretat també cal estudiar
+si existeix algun component físic implicat. En moltes ocasions la
+causa principal no és un atac informàtic, sinó una fallada en la
+protecció de les instal·lacions.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Seguretat física]
+
+--> C[Protecció dels actius]
+
+B[Ciberseguretat]
+
+--> C
+
+C
+
+--> D[Continuïtat del negoci]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     CONTROLS FÍSICS DE PROTECCIÓ
+========================================================== -->
+
+<section>
+
+<h3>Controls físics de protecció</h3>
+
+<p>
+Els <strong>controls físics</strong> són les mesures destinades a
+protegir les instal·lacions, els equips i les persones davant
+amenaces físiques. La seua finalitat és impedir l'accés no
+autoritzat, detectar activitats sospitoses i reduir els efectes
+d'incidents com robatoris, sabotatges o desastres naturals.
+</p>
+
+<p>
+La majoria d'organitzacions utilitzen una estratègia de
+<strong>defensa en capes</strong>, combinant diversos controls
+perquè, si un falla, els altres continuen protegint els actius.
+</p>
+
+<h3>Principals controls físics</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Control</th>
+
+<th>Funció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Tanques i murs</td>
+
+<td>Delimitar el perímetre de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Portes de seguretat</td>
+
+<td>Restringir l'accés.</td>
+
+</tr>
+
+<tr>
+
+<td>Panys electrònics</td>
+
+<td>Controlar l'obertura de les dependències.</td>
+
+</tr>
+
+<tr>
+
+<td>Torniquets</td>
+
+<td>Regular el pas de persones.</td>
+
+</tr>
+
+<tr>
+
+<td>Control d'accessos</td>
+
+<td>Identificar els usuaris autoritzats.</td>
+
+</tr>
+
+<tr>
+
+<td>Càmeres CCTV</td>
+
+<td>Supervisar les instal·lacions.</td>
+
+</tr>
+
+<tr>
+
+<td>Alarmes</td>
+
+<td>Detectar intrusions.</td>
+
+</tr>
+
+<tr>
+
+<td>Il·luminació de seguretat</td>
+
+<td>Dissuadir accessos no autoritzats.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un centre de dades disposa de diverses capes de protecció:
+tanca perimetral, control d'accés amb targeta, identificació
+biomètrica i videovigilància permanent. Per arribar als
+servidors és necessari superar cadascun d'aquests controls.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Perímetre]
+
+--> B[Recepció]
+
+--> C[Control d'accés]
+
+--> D[Sala de servidors]
+
+--> E[Rack]
+
+</div>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+La millor protecció física no consisteix en un únic control molt
+potent, sinó en la combinació de diverses capes de seguretat que
+dificulten l'accés als actius crítics.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SISTEMES DE CONTROL D'ACCÉS
+========================================================== -->
+
+<section>
+
+<h3>Sistemes de control d'accés</h3>
+
+<p>
+Els sistemes de control d'accés permeten determinar qui pot entrar
+a una determinada zona, en quin moment i durant quant de temps.
+Són un dels elements més importants de la seguretat física,
+especialment en sales de servidors, centres de dades i
+instal·lacions crítiques.
+</p>
+
+<p>
+Aquests sistemes registren totes les entrades i eixides, generant
+evidències que poden ser utilitzades durant una investigació
+posterior.
+</p>
+
+<h3>Mètodes d'autenticació física</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Mètode</th>
+
+<th>Característiques</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Clau mecànica</td>
+
+<td>Sistema tradicional.</td>
+
+</tr>
+
+<tr>
+
+<td>Targeta RFID</td>
+
+<td>Accés mitjançant proximitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Targeta NFC</td>
+
+<td>Comunicació sense contacte.</td>
+
+</tr>
+
+<tr>
+
+<td>Codi PIN</td>
+
+<td>Introducció d'un codi numèric.</td>
+
+</tr>
+
+<tr>
+
+<td>Empremta digital</td>
+
+<td>Biometria.</td>
+
+</tr>
+
+<tr>
+
+<td>Reconeixement facial</td>
+
+<td>Biometria avançada.</td>
+
+</tr>
+
+<tr>
+
+<td>Escàner d'iris</td>
+
+<td>Alta precisió.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<h3>Avantatges del control d'accés electrònic</h3>
+
+<ul>
+
+<li>Registre automàtic de totes les entrades.</li>
+
+<li>Revocació immediata dels permisos.</li>
+
+<li>Assignació de permisos per zones.</li>
+
+<li>Limitació horària dels accessos.</li>
+
+<li>Integració amb altres sistemes de seguretat.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Les targetes identificatives no s'han de compartir mai entre
+treballadors. Cada accés ha de quedar associat a una persona
+concreta per garantir la traçabilitat.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Usuari]
+
+--> B[Targeta o biometria]
+
+--> C{Autoritzat?}
+
+C -->|Sí| D[Obrir porta]
+
+C -->|No| E[Denegar accés]
+
+E --> F[Registrar incidència]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SISTEMES DE VIDEOVIGILÀNCIA
+========================================================== -->
+
+<section>
+
+<h2>Sistemes de videovigilància (CCTV)</h2>
+
+<p>
+Els sistemes de <strong>Circuit Tancat de Televisió (CCTV)</strong>
+constitueixen una de les principals eines de detecció
+d'incidents físics. Les càmeres permeten supervisar les
+instal·lacions de forma contínua, registrar evidències i ajudar
+en la investigació posterior dels incidents.
+</p>
+
+<p>
+Actualment els sistemes de videovigilància incorporen funcions
+intel·ligents basades en intel·ligència artificial, capaces de
+detectar automàticament comportaments anòmals sense necessitat
+que un operador estiga observant les imatges de manera
+constant.
+</p>
+
+<h3>Funcions principals</h3>
+
+<ul>
+
+<li>Vigilància permanent.</li>
+
+<li>Gravació d'evidències.</li>
+
+<li>Detecció de moviment.</li>
+
+<li>Reconeixement de matrícules.</li>
+
+<li>Reconeixement facial.</li>
+
+<li>Seguiment automàtic de persones.</li>
+
+<li>Integració amb alarmes.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Tipus de càmera</th>
+
+<th>Aplicació habitual</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Fixa</td>
+
+<td>Accessos i passadissos.</td>
+
+</tr>
+
+<tr>
+
+<td>Dom</td>
+
+<td>Interior d'edificis.</td>
+
+</tr>
+
+<tr>
+
+<td>PTZ</td>
+
+<td>Seguiment automàtic.</td>
+
+</tr>
+
+<tr>
+
+<td>Infraroja</td>
+
+<td>Vigilància nocturna.</td>
+
+</tr>
+
+<tr>
+
+<td>Tèrmica</td>
+
+<td>Detecció en baixa visibilitat.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una càmera detecta moviment a la sala de servidors fora de
+l'horari laboral. El sistema comprova que no existeix cap
+autorització d'accés i activa automàticament una alarma perquè
+el personal de seguretat verifique la situació.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Càmera CCTV]
+
+--> B[Detecció de moviment]
+
+--> C{Persona autoritzada?}
+
+C -->|Sí| D[Continuar monitoritzant]
+
+C -->|No| E[Alarma]
+
+E --> F[Personal de seguretat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     SISTEMES D'ALARMA I SENSORS
+========================================================== -->
+
+<section>
+
+<h2>Sistemes d'alarma i sensors</h2>
+
+<p>
+Els sistemes d'alarma tenen com a objectiu detectar de manera
+automàtica qualsevol situació que puga comprometre la seguretat
+de les instal·lacions. Per aconseguir-ho utilitzen una xarxa de
+sensors distribuïts pels edificis que supervisen contínuament
+l'entorn.
+</p>
+
+<p>
+Quan un sensor detecta una situació anòmala, envia la informació
+a la central d'alarmes, que decideix si és necessari generar una
+alerta, avisar el personal de seguretat o activar altres mesures
+de protecció.
+</p>
+
+<p>
+Els sensors actuals poden detectar tant intrusions com
+incendis, inundacions, variacions de temperatura o talls del
+subministrament elèctric.
+</p>
+
+<h3>Principals tipus de sensors</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Sensor</th>
+
+<th>Detecta</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>PIR (infraroig passiu)</td>
+
+<td>Moviment de persones.</td>
+
+</tr>
+
+<tr>
+
+<td>Contacte magnètic</td>
+
+<td>Obertura de portes o finestres.</td>
+
+</tr>
+
+<tr>
+
+<td>Detector de fum</td>
+
+<td>Presència de fum.</td>
+
+</tr>
+
+<tr>
+
+<td>Detector de calor</td>
+
+<td>Increment de temperatura.</td>
+
+</tr>
+
+<tr>
+
+<td>Sensor d'inundació</td>
+
+<td>Aigua al terra.</td>
+
+</tr>
+
+<tr>
+
+<td>Sensor de vibració</td>
+
+<td>Manipulació de portes o caixes fortes.</td>
+
+</tr>
+
+<tr>
+
+<td>Sensor acústic</td>
+
+<td>Trencament de vidres.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Durant la nit, un contacte magnètic detecta l'obertura d'una
+porta del CPD. Com que no existeix cap accés autoritzat en
+aquell moment, la central activa la sirena, envia una notificació
+al personal de seguretat i registra l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Sensor]
+
+--> B[Central d'alarmes]
+
+--> C{Incident?}
+
+C -->|No| D[Continuar monitoritzant]
+
+C -->|Sí| E[Activar alarma]
+
+E --> F[Equip de seguretat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     CONTROL AMBIENTAL
+========================================================== -->
+
+<section>
+
+<h2>Control ambiental del CPD</h2>
+
+<p>
+Els centres de processament de dades (CPD) necessiten unes
+condicions ambientals molt estables per garantir el correcte
+funcionament dels equips informàtics. Temperatures elevades,
+humitat excessiva o problemes en el subministrament elèctric
+poden provocar interrupcions del servei o danys irreversibles en
+els servidors.
+</p>
+
+<p>
+Per aquest motiu és habitual instal·lar sistemes de monitorització
+ambiental que supervisen contínuament diferents paràmetres i
+generen alertes quan detecten qualsevol desviació respecte als
+valors establerts.
+</p>
+
+<h3>Paràmetres monitoritzats</h3>
+
+<ul>
+
+<li>Temperatura.</li>
+
+<li>Humitat relativa.</li>
+
+<li>Qualitat de l'aire.</li>
+
+<li>Presència de fum.</li>
+
+<li>Inundacions.</li>
+
+<li>Consum elèctric.</li>
+
+<li>Estat dels SAI (UPS).</li>
+
+<li>Funcionament dels sistemes de climatització.</li>
+
+</ul>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>SAI (UPS)</td>
+
+<td>Mantindre l'alimentació elèctrica.</td>
+
+</tr>
+
+<tr>
+
+<td>Grup electrogen</td>
+
+<td>Subministrar energia en cas de tall.</td>
+
+</tr>
+
+<tr>
+
+<td>Aire condicionat de precisió</td>
+
+<td>Controlar la temperatura.</td>
+
+</tr>
+
+<tr>
+
+<td>Detector d'inundació</td>
+
+<td>Evitar danys als equips.</td>
+
+</tr>
+
+<tr>
+
+<td>Sistema antiincendis</td>
+
+<td>Protegir els servidors.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una temperatura excessiva pot reduir considerablement la vida
+útil dels equips informàtics i provocar interrupcions del servei.
+Per això la monitorització ambiental és considerada una mesura de
+seguretat crítica.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Sensors ambientals]
+
+--> B[Temperatura]
+
+A --> C[Humitat]
+
+A --> D[Fum]
+
+A --> E[Inundació]
+
+B --> F[Central de monitorització]
+
+C --> F
+
+D --> F
+
+E --> F
+
+F --> G[Alerta]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     INTEGRACIÓ DELS SISTEMES DE SEGURETAT FÍSICA
+========================================================== -->
+
+<section>
+
+<h2>Integració dels sistemes de seguretat física</h2>
+
+<p>
+En les organitzacions modernes els diferents sistemes de seguretat
+no funcionen de manera aïllada. Les alarmes, els controls
+d'accés, les càmeres de videovigilància i els sensors ambientals
+intercanvien informació per detectar incidents de forma més
+eficient.
+</p>
+
+<p>
+Aquest procés d'integració permet correlacionar esdeveniments,
+reduir els falsos positius i facilitar el treball dels equips de
+seguretat.
+</p>
+
+<p>
+Moltes organitzacions utilitzen plataformes
+<strong>PSIM (Physical Security Information Management)</strong>,
+que centralitzen tota la informació procedent dels sistemes de
+seguretat física en una única consola de supervisió.
+</p>
+
+<h3>Avantatges de la integració</h3>
+
+<ul>
+
+<li>Visió global de les instal·lacions.</li>
+
+<li>Resposta més ràpida davant incidents.</li>
+
+<li>Correlació automàtica d'esdeveniments.</li>
+
+<li>Reducció dels falsos positius.</li>
+
+<li>Millor coordinació del personal de seguretat.</li>
+
+<li>Registre centralitzat de totes les incidències.</li>
+
+</ul>
+
+<div class="info">
+
+<strong>PSIM</strong>
+
+<p>
+
+Una plataforma PSIM integra informació procedent dels sistemes
+CCTV, dels controls d'accés, de les alarmes i dels sensors
+ambientals, mostrant en una única interfície tot el que ocorre a
+les instal·lacions.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[CCTV]
+
+B[Control d'accés]
+
+C[Alarmes]
+
+D[Sensors]
+
+A --> E[PSIM]
+
+B --> E
+
+C --> E
+
+D --> E
+
+E --> F[Centre de control]
+
+F --> G[Resposta]
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La seguretat física és més efectiva quan tots els sistemes
+treballen de manera coordinada. La integració permet detectar
+incidents amb major rapidesa i facilitar la presa de decisions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples de detecció d'incidents de seguretat física</h2>
+
+<p>
+Els sistemes de seguretat física treballen conjuntament per
+detectar situacions que poden posar en perill les persones, els
+equips o la continuïtat dels serveis. Els exemples següents
+mostren alguns incidents habituals i el mecanisme que permet
+identificar-los.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Sistema que el detecta</th>
+
+<th>Resposta inicial</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Accés no autoritzat al CPD.</td>
+
+<td>Control d'accés.</td>
+
+<td>Denegar l'entrada i registrar l'intent.</td>
+
+</tr>
+
+<tr>
+
+<td>Moviment fora de l'horari laboral.</td>
+
+<td>Càmeres CCTV.</td>
+
+<td>Notificar el personal de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Obertura forçada d'una porta.</td>
+
+<td>Contacte magnètic.</td>
+
+<td>Activar l'alarma.</td>
+
+</tr>
+
+<tr>
+
+<td>Increment de temperatura.</td>
+
+<td>Sensors ambientals.</td>
+
+<td>Revisar la climatització.</td>
+
+</tr>
+
+<tr>
+
+<td>Presència d'aigua al CPD.</td>
+
+<td>Sensor d'inundació.</td>
+
+<td>Desconnectar els equips afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Tall del subministrament elèctric.</td>
+
+<td>SAI.</td>
+
+<td>Activar alimentació d'emergència.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Una empresa detecta que una persona intenta accedir a la sala de
+servidors utilitzant una targeta desactivada. El sistema denega
+l'accés, registra l'intent, activa una alerta al centre de
+control i orienta automàticament la càmera CCTV cap a la porta.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Bones pràctiques</h2>
+
+<p>
+La detecció d'incidents físics és molt més efectiva quan els
+controls estan correctament configurats i són revisats de manera
+periòdica.
+</p>
+
+<div class="tip">
+
+<strong>Recomanacions</strong>
+
+<ul>
+
+<li>Revisar periòdicament el funcionament dels sensors.</li>
+
+<li>Comprovar que totes les càmeres enregistren correctament.</li>
+
+<li>Actualitzar els permisos dels sistemes de control d'accés.</li>
+
+<li>Revocar immediatament les targetes del personal que abandona l'empresa.</li>
+
+<li>Mantindre lliures les eixides d'emergència.</li>
+
+<li>Realitzar simulacres periòdics d'evacuació.</li>
+
+<li>Verificar regularment el funcionament dels SAI.</li>
+
+<li>Guardar les gravacions CCTV durant el temps establit per la normativa.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La tecnologia, per si sola, no garanteix la seguretat física.
+Els sistemes han d'estar recolzats per procediments adequats i
+per personal format que sàpia actuar davant qualsevol incidència.
+</p>
+
+<div class="important">
+
+<strong>Errors freqüents</strong>
+
+<ul>
+
+<li>Compartir targetes identificatives.</li>
+
+<li>Deixar portes obertes per comoditat.</li>
+
+<li>Ignorar les alarmes repetitives.</li>
+
+<li>No revisar les gravacions CCTV.</li>
+
+<li>No provar periòdicament els sistemes d'emergència.</li>
+
+<li>No protegir físicament els racks dels servidors.</li>
+
+<li>No registrar les visites externes.</li>
+
+<li>No supervisar les empreses de manteniment.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Molts incidents de ciberseguretat comencen amb una vulneració de
+la seguretat física. Un atacant que aconsegueix accedir a un
+equip pot evitar moltes mesures de protecció lògica.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Els centres de dades utilitzen múltiples factors d'accés</strong>
+
+<p>
+
+Els CPD d'alta seguretat solen combinar targetes RFID,
+identificació biomètrica, videovigilància i personal de
+seguretat. És habitual haver de superar diverses portes abans
+d'arribar als servidors.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>Els incendis continuen sent una de les principals amenaces</strong>
+
+<p>
+
+Malgrat els avanços tecnològics, els incendis, les inundacions i
+els talls elèctrics continuen provocant importants interrupcions
+de serveis informàtics arreu del món.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La videovigilància ja incorpora intel·ligència artificial</strong>
+
+<p>
+
+Molts sistemes CCTV actuals poden detectar automàticament
+persones, vehicles, objectes abandonats o accessos a zones
+restringides sense necessitat d'una supervisió humana contínua.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> disposa d'un petit
+centre de dades. Durant una mateixa matinada es produeixen els
+següents incidents.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Sistema que hauria de detectar-la</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Obertura d'una porta d'emergència.</td>
+
+<td>........................................</td>
+
+</tr>
+
+<tr>
+
+<td>Augment sobtat de la temperatura.</td>
+
+<td>........................................</td>
+
+</tr>
+
+<tr>
+
+<td>Moviment dins del CPD fora de l'horari laboral.</td>
+
+<td>........................................</td>
+
+</tr>
+
+<tr>
+
+<td>Intent d'accés amb una targeta anul·lada.</td>
+
+<td>........................................</td>
+
+</tr>
+
+<tr>
+
+<td>Entrada d'aigua a la sala de servidors.</td>
+
+<td>........................................</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<p>
+
+Per a cada situació indica:
+
+</p>
+
+<ul>
+
+<li>Quin sistema físic detectaria l'incident.</li>
+
+<li>Quina alerta es generaria.</li>
+
+<li>Quina actuació inicial seria la més adequada.</li>
+
+<li>Quines conseqüències podria tenir si no es detectara a temps.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h3>💻 Laboratori</h3>
+
+<p>
+En aquesta pràctica assumiràs el paper del responsable de
+seguretat física d'una empresa. Hauràs d'identificar els riscos
+existents a les instal·lacions, analitzar els sistemes de
+protecció disponibles i proposar millores per detectar incidents
+abans que afecten els sistemes d'informació.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+L'empresa <strong>NetSecure S.L.</strong> disposa d'un edifici
+administratiu amb una sala de servidors situada a la planta
+baixa. Les instal·lacions compten amb càmeres CCTV, control
+d'accés mitjançant targetes RFID, sensors de fum i temperatura,
+SAI i una central d'alarmes.
+
+Durant una auditoria es detecten diverses incidències que cal
+analitzar.
+
+</p>
+
+</div>
+
+<h3>Material proporcionat</h3>
+
+<ul>
+
+<li>Plànol simplificat de les instal·lacions.</li>
+
+<li>Registre d'accessos del control d'entrada.</li>
+
+<li>Informe de les càmeres CCTV.</li>
+
+<li>Registre d'alarmes.</li>
+
+<li>Dades dels sensors ambientals.</li>
+
+<li>Plantilla d'anàlisi d'incidents físics.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Identificar els controls físics existents.</li>
+
+<li>Detectar possibles vulnerabilitats.</li>
+
+<li>Relacionar cada incidència amb el sistema que l'ha detectada.</li>
+
+<li>Proposar mesures correctores.</li>
+
+<li>Prioritzar els riscos segons el seu impacte.</li>
+
+<li>Redactar un breu informe tècnic amb les conclusions.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La millor manera de protegir una infraestructura és combinar
+controls físics, controls lògics i procediments d'actuació
+clarament definits.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h3>✍️ Activitats proposades</h3>
+
+<ol>
+
+<li>
+Identifica els principals riscos físics d'un institut o centre
+educatiu.
+</li>
+
+<li>
+Elabora una taula amb els diferents sistemes de control d'accés i
+els seus avantatges i inconvenients.
+</li>
+
+<li>
+Explica les diferències entre una targeta RFID i un sistema
+biomètric.
+</li>
+
+<li>
+Descriu el funcionament d'un sistema CCTV modern amb detecció
+intel·ligent.
+</li>
+
+<li>
+Investiga què és un sistema PSIM i quines funcions ofereix.
+</li>
+
+<li>
+Indica quins sensors instal·laries en una sala de servidors i
+justifica la teua resposta.
+</li>
+
+<li>
+Realitza un esquema de defensa física en capes per protegir un
+CPD.
+</li>
+
+<li>
+Analitza un cas real d'incident físic que haja provocat una
+interrupció dels serveis informàtics.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La seguretat física constitueix un element essencial dins de la
+ciberseguretat. La protecció de les instal·lacions, dels equips i
+de les persones permet reduir considerablement el risc
+d'incidents que podrien comprometre la disponibilitat, la
+integritat o la confidencialitat dels sistemes d'informació.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Amenaces físiques]
+
+--> B[Controls físics]
+
+--> C[Detecció]
+
+--> D[Alerta]
+
+--> E[Resposta]
+
+--> F[Protecció dels actius]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La seguretat física complementa la ciberseguretat.</li>
+
+<li>La defensa en profunditat també s'aplica als edificis.</li>
+
+<li>Els controls d'accés limiten l'entrada a zones sensibles.</li>
+
+<li>Els sistemes CCTV proporcionen vigilància contínua.</li>
+
+<li>Els sensors detecten incidents ambientals i intrusions.</li>
+
+<li>Els sistemes PSIM integren tota la informació física.</li>
+
+<li>La detecció primerenca redueix l'impacte dels incidents.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Conceptes que has de dominar</strong>
+
+<ul>
+
+<li>Què és la seguretat física.</li>
+
+<li>Diferència entre seguretat física i seguretat lògica.</li>
+
+<li>Controls físics més habituals.</li>
+
+<li>Sistemes de control d'accés.</li>
+
+<li>Funcionament dels sistemes CCTV.</li>
+
+<li>Principals tipus de sensors.</li>
+
+<li>Control ambiental dels CPD.</li>
+
+<li>Funcions dels SAI (UPS).</li>
+
+<li>Integració mitjançant plataformes PSIM.</li>
+
+<li>Relació entre incidents físics i ciberseguretat.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per reforçar els continguts d'aquest criteri d'avaluació es
+proporcionen els següents recursos.
+
+</p>
+
+<ul>
+
+<li>📄 Plantilla d'inspecció de seguretat física.</li>
+
+<li>📄 Checklist d'auditoria d'un CPD.</li>
+
+<li>📄 Fitxa de control d'accessos.</li>
+
+<li>📄 Guia de sensors i sistemes d'alarma.</li>
+
+<li>📄 Cas pràctic resolt.</li>
+
+<li>📄 Infografia sobre la defensa física en capes.</li>
+
+<li>📄 Esquema comparatiu dels sistemes de control d'accés.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+<li>📄 Glossari de terminologia.</li>
+
+<li>📄 Full d'autoavaluació.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+Conserva aquestes plantilles perquè seran útils en els criteris
+següents dedicats a la investigació mitjançant OSINT, la gestió
+d'incidents i la resposta davant ciberatacs.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+<!-- ================================================= -->
+<!-- Exemple d'imatge ampliable                        -->
+<!-- ================================================= -->
+<figure>
+
+    <img src="img/firewall-network-diagram-ex.png" width="40%"
+         alt="Regles del firewall"
+         class="zoomable">
+
+    <figcaption>
+        Exemple de configuració d'un tallafoc.
+    </figcaption>
+
+</figure>
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+  <!--  el javascript posarà el codi automaticament -->
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>

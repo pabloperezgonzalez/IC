@@ -1,0 +1,2084 @@
+<!DOCTYPE html>
+<html lang="ca"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>CA 4d Recuperació i restabliment dels serveis </title> 
+    <meta name="description" content="Plantilla dels criteris d'avaluació del mòdul Incidents de Ciberseguretat"> 
+    <link rel="icon" href="ico/cyber256.png"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/ca.css"> 
+</head><body> 
+    <!-- ============================== -->
+    <!-- Barra de progrés de lectura    -->
+    <!-- ============================== --> 
+    <div id="progress-bar"></div> 
+
+    <!-- ============================== -->
+    <!-- Botó tornar a dalt             -->
+    <!-- ============================== --> 
+    <button id="backToTop" title="Tornar a dalt"> 
+        ↑ 
+    </button> 
+
+    <!-- ============================== -->
+    <!-- Layout principal               -->
+    <!-- ============================== --> 
+    <div class="layout"> 
+
+        <!-- ===================================== -->
+        <!-- Sidebar                               -->
+        <!-- ===================================== --> 
+        <aside class="sidebar"> 
+            <div class="sidebar-header"> 
+               
+                <h2 class="title">
+                    <span>📚 Continguts</span>
+                    <button id="themeToggle">🌙 fosc </button>
+                    <!-- Canvi de tema --> 
+                </h2>                
+               
+            </div> 
+
+            <!-- Cercador --> 
+            <div class="search-box"> 
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="🔍 Buscar contingut..." 
+                    autocomplete="off"> 
+            </div> 
+
+            <!-- Índex automàtic --> 
+            <nav id="toc"> 
+                <!-- Es genera automàticament amb JavaScript --> 
+            </nav> 
+
+            <!-- Informació ràpida --> 
+            <div class="course-info"> 
+                <div> 
+                    ⏱ <strong>Temps:</strong> 
+                    <span>40 min</span> 
+                </div> 
+                <div> 
+                    🎯 <strong>Nivell:</strong> 
+                    <span>Intermedi</span> 
+                </div> 
+                <div> 
+                    📅 <strong>Actualitzat:</strong> 
+                    <span>2026</span> 
+                </div> 
+            </div> 
+
+ 
+        </aside> 
+ 
+
+        <!-- ===================================== -->
+        <!-- Contingut principal                   -->
+        <!-- ===================================== --> 
+        <main class="content"> 
+
+            <!-- Breadcrumb --> 
+            <nav class="breadcrumb"> 
+                <a href="index.html"> 
+                    Inici 
+                </a> 
+                <span>›</span> 
+                <a href="ra_04.html"> 
+                    RA4
+                </a> 
+                <span>›</span> 
+                <span> 
+                    CA4d
+                </span> 
+            </nav> 
+ 
+            <!-- Hero --> 
+            <header class="hero" style=" background:linear-gradient(135deg,#6f1e1e, #460707);"> 
+                <div class="hero-text"> 
+                    <div class="badge"> 
+                        CRITERI D'AVALUACIÓ 
+                    </div> 
+                    <h1> 
+                        CA 4d Recuperació i restabliment dels serveis
+                    </h1> 
+                    <p> 
+                        Classificació dels incidents de ciberseguretat. 
+                    </p> 
+                    <div class="hero-meta"> 
+                        <span> 
+                            📖 40 minuts 
+                        </span> 
+                        <span> 
+                            🎯 Intermedi 
+                        </span> 
+                        <span> 
+                            📝 4 activitats 
+                        </span> 
+                        <span> 
+                            🧪 1 laboratori 
+                        </span> 
+                    </div> 
+                </div> 
+
+                <div class="hero-icon"> 
+                    ⚡
+                </div> 
+            </header> 
+ 
+            <!-- ================================ -->
+            <!-- Contingut del criteri            -->
+            <!-- ================================ --> 
+            <article id="article">
+
+                <nav data-ca-navigation></nav>
+
+
+
+
+<!-- ==========================================================
+     🎯 QUÈ APRENDRÀS
+========================================================== -->
+
+<section>
+
+<h2>🎯 Què aprendràs</h2>
+
+<p>
+En aquest criteri d'avaluació aprendràs com es recuperen els sistemes
+i serveis després d'un incident de ciberseguretat. Coneixeràs les
+fases del procés de recuperació, la restauració dels sistemes, la
+validació del seu correcte funcionament i el retorn segur a
+l'operació normal.
+</p>
+
+<p>
+També comprendràs la importància de verificar la integritat de les
+dades, comprovar que les vulnerabilitats han estat eliminades i
+monitoritzar els sistemes durant els primers moments després de la
+recuperació.
+</p>
+
+<div class="info">
+
+<strong>Objectius d'aprenentatge</strong>
+
+<ul>
+
+<li>Comprendre el procés de recuperació dels serveis.</li>
+
+<li>Conèixer les diferents fases del restabliment.</li>
+
+<li>Aprendre a restaurar sistemes de forma segura.</li>
+
+<li>Verificar la integritat de les dades recuperades.</li>
+
+<li>Validar el correcte funcionament dels serveis.</li>
+
+<li>Entendre la importància de la monitorització posterior.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📖 INTRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>📖 Introducció</h2>
+
+<p>
+Quan un incident ha estat controlat i les mesures de contenció han
+evitat que continue propagant-se, comença una de les fases més
+importants de la resposta: la recuperació dels serveis.
+</p>
+
+<p>
+L'objectiu no és únicament tornar a posar els sistemes en
+funcionament, sinó fer-ho amb garanties que continuen sent segurs,
+que les dades són íntegres i que la vulnerabilitat que va provocar
+l'incident ha estat eliminada.
+</p>
+
+<p>
+Una recuperació precipitada pot provocar una nova infecció, la pèrdua
+d'informació o una interrupció repetida dels serveis. Per això totes
+les organitzacions disposen de procediments que defineixen com
+restaurar els sistemes, validar-los i tornar-los a producció.
+</p>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La recuperació només finalitza quan els serveis funcionen
+correctament, les dades són fiables i es confirma que l'incident ha
+estat completament resolt.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     QUÈ ÉS LA RECUPERACIÓ DELS SERVEIS?
+========================================================== -->
+
+<section>
+
+<h2>Què és la recuperació dels serveis?</h2>
+
+<p>
+La <strong>recuperació dels serveis</strong> és el conjunt
+d'actuacions destinades a restaurar el funcionament normal dels
+sistemes després d'un incident de ciberseguretat. Aquesta recuperació
+pot implicar restaurar dades, reconstruir servidors, substituir
+equips, verificar configuracions i comprovar que totes les funcions
+crítiques tornen a estar disponibles.
+</p>
+
+<p>
+La recuperació ha de seguir un ordre planificat per reduir riscos,
+prioritzant sempre els serveis essencials per al negoci i comprovant
+que cada sistema funciona correctament abans de continuar amb el
+següent.
+</p>
+
+<p>
+Aquest procés està estretament relacionat amb el Pla de Recuperació
+davant Desastres (DRP) i amb els objectius d'RTO i RPO definits per
+l'organització.
+</p>
+
+<h3>Objectius principals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Finalitat</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Restaurar serveis</td>
+
+<td>Recuperar l'activitat normal.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperar dades</td>
+
+<td>Minimitzar la pèrdua d'informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Eliminar la causa</td>
+
+<td>Evitar noves infeccions.</td>
+
+</tr>
+
+<tr>
+
+<td>Garantir la integritat</td>
+
+<td>Assegurar dades fiables.</td>
+
+</tr>
+
+<tr>
+
+<td>Reduir l'impacte</td>
+
+<td>Minimitzar el temps d'interrupció.</td>
+
+</tr>
+
+<tr>
+
+<td>Retornar a producció</td>
+
+<td>Reprendre el servei habitual.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'un atac de ransomware, els servidors afectats són
+reinstal·lats, les dades es restauren des de còpies de seguretat
+immutables i es comprova que totes les vulnerabilitats han estat
+corregides abans de reconnectar-los a la xarxa.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Contenció]
+
+--> B[Recuperació]
+
+--> C[Validació]
+
+--> D[Producció]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     OBJECTIUS DE LA RECUPERACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Objectius de la recuperació</h2>
+
+<p>
+La recuperació no consisteix únicament a tornar a encendre els
+servidors. És un procés controlat que pretén garantir que els
+sistemes recuperats siguen segurs, fiables i capaços de prestar el
+servei amb normalitat.
+</p>
+
+<p>
+Els objectius varien segons el tipus d'organització, però sempre
+inclouen la restauració dels serveis essencials, la protecció de la
+informació i la reducció de l'impacte sobre el negoci.
+</p>
+
+<h3>Objectius específics</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Objectiu</th>
+
+<th>Descripció</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Disponibilitat</td>
+
+<td>Restablir els serveis crítics.</td>
+
+</tr>
+
+<tr>
+
+<td>Integritat</td>
+
+<td>Garantir dades sense alteracions.</td>
+
+</tr>
+
+<tr>
+
+<td>Confidencialitat</td>
+
+<td>Evitar accessos no autoritzats.</td>
+
+</tr>
+
+<tr>
+
+<td>Continuïtat</td>
+
+<td>Reprendre l'activitat normal.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguretat</td>
+
+<td>Eliminar les vulnerabilitats detectades.</td>
+
+</tr>
+
+<tr>
+
+<td>Confiança</td>
+
+<td>Garantir la fiabilitat dels sistemes.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Els sistemes no han de tornar a producció mentre existisca qualsevol
+dubte sobre la seua integritat o sobre la persistència de
+l'amenaça.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     FASES DEL PROCÉS DE RECUPERACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Fases del procés de recuperació</h2>
+
+<p>
+La recuperació dels serveis segueix habitualment una seqüència
+ordenada que permet reduir riscos i verificar cada actuació abans de
+continuar amb la següent fase.
+</p>
+
+<p>
+Aquest procés evita que es posen en producció sistemes encara
+compromesos i facilita la detecció de problemes abans que afecten els
+usuaris.
+</p>
+
+<h3>Seqüència habitual</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Fase</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Avaluació</td>
+
+<td>Determinar els sistemes afectats.</td>
+
+</tr>
+
+<tr>
+
+<td>Restauració</td>
+
+<td>Recuperar sistemes i dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Verificació</td>
+
+<td>Comprovar la integritat.</td>
+
+</tr>
+
+<tr>
+
+<td>Validació</td>
+
+<td>Confirmar el funcionament correcte.</td>
+
+</tr>
+
+<tr>
+
+<td>Posada en producció</td>
+
+<td>Restablir els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Monitorització</td>
+
+<td>Supervisar el comportament posterior.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Avaluació]
+
+--> B[Restauració]
+
+--> C[Verificació]
+
+--> D[Validació]
+
+--> E[Producció]
+
+--> F[Monitorització]
+
+</div>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+És preferible recuperar els serveis de manera progressiva,
+començant pels més crítics i validant cadascun abans de continuar amb
+la resta.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RESTAURACIÓ DELS SISTEMES
+========================================================== -->
+
+<section>
+
+<h2>Restauració dels sistemes</h2>
+
+<p>
+La restauració consisteix a retornar els sistemes afectats a un estat
+operatiu segur després que l'incident haja estat contingut. Aquesta
+tasca pot implicar reinstal·lar sistemes operatius, restaurar còpies
+de seguretat, recuperar configuracions o substituir equips
+compromesos.
+</p>
+
+<p>
+L'objectiu és eliminar qualsevol rastre de l'atac abans de reprendre
+l'activitat normal. Restaurar un sistema sense haver eliminat la causa
+de l'incident podria provocar una nova infecció en poc de temps.
+</p>
+
+<p>
+Sempre que siga possible, la recuperació s'ha de realitzar a partir de
+còpies de seguretat verificades i lliures de programari maliciós.
+</p>
+
+<h3>Mètodes de restauració</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Mètode</th>
+
+<th>Aplicació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Reinstal·lació completa</td>
+
+<td>Compromís greu del sistema.</td>
+
+</tr>
+
+<tr>
+
+<td>Restauració de backup</td>
+
+<td>Recuperació de dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Reposició d'imatges</td>
+
+<td>Equips d'usuari.</td>
+
+</tr>
+
+<tr>
+
+<td>Recuperació de configuracions</td>
+
+<td>Dispositius de xarxa.</td>
+
+</tr>
+
+<tr>
+
+<td>Substitució del maquinari</td>
+
+<td>Avaries físiques.</td>
+
+</tr>
+
+<tr>
+
+<td>Restauració en núvol</td>
+
+<td>Infraestructures cloud.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Un servidor compromés és reinstal·lat completament utilitzant una
+imatge corporativa actualitzada. Posteriorment es restauren les dades
+des d'una còpia de seguretat generada abans de l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart TD
+
+A[Sistema afectat]
+
+--> B[Eliminar sistema compromés]
+
+--> C[Reinstal·lació]
+
+--> D[Restauració de dades]
+
+--> E[Sistema recuperat]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     VERIFICACIÓ DE LA INTEGRITAT
+========================================================== -->
+
+<section>
+
+<h2>Verificació de la integritat</h2>
+
+<p>
+Una vegada restaurats els sistemes, és imprescindible comprovar que
+les dades, els fitxers i les configuracions no han estat modificats de
+manera no autoritzada durant l'incident.
+</p>
+
+<p>
+La verificació de la integritat permet detectar alteracions ocultes,
+programari maliciós persistent o errors produïts durant el procés de
+recuperació.
+</p>
+
+<p>
+Aquestes comprovacions poden realitzar-se mitjançant funcions hash,
+comparació de còpies de seguretat, eines EDR o sistemes de control
+d'integritat de fitxers.
+</p>
+
+<h3>Elements que cal verificar</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Comprovació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Fitxers del sistema</td>
+
+<td>Comparació de hash.</td>
+
+</tr>
+
+<tr>
+
+<td>Bases de dades</td>
+
+<td>Integritat dels registres.</td>
+
+</tr>
+
+<tr>
+
+<td>Configuracions</td>
+
+<td>Comparació amb la configuració base.</td>
+
+</tr>
+
+<tr>
+
+<td>Aplicacions</td>
+
+<td>Funcionament correcte.</td>
+
+</tr>
+
+<tr>
+
+<td>Usuaris</td>
+
+<td>Comptes autoritzats.</td>
+
+</tr>
+
+<tr>
+
+<td>Registres</td>
+
+<td>Absència d'activitat sospitosa.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+No s'ha de donar per recuperat un sistema únicament perquè funciona.
+També cal verificar que les dades són íntegres i que no existeixen
+elements compromesos.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Restauració]
+
+--> B[Verificació de hash]
+
+--> C[Configuració]
+
+--> D[Integritat confirmada]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     VALIDACIÓ DELS SERVEIS RECUPERATS
+========================================================== -->
+
+<section>
+
+<h2>Validació dels serveis recuperats</h2>
+
+<p>
+Després de restaurar els sistemes és necessari comprovar que tots els
+serveis funcionen correctament i compleixen els requisits definits per
+l'organització.
+</p>
+
+<p>
+La validació inclou proves tècniques, verificacions funcionals i
+confirmacions per part dels usuaris responsables abans d'autoritzar el
+retorn complet a producció.
+</p>
+
+<h3>Comprovacions habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Verificació</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Accés dels usuaris</td>
+
+<td>Autenticació correcta.</td>
+
+</tr>
+
+<tr>
+
+<td>Aplicacions</td>
+
+<td>Funcionament normal.</td>
+
+</tr>
+
+<tr>
+
+<td>Base de dades</td>
+
+<td>Integritat de la informació.</td>
+
+</tr>
+
+<tr>
+
+<td>Xarxa</td>
+
+<td>Connectivitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Seguretat</td>
+
+<td>Sense noves alertes.</td>
+
+</tr>
+
+<tr>
+
+<td>Rendiment</td>
+
+<td>Temps de resposta habitual.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Abans de reobrir un portal web, es comprova que els usuaris poden
+iniciar sessió, consultar informació, realitzar operacions i que el
+rendiment és similar al registrat abans de l'incident.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Servei restaurat]
+
+--> B[Proves funcionals]
+
+--> C[Validació]
+
+--> D[Aprovació]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     RETORN A PRODUCCIÓ
+========================================================== -->
+
+<section>
+
+<h2>Retorn a producció</h2>
+
+<p>
+El retorn a producció consisteix a posar novament en funcionament els
+serveis perquè tornen a estar disponibles per als usuaris. Aquesta
+fase només s'ha d'iniciar quan totes les comprovacions tècniques i de
+seguretat han estat superades satisfactòriament.
+</p>
+
+<p>
+Habitualment la reincorporació dels serveis es realitza de manera
+progressiva, començant pels sistemes més crítics i mantenint una
+monitorització intensiva durant les primeres hores.
+</p>
+
+<h3>Passos habituals</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Pas</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Autorització</td>
+
+<td>Aprovar la recuperació.</td>
+
+</tr>
+
+<tr>
+
+<td>Connexió</td>
+
+<td>Reconnectar els serveis.</td>
+
+</tr>
+
+<tr>
+
+<td>Monitorització</td>
+
+<td>Detectar anomalies.</td>
+
+</tr>
+
+<tr>
+
+<td>Confirmació</td>
+
+<td>Validar el servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Tancament</td>
+
+<td>Finalitzar la recuperació.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Consell</strong>
+
+<p>
+
+Quan siga possible, recupera primer un nombre reduït de sistemes.
+Aquest desplegament progressiu facilita detectar problemes abans que
+afecten tota la infraestructura.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Validació]
+
+--> B[Autorització]
+
+--> C[Producció]
+
+--> D[Monitorització]
+
+--> E[Servei normal]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     MONITORITZACIÓ DESPRÉS DE LA RECUPERACIÓ
+========================================================== -->
+
+<section>
+
+<h2>Monitorització després de la recuperació</h2>
+
+<p>
+Una vegada els serveis han tornat a producció, és necessari mantenir
+una vigilància reforçada durant un període de temps. Aquesta
+monitorització permet detectar comportaments anòmals, possibles
+persistències de l'atacant o errors derivats del procés de
+restabliment.
+</p>
+
+<p>
+Durant aquesta fase és habitual incrementar el nivell de supervisió
+dels sistemes, revisar contínuament els registres d'activitat i
+configurar alertes específiques que faciliten una detecció ràpida de
+qualsevol incidència relacionada amb l'incident original.
+</p>
+
+<p>
+La duració d'aquesta monitorització dependrà de la criticitat dels
+serveis recuperats i de la naturalesa de l'incident.
+</p>
+
+<h3>Elements monitoritzats</h3>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Element</th>
+
+<th>Objectiu</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Registres del sistema</td>
+
+<td>Detectar activitats sospitoses.</td>
+
+</tr>
+
+<tr>
+
+<td>Trànsit de xarxa</td>
+
+<td>Identificar comunicacions anòmales.</td>
+
+</tr>
+
+<tr>
+
+<td>Autenticacions</td>
+
+<td>Detectar accessos no autoritzats.</td>
+
+</tr>
+
+<tr>
+
+<td>Rendiment</td>
+
+<td>Verificar l'estabilitat.</td>
+
+</tr>
+
+<tr>
+
+<td>Integritat</td>
+
+<td>Comprovar modificacions inesperades.</td>
+
+</tr>
+
+<tr>
+
+<td>Alertes SIEM</td>
+
+<td>Detectar nous indicadors de compromís.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després de restaurar un servidor, el SIEM genera una alerta perquè
+detecta una connexió sortint cap a una adreça IP utilitzada durant
+l'atac inicial. Aquesta detecció permet actuar abans que es produïsca
+una nova intrusió.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Servei recuperat]
+
+--> B[Monitorització]
+
+--> C{Anomalies?}
+
+C -->|No| D[Funcionament normal]
+
+C -->|Sí| E[Reobrir investigació]
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Servei recuperat]
+--> B[Monitorització]
+
+B --> C{Hi ha anomalies?}
+
+C --> D[No]
+C --> E[Sí]
+
+D --> F[Funcionament normal]
+E --> G[Reobrir investigació]
+
+</div>
+
+<div class="mermaid">
+flowchart LR
+
+A[Servei recuperat]
+--> B[Monitorització]
+--> C[Comprovació]
+
+C --> D[Sense anomalies]
+C --> E[Amb anomalies]
+
+D --> F[Servei estable]
+E --> G[Nova investigació]
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ERRORS HABITUALS DURANT EL RESTABLIMENT
+========================================================== -->
+
+<section>
+
+<h2>Errors habituals durant el restabliment</h2>
+
+<p>
+La fase de recuperació és especialment delicada perquè una decisió
+incorrecta pot provocar una nova interrupció del servei o fins i tot
+una reinfecció dels sistemes. Conèixer els errors més freqüents ajuda
+a evitar-los.
+</p>
+
+<h3>Errors més habituals</h3>
+
+<ul>
+
+<li>Restaurar còpies de seguretat infectades.</li>
+
+<li>No eliminar completament la causa de l'incident.</li>
+
+<li>Tornar a producció sense validar els serveis.</li>
+
+<li>No verificar la integritat de les dades.</li>
+
+<li>Desactivar temporalment mesures de seguretat i oblidar restaurar-les.</li>
+
+<li>No actualitzar els sistemes recuperats.</li>
+
+<li>No documentar el procés de recuperació.</li>
+
+<li>Finalitzar massa prompte la monitorització.</li>
+
+</ul>
+
+<div class="warning">
+
+<strong>Error habitual</strong>
+
+<p>
+
+Posar en producció un servidor simplement perquè torna a funcionar és
+un error. Primer cal confirmar que no conserva mecanismes de
+persistència ni vulnerabilitats explotables.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+mindmap
+
+root((Errors))
+
+    Backup infectat
+
+    Validació insuficient
+
+    Sense monitorització
+
+    Persistència
+
+    Mala documentació
+
+    Actualitzacions pendents
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     BONES PRÀCTIQUES
+========================================================== -->
+
+<section>
+
+<h2>Bones pràctiques</h2>
+
+<p>
+Les organitzacions més madures segueixen procediments estandarditzats
+per garantir una recuperació segura i minimitzar el risc de nous
+incidents. Aquestes bones pràctiques permeten reduir el temps de
+recuperació i augmentar la confiança en els sistemes restaurats.
+</p>
+
+<h3>Recomanacions</h3>
+
+<ul>
+
+<li>Restaurar únicament còpies verificades.</li>
+
+<li>Prioritzar els serveis essencials.</li>
+
+<li>Aplicar totes les actualitzacions pendents.</li>
+
+<li>Modificar les credencials compromeses.</li>
+
+<li>Validar funcionalment cada servei.</li>
+
+<li>Mantenir una monitorització reforçada.</li>
+
+<li>Documentar totes les actuacions.</li>
+
+<li>Realitzar una revisió final abans del tancament.</li>
+
+<li>Analitzar les lliçons apreses.</li>
+
+</ul>
+
+<div class="important">
+
+<strong>Important</strong>
+
+<p>
+
+Una recuperació correcta no finalitza quan els sistemes tornen a
+funcionar, sinó quan es confirma que són segurs, estables i no
+presenten indicadors de compromís.
+
+</p>
+
+</div>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Restauració]
+
+--> B[Validació]
+
+--> C[Producció]
+
+--> D[Monitorització]
+
+--> E[Lliçons apreses]
+
+--> F[Millora contínua]
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     🧪 EXEMPLES
+========================================================== -->
+
+<section>
+
+<h2>🧪 Exemples</h2>
+
+<p>
+La recuperació dels serveis varia segons el tipus d'incident, però
+sempre ha de seguir un procediment controlat que garantisca la
+seguretat dels sistemes abans de tornar-los a posar en funcionament.
+Els exemples següents mostren diferents situacions habituals.
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Incident</th>
+
+<th>Recuperació</th>
+
+<th>Verificació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Ransomware</td>
+
+<td>Restauració des de backups.</td>
+
+<td>Integritat de les dades.</td>
+
+</tr>
+
+<tr>
+
+<td>Servidor compromés</td>
+
+<td>Reinstal·lació completa.</td>
+
+<td>Escaneig de seguretat.</td>
+
+</tr>
+
+<tr>
+
+<td>Caiguda d'un servei</td>
+
+<td>Recuperació del clúster.</td>
+
+<td>Disponibilitat del servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Base de dades corrupta</td>
+
+<td>Restauració del backup.</td>
+
+<td>Consistència dels registres.</td>
+
+</tr>
+
+<tr>
+
+<td>Equip infectat</td>
+
+<td>Nova imatge corporativa.</td>
+
+<td>Funcionament normal.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="example">
+
+<strong>Exemple</strong>
+
+<p>
+
+Després d'una infecció per ransomware, l'organització restaura els
+servidors des d'una còpia immutable, actualitza els sistemes,
+substitueix totes les credencials administratives i manté una
+monitorització reforçada durant les següents 72 hores abans de donar
+l'incident per finalitzat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     💡 CONSELLS
+========================================================== -->
+
+<section>
+
+<h2>💡 Consells</h2>
+
+<p>
+Una bona recuperació requereix planificació, paciència i verificació.
+Intentar accelerar el procés pot provocar nous incidents o obligar a
+repetir tota la recuperació.
+</p>
+
+<div class="tip">
+
+<strong>Bones pràctiques</strong>
+
+<ul>
+
+<li>Prioritza sempre els serveis més crítics.</li>
+
+<li>Utilitza únicament còpies de seguretat verificades.</li>
+
+<li>Actualitza tots els sistemes abans de reconnectar-los.</li>
+
+<li>Canvia les credencials potencialment compromeses.</li>
+
+<li>Comprova la integritat de les dades recuperades.</li>
+
+<li>Realitza proves funcionals completes.</li>
+
+<li>Mantén una monitorització reforçada.</li>
+
+<li>Documenta totes les actuacions realitzades.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ⚠️ ASPECTES IMPORTANTS
+========================================================== -->
+
+<section>
+
+<h2>⚠️ Aspectes importants</h2>
+
+<p>
+La recuperació constitueix una de les fases més delicades de la gestió
+d'un incident. Qualsevol error pot provocar una nova interrupció del
+servei o permetre que l'atacant torne a comprometre els sistemes.
+</p>
+
+<div class="important">
+
+<strong>No oblides que...</strong>
+
+<ul>
+
+<li>La causa de l'incident ha d'estar eliminada.</li>
+
+<li>Les dades recuperades han de ser íntegres.</li>
+
+<li>Els serveis han de superar totes les proves funcionals.</li>
+
+<li>Els sistemes han d'estar completament actualitzats.</li>
+
+<li>Cal revisar les configuracions de seguretat.</li>
+
+<li>La monitorització posterior és imprescindible.</li>
+
+<li>La documentació facilita futures recuperacions.</li>
+
+</ul>
+
+</div>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+Restaurar un servei no significa únicament que funcione, sinó que ho
+fa de manera segura, estable i sense risc de reproduir l'incident.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📦 SABIES QUE...?
+========================================================== -->
+
+<section>
+
+<h2>📦 Sabies que...?</h2>
+
+<div class="didyouknow">
+
+<strong>Les còpies immutables estan guanyant protagonisme</strong>
+
+<p>
+
+Moltes organitzacions utilitzen còpies de seguretat immutables perquè
+ni tan sols un atacant amb privilegis administratius pot modificar-les
+o eliminar-les durant un atac de ransomware.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La recuperació es prova abans dels incidents</strong>
+
+<p>
+
+Els plans de recuperació davant desastres inclouen simulacres
+periòdics per comprovar que els sistemes poden restaurar-se dins dels
+temps previstos.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La monitorització continua després de la recuperació</strong>
+
+<p>
+
+Els equips SOC mantenen una vigilància intensiva dels sistemes
+restaurats per detectar qualsevol intent de persistència o reinfecció.
+
+</p>
+
+</div>
+
+<div class="didyouknow">
+
+<strong>La recuperació també és una oportunitat de millora</strong>
+
+<p>
+
+Després de cada incident és habitual revisar els procediments i
+actualitzar les polítiques de seguretat per reduir el risc que una
+situació semblant torne a produir-se.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🧪 CAS PRÀCTIC
+========================================================== -->
+
+<section>
+
+<h2>🧪 Cas pràctic</h2>
+
+<p>
+
+Una empresa ha aconseguit contenir un atac de ransomware que ha afectat
+els servidors de fitxers. Les còpies de seguretat es troben
+disponibles, però abans de restaurar els serveis és necessari garantir
+que el malware ha estat completament eliminat.
+
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Situació</th>
+
+<th>Informació</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>Incident</td>
+
+<td>Ransomware.</td>
+
+</tr>
+
+<tr>
+
+<td>Backups</td>
+
+<td>Disponibles i verificats.</td>
+
+</tr>
+
+<tr>
+
+<td>Serveis crítics</td>
+
+<td>Fora de servei.</td>
+
+</tr>
+
+<tr>
+
+<td>Temps màxim d'aturada</td>
+
+<td>8 hores.</td>
+
+</tr>
+
+<tr>
+
+<td>Prioritat</td>
+
+<td>Molt alta.</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+<div class="tip">
+
+<strong>Activitat</strong>
+
+<ol>
+
+<li>Ordena les fases del procés de recuperació.</li>
+
+<li>Decideix quins serveis restauraries primer.</li>
+
+<li>Descriu les comprovacions d'integritat necessàries.</li>
+
+<li>Indica les proves que realitzaries abans del retorn a producció.</li>
+
+<li>Explica com monitoritzaries els sistemes recuperats.</li>
+
+</ol>
+
+</div>
+
+</section>
+
+
+<!-- ==========================================================
+     💻 LABORATORI
+========================================================== -->
+
+<section>
+
+<h2>💻 Laboratori</h2>
+
+<p>
+En aquesta pràctica simularàs la recuperació d'una infraestructura
+després d'un incident de ciberseguretat. Hauràs d'organitzar les
+tasques de restauració, validar el correcte funcionament dels serveis
+i decidir quan és segur tornar-los a producció.
+</p>
+
+<div class="example">
+
+<strong>Situació inicial</strong>
+
+<p>
+
+Una empresa ha recuperat els seus servidors després d'un atac de
+ransomware. Les còpies de seguretat són correctes, però encara cal
+verificar la integritat dels sistemes abans de reconnectar-los a la
+xarxa corporativa.
+
+</p>
+
+</div>
+
+<h3>Material disponible</h3>
+
+<ul>
+
+<li>Pla de Recuperació davant Desastres (DRP).</li>
+
+<li>Inventari dels serveis crítics.</li>
+
+<li>Còpies de seguretat verificades.</li>
+
+<li>Registres del SIEM.</li>
+
+<li>Alertes de l'EDR.</li>
+
+<li>Llista de vulnerabilitats corregides.</li>
+
+<li>Procediment de validació dels serveis.</li>
+
+<li>Plantilla de registre de recuperació.</li>
+
+<li>Cronograma de restauració.</li>
+
+</ul>
+
+<h3>Tasques</h3>
+
+<ol>
+
+<li>Prioritzar els serveis que s'han de recuperar.</li>
+
+<li>Restaurar els sistemes a partir de les còpies de seguretat.</li>
+
+<li>Verificar la integritat dels fitxers recuperats.</li>
+
+<li>Comprovar les configuracions de seguretat.</li>
+
+<li>Validar el funcionament dels serveis.</li>
+
+<li>Autoritzar el retorn progressiu a producció.</li>
+
+<li>Configurar una monitorització reforçada.</li>
+
+<li>Registrar totes les actuacions realitzades.</li>
+
+<li>Elaborar un informe final de recuperació.</li>
+
+</ol>
+
+<div class="remember">
+
+<strong>Recorda</strong>
+
+<p>
+
+La recuperació no acaba quan els serveis tornen a funcionar. Cal
+confirmar que són segurs, estables i que no existeixen indicadors de
+compromís abans de donar l'incident per tancat.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     ✍️ ACTIVITATS PROPOSADES
+========================================================== -->
+
+<section>
+
+<h2>✍️ Activitats proposades</h2>
+
+<ol>
+
+<li>Defineix què és la recuperació dels serveis.</li>
+
+<li>Explica les fases del procés de recuperació.</li>
+
+<li>Diferencia restauració, verificació i validació.</li>
+
+<li>Descriu els principals mètodes de restauració.</li>
+
+<li>Explica com es verifica la integritat de les dades.</li>
+
+<li>Justifica la necessitat de validar els serveis abans del retorn a producció.</li>
+
+<li>Identifica errors habituals durant el restabliment.</li>
+
+<li>Proposa bones pràctiques per reduir el risc de reinfecció.</li>
+
+<li>Analitza un cas pràctic de recuperació després d'un ransomware.</li>
+
+<li>Elabora un diagrama del procés complet de recuperació.</li>
+
+</ol>
+
+</section>
+
+<!-- ==========================================================
+     📚 RESUM
+========================================================== -->
+
+<section>
+
+<h2>📚 Resum</h2>
+
+<p>
+
+La recuperació i el restabliment dels serveis constitueixen l'última
+fase operativa de la resposta davant incidents. Aquest procés permet
+restaurar els sistemes afectats, recuperar les dades, validar el seu
+correcte funcionament i tornar progressivament a l'activitat normal.
+
+</p>
+
+<p>
+
+Perquè la recuperació siga segura és imprescindible eliminar la causa
+de l'incident, verificar la integritat de la informació, validar tots
+els serveis i mantenir una monitorització reforçada durant els primers
+dies de funcionament.
+
+</p>
+
+<div class="mermaid">
+
+flowchart LR
+
+A[Contenció]
+
+--> B[Restauració]
+
+--> C[Verificació]
+
+--> D[Validació]
+
+--> E[Producció]
+
+--> F[Monitorització]
+
+--> G[Tancament]
+
+</div>
+
+<div class="info">
+
+<strong>Idees clau</strong>
+
+<ul>
+
+<li>La recuperació ha de seguir un procediment planificat.</li>
+
+<li>Els serveis crítics tenen prioritat.</li>
+
+<li>Les dades restaurades han de ser íntegres.</li>
+
+<li>Cal validar funcionalment tots els sistemes.</li>
+
+<li>La producció ha de recuperar-se de manera progressiva.</li>
+
+<li>La monitorització posterior és imprescindible.</li>
+
+<li>Totes les actuacions han de quedar documentades.</li>
+
+<li>Les lliçons apreses permeten millorar futurs processos.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     🎯 EN L'EXAMEN...
+========================================================== -->
+
+<section>
+
+<h2>🎯 En l'examen...</h2>
+
+<div class="exam">
+
+<strong>Has de saber...</strong>
+
+<ul>
+
+<li>Definir què és la recuperació dels serveis.</li>
+
+<li>Descriure les fases del procés de recuperació.</li>
+
+<li>Explicar els diferents mètodes de restauració.</li>
+
+<li>Justificar la verificació de la integritat.</li>
+
+<li>Diferenciar verificació i validació.</li>
+
+<li>Explicar el procés de retorn a producció.</li>
+
+<li>Descriure la monitorització posterior.</li>
+
+<li>Identificar errors habituals durant el restabliment.</li>
+
+<li>Analitzar un cas pràctic de recuperació.</li>
+
+<li>Aplicar bones pràctiques de recuperació segura.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ==========================================================
+     📂 RECURSOS DESCARREGABLES
+========================================================== -->
+
+<section>
+
+<h2>📂 Recursos descarregables</h2>
+
+<p>
+
+Per consolidar aquest criteri d'avaluació es proposen diversos
+materials que permeten practicar els procediments de recuperació,
+validació dels serveis i retorn segur a producció.
+
+</p>
+
+<ul>
+
+<li>📄 Procediment complet de recuperació dels serveis.</li>
+
+<li>📄 Plantilla de Pla de Recuperació davant Desastres (DRP).</li>
+
+<li>📄 Checklist de verificació de la integritat.</li>
+
+<li>📄 Guia de validació funcional dels serveis.</li>
+
+<li>📄 Plantilla d'informe de recuperació.</li>
+
+<li>📄 Casos pràctics resolts de restauració després d'incidents.</li>
+
+<li>📄 Esquema del procés de retorn a producció.</li>
+
+<li>📄 Full de seguiment de la monitorització posterior.</li>
+
+<li>📄 Exercicis sobre RTO, RPO i priorització de serveis.</li>
+
+<li>📄 Presentació utilitzada a classe.</li>
+
+</ul>
+
+<div class="tip">
+
+<strong>Recomanació</strong>
+
+<p>
+
+La recuperació és l'etapa que transforma una resposta davant incidents
+en una recuperació completa del negoci. Dominar aquest procés permet
+restablir els serveis amb garanties, minimitzar el temps d'interrupció
+i augmentar la ciberresiliència de l'organització davant futurs
+incidents.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<nav data-ca-navigation></nav>
+
+            </article> 
+        </main> 
+    </div> 
+ 
+    <!-- ================================================ -->
+    <!-- Footer                                            -->
+    <!-- ================================================ --> 
+    <footer> 
+ 
+    </footer> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script src="js/ca.js"></script>       
+    
+    
+</body> 
+</html>
