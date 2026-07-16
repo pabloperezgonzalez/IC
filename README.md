@@ -2,17 +2,13 @@
 
 ## Mòdul del CE - CETI. Incidents de Ciberseguretat
 
-Visita pàgina principal de continguts en:  https://enriqueiborra.github.io/IC/ 
+Visita pàgina principal de continguts en:  https://pabloperezgonzalez.github.io/IC/
 
 Fes servir ![traductor](docs/imgs/icono-trad-google.png) per visualitzar en altres llengües.
 
 Codi Mòdul: 5021 – Incidents de Ciberseguretat
 
 Del CE - CETI, Curs d'Especialització de Ciberseguretat en Entorns de les Tecnologies de la Informació
-
-# UNDER CONSTRUCTION
-## Esta pàgina encara es troba en periode de revisió...
-![CID](docs/imgs/under-contruction.png)
 
 D'acord amb el “Reial decret 479/2020, de 7 d'abril, pel qual s'estableix el Curs de “especialització en ciberseguretat en entorns de les tecnologies de la informació”
 on es fixen els ensenyaments mínims, els resultats d'aprenentatge són:
@@ -36,7 +32,3 @@ Formació Professional per a la Comunitat Valenciana, en aplicació de la Llei o
 d’ordenació i integració de la Formació Professional, 
 El mòdul d'Incidents de Ciberseguretat tindrà una docència presencial de 120 hores al llarg del curs, distribuïdes en 30 setmanes,
 a 4 hores per setmana.
-
-Pàgina principal de continguts del curs :  https://enriqueiborra.github.io/IC/ 
-
-
