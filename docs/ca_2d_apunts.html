@@ -106,7 +106,7 @@
                         CA 2d - Investigació mitjançant fonts obertes (OSINT)
                     </h1> 
                     <p> 
-                        Classificació dels incidents de ciberseguretat. 
+                        Investigació d'incidents de ciberseguretat. 
                     </p> 
                     <div class="hero-meta"> 
                         <span> 
@@ -217,20 +217,6 @@ pels investigadors forenses i pels equips de Threat Intelligence
 per detectar amenaces abans que provoquen un incident greu.
 </p>
 
-<div class="remember">
-
-<strong>Recorda</strong>
-
-<p>
-
-L'OSINT utilitza únicament informació accessible públicament.
-L'objectiu no és obtenir dades de forma il·legal, sinó saber
-localitzar-les, verificar-les i interpretar-les correctament.
-
-</p>
-
-</div>
-
 </section>
 
 <!-- ==========================================================
@@ -239,7 +225,7 @@ localitzar-les, verificar-les i interpretar-les correctament.
 
 <section>
 
-<h3>Què és l'OSINT?</h3>
+<h2>Què és l'OSINT?</h2>
 
 <p>
 <strong>OSINT (Open Source Intelligence)</strong> és el procés de
@@ -354,7 +340,7 @@ A[Fonts obertes]
 
 <section>
 
-<h3>Fonts obertes d'informació</h3>
+<h2>Fonts obertes d'informació</h2>
 
 <p>
 Una investigació OSINT pot utilitzar centenars de fonts
@@ -454,20 +440,6 @@ tipus d'investigació que estiga realitzant.
 </tbody>
 
 </table>
-
-<div class="tip">
-
-<strong>Consell</strong>
-
-<p>
-
-No confies mai en una única font d'informació. En qualsevol
-investigació és recomanable contrastar les dades utilitzant
-diverses fonts independents.
-
-</p>
-
-</div>
 
 <div class="mermaid">
 mindmap
@@ -1457,60 +1429,6 @@ recopilada.
 </section>
 
 <!-- ==========================================================
-     📦 SABIES QUE...?
-========================================================== -->
-
-<section>
-
-<h2>📦 Sabies que...?</h2>
-
-<div class="didyouknow">
-
-<strong>Google no indexa tot Internet</strong>
-
-<p>
-
-Els motors de cerca només mostren una part de la informació
-disponible. Gran quantitat de dades es troben en bases de dades,
-API, repositoris o serveis que no apareixen en les cerques
-habituals.
-
-</p>
-
-</div>
-
-<div class="didyouknow">
-
-<strong>Shodan és conegut com "el Google dels dispositius"</strong>
-
-<p>
-
-A diferència dels motors de cerca tradicionals, Shodan indexa
-servidors, routers, càmeres IP, dispositius IoT i molts altres
-equips connectats a Internet.
-
-</p>
-
-</div>
-
-<div class="didyouknow">
-
-<strong>Moltes filtracions s'han descobert gràcies a l'OSINT</strong>
-
-<p>
-
-Investigadors de ciberseguretat utilitzen fonts obertes per
-detectar bases de dades exposades, repositoris públics amb
-credencials o servidors configurats incorrectament abans que els
-ciberdelinqüents els aprofiten.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
      🧪 CAS PRÀCTIC
 ========================================================== -->
 
@@ -1694,7 +1612,7 @@ un informe amb les conclusions obtingudes.
 
 <p>
 
-L'empresa <strong>NetSecure S.L.</strong> ha detectat trànsit de
+L'empresa <b>NetSecure S.L.</b> ha detectat trànsit de
 xarxa cap a un domini desconegut. No existeixen alertes internes
 que indiquen si és legítim o maliciós, per la qual cosa es decideix
 iniciar una investigació OSINT abans d'aplicar mesures de bloqueig.
@@ -1756,222 +1674,6 @@ possible amenaça.
 </div>
 
 </section>
-
-<!-- ==========================================================
-     ✍️ ACTIVITATS PROPOSADES
-========================================================== -->
-
-<section>
-
-<h3>✍️ Activitats proposades</h3>
-
-<ol>
-
-<li>Explica amb les teues paraules què significa OSINT.</li>
-
-<li>Diferencia informació pública d'intel·ligència.</li>
-
-<li>Investiga quines dades proporciona un registre WHOIS.</li>
-
-<li>Descriu les diferències entre Shodan i un motor de cerca convencional.</li>
-
-<li>Busca informació sobre les funcions principals de VirusTotal.</li>
-
-<li>Investiga què és un certificat digital i per què pot ser útil durant una investigació.</li>
-
-<li>Realitza una taula comparativa entre Maltego, SpiderFoot i theHarvester.</li>
-
-<li>Explica què és un Indicador de Compromís (IoC) i posa tres exemples.</li>
-
-<li>Descriu un cas real en què l'OSINT haja ajudat a detectar una campanya de phishing o malware.</li>
-
-<li>Debateix amb els companys quins són els límits legals i ètics de les investigacions OSINT.</li>
-
-</ol>
-
-</section>
-
-<!-- ==========================================================
-     📚 RESUM
-========================================================== -->
-
-<section>
-
-<h2>📚 Resum</h2>
-
-<p>
-
-L'OSINT és una disciplina fonamental dins de la investigació
-d'incidents de ciberseguretat. Permet recopilar informació
-procedent de fonts obertes, verificar-la i transformar-la en
-intel·ligència útil per detectar amenaces, investigar incidents i
-prendre decisions amb major rapidesa.
-
-</p>
-
-<div class="mermaid">
-
-flowchart LR
-
-A[Fonts obertes]
-
---> B[Recopilació]
-
---> C[Verificació]
-
---> D[Correlació]
-
---> E[Intel·ligència]
-
---> F[Resposta davant incidents]
-
-</div>
-
-<div class="info">
-
-<strong>Idees clau</strong>
-
-<ul>
-
-<li>L'OSINT utilitza exclusivament informació pública.</li>
-
-<li>La informació ha de ser sempre verificada.</li>
-
-<li>És una eina essencial durant la investigació d'incidents.</li>
-
-<li>Existeixen nombroses fonts obertes: DNS, WHOIS, certificats, xarxes socials, etc.</li>
-
-<li>Cap eina proporciona tota la informació necessària.</li>
-
-<li>Els Indicadors de Compromís (IoC) ajuden a identificar amenaces.</li>
-
-<li>L'OSINT complementa els sistemes interns de monitorització.</li>
-
-<li>Les investigacions han de respectar sempre la legalitat i l'ètica professional.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
-     🎯 EN L'EXAMEN...
-========================================================== -->
-
-<section>
-
-<h2>🎯 En l'examen...</h2>
-
-<div class="exam">
-
-<strong>Conceptes que has de dominar</strong>
-
-<ul>
-
-<li>Definició d'OSINT.</li>
-
-<li>Diferència entre informació i intel·ligència.</li>
-
-<li>Fonts obertes d'informació.</li>
-
-<li>Reconeixement passiu i actiu.</li>
-
-<li>Footprinting i enumeració.</li>
-
-<li>Indicadors de Compromís (IoC).</li>
-
-<li>Principals eines OSINT.</li>
-
-<li>Investigació de dominis i adreces IP.</li>
-
-<li>Avantatges i limitacions de l'OSINT.</li>
-
-<li>Aspectes legals i ètics.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
-     📂 RECURSOS DESCARREGABLES
-========================================================== -->
-
-<section>
-
-<h2>📂 Recursos descarregables</h2>
-
-<p>
-
-Per ampliar els continguts d'aquest criteri d'avaluació es
-proporcionen els següents recursos.
-
-</p>
-
-<ul>
-
-<li>📄 Guia d'introducció a OSINT.</li>
-
-<li>📄 Plantilla d'investigació d'un domini.</li>
-
-<li>📄 Checklist d'una investigació OSINT.</li>
-
-<li>📄 Taula resum de les principals eines OSINT.</li>
-
-<li>📄 Exercici resolt sobre investigació d'una IP.</li>
-
-<li>📄 Infografia del procés d'investigació OSINT.</li>
-
-<li>📄 Glossari de terminologia.</li>
-
-<li>📄 Col·lecció de Google Dorks bàsics.</li>
-
-<li>📄 Plantilla d'informe tècnic.</li>
-
-<li>📄 Full d'autoavaluació.</li>
-
-</ul>
-
-<div class="tip">
-
-<strong>Recomanació</strong>
-
-<p>
-
-Conserva aquestes plantilles, ja que seran molt útils en els
-criteris següents dedicats a l'anàlisi d'evidències digitals,
-la investigació forense i la resposta davant incidents de
-ciberseguretat.
-
-</p>
-
-</div>
-
-</section>
-
-
-
-
-
-
-
-<!-- ================================================= -->
-<!-- Exemple d'imatge ampliable                        -->
-<!-- ================================================= -->
-<figure>
-
-    <img src="img/firewall-network-diagram-ex.png" width="40%"
-         alt="Regles del firewall"
-         class="zoomable">
-
-    <figcaption>
-        Exemple de configuració d'un tallafoc.
-    </figcaption>
-
-</figure>
-
 
 <nav data-ca-navigation></nav>
 
