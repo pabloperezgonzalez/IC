@@ -251,19 +251,6 @@ incident com qualsevol esdeveniment que viola o posa en risc les
 polítiques de seguretat establertes.
 </p>
 
-<div class="example">
-
-<strong>Exemple</strong>
-
-<p>
-Un empleat introdueix les seues credencials en una pàgina web
-fraudulenta després de rebre un correu de phishing. Aquest fet
-constitueix un incident perquè compromet la seguretat del compte
-corporatiu.
-</p>
-
-</div>
-
 <h3>Esdeveniment o incident?</h3>
 
 <p>
@@ -419,20 +406,7 @@ A[Actiu]
 
 </div>
 
-<div class="important">
-
-<strong>Important</strong>
-
-<p>
-Un incident no apareix de manera espontània. Normalment és el
-resultat de la combinació d'un actiu vulnerable, una amenaça
-existent i unes mesures de protecció insuficients.
-</p>
-
-</div>
-
 </section>
-
 
 
 <!-- ==========================================================
@@ -514,7 +488,7 @@ A[Incident detectat]
 
 <section>
 
-<h3>Classificació segons l'origen</h3>
+<h2>Classificació segons l'origen</h2>
 
 <p>
 Una de les primeres característiques que s'analitza és l'origen de
@@ -672,7 +646,7 @@ investigacions posteriors i ajudarà a detectar patrons repetitius.
 
 <section>
 
-<h3>Classificació segons el tipus d'incident</h3>
+<h2>Classificació segons el tipus d'incident</h2>
 
 <p>
 La classificació segons el tipus és probablement la més utilitzada
@@ -784,40 +758,16 @@ pas fonamental dins del procés de gestió.
 <div class="mermaid">
 
 mindmap
-
-root((Incidents))
-
-    Malware
-
-    Phishing
-
-    Ransomware
-
-    DDoS
-
-    "Accés no autoritzat"
-
-    "Fuita de dades"
-
-    "Error humà"
-
-    "Configuració incorrecta"
-
-    "Amenaces internes"
-
-</div>
-
-<div class="important">
-
-<strong>Important</strong>
-
-<p>
-Un mateix incident pot pertànyer simultàniament a diverses
-categories. Per exemple, un atac de phishing pot provocar un accés
-no autoritzat que finalment desemboque en una fuita d'informació o
-en la instal·lació de ransomware.
-</p>
-
+    root((Incidents))
+        Malware
+        Phishing
+        Ransomware
+        DDoS
+        "Accés no autoritzat"
+        "Fuita de dades"
+        "Error humà"
+        "Configuració incorrecta"
+        "Amenaces internes"
 </div>
 
 </section>
@@ -829,7 +779,7 @@ en la instal·lació de ransomware.
 
 <section>
 
-<h3>Classificació segons la gravetat</h3>
+<h2>Classificació segons la gravetat</h2>
 
 <p>
 No tots els incidents tenen la mateixa importància ni requereixen
@@ -929,18 +879,6 @@ B --> F[Crítica]
 
 </div>
 
-<div class="tip">
-
-<strong>Consell</strong>
-
-<p>
-La gravetat d'un incident pot canviar durant la investigació.
-Inicialment pot considerar-se moderat i, després de descobrir nous
-equips compromesos, passar a ser crític.
-</p>
-
-</div>
-
 </section>
 
 <!-- ==========================================================
@@ -949,7 +887,7 @@ equips compromesos, passar a ser crític.
 
 <section>
 
-<h3>Classificació segons l'impacte</h3>
+<h2>Classificació segons l'impacte</h2>
 
 <p>
 A més de la gravetat, també és important determinar quin és
@@ -1001,19 +939,6 @@ A --> D[Disponibilitat]
 </div>
 
 <div class="example">
-
-<strong>Exemple</strong>
-
-<p>
-
-Un atac de ransomware afecta simultàniament la disponibilitat
-(encripta els fitxers) i la integritat (modifica les dades).
-Si, a més, els atacants roben informació abans del xifrat,
-també es compromet la confidencialitat.
-
-</p>
-
-</div>
 
 </section>
 
@@ -1079,16 +1004,6 @@ A[Detecció]
 </div>
 
 <div class="remember">
-
-<strong>Recorda</strong>
-
-<p>
-La classificació és una de les primeres activitats després de la
-detecció. Una classificació incorrecta pot retardar la resposta i
-augmentar considerablement l'impacte de l'incident.
-</p>
-
-</div>
 
 </section>
 
@@ -1191,18 +1106,6 @@ amb els mètodes emprats pels ciberdelinqüents.
 </tbody>
 
 </table>
-
-<div class="info">
-
-<strong>Informació</strong>
-
-<p>
-En els pròxims criteris d'avaluació estudiarem com aquests models
-s'utilitzen durant la detecció, investigació i resposta davant
-incidents de ciberseguretat.
-</p>
-
-</div>
 
 </section>
 
@@ -1331,13 +1234,10 @@ pàgina fraudulenta, els atacants accedeixen al correu corporatiu.
 
 <ul>
 
-<li><strong>Origen:</strong> extern.</li>
-
-<li><strong>Tipus:</strong> phishing.</li>
-
-<li><strong>Impacte:</strong> confidencialitat.</li>
-
-<li><strong>Gravetat:</strong> alta.</li>
+<li>Origen: extern.</li>
+<li>Tipus: phishing.</li>
+<li>Impacte: confidencialitat.</li>
+<li>Gravetat: alta.</li>
 
 </ul>
 
@@ -1521,55 +1421,6 @@ Per a cada situació identifica:
 </ul>
 
 </div>
-
-</section>
-
-
-<!-- ==========================================================
-     ✍️ ACTIVITATS
-========================================================== -->
-
-<section>
-
-<h3>✍️ Activitats proposades</h3>
-
-<ol>
-
-<li>
-Defineix amb les teues paraules què és un incident de
-ciberseguretat.
-</li>
-
-<li>
-Explica la diferència entre un esdeveniment i un incident.
-</li>
-
-<li>
-Elabora una taula amb cinc exemples d'incidents interns i cinc
-d'externs.
-</li>
-
-<li>
-Classifica els següents incidents segons el seu tipus,
-gravetat i impacte.
-</li>
-
-<li>
-Investiga un incident real publicat per ENISA o INCIBE i
-descriu com el classificaries.
-</li>
-
-<li>
-Construeix un mapa conceptual amb els conceptes:
-actiu, amenaça, vulnerabilitat, risc i incident.
-</li>
-
-<li>
-Explica per què és important utilitzar una taxonomia comuna
-dins d'una organització.
-</li>
-
-</ol>
 
 </section>
 
