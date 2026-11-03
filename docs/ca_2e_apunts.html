@@ -219,19 +219,6 @@ d'Operacions de Seguretat (SOC) i dels equips de resposta davant
 incidents (CSIRT).
 </p>
 
-<div class="remember">
-
-<strong>Recorda</strong>
-
-<p>
-
-Un incident que no queda registrat ni documentat és un incident
-del qual l'organització difícilment podrà aprendre.
-
-</p>
-
-</div>
-
 </section>
 
 <!-- ==========================================================
@@ -247,11 +234,7 @@ La classificació consisteix a agrupar els incidents segons les
 seues característiques. Aquesta informació facilita l'assignació
 de recursos, la priorització de la resposta i l'elaboració
 d'estadístiques que permeten identificar tendències i amenaces
-recurrents.
-</p>
-
-<p>
-Cada organització pot definir la seua pròpia classificació, però
+recurrents. Cada organització pot definir la seua pròpia classificació, però
 habitualment es tenen en compte l'origen de l'incident, els actius
 afectats, el tipus d'atac i els objectius compromesos.
 </p>
@@ -326,21 +309,6 @@ afectats, el tipus d'atac i els objectius compromesos.
 
 </table>
 
-<div class="example">
-
-<strong>Exemple</strong>
-
-<p>
-
-Un correu electrònic fraudulent que intenta robar credencials es
-classificaria com un incident de <strong>phishing</strong>, amb
-origen extern, afectació als usuaris i compromís potencial de la
-confidencialitat.
-
-</p>
-
-</div>
-
 <div class="mermaid">
 
 flowchart LR
@@ -370,11 +338,7 @@ A[Incident]
 <p>
 Una vegada classificat l'incident, és necessari valorar-ne la
 gravetat. Aquesta valoració determina l'ordre en què serà atés i
-els recursos que caldrà dedicar-hi.
-</p>
-
-<p>
-La criticitat d'un incident depén tant de la probabilitat que
+els recursos que caldrà dedicar-hi. La criticitat d'un incident depén tant de la probabilitat que
 provoque danys com de l'impacte que pot tenir sobre els serveis de
 l'organització.
 </p>
@@ -448,36 +412,6 @@ l'organització.
 </tbody>
 
 </table>
-
-<div class="tip">
-
-<strong>Consell</strong>
-
-<p>
-
-Dos incidents del mateix tipus poden tenir prioritats molt
-diferents segons els sistemes afectats. Un ransomware en un equip
-d'oficina no té el mateix impacte que en un servidor de producció.
-
-</p>
-
-</div>
-
-<div class="mermaid">
-
-flowchart TD
-
-A[Incident]
-
---> B[Classificació]
-
---> C[Valoració]
-
---> D[Priorització]
-
---> E[Resposta]
-
-</div>
 
 </section>
 
@@ -613,10 +547,9 @@ durant les auditories i les anàlisis de lliçons apreses.
 
 <p>
 
-En detectar un intent de phishing es crea el registre
-<strong>INC-2026-0048</strong>, indicant la data, el departament
-afectat, el correu fraudulent, les evidències disponibles i el
-responsable assignat a la investigació.
+En detectar un intent de phishing es crea el registre INC-2026-0048, 
+indicant la data, el departament afectat, el correu fraudulent, les 
+evidències disponibles i el responsable assignat a la investigació.
 
 </p>
 
@@ -730,20 +663,6 @@ realitzades.
 </tbody>
 
 </table>
-
-<div class="important">
-
-<strong>Important</strong>
-
-<p>
-
-No s'ha de considerar un incident tancat fins que s'haja comprovat
-que els serveis funcionen amb normalitat i que no existeixen nous
-indicadors de compromís.
-
-</p>
-
-</div>
 
 <div class="mermaid">
 
@@ -1104,20 +1023,6 @@ incidents amb major impacte per a l'organització.
 
 </table>
 
-<div class="tip">
-
-<strong>Consell</strong>
-
-<p>
-
-La prioritat no depén únicament del tipus d'incident. Un atac de
-phishing dirigit al director financer pot ser molt més crític que
-altres incidents aparentment més greus.
-
-</p>
-
-</div>
-
 <div class="mermaid">
 
 flowchart TD
@@ -1189,21 +1094,6 @@ mesures s'han aplicat fins al moment.
 <li>Conclusió i mesures adoptades.</li>
 
 </ul>
-
-<div class="example">
-
-<strong>Exemple</strong>
-
-<p>
-
-En finalitzar la investigació d'un incident de malware, l'equip
-redacta un informe que inclou la cronologia dels fets, els equips
-afectats, les evidències recollides, les accions de contenció i
-les recomanacions per evitar incidents similars.
-
-</p>
-
-</div>
 
 </section>
 
@@ -1333,21 +1223,6 @@ A[Detecció]
 
 </div>
 
-<div class="remember">
-
-<strong>Recorda</strong>
-
-<p>
-
-Classificar, valorar, documentar i fer el seguiment dels incidents
-no només facilita la resposta immediata, sinó que també permet
-millorar contínuament la seguretat de l'organització a partir de
-l'experiència adquirida.
-
-</p>
-
-</div>
-
 </section>
 
 
@@ -1469,8 +1344,8 @@ tancament.
 <p>
 
 El SOC detecta un atac de ransomware sobre el servidor de fitxers.
-L'incident es classifica com a <strong>Malware</strong>, amb
-criticitat <strong>Crítica</strong>, s'assigna immediatament a
+L'incident es classifica com a Malware, amb
+criticitat Crítica, s'assigna immediatament a
 l'equip de resposta i s'actualitza el seu estat cada vegada que es
 realitza una nova actuació fins al seu tancament.
 
@@ -1557,73 +1432,6 @@ incidents de poca importància.
 <li>No identificar correctament els actius afectats.</li>
 
 </ul>
-
-</div>
-
-<div class="remember">
-
-<strong>Recorda</strong>
-
-<p>
-
-Un incident no finalitza quan desapareix el problema tècnic. Només
-pot considerar-se tancat quan s'han completat la investigació, la
-documentació i la revisió final.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
-     📦 SABIES QUE...?
-========================================================== -->
-
-<section>
-
-<h2>📦 Sabies que...?</h2>
-
-<div class="didyouknow">
-
-<strong>Els SOC gestionen milers d'incidents cada dia</strong>
-
-<p>
-
-Els grans Centres d'Operacions de Seguretat poden rebre desenes de
-milers d'alertes diàries. Sense una correcta classificació i
-priorització seria impossible identificar els incidents realment
-crítics.
-
-</p>
-
-</div>
-
-<div class="didyouknow">
-
-<strong>Molts incidents es reobrin després del seu tancament</strong>
-
-<p>
-
-Si apareixen noves evidències o es detecten noves afectacions,
-l'incident pot tornar a obrir-se per continuar la investigació i
-actualitzar la documentació.
-
-</p>
-
-</div>
-
-<div class="didyouknow">
-
-<strong>Les lliçons apreses milloren la seguretat</strong>
-
-<p>
-
-L'anàlisi dels incidents resolts permet identificar patrons,
-millorar els procediments i reduir el temps de resposta davant
-futurs incidents similars.
-
-</p>
 
 </div>
 
@@ -1782,7 +1590,7 @@ al seu tancament.
 
 <p>
 
-L'empresa <strong>NetSecure S.L.</strong> ha registrat diversos
+L'empresa <b>NetSecure S.L.</b> ha registrat diversos
 incidents en les últimes hores. El responsable del SOC t'ha
 assignat la tasca de gestionar-los utilitzant el procediment
 intern de resposta davant incidents.
@@ -1847,187 +1655,7 @@ auditories i les investigacions forenses.
 
 </section>
 
-<!-- ==========================================================
-     ✍️ ACTIVITATS PROPOSADES
-========================================================== -->
-
 <section>
-
-<h3>✍️ Activitats proposades</h3>
-
-<ol>
-
-<li>Explica la diferència entre classificar i prioritzar un incident.</li>
-
-<li>Descriu el cicle de vida complet d'un incident de ciberseguretat.</li>
-
-<li>Indica quines dades mínimes ha de contenir un registre d'incident.</li>
-
-<li>Elabora una plantilla per documentar incidents dins d'una organització.</li>
-
-<li>Classifica cinc incidents diferents segons la seua gravetat.</li>
-
-<li>Construeix una matriu Impacte × Probabilitat i utilitza-la per determinar la prioritat de diversos incidents.</li>
-
-<li>Investiga quines plataformes ITSM s'utilitzen habitualment en empreses.</li>
-
-<li>Compara les funcions d'un SIEM i d'un SOAR durant la gestió dels incidents.</li>
-
-<li>Explica per què és important conservar totes les evidències encara que l'incident semble resolt.</li>
-
-<li>Debateix quines conseqüències podria tenir una classificació incorrecta d'un incident crític.</li>
-
-</ol>
-
-</section>
-
-<!-- ==========================================================
-     📚 RESUM
-========================================================== -->
-
-<section>
-
-<h2>📚 Resum</h2>
-
-<p>
-
-La classificació, la valoració i el seguiment constitueixen les
-últimes fases del procés de detecció d'incidents. Aquestes
-activitats permeten establir la prioritat de resposta, coordinar
-els equips implicats, documentar totes les actuacions i obtenir
-informació valuosa per millorar la seguretat de l'organització en
-el futur.
-
-</p>
-
-<div class="mermaid">
-
-flowchart LR
-
-A[Incident detectat]
-
---> B[Classificació]
-
---> C[Valoració]
-
---> D[Priorització]
-
---> E[Registre]
-
---> F[Seguiment]
-
---> G[Tancament]
-
---> H[Lliçons apreses]
-
-</div>
-
-<div class="info">
-
-<strong>Idees clau</strong>
-
-<ul>
-
-<li>Cal classificar tots els incidents detectats.</li>
-
-<li>La prioritat depén del risc i de l'impacte sobre el negoci.</li>
-
-<li>Tot incident ha de disposar d'un registre únic.</li>
-
-<li>Les actuacions han de quedar perfectament documentades.</li>
-
-<li>El seguiment garanteix que no queden tasques pendents.</li>
-
-<li>La traçabilitat facilita les investigacions i les auditories.</li>
-
-<li>Les lliçons apreses permeten millorar els procediments de seguretat.</li>
-
-<li>Els SIEM, SOAR i ITSM faciliten la gestió integral dels incidents.</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
-     🎯 EN L'EXAMEN...
-========================================================== -->
-
-<section>
-
-<h2>🎯 En l'examen...</h2>
-
-<div class="exam">
-
-<strong>Conceptes que has de dominar</strong>
-
-<ul>
-
-<li>Classificació dels incidents.</li>
-
-<li>Criteris de valoració.</li>
-
-<li>Impacte, probabilitat i criticitat.</li>
-
-<li>Priorització dels incidents.</li>
-
-<li>Registre d'incidents.</li>
-
-<li>Seguiment i canvi d'estats.</li>
-
-<li>Traçabilitat.</li>
-
-<li>Documentació i informes.</li>
-
-<li>Diferències entre SIEM, SOAR, ITSM i sistemes de ticketing.</li>
-
-<li>Lliçons apreses (<em>Lessons Learned</em>).</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- ==========================================================
-     📂 RECURSOS DESCARREGABLES
-========================================================== -->
-
-<section>
-
-<h2>📂 Recursos descarregables</h2>
-
-<p>
-
-Per reforçar els continguts d'aquest criteri d'avaluació es
-proporcionen els següents recursos.
-
-</p>
-
-<ul>
-
-<li>📄 Plantilla de registre d'incidents.</li>
-
-<li>📄 Fitxa de classificació i priorització.</li>
-
-<li>📄 Matriu Impacte × Probabilitat.</li>
-
-<li>📄 Model d'informe d'incident.</li>
-
-<li>📄 Checklist de seguiment d'incidents.</li>
-
-<li>📄 Infografia del cicle de vida d'un incident.</li>
-
-<li>📄 Cas pràctic resolt.</li>
-
-<li>📄 Glossari de terminologia.</li>
-
-<li>📄 Presentació utilitzada a classe.</li>
-
-<li>📄 Full d'autoavaluació.</li>
-
-</ul>
 
 <div class="tip">
 
@@ -2036,7 +1664,7 @@ proporcionen els següents recursos.
 <p>
 
 Conserva aquestes plantilles perquè es reutilitzaran en el
-<strong>RA3</strong>, dedicat a la recopilació d'evidències,
+<b>RA3</b>, dedicat a la recopilació d'evidències,
 l'anàlisi forense i la investigació d'incidents de
 ciberseguretat. Un bon registre dels incidents facilitarà enormement
 les fases posteriors de l'anàlisi i la resposta.
@@ -2046,26 +1674,6 @@ les fases posteriors de l'anàlisi i la resposta.
 </div>
 
 </section>
-
-
-
-
-
-<!-- ================================================= -->
-<!-- Exemple d'imatge ampliable                        -->
-<!-- ================================================= -->
-<figure>
-
-    <img src="img/firewall-network-diagram-ex.png" width="40%"
-         alt="Regles del firewall"
-         class="zoomable">
-
-    <figcaption>
-        Exemple de configuració d'un tallafoc.
-    </figcaption>
-
-</figure>
-
 
 <nav data-ca-navigation></nav>
 
