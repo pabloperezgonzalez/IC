@@ -1455,39 +1455,14 @@ analitzar.
 </div>
 
 <h3>Material proporcionat</h3>
-
+<section>
 <h4>1. Plànol simplificat de les instal·lacions.</h4>
+<img src="imgs\plano-ca2c.png" alt="Plànol de les instal·lacions">
+</section>
 
-        ┌───────────────────────┬───────────────────────┐
-        │                       │                       │
-        │   A. RECEPCIÓ         │   B. DESPATXOS        │
-        │                       │                       │
-        │   C1 - CCTV           │   C2 - CCTV           │
-        │   RFID principal      │                       │
-        │                       │                       │
-        ├──────────────┬────────┴──────────────┬────────┤
-        │              │                       │        │
-        │ E. MAGATZEM  │   C. PASSADÍS TÈCNIC  │        │
-        │              │                       │        │
-        │ Sensor       │   C3 - CCTV           │        │
-        │ moviment     │                       │        │
-        │              ├───────────────────────┤        │
-        ├──────────────┤                       │        │
-        │              │ D. SALA DE SERVIDORS  │        │
-        │ G. SALA      │                       │        │
-        │ ELÈCTRICA    │ C4 - CCTV             │        │
-        │              │ RFID restringit       │        │
-        │ SAI          │ Sensor temperatura    │        │
-        │ Sensor fum   │                       │        │
-        ├──────────────┴──────────────┬────────┴────────┤
-        │                             │                 │
-        │     F. EIXIDA D'EMERGÈNCIA  │   ESCALA        │
-        │                             │                 │
-        │     Alarma d'obertura       │                 │
-        └─────────────────────────────┴─────────────────┘
-
+<section>
 <h4>2. Normativa interna de seguretat física</h4>
-<ol>
+<ul>
 <li>La sala de servidors és una zona d'accés restringit.</li>
 <li>Només el responsable IT i dos tècnics autoritzats poden accedir-hi.</li>
 <li>Els proveïdors externs necessiten autorització prèvia i han d'estar acompanyats.</li>
@@ -1498,8 +1473,10 @@ analitzar.
 <li>Les interrupcions de les càmeres han de generar un avís a la central.</li>
 <li>Qualsevol incidència ha de quedar documentada.</li>
 <li>El personal de neteja no pot accedir a les zones tècniques.</li>
-</ol>
+</ul>
+</section>
 
+<section>
 <h4>3. Registre de control d'accessos RFID</h4>
 <p><strong>Data:</strong> 14 d'octubre de 2026.</p>
 <table><thead><tr><th>Hora</th><th>Targeta</th><th>Persona</th><th>Zona</th><th>Resultat</th></tr></thead><tbody>
@@ -1523,12 +1500,14 @@ analitzar.
 <tr><td>19:52</td><td>RFID-009</td><td>Desconegut</td><td>Entrada principal</td><td>Denegat</td></tr>
 <tr><td>19:53</td><td>RFID-009</td><td>Desconegut</td><td>Entrada principal</td><td>Denegat</td></tr>
 </tbody></table>
-<h3>Informació complementària</h3>
+<p>Informació complementària:</p>
 <ul>
 <li>RFID-001: Marta Soler, responsable IT.</li><li>RFID-002: Joan Ferrer, responsable de manteniment.</li><li>RFID-003: Laura Vidal, administració.</li><li>RFID-004: Pau Martí, tècnic de sistemes.</li><li>RFID-005: tècnic extern de TecnoManteniment.</li><li>RFID-006: Anna Costa, direcció.</li><li>RFID-007: David Roca, administració.</li><li>RFID-008: personal de neteja.</li><li>RFID-009: targeta no identificada.</li>
 </ul>
 <p>El sistema RFID registra l'hora en què es valida una targeta, però no registra si la porta s'ha tancat correctament.</p>
+</section>
 
+<section>
 <h4>4. Informe de videovigilància CCTV</h4>
 <p><strong>Data:</strong> 14 d'octubre de 2026.</p>
 <table><thead><tr><th>Càmera</th><th>Hora</th><th>Observació</th></tr></thead><tbody>
@@ -1545,7 +1524,7 @@ analitzar.
 <tr><td>C4</td><td>16:30</td><td>Recuperació de la gravació.</td></tr>
 <tr><td>C1</td><td>18:37</td><td>Laura Vidal ix de l'edifici.</td></tr>
 </tbody></table>
-<h3>Observacions tècniques</h3>
+<p>Observacions tècniques:</p>
 <ul>
 <li>La càmera C4 no va enregistrar entre les 14:00 i les 16:30.</li>
 <li>No consta cap avís de fallada en la central d'alarmes.</li>
@@ -1553,7 +1532,9 @@ analitzar.
 <li>Els rellotges de les càmeres poden tindre una desviació de fins a dos minuts respecte del sistema RFID.</li>
 <li>No s'ha pogut identificar la persona que transportava la caixa.</li>
 </ul>
+</section>
 
+<section>
 <h4>5. Registre d'alarmes</h4>
 <table><thead><tr><th>Hora</th><th>Sistema</th><th>Esdeveniment</th><th>Resposta</th></tr></thead><tbody>
 <tr><td>08:32</td><td>RFID</td><td>Accés denegat a sala de servidors</td><td>Sense notificació</td></tr>
@@ -1567,36 +1548,39 @@ analitzar.
 <tr><td>15:31</td><td>Sensor fum</td><td>Lectura normalitzada</td><td>Sense inspecció</td></tr>
 <tr><td>19:52</td><td>RFID</td><td>Targeta desconeguda denegada</td><td>Sense notificació</td></tr>
 </tbody></table>
-<h3>Configuració de la central</h3>
+<p>Configuració de la central:</p>
 <ul>
 <li>Les alarmes de portes es tanquen automàticament quan el sensor detecta que la porta torna a estar tancada.</li>
 <li>Els accessos denegats no generen avisos crítics.</li>
 <li>Les fallades de CCTV només es comuniquen si es perd la connexió amb el servidor central.</li>
 <li>No hi ha un procediment documentat de verificació de les alarmes ambientals.</li>
 </ul>
+</section>
 
+<section>
 <h4>6. Dades dels sensors ambientals</h4>
-<h3>Sensor de temperatura de la sala de servidors</h3>
+<p><strong>Sensor de temperatura de la sala de servidors:</strong></p>
 <table><thead><tr><th>Hora</th><th>Temperatura</th></tr></thead><tbody>
 <tr><td>08:00</td><td>21 °C</td></tr><tr><td>09:00</td><td>22 °C</td></tr><tr><td>10:00</td><td>23 °C</td></tr><tr><td>11:00</td><td>25 °C</td></tr><tr><td>12:00</td><td>29 °C</td></tr><tr><td>13:00</td><td>31 °C</td></tr><tr><td>14:00</td><td>32 °C</td></tr><tr><td>15:00</td><td>34 °C</td></tr><tr><td>16:00</td><td>33 °C</td></tr><tr><td>17:00</td><td>26 °C</td></tr><tr><td>18:00</td><td>24 °C</td></tr>
 </tbody></table>
-<p>Límit establit per l'empresa: 18–27 °C.</p>
-<p><strong>Configuració:</strong> el sensor registra les dades cada hora, però només envia una notificació quan supera els 35 °C durant més de deu minuts.</p>
-<h3>Sensor de fum de la sala elèctrica</h3>
+<p>Límit establit per l'empresa: 18–27 °C. El sensor registra les dades cada hora, però només envia una notificació quan supera els 35 °C durant més de deu minuts.</p>
+<p><strong>Sensor de temperatura de la sala elèctrica:</strong></p>
 <table><thead><tr><th>Hora</th><th>Lectura</th><th>Estat</th></tr></thead><tbody>
 <tr><td>14:30</td><td>0,02</td><td>Normal</td></tr><tr><td>15:00</td><td>0,03</td><td>Normal</td></tr><tr><td>15:26</td><td>0,18</td><td>Alerta</td></tr><tr><td>15:28</td><td>0,22</td><td>Alerta</td></tr><tr><td>15:31</td><td>0,04</td><td>Normal</td></tr><tr><td>16:00</td><td>0,02</td><td>Normal</td></tr>
 </tbody></table>
 <p class="small">Nota: són lectures fictícies d'un sensor simulat. No representen unitats ni llindars universals.</p>
+</section>
 
+<section>
 <h4>7. Registre de visites i manteniment</h4>
-<h3>Visites externes</h3>
+<p><strong>Visites externes:</strong></p>
 <table><thead><tr><th>Hora prevista</th><th>Visitant</th><th>Empresa</th><th>Motiu</th><th>Autorització</th></tr></thead><tbody>
 <tr><td>10:30–11:00</td><td>Tècnic extern</td><td>TecnoManteniment</td><td>Revisió d'un servidor</td><td>Autoritzat amb acompanyament</td></tr>
 <tr><td>11:30–12:00</td><td>Cap visita</td><td>—</td><td>—</td><td>—</td></tr>
 <tr><td>15:00–16:00</td><td>Cap visita</td><td>—</td><td>—</td><td>—</td></tr>
 </tbody></table>
 <p>El tècnic extern havia de revisar un servidor concret i no tenia autorització per a retirar equips o components.</p>
-<h3>Registre de manteniment</h3>
+<p><strong>Registre de manteniment:</strong></p>
 <table><thead><tr><th>Data</th><th>Equip</th><th>Actuació</th><th>Resultat</th></tr></thead><tbody>
 <tr><td>01/09/2026</td><td>SAI</td><td>Revisió visual</td><td>Correcte</td></tr>
 <tr><td>01/09/2026</td><td>SAI</td><td>Prova d'autonomia</td><td>No realitzada</td></tr>
@@ -1605,12 +1589,14 @@ analitzar.
 <tr><td>01/10/2026</td><td>Central d'alarmes</td><td>Revisió general</td><td>Correcte</td></tr>
 <tr><td>14/10/2026</td><td>CCTV C4</td><td>Fallada d'alimentació</td><td>Pendent</td></tr>
 </tbody></table>
-<h3>Inventari de la sala de servidors</h3>
+<p><strong>Inventari de la sala de servidors:</strong></p>
 <table><thead><tr><th>Equip</th><th>Identificador</th><th>Estat anterior</th></tr></thead><tbody>
 <tr><td>Servidor principal</td><td>SRV-01</td><td>Operatiu</td></tr><tr><td>Servidor de còpies</td><td>SRV-02</td><td>Operatiu</td></tr><tr><td>Switch principal</td><td>SW-01</td><td>Operatiu</td></tr><tr><td>SAI</td><td>SAI-01</td><td>Operatiu</td></tr><tr><td>Disc extern de còpies</td><td>EXT-01</td><td>Emmagatzemat en armari</td></tr>
 </tbody></table>
 <p>Després de la revisió del 14 d'octubre, el responsable IT detecta que el disc extern EXT-01 no es troba a l'armari. No hi ha cap registre de retirada de material.</p>
+</section>
 
+<section>
 <h4>8. Incidències del dia següent</h4>
 <p><strong>Data:</strong> 15 d'octubre de 2026.</p>
 <table><thead><tr><th>Hora</th><th>Departament</th><th>Comunicació</th></tr></thead><tbody>
@@ -1621,7 +1607,7 @@ analitzar.
 <tr><td>09:30</td><td>Direcció</td><td>Sol·licita una investigació completa.</td></tr>
 <tr><td>10:00</td><td>IT</td><td>Es confirma que no hi ha cap registre de retirada del disc extern.</td></tr>
 </tbody></table>
-<h3>Declaracions addicionals</h3>
+<p><strong>Declaracions addicionals:</strong></p>
 <ul>
 <li>El tècnic extern afirma que va treballar únicament en el servidor SRV-01.</li>
 <li>David Roca afirma que no va manipular cap equip.</li>
@@ -1629,14 +1615,18 @@ analitzar.
 <li>El responsable de manteniment no recorda haver rebut cap avís de la porta d'emergència.</li>
 </ul>
 <p>Les declaracions no estan verificades i s'han de contrastar amb les evidències disponibles.</p>
+</section>
 
+<section>
 <h4>9. Plantilla d'anàlisi d'incidents físics.</h4>
 <table><thead><tr><th>Camp</th><th>Informació</th></tr></thead><tbody>
 <tr><td>Identificador</td><td>INC-01, INC-02...</td></tr><tr><td>Data i hora</td><td>Quan s'ha produït o detectat</td></tr><tr><td>Zona afectada</td><td>Ubicació de l'incident</td></tr><tr><td>Descripció</td><td>Què ha passat?</td></tr><tr><td>Sistema de detecció</td><td>RFID, CCTV, alarma, sensor...</td></tr><tr><td>Evidències</td><td>Registres que sustenten la conclusió</td></tr><tr><td>Tipus</td><td>Incident confirmat, sospita o vulnerabilitat</td></tr><tr><td>Causa probable</td><td>Què ha pogut provocar-lo?</td></tr><tr><td>Impacte</td><td>Conseqüències possibles</td></tr><tr><td>Probabilitat</td><td>Valor de l'1 al 5</td></tr><tr><td>Impacte valorat</td><td>Valor de l'1 al 5</td></tr><tr><td>Nivell de risc</td><td>Resultat de la multiplicació</td></tr><tr><td>Mesura correctora</td><td>Acció proposada</td></tr><tr><td>Prioritat</td><td>Baixa, mitjana, alta o crítica</td></tr>
 </tbody></table>
+</section>
 
+<section>
 <h3>Tasques</h3>
-<p>Cada grup haurà de lliurar un informe tècnic amb una extensió màxima de <strong>6 pàgines, sense comptar la portada ni l'índex</strong>.</p>
+<p>Cada grup haurà de lliurar un informe tècnic amb una extensió màxima de <strong>10 pàgines, sense comptar la portada ni l'índex</strong>.</p>
 <p>L'informe haurà d'incloure:</p>
 <ol>
 <li>Identificació i descripció dels sistemes de protecció.</li>
@@ -1647,6 +1637,7 @@ analitzar.
 <li>Pla de mesures correctores i conclusions.</li>
 </ol>
 <p>Cal justificar totes les conclusions amb evidències del dossier. No es considerarà vàlid afirmar que una persona ha robat un equip o ha provocat un incident si no hi ha proves suficients.</p>
+</section>
 
 </section>
 

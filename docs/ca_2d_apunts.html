@@ -1349,7 +1349,7 @@ investigació OSINT.
 
 <td>Domini</td>
 
-<td>secure-login-support.com</td>
+<td>eicar.org</td>
 
 </tr>
 
@@ -1357,7 +1357,7 @@ investigació OSINT.
 
 <td>Adreça IP</td>
 
-<td>198.51.100.45</td>
+<td>89.238.73.97</td>
 
 </tr>
 
@@ -1366,14 +1366,6 @@ investigació OSINT.
 <td>Protocol</td>
 
 <td>HTTPS</td>
-
-</tr>
-
-<tr>
-
-<td>Data de detecció</td>
-
-<td>Fa 30 minuts</td>
 
 </tr>
 
@@ -1481,11 +1473,12 @@ presenta indicadors que justifiquen el seu bloqueig preventiu o si
 <h2>💻 Laboratori</h2>
 
 <p>
-En aquesta pràctica assumiràs el paper d'un analista d'un
-<strong>Centre d'Operacions de Seguretat (SOC)</strong>. La teua
+En aquest laboratori, assumireu el paper d'un analista d'un
+<strong>Centre d'Operacions de Seguretat (SOC)</strong>. La vostra
 missió serà investigar un domini sospitós utilitzant únicament
 fonts obertes (OSINT), documentar totes les evidències i elaborar
 un informe amb les conclusions obtingudes.
+Es realitzarà en els grups de 2 o 3 persones habituals.
 </p>
 
 <div class="example">
@@ -1504,42 +1497,14 @@ iniciar una investigació OSINT abans d'aplicar mesures de bloqueig.
 </div>
 
 <h3>Material proporcionat</h3>
-
-<ul>
-
-<li>Nom del domini sospitós.</li>
-
-<li>Adreça IP associada.</li>
-
-<li>Registre de connexions del tallafoc.</li>
-
-<li>Llistat d'URLs visitades.</li>
-
-<li>Plantilla d'informe d'investigació.</li>
-
-</ul>
+<section><h4>1. Dades inicials de la investigació</h4><table><tr><th>Element</th><th>Dada</th></tr><tr><td>Empresa</td><td>NetSecure S.L.</td></tr><tr><td>Equip d'origen</td><td>PC-SOC-03</td></tr><tr><td>Departament</td><td>Sistemes</td></tr><tr><td>Domini investigat</td><td><code>eicar.org</code></td></tr><tr><td>Adreça IPv4 associada</td><td><code>89.238.73.97</code></td></tr><tr><td>Protocol</td><td>HTTPS</td></tr><tr><td>Port de destinació</td><td>443</td></tr><tr><td>Data de detecció</td><td>10/11/2026</td></tr><tr><td>Tipus d'alerta</td><td>Domini relacionat amb proves antivirus</td></tr><tr><td>Prioritat inicial</td><td>Mitjana</td></tr></table><p class="small">La IP és una dada inicial del cas i s'ha de verificar amb una consulta DNS el dia de la investigació. Les adreces i els registres públics poden canviar.</p></section>
+<section><h4>2. Registre de connexions del tallafoc</h4><p><em>Les connexions següents són dades fictícies creades per a la pràctica.</em></p><table><tr><th>Data i hora</th><th>Equip</th><th>Domini / URL</th><th>IP destinació</th><th>Port</th><th>Acció</th></tr><tr><td>10/11/2026 09:14:22</td><td>PC-SOC-03</td><td><code>https://www.eicar.org/</code></td><td>89.238.73.97</td><td>443</td><td>Permesa</td></tr><tr><td>10/11/2026 09:15:03</td><td>PC-SOC-03</td><td><code>https://www.eicar.org/about-us/</code></td><td>89.238.73.97</td><td>443</td><td>Permesa</td></tr><tr><td>10/11/2026 09:17:41</td><td>PC-SOC-03</td><td><code>https://www.eicar.org/</code></td><td>89.238.73.97</td><td>443</td><td>Permesa</td></tr><tr><td>10/11/2026 09:21:08</td><td>PC-SOC-03</td><td><code>https://www.eicar.org/</code></td><td>89.238.73.97</td><td>443</td><td>Permesa</td></tr><tr><td>10/11/2026 09:23:51</td><td>PC-SOC-03</td><td><code>https://www.eicar.org/</code></td><td>89.238.73.97</td><td>443</td><td>Permesa</td></tr></table></section>
+<section><h4>3. Llistat d'URLs visitades</h4><table><tr><th>URL</th><th>Observació</th></tr><tr><td><code>https://www.eicar.org/</code></td><td>Pàgina principal</td></tr><tr><td><code>https://www.eicar.org/about-us/</code></td><td>Informació de l'organització</td></tr><tr><td><code>https://www.eicar.org/</code></td><td>Nova consulta de la pàgina principal</td></tr></table><div class="callout warning"><strong>Limitació de les evidències:</strong> no s'ha proporcionat cap evidència que indique que l'equip haja descarregat o executat cap fitxer.</div></section>
+<section><h4>4. Fonts OSINT que cal consultar</h4><p>Consulteu les fonts següents i guardeu captures de pantalla o evidències dels resultats. Anoteu sempre la data i l'hora de consulta.</p><table><tr><th>Investigació</th><th>Eina</th><th>Enllaç</th></tr><tr><td>WHOIS</td><td>ICANN Lookup</td><td><a href="https://lookup.icann.org/es">Consultar WHOIS</a></td></tr><tr><td>DNS</td><td>Google Admin Toolbox Dig</td><td><a href="https://toolbox.googleapps.com/apps/dig">Consultar DNS</a></td></tr><tr><td>Certificats digitals</td><td>crt.sh</td><td><a href="https://crt.sh">Consultar certificats</a></td></tr><tr><td>Reputació del domini</td><td>VirusTotal</td><td><a href="https://www.virustotal.com/">Analitzar eicar.org</a></td></tr><tr><td>Reputació de la IP</td><td>VirusTotal</td><td><a href="https://www.virustotal.com/">Analitzar la IP</a></td></tr><tr><td>Serveis exposats</td><td>Shodan</td><td><a href="https://www.shodan.io">Consultar Shodan</a></td></tr></table><div class="callout warning"><strong>Seguretat:</strong> no descarregueu cap fitxer de la pàgina investigada ni executeu proves contra el servidor. La pràctica consisteix a consultar informació pública i passiva. Si una eina no mostra dades o demana iniciar sessió, documenteu aquesta limitació; no intenteu accedir a sistemes restringits.</div></section>
 
 <h3>Tasques</h3>
-
-<ol>
-
-<li>Consultar el registre WHOIS del domini.</li>
-
-<li>Analitzar els registres DNS.</li>
-
-<li>Buscar certificats digitals associats.</li>
-
-<li>Consultar la reputació de la IP.</li>
-
-<li>Investigar el domini amb VirusTotal.</li>
-
-<li>Comprovar si apareix a Shodan.</li>
-
-<li>Relacionar totes les evidències obtingudes.</li>
-
-<li>Redactar un informe tècnic amb les conclusions.</li>
-
-</ol>
+<section><h4>Tasques que ha de realitzar l'alumnat:</h4><ul><li>Consultar el registre WHOIS i identificar la data de registre, el registrador i les dades públiques disponibles.</li><li>Consultar els registres DNS i identificar les adreces IP, els servidors DNS i els servidors de correu, si apareixen.</li><li>Buscar certificats digitals associats al domini i identificar-ne els noms i les dates de validesa.</li><li>Consultar la reputació de la IP en VirusTotal o una font equivalent.</li><li>Investigar el domini en VirusTotal i anotar el nombre de motors que el marquen com a maliciós o sospitós.</li><li>Consultar Shodan per identificar els serveis i ports que apareixen associats a la IP.</li><li>Relacionar les evidències amb els registres del tallafoc i les URL visitades.</li><li>Determinar si existeixen indicis suficients per considerar les connexions malicioses.</li><li>Proposar una actuació per a NetSecure S.L. i justificar-la.</li></ul></section>
+<section><h4>Plantilla de l'informe tècnic</h4><p><p>Cada grup haurà de lliurar un informe tècnic amb una extensió màxima de <strong>10 pàgines, sense comptar la portada ni l'índex</strong>. L'informe haurà d'incloure, com a mínim, els apartats següents:</p><ul><li><strong>Identificació:</strong> analistes, data i domini investigat.</li><li><strong>Objectiu:</strong> motiu pel qual s'ha iniciat la investigació.</li><li><strong>WHOIS:</strong> dades de registre i interpretació.</li><li><strong>DNS:</strong> registres trobats i relació amb la IP.</li><li><strong>Certificats:</strong> informació dels certificats digitals.</li><li><strong>Reputació:</strong> resultats de VirusTotal i altres fonts consultades.</li><li><strong>Shodan:</strong> serveis i ports identificats.</li><li><strong>Correlació:</strong> relació entre les dades públiques i els registres interns.</li><li><strong>Conclusió:</strong> classificació del domini i justificació.</li><li><strong>Recomanacions:</strong> mesures que hauria d'adoptar el SOC.</li></ul><p>Incloeu captures llegibles, indiqueu la font de cada evidència i diferencieu clarament entre fets observats, interpretacions i hipòtesis.</p></section>
 
 </section>
 
