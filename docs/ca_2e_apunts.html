@@ -1576,70 +1576,40 @@ Per a cada incident indica:
 <h2>💻 Laboratori</h2>
 
 <p>
-En aquesta pràctica assumiràs el paper d'un analista d'un
-<strong>Centre d'Operacions de Seguretat (SOC)</strong>. El teu
+En aquesta pràctica assumireu el paper d'un analista d'un
+<strong>Centre d'Operacions de Seguretat (SOC)</strong>. El vostre
 objectiu serà gestionar un conjunt d'incidents detectats durant
 una jornada laboral, classificar-los, assignar-los una prioritat,
 documentar totes les actuacions i realitzar-ne el seguiment fins
 al seu tancament.
+Es realitzarà en els grups de 2 o 3 persones habituals.
 </p>
-
-<div class="example">
-
-<strong>Situació inicial</strong>
-
-<p>
-
-L'empresa <b>NetSecure S.L.</b> ha registrat diversos
-incidents en les últimes hores. El responsable del SOC t'ha
-assignat la tasca de gestionar-los utilitzant el procediment
-intern de resposta davant incidents.
-
-</p>
-
-</div>
-
-<h3>Material proporcionat</h3>
-
-<ul>
-
-<li>Fitxes dels incidents detectats.</li>
-
-<li>Registres del SIEM.</li>
-
-<li>Logs del tallafoc.</li>
-
-<li>Informe dels sistemes EDR.</li>
-
-<li>Plantilla de registre d'incidents.</li>
-
-<li>Procediment de classificació i priorització.</li>
-
-</ul>
-
-<h3>Tasques</h3>
-
-<ol>
-
-<li>Classificar cada incident segons la taxonomia establida.</li>
-
-<li>Determinar el nivell de criticitat.</li>
-
-<li>Assignar la prioritat de resposta.</li>
-
-<li>Crear el registre inicial de cada incident.</li>
-
-<li>Documentar totes les actuacions realitzades.</li>
-
-<li>Actualitzar l'estat de cada incidència.</li>
-
-<li>Registrar les evidències associades.</li>
-
-<li>Redactar l'informe final de tancament.</li>
-
-</ol>
-
 </section>
+
+<section><h3>1. Situació de partida</h3><p>És dimecres 11 de novembre de 2026. Formeu part del torn del SOC de NetSecure S.L. i heu de gestionar quatre alertes detectades durant la jornada. No n'hi ha prou amb marcar-les com a resoltes: heu de decidir si són incidents reals, classificar-los, valorar-ne la criticitat, assignar una prioritat i documentar cada actuació.</p><div class="info"><b>Continuïtat amb els criteris anteriors</b><ul><li><b>CA 2c — Seguretat física:</b> el 14 i 15 d'octubre es van detectar accessos irregulars a la sala de servidors, una fallada de la càmera C4 i la desaparició del disc extern de còpies <code>EXT-01</code>. No es va poder atribuir la desaparició a cap persona.</li><li><b>CA 2d — OSINT:</b> el 10 de novembre es va revisar una alerta sobre <code>eicar.org</code>. El domini està associat a EICAR i a proves antivirus; la connexió, per si sola, no demostrava una infecció.</li></ul></div><p>En aquest laboratori apareixen noves dades relacionades amb aquests casos. Distingiu sempre entre fets observats, indicis i hipòtesis.</p><div class="note"><b>Nota:</b> els usuaris, equips, registres interns i alertes de NetSecure són simulats. <code>eicar.org</code> és un domini real, però les connexions descrites ací són fictícies. No feu proves actives contra sistemes externs.</div></section>
+<section><h3>2. Procediment intern de classificació i priorització</h3><p>Classifiqueu cada cas segons l'origen, tipus, actius afectats, objectiu compromés, àrea afectada i origen tècnic.</p><table><tr><th>Camp</th><th>Valors orientatius</th></tr><tr><td>Origen</td><td>Intern / extern / desconegut</td></tr><tr><td>Tipus</td><td>Intrusió, malware, enginyeria social, fuga o pèrdua d'informació, seguretat física, disponibilitat, configuració, activitat sospitosa o fals positiu.</td></tr><tr><td>Actiu afectat</td><td>Compte, portàtil, servidor, xarxa, VPN, sala de servidors, suport de còpia o dades.</td></tr><tr><td>Objectiu compromés</td><td>Confidencialitat, integritat, disponibilitat o cap objectiu confirmat.</td></tr><tr><td>Origen tècnic</td><td>Atac extern, error humà, fallada tècnica, ús indegut o no determinat.</td></tr></table><h4>Criticitat i prioritat:</h4><p>Valoreu impacte, probabilitat de dany, urgència, serveis i usuaris afectats i possibles obligacions legals. La <b>criticitat</b> descriu la gravetat; la <b>prioritat</b> determina l'ordre i la rapidesa de resposta.</p><table><tr><th>Prioritat</th><th>Criteri</th><th>Resposta orientativa</th></tr><tr><td><b>P1 — Crítica</b></td><td>Compromís actiu greu, ransomware en producció, servei essencial paralitzat o fuga greu confirmada.</td><td>Immediata</td></tr><tr><td><b>P2 — Alta</b></td><td>Accés no autoritzat probable, possible exposició de dades o risc elevat sobre actius importants.</td><td>Menys d'1 hora</td></tr><tr><td><b>P3 — Mitjana</b></td><td>Incident limitat o activitat sospitosa que necessita investigació sense impacte greu confirmat.</td><td>Mateix dia</td></tr><tr><td><b>P4 — Baixa</b></td><td>Alerta informativa, fals positiu justificat o incidència menor.</td><td>Segons planificació</td></tr></table><h4>Estats:</h4><table><tr><th>Estat</th><th>Significat</th></tr><tr><td>Nou</td><td>Detectat, pendent de triatge.</td></tr><tr><td>En investigació</td><td>S'analitzen causes, abast i evidències.</td></tr><tr><td>Contingut</td><td>S'ha limitat el risc o l'activitat sospitosa.</td></tr><tr><td>En recuperació</td><td>Es restaura el servei o l'actiu.</td></tr><tr><td>Resolt</td><td>Mesures aplicades i resolució tècnica verificada.</td></tr><tr><td>Tancat</td><td>Responsable valida el tancament i conclusions.</td></tr></table></section>
+<section><h3>3. Fitxes inicials dels incidents</h3><h4>INC-2026-1111-01 — Possible accés indegut i desaparició d'un suport de còpia</h4><table><tr><th>Detecció</th><td>11/11/2026 · 08:42</td><th>Origen</th><td>Intern / pendent de determinar</td></tr><tr><th>Actius</th><td colspan="3">Sala de servidors, RFID, càmera C4 i disc EXT-01</td></tr><tr><th>Descripció</th><td colspan="3">L'inventari confirma que EXT-01 continua sense localitzar-se. Els registres d'octubre mostren accessos del tècnic extern fora de la visita prevista i una interrupció de C4. No consta autorització de retirada.</td></tr></table><p><b>Actualització:</b> el proveïdor confirma que el tècnic va estar a l'edifici el 14 d'octubre, però no aporta ordre de treball signada ni confirma qui l'acompanyava. El disc contenia una còpia xifrada de configuracions i dades de treball. No s'ha acreditat que s'haja connectat a un dispositiu extern ni que les dades s'hagen consultat.</p>
+<h4>INC-2026-1111-02 — Alerta de reputació sobre eicar.org</h4><table><tr><th>Detecció</th><td>11/11/2026 · 09:06</td><th>Origen</th><td>Extern (connexió des d'equip intern)</td></tr><tr><th>Actius</th><td colspan="3">PC-SOC-03, DNS i HTTPS</td></tr><tr><th>Descripció</th><td colspan="3">El SIEM torna a generar una alerta de reputació sobre <code>eicar.org</code>. Cal comprovar si hi ha activitat nova o si és la mateixa regla del CA 2d.</td></tr></table><p><b>Context:</b> la usuària explica que consultava informació d'EICAR per preparar una demostració docent. No hi ha registre de descàrrega ni execució del fitxer de prova. Les pàgines informatives han sigut accessibles per HTTPS.</p>
+<h4>INC-2026-1111-03 — Inici de sessió VPN anòmal</h4><table><tr><th>Detecció</th><td>11/11/2026 · 09:18</td><th>Origen</th><td>Extern probable</td></tr><tr><th>Actius</th><td colspan="3">Compte VPN <code>m.soler</code>, passarel·la VPN i portàtil LT-MSOLER-07</td></tr><tr><th>Descripció</th><td colspan="3">Set intents fallits sobre el compte <code>m.soler</code>, seguits d'un inici correcte des d'una IP no habitual.</td></tr></table><p><b>Context:</b> la treballadora confirma que no intentava connectar-se i que era a l'oficina. El compte té doble factor, però el registre indica validació amb un mètode alternatiu de recuperació. Encara no s'ha confirmat si la sessió va accedir a recursos interns.</p>
+<h4>INC-2026-1111-04 — Programa potencialment no desitjat</h4><table><tr><th>Detecció</th><td>11/11/2026 · 10:02</td><th>Origen</th><td>Intern (equip d'usuari)</td></tr><tr><th>Actius</th><td colspan="3">Portàtil LT-ACOSTA-12, usuari <code>a.costa</code></td></tr><tr><th>Descripció</th><td colspan="3">L'EDR detecta un instal·lador PUA. L'execució ha sigut bloquejada i el fitxer està en quarantena.</td></tr></table><p><b>Context:</b> l'usuari havia descarregat una eina gratuïta d'edició PDF des d'un portal de descàrregues. No s'ha detectat persistència, comunicació sospitosa ni altres alertes durant les dues hores següents.</p></section>
+<section><h3>4. Registres del SIEM</h3><table><tr><th>Data/hora</th><th>Alerta</th><th>Origen</th><th>Detall</th></tr><tr><td>08:42:11</td><td>INV-ACCESS-221</td><td>Inventari</td><td>EXT-01 no localitzat.</td></tr><tr><td>08:47:03</td><td>PHYS-ACCESS-118</td><td>RFID</td><td>Revisió d'octubre: RFID-005 accedeix a sala de servidors fora de visita autoritzada.</td></tr><tr><td>08:49:20</td><td>CAM-LOSS-044</td><td>CCTV</td><td>C4 sense senyal entre 14:00 i 16:30; no consta manteniment tancat.</td></tr><tr><td>09:06:14</td><td>WEB-REP-031</td><td>DNS/Proxy</td><td>Connexió HTTPS a eicar.org; regla genèrica de reputació.</td></tr><tr><td>09:18:51</td><td>VPN-AUTH-092</td><td>VPN</td><td>7 intents fallits i un inici correcte per m.soler en quatre minuts.</td></tr><tr><td>09:21:06</td><td>VPN-GEO-017</td><td>VPN</td><td>Origen no habitual per al compte.</td></tr><tr><td>10:02:39</td><td>EDR-PUA-066</td><td>EDR</td><td>Instal·lador PUA bloquejat i en quarantena.</td></tr></table></section>
+<section><h3>5. Logs del tallafoc i de la VPN</h3><h4>Connexions web de PC-SOC-03:</h4><pre>11/11/2026 09:04:52  PC-SOC-03 -> eicar.org       TCP/443 ALLOW
+11/11/2026 09:05:17  PC-SOC-03 -> www.eicar.org   TCP/443 ALLOW
+11/11/2026 09:05:44  PC-SOC-03 -> eicar.org       TCP/443 ALLOW
+11/11/2026 09:07:02  PC-SOC-03 -> eicar.org       TCP/443 ALLOW</pre><p>No hi ha connexions a dominis addicionals ni transferències de fitxers registrades pel proxy.</p><h4>Autenticació VPN de m.soler:</h4><table><tr><th>Hora</th><th>IP d'origen simulada</th><th>Resultat</th><th>Detall</th></tr><tr><td>09:14:03</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:14:19</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:14:37</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:15:02</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:15:26</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:16:01</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:16:44</td><td>203.0.113.74</td><td>DENY</td><td>Contrasenya incorrecta</td></tr><tr><td>09:18:51</td><td>203.0.113.74</td><td>ALLOW</td><td>Inici correcte; MFA alternatiu validat</td></tr></table><div class="note">203.0.113.74 és una IP reservada per a documentació i exemples. És una dada simulada, no l'adreça real d'un atacant.</div>
+<p></p><pre>SESSION-ID: VPN-884201
+USER: m.soler
+START: 2026-11-11 09:18:51
+SOURCE: 203.0.113.74
+MFA: RECOVERY-CODE
+SESSION-STATUS: ACTIVE
+INTERNAL-RESOURCE-ACCESS: PENDING-REVIEW</pre>
+<p></p>
+<p></p>
+<h4>Informe EDR de LT-ACOSTA-12</h4><table><tr><th>Camp</th><th>Valor</th></tr><tr><td>Hora</td><td>11/11/2026 10:02:39</td></tr><tr><td>Fitxer</td><td>PDF_Editor_Free_Setup.exe</td></tr><tr><td>Ubicació</td><td>C:\Users\a.costa\Downloads\</td></tr><tr><td>Detecció</td><td>PUA / Bundler</td></tr><tr><td>Acció</td><td>Execució bloquejada; fitxer en quarantena</td></tr><tr><td>Altres indicadors</td><td>Sense persistència ni connexions sospitoses; sense alertes addicionals en dues hores.</td></tr></table><p>L'EDR no confirma una infecció activa. Verifiqueu que no s'haja instal·lat cap component addicional i que l'equip estiga correcte.</p></section>
+<section><h3>6. Plantilles de treball</h3><h4>A. Registre inicial:</h4><table><tr><th>Camp</th><th>Dada</th></tr><tr><td>Identificador únic</td><td>INC-AAAA-XXXX</td></tr><tr><td>Data i hora de detecció</td><td></td></tr><tr><td>Analista responsable</td><td></td></tr><tr><td>Origen i tipus</td><td></td></tr><tr><td>Actius / àrea afectada</td><td></td></tr><tr><td>Objectiu compromés</td><td></td></tr><tr><td>Descripció dels fets</td><td></td></tr><tr><td>Impacte i probabilitat</td><td></td></tr><tr><td>Criticitat i prioritat</td><td></td></tr><tr><td>Responsable assignat</td><td></td></tr><tr><td>Estat inicial</td><td>Nou</td></tr><tr><td>Evidències associades</td><td></td></tr></table><h4>B. Historial d'actuacions:</h4><table><tr><th>Data/hora</th><th>Responsable</th><th>Acció</th><th>Evidència</th><th>Canvi d'estat</th><th>Resultat / observacions</th></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr><tr><td> </td><td> </td><td> </td><td> </td><td> </td><td> </td></tr></table><h4>C. Inventari d'evidències:</h4><table><tr><th>ID</th><th>Descripció</th><th>Origen</th><th>Data/hora</th><th>Responsable</th><th>Ubicació / referència</th></tr><tr><td>EV-01</td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>EV-02</td><td></td><td></td><td></td><td></td><td></td></tr></table><h4>D. Informe de tancament:</h4><ul><li>Identificador i resum de l'incident.</li><li>Classificació, criticitat i prioritat final.</li><li>Actius i usuaris afectats.</li><li>Cronologia, actuacions i responsables.</li><li>Evidències conservades i referències.</li><li>Mesures de contenció, erradicació i recuperació.</li><li>Impacte confirmat i potencial.</li><li>Motiu del tancament o tasques pendents.</li><li>Mesures preventives i lliçons apreses.</li></ul></section>
+<section><h3>7. Tasques de l'alumnat</h3><ol><li>Fer el triatge: determinar si cada alerta és un incident confirmat, probable pendent d'investigació o fals positiu/alerta informativa. Justifiqueu-ho.</li><li>Classificar cada cas segons origen, tipus, actius, objectiu compromés, àrea i origen tècnic.</li><li>Assignar criticitat i prioritat P1–P4. Justificar impacte, urgència i probabilitat de dany.</li><li>Crear una fitxa inicial per incident, amb identificador únic, responsable i estat.</li><li>Proposar les primeres actuacions del SOC sense alterar ni eliminar evidències.</li><li>Completar l'historial d'actuacions i els canvis d'estat. No tots els incidents han d'arribar a Tancat durant la jornada.</li><li>Relacionar les evidències mitjançant codis EV i indicar a quin incident pertanyen.</li><li>Redactar un informe final per incident. Si falten dades, indiqueu què queda pendent, qui n'és responsable i quan es revisarà.</li></ol></section>
+<section><h3>8.Entrega</h3><p>Un document PDF de cada grup amb quatre fitxes, quatre historials, inventari d'evidències i informes finals. Extensió orientativa: 5–10 pàgines, sense comptar portada ni índex. Les hores han de mantindre una cronologia coherent.</p></section>
 
 <section>
 
@@ -1649,7 +1619,7 @@ intern de resposta davant incidents.
 
 <p>
 
-Conserva aquestes plantilles perquè es reutilitzaran en el
+Conserva aquesta informació perquè es reutilitzaran en el
 <b>RA3</b>, dedicat a la recopilació d'evidències,
 l'anàlisi forense i la investigació d'incidents de
 ciberseguretat. Un bon registre dels incidents facilitarà enormement
