@@ -1005,101 +1005,234 @@ A[Detecció]
 ========================================================== -->
 
 <section>
+    <h2>Taxonomies i estàndards internacionals</h2>
 
-<h2>Taxonomies i estàndards internacionals</h2>
+    <p>
+        Per poder actuar de manera ràpida i eficient davant d'un incident de ciberseguretat és necessari utilitzar una classificació comuna que permeta descriure'l amb un llenguatge estandarditzat. Aquesta classificació s'anomena <strong>taxonomia dels incidents</strong> i facilita la coordinació entre administradors, equips SOC, equips CSIRT, organismes oficials i empreses.
+    </p>
 
-<p>
-Diverses organitzacions internacionals han desenvolupat models i
-guies per facilitar una classificació homogènia dels incidents de
-ciberseguretat. Encara que cadascun té els seus objectius, tots
-persegueixen un llenguatge comú que facilite la cooperació entre
-organitzacions.
-</p>
+    <p>
+        Actualment, les taxonomies més utilitzades per compartir informació sobre incidents són les següents:
+    </p>
 
-<h3>NIST</h3>
+    <h3>Taxonomia ENISA / CSIRT</h3>
 
-<p>
-Publica guies de referència sobre gestió d'incidents i
-ciberseguretat, àmpliament utilitzades en administracions
-públiques i empreses.
-</p>
+    <p>
+        Els equips CSIRT europeus i organismes com ENISA classifiquen els incidents segons el tipus d'amenaça o activitat observada.
+    </p>
 
-<h3>ENISA</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Categoria</th>
+                <th>Exemple</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Malware</td>
+                <td>Virus, troians, ransomware</td>
+            </tr>
+            <tr>
+                <td>Intrusion Attempts</td>
+                <td>Escanejos de ports, intents d'explotació</td>
+            </tr>
+            <tr>
+                <td>Intrusions</td>
+                <td>Accessos no autoritzats</td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td>Atacs DDoS, interrupció de serveis</td>
+            </tr>
+            <tr>
+                <td>Information Gathering</td>
+                <td>Reconeixement i recopilació d'informació</td>
+            </tr>
+            <tr>
+                <td>Information Security</td>
+                <td>Fuites o exposició de dades</td>
+            </tr>
+            <tr>
+                <td>Fraud</td>
+                <td>Phishing, estafes en línia</td>
+            </tr>
+            <tr>
+                <td>Vulnerable Services</td>
+                <td>Serveis vulnerables o mal configurats</td>
+            </tr>
+            <tr>
+                <td>Abusive Content</td>
+                <td>Spam, contingut maliciós</td>
+            </tr>
+        </tbody>
+    </table>
 
-<p>
-L'Agència de la Unió Europea per a la Ciberseguretat elabora
-recomanacions, bones pràctiques i informes sobre incidents que
-serveixen de referència als països membres.
-</p>
+    <p>Per exemple, un atac de ransomware podria classificar-se com a:</p>
 
-<h3>FIRST</h3>
+    <ul>
+        <li><strong>Categoria:</strong> Malware</li>
+        <li><strong>Subcategoria:</strong> Ransomware</li>
+        <li><strong>Impacte:</strong> Disponibilitat del servei</li>
+    </ul>
 
-<p>
-Associació internacional que agrupa equips de resposta davant
-incidents (CSIRT) i fomenta l'intercanvi segur d'informació entre
-organitzacions.
-</p>
+    <h3>Taxonomia NIST</h3>
 
-<h3>MITRE ATT&amp;CK</h3>
+    <p>
+        El NIST (<em>National Institute of Standards and Technology</em>) classifica els incidents segons la propietat de seguretat afectada.
+    </p>
 
-<p>
-Base de coneixement que descriu les tècniques i tàctiques
-utilitzades pels atacants. És molt útil per relacionar incidents
-amb els mètodes emprats pels ciberdelinqüents.
-</p>
+    <h4>Incidents contra la confidencialitat</h4>
+    <ul>
+        <li>Robatori de dades.</li>
+        <li>Exfiltració d'informació.</li>
+        <li>Compromís de credencials.</li>
+    </ul>
 
-<table>
+    <h4>Incidents contra la integritat</h4>
+    <ul>
+        <li>Modificació no autoritzada de dades.</li>
+        <li>Defacement de pàgines web.</li>
+    </ul>
 
-<thead>
+    <h4>Incidents contra la disponibilitat</h4>
+    <ul>
+        <li>Denegació de servei (DoS/DDoS).</li>
+        <li>Ransomware.</li>
+        <li>Sabotatge de sistemes.</li>
+    </ul>
 
-<tr>
+    <p>Aquesta classificació es basa en la tríada <strong>CIA</strong>:</p>
 
-<th>Organisme</th>
+    <ul>
+        <li><strong>Confidentiality</strong> (Confidencialitat)</li>
+        <li><strong>Integrity</strong> (Integritat)</li>
+        <li><strong>Availability</strong> (Disponibilitat)</li>
+    </ul>
 
-<th>Àmbit principal</th>
+    <h3>Marc MITRE ATT&amp;CK</h3>
 
-</tr>
+    <p>
+        MITRE ATT&amp;CK és actualment el llenguatge tècnic més utilitzat pels SOC i CSIRT per descriure les tècniques emprades pels atacants.
+    </p>
 
-</thead>
+    <p>
+        No classifica l'incident segons l'impacte, sinó segons les accions realitzades durant l'atac.
+    </p>
 
-<tbody>
+    <table>
+        <thead>
+            <tr>
+                <th>Tàctica</th>
+                <th>Exemple de tècnica</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Initial Access</td>
+                <td>Phishing</td>
+            </tr>
+            <tr>
+                <td>Execution</td>
+                <td>Ús de PowerShell</td>
+            </tr>
+            <tr>
+                <td>Persistence</td>
+                <td>Tasques programades</td>
+            </tr>
+            <tr>
+                <td>Privilege Escalation</td>
+                <td>Escalada de privilegis</td>
+            </tr>
+            <tr>
+                <td>Credential Access</td>
+                <td>Robatori de credencials</td>
+            </tr>
+            <tr>
+                <td>Lateral Movement</td>
+                <td>Moviment lateral entre equips</td>
+            </tr>
+            <tr>
+                <td>Exfiltration</td>
+                <td>Extracció de dades</td>
+            </tr>
+        </tbody>
+    </table>
 
-<tr>
+    <p>
+        Per exemple, un informe pot indicar que l'atac ha utilitzat:
+    </p>
 
-<td>NIST</td>
+    <ul>
+        <li><strong>T1566</strong> - Phishing</li>
+        <li><strong>T1059</strong> - Command and Scripting Interpreter</li>
+        <li><strong>T1003</strong> - Credential Dumping</li>
+    </ul>
 
-<td>Guies i bones pràctiques.</td>
+    <p>
+        Això permet que equips de diferents organitzacions entenguen exactament com s'ha produït l'atac.
+    </p>
 
-</tr>
+    <h3>CVSS (Common Vulnerability Scoring System)</h3>
 
-<tr>
+    <p>
+        CVSS no és una taxonomia d'incidents, sinó un sistema per mesurar la gravetat de les vulnerabilitats explotades.
+    </p>
 
-<td>ENISA</td>
+    <table>
+        <thead>
+            <tr>
+                <th>Puntuació</th>
+                <th>Nivell de risc</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0.1 - 3.9</td>
+                <td>Baix</td>
+            </tr>
+            <tr>
+                <td>4.0 - 6.9</td>
+                <td>Mitjà</td>
+            </tr>
+            <tr>
+                <td>7.0 - 8.9</td>
+                <td>Alt</td>
+            </tr>
+            <tr>
+                <td>9.0 - 10.0</td>
+                <td>Crític</td>
+            </tr>
+        </tbody>
+    </table>
 
-<td>Ciberseguretat a la Unió Europea.</td>
+    <p>
+        Aquesta puntuació ajuda a prioritzar les actuacions de resposta i correcció.
+    </p>
 
-</tr>
+    <h3>VERIS</h3>
 
-<tr>
+    <p>
+        VERIS (<em>Vocabulary for Event Recording and Incident Sharing</em>) és un model utilitzat per registrar i compartir informació sobre incidents de manera estructurada.
+    </p>
 
-<td>FIRST</td>
+    <p>Classifica cada incident segons:</p>
 
-<td>Coordinació entre equips CSIRT.</td>
+    <ul>
+        <li><strong>Actor:</strong> qui realitza l'atac (extern, intern, soci, etc.).</li>
+        <li><strong>Acció:</strong> què fa l'atacant (phishing, malware, hacking, error humà...).</li>
+        <li><strong>Actiu afectat:</strong> sistema o recurs compromés.</li>
+        <li><strong>Impacte:</strong> conseqüències produïdes.</li>
+    </ul>
 
-</tr>
+    <p><strong>Exemple:</strong></p>
 
-<tr>
-
-<td>MITRE ATT&amp;CK</td>
-
-<td>Tècniques i tàctiques dels atacants.</td>
-
-</tr>
-
-</tbody>
-
-</table>
-
+    <ul>
+        <li>Actor: Extern</li>
+        <li>Acció: Phishing</li>
+        <li>Actiu afectat: Correu electrònic</li>
+        <li>Impacte: Robatori de credencials</li>
+    </ul>
 </section>
 
 <!-- ==========================================================
